@@ -1,0 +1,49 @@
+
+build/loop_forward.elf:     file format elf32-littleriscv
+
+Contents of section .text:
+ 0000 6f004000 9301c000 23203000 13000000  o.@.....# 0.....
+ 0010 6f008000 13000000 93811100 33000000  o...........3...
+ 0020 23203000 13000000 6ff01fff 13000000  # 0.....o.......
+ 0030 6f004000 9301c000 23203000 13000000  o.@.....# 0.....
+ 0040 6f008000 13000000 93811100 33000000  o...........3...
+ 0050 23203000 13000000 6ff01fff 13000000  # 0.....o.......
+Contents of section .riscv.attributes:
+ 0000 41190000 00726973 63760001 0f000000  A....riscv......
+ 0010 05727633 32693270 3000               .rv32i2p0.      
+
+Disassembly of section .text:
+
+00000000 <main-0x4>:
+   0:	0040006f          	j	4 <main>
+
+00000004 <main>:
+   4:	00c00193          	li	gp,12
+   8:	00302023          	sw	gp,0(zero) # 0 <main-0x4>
+   c:	00000013          	nop
+  10:	0080006f          	j	18 <loop>
+  14:	00000013          	nop
+
+00000018 <loop>:
+  18:	00118193          	addi	gp,gp,1
+  1c:	00000033          	add	zero,zero,zero
+  20:	00302023          	sw	gp,0(zero) # 0 <main-0x4>
+  24:	00000013          	nop
+  28:	ff1ff06f          	j	18 <loop>
+  2c:	00000013          	nop
+  30:	0040006f          	j	34 <main>
+
+00000034 <main>:
+  34:	00c00193          	li	gp,12
+  38:	00302023          	sw	gp,0(zero) # 0 <main-0x4>
+  3c:	00000013          	nop
+  40:	0080006f          	j	48 <loop>
+  44:	00000013          	nop
+
+00000048 <loop>:
+  48:	00118193          	addi	gp,gp,1
+  4c:	00000033          	add	zero,zero,zero
+  50:	00302023          	sw	gp,0(zero) # 0 <main-0x4>
+  54:	00000013          	nop
+  58:	ff1ff06f          	j	48 <loop>
+  5c:	00000013          	nop
