@@ -1,0 +1,36 @@
+
+build/hazard_control.elf:     file format elf32-littleriscv
+
+Contents of section .text:
+ 0000 9301b002 13026001 b3023200 33033240  ......`...2.3.2@
+ 0010 e30c00fe b3033200 9301b002 13026001  ......2.......`.
+ 0020 b3023200 33033240 e30c00fe b3033200  ..2.3.2@......2.
+Contents of section .riscv.attributes:
+ 0000 41190000 00726973 63760001 0f000000  A....riscv......
+ 0010 05727633 32693270 3000               .rv32i2p0.      
+
+Disassembly of section .text:
+
+00000000 <main>:
+   0:	02b00193          	li	gp,43
+   4:	01600213          	li	tp,22
+
+00000008 <solution>:
+   8:	003202b3          	add	t0,tp,gp
+   c:	40320333          	sub	t1,tp,gp
+
+00000010 <branch>:
+  10:	fe000ce3          	beqz	zero,8 <solution>
+  14:	003203b3          	add	t2,tp,gp
+
+00000018 <main>:
+  18:	02b00193          	li	gp,43
+  1c:	01600213          	li	tp,22
+
+00000020 <solution>:
+  20:	003202b3          	add	t0,tp,gp
+  24:	40320333          	sub	t1,tp,gp
+
+00000028 <branch>:
+  28:	fe000ce3          	beqz	zero,20 <solution>
+  2c:	003203b3          	add	t2,tp,gp

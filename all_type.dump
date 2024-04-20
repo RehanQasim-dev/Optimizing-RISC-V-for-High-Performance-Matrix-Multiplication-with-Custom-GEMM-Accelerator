@@ -1,0 +1,147 @@
+
+build/all_type.elf:     file format elf32-littleriscv
+
+Contents of section .text:
+ 0000 1301a000 9301f000 33023100 b3023140  ........3.1...1@
+ 0010 33133100 b3233100 33343100 b3443100  3.1..#1.341..D1.
+ 0020 33553100 b3553140 33663100 b3763100  3U1..U1@3f1..v1.
+ 0030 1306e200 93761302 1347c302 93e7c300  .....v...G......
+ 0040 93194500 13aa5300 933a7601 135b7641  ..E...S..:v..[vA
+ 0050 935b5701 23200200 23120100 23830200  .[W.# ..#...#...
+ 0060 832e0200 03104100 03806200 03504100  ......A...b..PA.
+ 0070 03c06200 37543412 17490000 63020000  ..b.7T4..I..c...
+ 0080 63124000 63424300 63520200 63e27200  c.@.cBC.cR..c.r.
+ 0090 63f2f801 6f014000 e70f0000 1301a000  c...o.@.........
+ 00a0 9301f000 33023100 b3023140 33133100  ....3.1...1@3.1.
+ 00b0 b3233100 33343100 b3443100 33553100  .#1.341..D1.3U1.
+ 00c0 b3553140 33663100 b3763100 1306e200  .U1@3f1..v1.....
+ 00d0 93761302 1347c302 93e7c300 93194500  .v...G........E.
+ 00e0 13aa5300 933a7601 135b7641 935b5701  ..S..:v..[vA.[W.
+ 00f0 23200200 23120100 23830200 832e0200  # ..#...#.......
+ 0100 03104100 03806200 03504100 03c06200  ..A...b..PA...b.
+ 0110 37543412 17490000 63020000 63124000  7T4..I..c...c.@.
+ 0120 63424300 63520200 63e27200 63f2f801  cBC.cR..c.r.c...
+ 0130 6f014000 e70f0000                    o.@.....        
+Contents of section .riscv.attributes:
+ 0000 41190000 00726973 63760001 0f000000  A....riscv......
+ 0010 05727633 32693270 3000               .rv32i2p0.      
+
+Disassembly of section .text:
+
+00000000 <start>:
+   0:	00a00113          	li	sp,10
+   4:	00f00193          	li	gp,15
+
+00000008 <main>:
+   8:	00310233          	add	tp,sp,gp
+   c:	403102b3          	sub	t0,sp,gp
+  10:	00311333          	sll	t1,sp,gp
+  14:	003123b3          	slt	t2,sp,gp
+  18:	00313433          	sltu	s0,sp,gp
+  1c:	003144b3          	xor	s1,sp,gp
+  20:	00315533          	srl	a0,sp,gp
+  24:	403155b3          	sra	a1,sp,gp
+  28:	00316633          	or	a2,sp,gp
+  2c:	003176b3          	and	a3,sp,gp
+  30:	00e20613          	addi	a2,tp,14 # e <main+0x6>
+  34:	02137693          	andi	a3,t1,33
+  38:	02c34713          	xori	a4,t1,44
+  3c:	00c3e793          	ori	a5,t2,12
+  40:	00451993          	slli	s3,a0,0x4
+  44:	0053aa13          	slti	s4,t2,5
+  48:	01763a93          	sltiu	s5,a2,23
+  4c:	41765b13          	srai	s6,a2,0x17
+  50:	01575b93          	srli	s7,a4,0x15
+  54:	00022023          	sw	zero,0(tp) # 0 <start>
+  58:	00011223          	sh	zero,4(sp)
+  5c:	00028323          	sb	zero,6(t0)
+  60:	00022e83          	lw	t4,0(tp) # 0 <start>
+  64:	00411003          	lh	zero,4(sp)
+  68:	00628003          	lb	zero,6(t0)
+  6c:	00415003          	lhu	zero,4(sp)
+  70:	0062c003          	lbu	zero,6(t0)
+  74:	12345437          	lui	s0,0x12345
+  78:	00004917          	auipc	s2,0x4
+
+0000007c <branch>:
+  7c:	00000263          	beqz	zero,80 <bnew>
+
+00000080 <bnew>:
+  80:	00401263          	bne	zero,tp,84 <blessthan>
+
+00000084 <blessthan>:
+  84:	00434263          	blt	t1,tp,88 <branchgreat>
+
+00000088 <branchgreat>:
+  88:	00025263          	bgez	tp,8c <branchlessun>
+
+0000008c <branchlessun>:
+  8c:	0072e263          	bltu	t0,t2,90 <branchgreatun>
+
+00000090 <branchgreatun>:
+  90:	01f8f263          	bgeu	a7,t6,94 <jit>
+
+00000094 <jit>:
+  94:	0040016f          	jal	sp,98 <jumps>
+
+00000098 <jumps>:
+  98:	00000fe7          	jalr	t6,zero # 0 <start>
+
+0000009c <start>:
+  9c:	00a00113          	li	sp,10
+  a0:	00f00193          	li	gp,15
+
+000000a4 <main>:
+  a4:	00310233          	add	tp,sp,gp
+  a8:	403102b3          	sub	t0,sp,gp
+  ac:	00311333          	sll	t1,sp,gp
+  b0:	003123b3          	slt	t2,sp,gp
+  b4:	00313433          	sltu	s0,sp,gp
+  b8:	003144b3          	xor	s1,sp,gp
+  bc:	00315533          	srl	a0,sp,gp
+  c0:	403155b3          	sra	a1,sp,gp
+  c4:	00316633          	or	a2,sp,gp
+  c8:	003176b3          	and	a3,sp,gp
+  cc:	00e20613          	addi	a2,tp,14 # e <main+0x6>
+  d0:	02137693          	andi	a3,t1,33
+  d4:	02c34713          	xori	a4,t1,44
+  d8:	00c3e793          	ori	a5,t2,12
+  dc:	00451993          	slli	s3,a0,0x4
+  e0:	0053aa13          	slti	s4,t2,5
+  e4:	01763a93          	sltiu	s5,a2,23
+  e8:	41765b13          	srai	s6,a2,0x17
+  ec:	01575b93          	srli	s7,a4,0x15
+  f0:	00022023          	sw	zero,0(tp) # 0 <start>
+  f4:	00011223          	sh	zero,4(sp)
+  f8:	00028323          	sb	zero,6(t0)
+  fc:	00022e83          	lw	t4,0(tp) # 0 <start>
+ 100:	00411003          	lh	zero,4(sp)
+ 104:	00628003          	lb	zero,6(t0)
+ 108:	00415003          	lhu	zero,4(sp)
+ 10c:	0062c003          	lbu	zero,6(t0)
+ 110:	12345437          	lui	s0,0x12345
+ 114:	00004917          	auipc	s2,0x4
+
+00000118 <branch>:
+ 118:	00000263          	beqz	zero,11c <bnew>
+
+0000011c <bnew>:
+ 11c:	00401263          	bne	zero,tp,120 <blessthan>
+
+00000120 <blessthan>:
+ 120:	00434263          	blt	t1,tp,124 <branchgreat>
+
+00000124 <branchgreat>:
+ 124:	00025263          	bgez	tp,128 <branchlessun>
+
+00000128 <branchlessun>:
+ 128:	0072e263          	bltu	t0,t2,12c <branchgreatun>
+
+0000012c <branchgreatun>:
+ 12c:	01f8f263          	bgeu	a7,t6,130 <jit>
+
+00000130 <jit>:
+ 130:	0040016f          	jal	sp,134 <jumps>
+
+00000134 <jumps>:
+ 134:	00000fe7          	jalr	t6,zero # 0 <start>

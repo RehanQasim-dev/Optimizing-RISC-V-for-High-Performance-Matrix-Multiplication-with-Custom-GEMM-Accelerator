@@ -1,0 +1,51 @@
+
+build/hazard_true.elf:     file format elf32-littleriscv
+
+Contents of section .text:
+ 0000 1301d000 9301e000 33822100 23204000  ........3.!.# @.
+ 0010 03226000 13050000 63865200 3305a500  ."`.....c.R.3...
+ 0020 6ff09ffe 1303d000 83230300 33847300  o........#..3.s.
+ 0030 1301d000 9301e000 33822100 23204000  ........3.!.# @.
+ 0040 03226000 13050000 63865200 3305a500  ."`.....c.R.3...
+ 0050 6ff09ffe 1303d000 83230300 33847300  o........#..3.s.
+Contents of section .riscv.attributes:
+ 0000 41190000 00726973 63760001 0f000000  A....riscv......
+ 0010 05727633 32693270 3000               .rv32i2p0.      
+
+Disassembly of section .text:
+
+00000000 <main>:
+   0:	00d00113          	li	sp,13
+   4:	00e00193          	li	gp,14
+
+00000008 <haszard>:
+   8:	00218233          	add	tp,gp,sp
+   c:	00402023          	sw	tp,0(zero) # 0 <main>
+  10:	00602203          	lw	tp,6(zero) # 6 <main+0x6>
+  14:	00000513          	li	a0,0
+  18:	00528663          	beq	t0,t0,24 <foraward>
+  1c:	00a50533          	add	a0,a0,a0
+  20:	fe9ff06f          	j	8 <haszard>
+
+00000024 <foraward>:
+  24:	00d00313          	li	t1,13
+  28:	00032383          	lw	t2,0(t1)
+  2c:	00738433          	add	s0,t2,t2
+
+00000030 <main>:
+  30:	00d00113          	li	sp,13
+  34:	00e00193          	li	gp,14
+
+00000038 <haszard>:
+  38:	00218233          	add	tp,gp,sp
+  3c:	00402023          	sw	tp,0(zero) # 0 <main>
+  40:	00602203          	lw	tp,6(zero) # 6 <main+0x6>
+  44:	00000513          	li	a0,0
+  48:	00528663          	beq	t0,t0,54 <foraward>
+  4c:	00a50533          	add	a0,a0,a0
+  50:	fe9ff06f          	j	38 <haszard>
+
+00000054 <foraward>:
+  54:	00d00313          	li	t1,13
+  58:	00032383          	lw	t2,0(t1)
+  5c:	00738433          	add	s0,t2,t2
