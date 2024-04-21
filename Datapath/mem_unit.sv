@@ -13,7 +13,7 @@ module mem_unit (input logic read_en, write_en,input logic [2:0] func3, input lo
 		load_uart= 1'b0;
 		mask='0;
 		mem_read='0;
-		cs=1'b0;
+		cs=1'b1;
 			if (read_en) begin 
 						mask = 4'b1111;
 						mem_read= 1;

@@ -1,4 +1,4 @@
-module main_csr_pipe (input logic clk, reset, interupt, output logic [7:0] an, output logic [6:0] a_to_g, output logic uart_output, uart_busy );
+module main_csr_pipe (input logic clk, reset, interupt, output logic [7:0] an, output logic [6:0] a_to_g, output logic mem_rd_wr, cs, output logic [3:0] mask, output logic [31:0] mem_addr, mem_write_data, input logic [31:0] mem_read_data, input logic mem_valid );
 	logic 	[31:0]  pc_to_flip, pc_to_inst_mem,pc_to_flip_mux, pc_from_alu,pc_for_jump, pc_for_jump_flip_2, data_out_to_reg;
 	logic 	[31:0] inst_out,rs1_alu_a,rs2_alu_b,write_back_data_to_reg_file,pc_for_inst_mem_from_csr,pc_to_flip_intrupt_mux;
 	logic 	[3:0] alu_con;
@@ -83,7 +83,10 @@ module main_csr_pipe (input logic clk, reset, interupt, output logic [7:0] an, o
 	ALU calculator (alu_A,alu_B,alu_con, alu_result);
 
 	// memeory and write back stage
-	main_mem LOAD_STORE (clk,reset, alu_result_flip, store_data_flip,mem_write_flip,mem_read_flip, func3_to_mem_flip, load_data, valid, led_display_mem , uart_output, uart_busy);
+	// main_mem LOAD_STORE (clk,reset, alu_result_flip, store_data_flip,mem_write_flip,mem_read_flip, func3_to_mem_flip, load_data, valid, led_display_mem , uart_output, uart_busy);
+	
+	mem_unit LOAD_STORE (.read_en(mem_read_flip),.write_en(mem_write_flip),.func3(func3_to_mem_flip),.address(alu_result_flip),.data_in(store_data_flip),.data_from_mem(mem_read_data),.data_out_to_riscv(load_data),.address_to_mem(mem_addr),.data_out_to_mem(mem_write_data),.cs(cs),.mem_read(mem_rd_wr),.mask(mask));
+
 	CPU control_unit (inst_out_flip , alu_con, reg_wr,mem_read, mem_write, alu_mux_1, alu_mux_2, pc_jump_mux, wr_bck_mux, sign_extend, func3_to_mem, branch_type, csr_reg_rd, csr_reg_wr,csr_return ); //CPU (input logic [31:0] instruction, output logic [3:0] ALU_CON , output logic reg_wr , mem_read, mem_write, alu_mux_1, alu_mux_2, pc_jump_mux, output logic[1:0] wr_bck_mux, output logic [2:0] sign_extend, func3_to_mem, branch_type );
 	x7segb8 led_display_on_hardware (.x(led_display), .clk(clk), .clr(reset), .a_to_g(a_to_g), .an(an));
 
@@ -91,6 +94,7 @@ module main_csr_pipe (input logic clk, reset, interupt, output logic [7:0] an, o
     assign rs2 = inst_out_flip [24:20];
 	assign rs1 = inst_out_flip [19:15];
 	assign rd = inst_out_flip_2 [11:7];
+	assign valid = mem_valid;
 /*	// control stage
 	flip_flop reg_flie_write_flip(clk, reset, reg_wr, reg_wr_flip);
 	flip_flop mem_data_write_flip(clk, reset, mem_write, mem_write_flip);
