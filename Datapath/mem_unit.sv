@@ -12,12 +12,12 @@ module mem_unit (input logic read_en, write_en,input logic [2:0] func3, input lo
 		transfer_byte=1'b0;
 		load_uart= 1'b0;
 		mask='0;
-		mem_read='0;
-		cs=1'b1;
+		mem_read=~('0);
+		cs=~(1'b1);
 			if (read_en) begin 
 						mask = 4'b1111;
-						mem_read= 1;
-						cs=1'b0;
+						mem_read=~( 1);
+						cs=~(1'b0);
 						//mem_write=1;
 	
 								end
@@ -27,47 +27,47 @@ module mem_unit (input logic read_en, write_en,input logic [2:0] func3, input lo
 					3'b000 : begin // store byte :from func3
 							case (address[1:0])
 							2'b00 : begin mask = 4'b0001;
-								mem_read=0;
+								mem_read=~(0);
 								data_out_to_mem[7:0]=data_in[7:0];
-								cs=1'b0;
+								cs=~(1'b0);
 									end
 
 							2'b01 : begin mask =4'b0010;
-								mem_read=0;
+								mem_read=~(0);
 								data_out_to_mem[15:8]=data_in[15:8];
-								cs=1'b0;
+								cs=~(1'b0);
 									end
 
 							2'b10 : begin mask=4'b0100;
 								data_out_to_mem[23:16]=data_in[23:16];
-								mem_read = 0;
-								cs=1'b0;
+								mem_read= ~( 0);
+								cs=~(1'b0);
 									end
 
 							2'b11 : begin mask=4'b1000;
-								mem_read=0;
-								cs=1'b0;
+								mem_read=~(0);
+								cs=~(1'b0);
 								data_out_to_mem[31:24]=data_in[31:24];
 									end
-							default begin mask=4'b0000; mem_read=0; data_out_to_mem=0; end
+							default begin mask=4'b0000; mem_read=~(0); data_out_to_mem=0; end
 							endcase
 								end
 					3'b001 : begin //store half word :form func3
 							case (address[1])
 							1'b0 : begin 
-									mem_read=0;							
+									mem_read=~(0);							
 									mask = 4'b0011;
 									data_out_to_mem[15:0]=data_in[15:0];
-									cs=1'b0;
+									cs=~(1'b0);
 											end
 					
 							1'b1 : begin 
-									mem_read=0;							
+									mem_read=~(0);							
 									mask = 4'b1100;
-									cs=1'b0;
+									cs=~(1'b0);
 									data_out_to_mem[31:16]=data_in[31:16];
 											end
-							default begin mem_read=0;							
+							default begin mem_read=~(0)	;						
 									mask = 4'b0000;
 									data_out_to_mem=data_in;
 						
@@ -75,11 +75,11 @@ module mem_unit (input logic read_en, write_en,input logic [2:0] func3, input lo
                             	endcase
                             	end
 					3'b010 : begin // store word :from func3 
-								mem_read=0;
+								mem_read=~(0);
 							
 								mask=4'b1111;
 								data_out_to_mem=data_in;
-								cs=1'b0;
+								cs=~(1'b0);
 								end
 					endcase 
 			end
@@ -92,28 +92,28 @@ module mem_unit (input logic read_en, write_en,input logic [2:0] func3, input lo
 								case (address[1:0])
 								2'b00 : begin 
 									data_to_uart=data_in[7:0];
-									cs=1'b1;
+									cs=~(1'b1);
 									transfer_byte=1'b1;
 									load_uart=1'b1;
 										end
 
 								2'b01 : begin 
-									mem_read=0;
+									mem_read=~(0);
 									data_to_uart=data_in[15:8];
-									cs=1'b1;
+									cs=~(1'b1);
 									transfer_byte=1'b1;
 									load_uart=1'b1;
 										end
 
 								2'b10 : begin 
 									data_to_uart=data_in[23:16];
-									cs=1'b1;
+									cs=~(1'b1);
 									transfer_byte=1'b1;
 									load_uart=1'b1;
 										end
 
 								2'b11 : begin 
-									cs=1'b1;
+									cs=~(1'b1);
 									transfer_byte=1'b1;
 									load_uart=1'b1;
 									data_to_uart=data_in[31:24];
