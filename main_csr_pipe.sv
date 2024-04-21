@@ -38,7 +38,7 @@ module main_csr_pipe (input logic clk, reset, interupt, output logic [7:0] an, o
 
 	mux_2x1 PC_MUX (pc_to_flip_mux,pc_from_alu, sel_for_branch, pc_to_flip_intrupt_mux);
     mux_2x1 intrupt_pc_mux (pc_to_flip_intrupt_mux, pc_for_inst_mem_from_csr, interupt_sel, pc_to_flip);
-	mux_4x1 ALU_MUX_1(data_out_to_alu_mux_1,pc_to_alu_mux,imm_to_alu_mux_2,imm_to_alu_mux_2, {{mem_write},{alu_mux_1}}, alu_A);
+	mux_2x1 ALU_MUX_1(data_out_to_alu_mux_1,pc_to_alu_mux,{{alu_mux_1}}, alu_A);
 	mux_2x1 ALU_MUX_2(data_out_to_alu_mux_2, imm_to_alu_mux_2, alu_mux_2 , alu_B);
 	mux_4x1 WRITE_BACK_MUX (alu_result_flip, load_data, pc_for_jump_flip_2, data_out_to_reg, wr_bck_mux_flip, write_back_data_to_reg_file);
 
@@ -79,11 +79,11 @@ module main_csr_pipe (input logic clk, reset, interupt, output logic [7:0] an, o
 	// decode and execute stage
 	extend IMMEDIATE_CREATE (sign_extend, inst_out_flip,imm_to_alu_mux_2);
 	branch_con COMPARATOR (data_out_to_alu_mux_1,data_out_to_alu_mux_2,branch_type,BR_taken);
-	reg_file register_file(clk, reset, reg_wr_flip,rd,rs1,rs2,write_back_data_to_reg_file,rs1_alu_a,rs2_alu_b);
+	reg_file register_file(clk, reset, reg_wr_flip,rd,rs1,rs2,write_back_data_to_reg_file,rs1_alu_a,rs2_alu_b, led_display);
 	ALU calculator (alu_A,alu_B,alu_con, alu_result);
 
 	// memeory and write back stage
-	main_mem LOAD_STORE (clk,reset, alu_result_flip, store_data_flip,mem_write_flip,mem_read_flip, func3_to_mem_flip, load_data, valid, led_display , uart_output, uart_busy);
+	main_mem LOAD_STORE (clk,reset, alu_result_flip, store_data_flip,mem_write_flip,mem_read_flip, func3_to_mem_flip, load_data, valid, led_display_mem , uart_output, uart_busy);
 	CPU control_unit (inst_out_flip , alu_con, reg_wr,mem_read, mem_write, alu_mux_1, alu_mux_2, pc_jump_mux, wr_bck_mux, sign_extend, func3_to_mem, branch_type, csr_reg_rd, csr_reg_wr,csr_return ); //CPU (input logic [31:0] instruction, output logic [3:0] ALU_CON , output logic reg_wr , mem_read, mem_write, alu_mux_1, alu_mux_2, pc_jump_mux, output logic[1:0] wr_bck_mux, output logic [2:0] sign_extend, func3_to_mem, branch_type );
 	x7segb8 led_display_on_hardware (.x(led_display), .clk(clk), .clr(reset), .a_to_g(a_to_g), .an(an));
 
@@ -98,6 +98,6 @@ module main_csr_pipe (input logic clk, reset, interupt, output logic [7:0] an, o
 	flip_flop wr_bck_mux_control_flip (clk, reset, wr_bck_mux, wr_bck_mux_flip);*/
 
 	cva6_csr_unit csr_and_intrupts (clk, reset,   pc_for_jump,  write_data,  csr_address,  csr_reg_wr_flip, csr_reg_rd_flip,csr_return_flip, interupt, data_out_to_reg, pc_for_inst_mem_from_csr, interupt_sel );
-	flip_CU control_unit_flip(clk, reset, reg_wr, mem_write, mem_read,pc_jump_mux,BR_taken,wr_bck_mux,func3_to_mem,csr_reg_rd, csr_reg_wr,csr_return,reg_wr_flip,mem_write_flip,mem_read_flip,pc_jump_mux_flip,BR_taken_flip,wr_bck_mux_flip,func3_to_mem_flip,csr_reg_rd_flip, csr_reg_wr_flip, csr_return_flip);
+	flip_CU control_unit_flip(clk, reset,stall_sel, reg_wr, mem_write, mem_read,pc_jump_mux,BR_taken,wr_bck_mux,func3_to_mem,csr_reg_rd, csr_reg_wr,csr_return,reg_wr_flip,mem_write_flip,mem_read_flip,pc_jump_mux_flip,BR_taken_flip,wr_bck_mux_flip,func3_to_mem_flip,csr_reg_rd_flip, csr_reg_wr_flip, csr_return_flip);
 	hazard_unit hazard_detection_unit(reg_wr_flip,mem_read_flip,sel_for_branch,interupt_sel,valid,inst_out_flip, inst_out_flip_2,forward_sel_1, forward_sel_2, flush_sel, stall_sel);
 endmodule

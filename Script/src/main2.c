@@ -75,8 +75,10 @@
 void main (void) {
     int a=0;
     int w=30;
-    // int r;
-    // r= w+ w;
+    int r;
+    r= w* w;
+    asm("mv a2, %0" : : "r" (w));
+    for (int e =0; e< 10000; e++){}
     asm("mv a2, %0" : : "r" (w));
     while (1){}
 //     a=3;

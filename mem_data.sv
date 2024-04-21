@@ -1,7 +1,7 @@
 module mem_data (input logic clk, input logic [31:0] address, data_in, input logic rd_wr_en, bus_cs,input logic [3:0]mask, output logic [31:0]data_out, output logic valid, output logic [31:0] led_display);
-	logic [31:0]Data_mem [75:0];
+	logic [31:0]Data_mem [1024:0];
 	initial begin 
-	$readmemh ("DECACHE.mem",Data_mem);
+	$readmemh ("C:/Users/Prince/Desktop/rv32_for_fyp/Script/build/DECACHE.mem",Data_mem);
             end
 	always_ff@(posedge clk) begin //read operation
 	valid =1'b0;
