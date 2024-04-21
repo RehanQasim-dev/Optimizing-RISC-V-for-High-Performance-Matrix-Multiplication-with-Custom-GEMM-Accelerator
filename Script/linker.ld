@@ -2,8 +2,8 @@ ENTRY( reset_handler )
 
 MEMORY
 { 
-  ICACHE (rwx) : ORIGIN = 0x00000000, LENGTH = 2K
-  DCACHE (rx)  : ORIGIN = 0x00000000, LENGTH = 2K
+  ICACHE (rwx) : ORIGIN = 0x00000000, LENGTH = 1K
+  DCACHE (rx)  : ORIGIN = 0x00000000, LENGTH = 1K
 }
 
 

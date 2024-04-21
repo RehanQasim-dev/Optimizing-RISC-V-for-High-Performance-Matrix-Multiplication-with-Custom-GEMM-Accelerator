@@ -28,7 +28,7 @@ module hazard_unit(input logic reg_wr,input logic mem_read,input logic sel_for_b
         end
         if (mem_read & reg_wr) begin
             if (~valid) begin     
-                if ((rs1_exec == rd_mem) &  (rd_mem != 5'b00000)) begin
+                if ( (rd_mem != 5'b00000)) begin
                     stall_sel=1'b1;
                 end
                 if ((rs1_exec == rd_mem) &  (rd_mem != 5'b00000)) begin

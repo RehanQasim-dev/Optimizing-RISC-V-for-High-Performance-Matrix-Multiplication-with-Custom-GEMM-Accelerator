@@ -2,8 +2,8 @@
 module alu_tb;
 
 	logic [31:0] a,b ;
-	 assign a= 31'd10;
-	 assign b=31'd16;
+	//  assign a= 31'd10;
+	//  assign b=31'd16;
 	 
 	 logic [3:0] alu_con;
 	 
@@ -11,7 +11,8 @@ module alu_tb;
 	 
 	 ALU uut (a,b,alu_con,out);
 		initial begin 
-		
+		a= 31'd10;
+	  b=31'd16;
 		alu_con=4'd0;
 		#1;
 		alu_con=4'd1;
@@ -34,6 +35,18 @@ module alu_tb;
 		#1;
 		alu_con=4'd10;
 		#1;
+		alu_con=4'd11;a=-32'd10; b = 32'd4; 
+		#1;
+		
+		alu_con=4'd12; 
+		#1;
+		alu_con=4'd13;
+		#1;
+		alu_con=4'd14;
+		#1;
+		alu_con=4'd14;a=b; b = -32'd10;
+		#1;
+
 		$stop;
 		end
 		
