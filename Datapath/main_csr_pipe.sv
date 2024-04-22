@@ -260,6 +260,7 @@ module main_csr_pipe (
   PC_flip flip_flop_pc (
       clk,
       reset,
+      stall_sel,
       pc_to_flip,
       pc_to_inst_mem
   );  //fetch stage

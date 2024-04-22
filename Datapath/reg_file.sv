@@ -36,7 +36,7 @@ module reg_file (
 
   end
 
-  always_ff @(posedge clk) begin
+  always_ff @(negedge clk) begin
     //if (reset) reg_mem <= {default: 32'b0};  no need to
     if (write_reg & valid_rd) begin
       reg_mem[rd] <= data_in;
