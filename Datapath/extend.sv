@@ -33,8 +33,8 @@ module extend (input logic [2:0] ALU_ex_con, input logic [31:0] instruction, out
                 3'b010 : immediate_to_alu = {{20{imm_I[11]}}, imm_I}; // sign extend , I type 
                 3'b011 : immediate_to_alu = {{20{imm_S[11]}}, imm_S}; //sign extend , S type 
                 3'b100 : immediate_to_alu = {{19{imm_B[12]}},imm_B}; // sign extend : B type
-                3'b101 : immediate_to_alu = {imm_U, {11{1'b0}}}; // sign extend : U type
-                3'b110 : immediate_to_alu = { { 11{imm_J[20]}} , imm_J }; //sign extend : J Type
+                3'b101 : immediate_to_alu = {imm_U, {12{1'b0}}}; // sign extend : U type
+                3'b110 : immediate_to_alu = { { 12{imm_J[20]}} , imm_J }; //sign extend : J Type
                 default: begin
                     immediate_to_alu ='0;
                 end
