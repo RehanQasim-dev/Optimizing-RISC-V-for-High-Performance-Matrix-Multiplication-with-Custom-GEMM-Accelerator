@@ -10,4 +10,4 @@ addi sp, sp, %lo(_sp)  # Add lower 12 bits of _sp
   li   a0, 0
   li   a1, 0
   li    a2, 134
-  j verilate
+  call main
