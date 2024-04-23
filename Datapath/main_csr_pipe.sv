@@ -156,13 +156,13 @@ module main_csr_pipe (
   mux_2x1 stall_for_pc_flip_to_alu_mux_and_jump_return (
       pc_to_inst_mem,
       pc_to_alu_mux,
-      (stall_sel | flush_sel),
+      (stall_sel ),
       pc_to_inst_mem_through_stall_n_flush
   );
   mux_2x1 stall_for_pc_flip_2_to_write_back (
       pc_to_alu_mux,
       pc_for_jump,
-      (stall_sel | flush_sel),
+      (stall_sel ),
       pc_to_alu_mux_muxed
   );
   // stall for alu and write_data_to_memory, instruction flip 2 
