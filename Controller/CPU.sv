@@ -151,32 +151,32 @@ module CPU (input logic [31:0] instruction, output logic [3:0] ALU_CON , output 
 					ALU_CON = 0000 ;reg_wr=1;sign_extend=3'b010; wr_bck_mux=2'b00; alu_mux_1=1'b0; alu_mux_2 =1'b1;
 							end
 				3'b010 : begin //SLTI-instruction
-						ALU_CON = 0011 ;reg_wr=1;sign_extend=3'b010;wr_bck_mux=2'b00; alu_mux_1=1'b0; alu_mux_2 =1'b1;
+						ALU_CON = 4'b0011 ;reg_wr=1;sign_extend=3'b010;wr_bck_mux=2'b00; alu_mux_1=1'b0; alu_mux_2 =1'b1;
 						end
 				3'b011 : begin // SLTIU-instruction 
-						ALU_CON = 0100 ;reg_wr=1;sign_extend=3'b001;wr_bck_mux=2'b00; alu_mux_1=1'b0; alu_mux_2 =1'b1;
+						ALU_CON = 4'b0100 ;reg_wr=1;sign_extend=3'b001;wr_bck_mux=2'b00; alu_mux_1=1'b0; alu_mux_2 =1'b1;
 						end
 				3'b100 : begin //XORI-instruction
-						ALU_CON = 0101 ;reg_wr=1;sign_extend=3'b010;wr_bck_mux=2'b00; alu_mux_1=1'b0; alu_mux_2 =1'b1;
+						ALU_CON = 4'b0101 ;reg_wr=1;sign_extend=3'b010;wr_bck_mux=2'b00; alu_mux_1=1'b0; alu_mux_2 =1'b1;
 						end
 				3'b110 : begin //ORI-instruction
-						ALU_CON = 1000 ;reg_wr=1;sign_extend=3'b010;wr_bck_mux=2'b00; alu_mux_1=1'b0; alu_mux_2 =1'b1;
+						ALU_CON = 4'b1000 ;reg_wr=1;sign_extend=3'b010;wr_bck_mux=2'b00; alu_mux_1=1'b0; alu_mux_2 =1'b1;
 						end
 				3'b111 : begin //ANDI-instruction 
-						ALU_CON = 1001 ;reg_wr=1;sign_extend=3'b010;wr_bck_mux=2'b00; alu_mux_1=1'b0; alu_mux_2 =1'b1;
+						ALU_CON = 4'b1001 ;reg_wr=1;sign_extend=3'b010;wr_bck_mux=2'b00; alu_mux_1=1'b0; alu_mux_2 =1'b1;
 						end
 				3'b001 : begin //SLLI-instruction 
 						if (func7 == 7'b0000000) begin 
-								 ALU_CON = 0010	; reg_wr=1;sign_extend=3'b001;wr_bck_mux=2'b00; alu_mux_1=1'b0; alu_mux_2 =1'b1;
+								 ALU_CON = 4'b0010	; reg_wr=1;sign_extend=3'b001;wr_bck_mux=2'b00; alu_mux_1=1'b0; alu_mux_2 =1'b1;
 										end
 						end
 				3'b101 : begin //SRLI-instruction 
 							case (func7)
 							7'b0000000 :  begin //SRLI-instruction 
-								 ALU_CON = 0110	; reg_wr=1;sign_extend=3'b001;wr_bck_mux=2'b00; alu_mux_1=1'b0; alu_mux_2 =1'b1;
+								 ALU_CON = 4'b0110	; reg_wr=1;sign_extend=3'b001;wr_bck_mux=2'b00; alu_mux_1=1'b0; alu_mux_2 =1'b1;
 									end 
 							7'b0100000 : begin //SRAI-instruction
-								 ALU_CON = 0111	; reg_wr=1;sign_extend=3'b001;wr_bck_mux=2'b00; alu_mux_1=1'b0; alu_mux_2 =1'b1;
+								 ALU_CON = 4'b0111	; reg_wr=1;sign_extend=3'b001;wr_bck_mux=2'b00; alu_mux_1=1'b0; alu_mux_2 =1'b1;
 									end 
 									endcase 
 						end
