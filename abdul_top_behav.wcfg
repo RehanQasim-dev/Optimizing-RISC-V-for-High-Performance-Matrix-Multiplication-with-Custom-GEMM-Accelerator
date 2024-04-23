@@ -12,15 +12,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="151241667fs"></ZoomStartTime>
-      <ZoomEndTime time="197791668fs"></ZoomEndTime>
-      <Cursor1Time time="162242000fs"></Cursor1Time>
+      <ZoomStartTime time="264502978650fs"></ZoomStartTime>
+      <ZoomEndTime time="264512378651fs"></ZoomEndTime>
+      <Cursor1Time time="264584179000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="329"></NameColumnWidth>
-      <ValueColumnWidth column_width="236"></ValueColumnWidth>
+      <ValueColumnWidth column_width="238"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="244" />
+   <WVObjectSize size="256" />
    <wvobject type="logic" fp_name="/tb_top/DUT/clk">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
@@ -96,6 +96,7 @@
    <wvobject type="array" fp_name="/tb_top/DUT/interface_rd_data">
       <obj_property name="ElementShortName">interface_rd_data[127:0]</obj_property>
       <obj_property name="ObjectShortName">interface_rd_data[127:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/tb_top/DUT/interface_wr_data">
       <obj_property name="ElementShortName">interface_wr_data[127:0]</obj_property>
@@ -996,5 +997,53 @@
    <wvobject type="array" fp_name="/tb_top/DUT/memory_instance/D_WID">
       <obj_property name="ElementShortName">D_WID[31:0]</obj_property>
       <obj_property name="ObjectShortName">D_WID[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider750" type="divider">
+      <obj_property name="label">seven_seg</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_top/DUT/UUT/led_display_on_hardware/x">
+      <obj_property name="ElementShortName">x[31:0]</obj_property>
+      <obj_property name="ObjectShortName">x[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_top/DUT/UUT/led_display_on_hardware/clk">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_top/DUT/UUT/led_display_on_hardware/clr">
+      <obj_property name="ElementShortName">clr</obj_property>
+      <obj_property name="ObjectShortName">clr</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_top/DUT/UUT/led_display_on_hardware/a_to_g">
+      <obj_property name="ElementShortName">a_to_g[6:0]</obj_property>
+      <obj_property name="ObjectShortName">a_to_g[6:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_top/DUT/UUT/led_display_on_hardware/an">
+      <obj_property name="ElementShortName">an[7:0]</obj_property>
+      <obj_property name="ObjectShortName">an[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_top/DUT/UUT/led_display_on_hardware/dp">
+      <obj_property name="ElementShortName">dp</obj_property>
+      <obj_property name="ObjectShortName">dp</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_top/DUT/UUT/led_display_on_hardware/s">
+      <obj_property name="ElementShortName">s[2:0]</obj_property>
+      <obj_property name="ObjectShortName">s[2:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_top/DUT/UUT/led_display_on_hardware/digit">
+      <obj_property name="ElementShortName">digit[3:0]</obj_property>
+      <obj_property name="ObjectShortName">digit[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_top/DUT/UUT/led_display_on_hardware/aen">
+      <obj_property name="ElementShortName">aen[7:0]</obj_property>
+      <obj_property name="ObjectShortName">aen[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_top/DUT/UUT/led_display_on_hardware/clkdiv">
+      <obj_property name="ElementShortName">clkdiv[17:0]</obj_property>
+      <obj_property name="ObjectShortName">clkdiv[17:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider751" type="divider">
+      <obj_property name="label">GEMM</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
    </wvobject>
 </wave_config>
