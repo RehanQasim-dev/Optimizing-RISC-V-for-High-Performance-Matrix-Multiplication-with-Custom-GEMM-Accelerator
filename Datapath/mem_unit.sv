@@ -26,11 +26,11 @@ module mem_unit (
 
 
   always_comb begin : store_operations
-
+	data_out_to_mem =0;
     transfer_byte = 1'b0;
     load_uart = 1'b0;
     mask = '0;
-    mem_read = ~('0);
+    mem_read = ('0);
     cs = ~(1'b1);
     if (read_en) begin
       mask = 4'b1111;
@@ -53,13 +53,13 @@ module mem_unit (
               2'b01: begin
                 mask = 4'b0010;
                 mem_read = ~(0);
-                data_out_to_mem[15:8] = data_in[15:8];
+                data_out_to_mem[15:8] = data_in[7:0];
                 cs = ~(1'b0);
               end
 
               2'b10: begin
                 mask = 4'b0100;
-                data_out_to_mem[23:16] = data_in[23:16];
+                data_out_to_mem[23:16] = data_in[7:0];
                 mem_read = ~(0);
                 cs = ~(1'b0);
               end
@@ -68,11 +68,11 @@ module mem_unit (
                 mask = 4'b1000;
                 mem_read = ~(0);
                 cs = ~(1'b0);
-                data_out_to_mem[31:24] = data_in[31:24];
+                data_out_to_mem[31:24] = data_in[7:0];
               end
               default begin
                 mask = 4'b0000;
-                mem_read = ~(0);
+                mem_read = (0);
                 data_out_to_mem = 0;
               end
             endcase
@@ -90,12 +90,12 @@ module mem_unit (
                 mem_read = ~(0);
                 mask = 4'b1100;
                 cs = ~(1'b0);
-                data_out_to_mem[31:16] = data_in[31:16];
+                data_out_to_mem[31:16] = data_in[15:0];
               end
               default begin
-                mem_read = ~(0);
+                mem_read = (0);
                 mask = 4'b0000;
-                data_out_to_mem = data_in;
+                data_out_to_mem = 0;
 
               end
             endcase
@@ -108,50 +108,50 @@ module mem_unit (
             cs = ~(1'b0);
           end
         endcase
-      end else if (address[31]) begin  // uart transmission
-        transfer_byte = 1'b0;
-        load_uart = 1'b0;
-        if (~uart_done & ~uart_busy) begin
-          if (func3 == 3'b000) begin
-            case (address[1:0])
-              2'b00: begin
-                data_to_uart = data_in[7:0];
-                cs = ~(1'b1);
-                transfer_byte = 1'b1;
-                load_uart = 1'b1;
-              end
+    //   end else if (address[31]) begin  // uart transmission
+    //     transfer_byte = 1'b0;
+    //     load_uart = 1'b0;
+    //     if (~uart_done & ~uart_busy) begin
+    //       if (func3 == 3'b000) begin
+    //         case (address[1:0])
+    //           2'b00: begin
+    //             data_to_uart = data_in[7:0];
+    //             cs = ~(1'b1);
+    //             transfer_byte = 1'b1;
+    //             load_uart = 1'b1;
+    //           end
 
-              2'b01: begin
-                mem_read = ~(0);
-                data_to_uart = data_in[15:8];
-                cs = ~(1'b1);
-                transfer_byte = 1'b1;
-                load_uart = 1'b1;
-              end
+    //           2'b01: begin
+    //             mem_read = ~(0);
+    //             data_to_uart = data_in[15:8];
+    //             cs = ~(1'b1);
+    //             transfer_byte = 1'b1;
+    //             load_uart = 1'b1;
+    //           end
 
-              2'b10: begin
-                data_to_uart = data_in[23:16];
-                cs = ~(1'b1);
-                transfer_byte = 1'b1;
-                load_uart = 1'b1;
-              end
+    //           2'b10: begin
+    //             data_to_uart = data_in[23:16];
+    //             cs = ~(1'b1);
+    //             transfer_byte = 1'b1;
+    //             load_uart = 1'b1;
+    //           end
 
-              2'b11: begin
-                cs = ~(1'b1);
-                transfer_byte = 1'b1;
-                load_uart = 1'b1;
-                data_to_uart = data_in[31:24];
-              end
-            endcase
-          end else if (uart_busy & ~uart_done) begin
-            transfer_byte = 1'b1;
-            load_uart = 1'b0;
+    //           2'b11: begin
+    //             cs = ~(1'b1);
+    //             transfer_byte = 1'b1;
+    //             load_uart = 1'b1;
+    //             data_to_uart = data_in[31:24];
+    //           end
+    //         endcase
+    //       end else if (uart_busy & ~uart_done) begin
+    //         transfer_byte = 1'b1;
+    //         load_uart = 1'b0;
 
-          end else if (~uart_busy & uart_done) begin
-            transfer_byte = 1'b0;
-            load_uart = 1'b0;
-          end
-        end
+    //       end else if (~uart_busy & uart_done) begin
+    //         transfer_byte = 1'b0;
+    //         load_uart = 1'b0;
+    //       end
+        // end
       end
     end
 
