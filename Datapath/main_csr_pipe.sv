@@ -394,6 +394,8 @@ module main_csr_pipe (
       csr_return_flip
   );
   hazard_unit hazard_detection_unit (
+    clk, 
+    reset,
       reg_wr_flip,
       mem_read_flip,
       sel_for_branch,
