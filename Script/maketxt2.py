@@ -19,12 +19,17 @@ with open(binfile, "rb") as f:
 #assert len(bindata) < 4*nwords
 #assert len(bindata) % 4 == 0
 nwords = len(bindata) // 4
-
+addr = 8
 for i in range(nwords):
     w = bindata[4*i : 4*i+4]
-    print("%02x" % (w[0]))
-    print("%02x" % (w[1]))
-    print("%02x" % (w[2]))
-    print("%02x" % (w[3]))
+    print("@%08x" % (addr) )
+    print("%08x" % (w[0]))
+    print("@%08x" % (addr+4) )
+    print("%08x" % (w[1]))
+    print("@%08x" % (addr+8) )
+    print("%08x" % (w[2]))
+    print("@%08x" % (addr+12) )
+    print("%08x" % (w[3]))
+    addr = addr + 32
     
 
