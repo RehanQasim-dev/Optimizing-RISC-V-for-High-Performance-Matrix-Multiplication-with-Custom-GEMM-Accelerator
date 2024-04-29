@@ -29,7 +29,7 @@ void main()
         for (int w = 0; w < 2; w++)
         {
             asm("mv a3, %0" : : "r"(C[i][w]));
-            for (uint32_t e = 0; e < 1000000000000000; e++){
+            for (uint32_t e = 0; e < 10000; e++){
             }
         }
     }

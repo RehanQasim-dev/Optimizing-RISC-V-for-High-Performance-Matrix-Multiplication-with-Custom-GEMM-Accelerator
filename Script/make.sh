@@ -6,6 +6,6 @@ riscv64-unknown-elf-gcc -o build/main.elf build/startup.o build/main.o -T linker
 riscv64-unknown-elf-objcopy -O binary --only-section=.text* build/main.elf build/ICACHE.bin
 riscv64-unknown-elf-objcopy -O binary --only-section=.data*  build/main.elf build/DCACHE.bin
 python3 maketxt1.py build/ICACHE.bin > build/ICACHE.mem
-python3 maketxt2.py build/DCACHE.bin > build/DCACHE.mem
+python3 maketxt4.py build/DCACHE.bin > build/DCACHE.mem
 riscv64-unknown-elf-objdump -S -s build/main.elf > build/main.dump
 riscv64-unknown-elf-objdump -S -s build/main.o > build/test.dump
