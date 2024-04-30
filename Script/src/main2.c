@@ -76,11 +76,16 @@ void main (void) {
     int a=0;
     int w=30;
     int r;
-    r= w* w;
+    
     asm("mv a2, %0" : : "r" (w));
     for (int e =0; e< 10000; e++){}
-    asm("mv a2, %0" : : "r" (w));
-    while (1){}
+    
+    while (1){
+        // r= w+ w;
+        
+    asm("mv a3, %0" : : "r" (a));
+    a +=1;
+    for (int o =0; o<1000000; o++){}} ///// slow almost 1 sec chagnes
 //     a=3;
 //    asm("mv a1, %0" : : "r" (w));
 //     for (int e=0 ; e < 1000; e++){}
