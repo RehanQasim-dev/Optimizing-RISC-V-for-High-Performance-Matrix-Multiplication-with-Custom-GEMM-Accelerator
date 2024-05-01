@@ -12,9 +12,9 @@ module reg_file (
 );
 
   logic [31:0] reg_mem[31:0];
-  // initial begin 
-  // 	$readmemh("C:/Users/Prince/Desktop/rv32_for_fyp/reg_int.txt",reg_mem);
-  // 	end
+ initial begin 
+		$readmemh("reg_int.mem",reg_mem);
+		end
   logic valid_rs1;
   logic valid_rs2;
   logic valid_rd;
@@ -47,7 +47,7 @@ module reg_file (
   assign valid_rs1 = |rs1;
   assign valid_rs2 = |rs2;
   assign valid_rd  = |rd;
-  assign to_leds   = reg_mem[13];
+  assign to_leds   = reg_mem[31];
 
 
 endmodule

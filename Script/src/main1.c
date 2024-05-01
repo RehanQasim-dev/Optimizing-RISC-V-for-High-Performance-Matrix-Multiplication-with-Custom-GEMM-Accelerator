@@ -20,17 +20,25 @@ void main()
                        {11, 12}};
     uint32_t C[2][2];
     // Result matrix C
-
+    asm("mv t6, %0" : : "r"(67));
     // Call the matrix multiplication function
     MATMUL(2, 3, 2, A, B, C);
-
+    int qw =0;
     for (int i = 0; i < 2; i++)
     {
         for (int w = 0; w < 2; w++)
         {
-            asm("mv a3, %0" : : "r"(C[i][w]));
-            for (uint32_t e = 0; e < 10000; e++){
-            }
+            qw = qw + C[i][w];
+            asm("mv t6, %0" : : "r"(qw));
+            for (int o =0; o<1000000; o++){}
+            // for (uint32_t e = 0; e < 10000000; e++){
+            // }
         }
     }
-}
+    asm("mv t6, %0" : : "r"(qw));
+     for (int o =0; o<1000000; o++){}
+    while (1){
+        
+        }
+    }
+
