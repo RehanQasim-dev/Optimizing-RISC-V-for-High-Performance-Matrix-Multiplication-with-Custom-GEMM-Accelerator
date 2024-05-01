@@ -11,7 +11,7 @@ module main_csr_pipe_tb;
   logic [6:0] seven_seg_comb;
 
 
-  top top_instance (
+  soc top_instance (
       .clk(clk),
       .rst(reset),
       .an(pins_comb),
@@ -20,8 +20,18 @@ module main_csr_pipe_tb;
 
 
   initial begin
-    @(posedge clk) reset <= 1;
-    @(posedge clk) @(posedge clk) @(posedge clk) @(posedge clk) reset <= 0;
+    @(posedge clk) reset <= 0;
+    @(posedge clk) 
+    @(posedge clk) 
+    @(posedge clk) 
+    @(posedge clk) reset <=1;
+     @(posedge clk) reset <= 0;
+    @(posedge clk) 
+    @(posedge clk) 
+    @(posedge clk) reset <=0;
+//     /
+//     *reset <= 0;
+// */
 
   end
 
