@@ -81,7 +81,7 @@ module Load_Ex_controller (
   always_comb begin
     // Default assignments
     gen_addr = 0;
-    clr_size_counter = 'x;
+    clr_size_counter = 0;
     en_size_counter = 0;
     interface_en = 0;
     interface_control = 'x;
