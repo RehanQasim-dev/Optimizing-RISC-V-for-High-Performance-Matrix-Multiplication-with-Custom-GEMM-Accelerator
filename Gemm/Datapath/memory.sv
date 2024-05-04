@@ -2,7 +2,7 @@
 // File:rams_tdp_3d.sv
 module memory #(
     parameter NUM_RAMS = 16,
-    A_WID = 12,
+    A_WID = 4,
     D_WID = 8
 ) (
     input logic clk,
@@ -86,10 +86,52 @@ genvar i;
       end
     end
   end
-  logic [D_WID-1:0] mem[NUM_RAMS-1:0][2**A_WID-1:0];
+  reg [D_WID-1:0] meam[NUM_RAMS-1:0][2**A_WID-1:0];
+
   // logic [D_WID-1:0] mem[2**A_WID-1:0][NUM_RAMS-1:0];
   initial begin
-    $readmemh("DCACHE.mem", mem);
+  // Open the file for reading
+  integer file;
+  logic [7:0] mem_value;
+  file = $fopen("DCACHE.data", "r");
+  
+  // Check if file opened successfully
+  if (file == 0) begin
+      $display("Error opening file");
+      $finish;
+  end
+  $fscanf(file, "%h", mem_value);
+  meam[0][0]  = mem_value;
+  $display("%h",mem_value);
+  // Loop through each line in the file
+//  for (int i = 0; i < 1;i++) begin
+//      for (int j = 0; NUM_RAMS; j++) begin
+//          // Read the line from the file
+//          $fscanf(file, "%h", mem_value);
+//          //isplay("%h",mem_value);
+//          // Assign the value to the memory array
+//          meam[j][i] = mem_value;
+//      end
+//  end
+  
+  // Close the file
+  $fclose(file);
+//    $readmemb("DCACHE.data",meam);
+//meam[0][0]=8'd1;
+//meam[1][0]=8'd2;
+//meam[2][0]=8'd3;
+//meam[3][0]=8'd4;
+//meam[4][0]=8'd5;
+//meam[5][0]=8'd6;
+//meam[6][0]=8'd7;
+//meam[7][0]=8'd8;
+//meam[8][0]=8'd9;
+//meam[9][0]=8'd7;
+//meam[10][0]=8'd11;
+//meam[11][0]=8'd12;
+
+
+
   end
   // PORT_A
   generate
@@ -97,10 +139,10 @@ genvar i;
       always @(posedge clk) begin
         if (bank_ena[i]) begin
           if (bank_wea[i]) begin
-            mem[i] [bank_addra[i]]<= bank_dina[i];
+            meam[i] [bank_addra[i]]<= bank_dina[i];
             // mem [bank_addra[i]][i] <= bank_dina[i];
           end
-          bank_douta[i] <= mem[i][bank_addra[i]];
+          bank_douta[i] <= meam[i][bank_addra[i]];
           // bank_douta[i] <= mem[bank_addra[i]][i];
         end
       end
@@ -110,14 +152,14 @@ genvar i;
   
   // //PORT_B
    generate
-    for (i = 0; i < NUM_RAMS; i = i + 1) begin
+    for (i = 0; i < NUM_RAMS; i = i + 1) begin: port_b_ops
       always @(posedge clk) begin
         if (bank_enb[i]) begin
           if (bank_web[i]) begin
-            mem[i][bank_addrb[i]] <= bank_dinb[i];
+            meam[i][bank_addrb[i]] <= bank_dinb[i];
             // mem[bank_addrb[i]][i] <= bank_dinb[i];
           end
-          bank_doutb[i] <= mem[i][bank_addrb[i]];
+          bank_doutb[i] <= meam[i][bank_addrb[i]];
           // bank_doutb[i] <= mem[bank_addrb[i]][i];
         end
       end
