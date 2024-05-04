@@ -25,7 +25,7 @@ for i in range(nwords):
     # Iterate over each byte in the word
     for j in range(16):
         # Append the byte as a hexadecimal string to the corresponding bank's data
-        bank_data[j] = "%02x" % w[j] + bank_data[j]
+        bank_data[j] = "%0b16" % w[j] + bank_data[j]
 
 # Iterate over the bank data and print the result
 for i, bank in enumerate(bank_data):

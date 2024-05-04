@@ -12,13 +12,13 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="264502978650fs"></ZoomStartTime>
-      <ZoomEndTime time="264512378651fs"></ZoomEndTime>
-      <Cursor1Time time="264584179000fs"></Cursor1Time>
+      <ZoomStartTime time="459272000fs"></ZoomStartTime>
+      <ZoomEndTime time="552572001fs"></ZoomEndTime>
+      <Cursor1Time time="499172000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="329"></NameColumnWidth>
-      <ValueColumnWidth column_width="238"></ValueColumnWidth>
+      <ValueColumnWidth column_width="234"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="256" />
    <wvobject type="logic" fp_name="/tb_top/DUT/clk">
@@ -77,17 +77,17 @@
       <obj_property name="ElementShortName">system_bus_addr[31:0]</obj_property>
       <obj_property name="ObjectShortName">system_bus_addr[31:0]</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/tb_top/DUT/interface_control">
-      <obj_property name="ElementShortName">interface_control[4:0]</obj_property>
-      <obj_property name="ObjectShortName">interface_control[4:0]</obj_property>
+   <wvobject type="logic" fp_name="/tb_top/DUT/interface_en">
+      <obj_property name="ElementShortName">interface_en</obj_property>
+      <obj_property name="ObjectShortName">interface_en</obj_property>
    </wvobject>
    <wvobject type="logic" fp_name="/tb_top/DUT/interface_rdwr">
       <obj_property name="ElementShortName">interface_rdwr</obj_property>
       <obj_property name="ObjectShortName">interface_rdwr</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/tb_top/DUT/interface_en">
-      <obj_property name="ElementShortName">interface_en</obj_property>
-      <obj_property name="ObjectShortName">interface_en</obj_property>
+   <wvobject type="array" fp_name="/tb_top/DUT/interface_control">
+      <obj_property name="ElementShortName">interface_control[4:0]</obj_property>
+      <obj_property name="ObjectShortName">interface_control[4:0]</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/tb_top/DUT/interface_addr">
       <obj_property name="ElementShortName">interface_addr[31:0]</obj_property>
@@ -933,6 +933,7 @@
    <wvobject type="array" fp_name="/tb_top/DUT/memory_instance/bank_addra">
       <obj_property name="ElementShortName">bank_addra[15:0][8:0]</obj_property>
       <obj_property name="ObjectShortName">bank_addra[15:0][8:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/tb_top/DUT/memory_instance/bank_ena">
       <obj_property name="ElementShortName">bank_ena[15:0]</obj_property>
@@ -981,10 +982,6 @@
    <wvobject type="array" fp_name="/tb_top/DUT/memory_instance/system_bus_addr_ppl">
       <obj_property name="ElementShortName">system_bus_addr_ppl[3:0]</obj_property>
       <obj_property name="ObjectShortName">system_bus_addr_ppl[3:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/tb_top/DUT/memory_instance/mem">
-      <obj_property name="ElementShortName">mem[511:0][15:0][7:0]</obj_property>
-      <obj_property name="ObjectShortName">mem[511:0][15:0][7:0]</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/tb_top/DUT/memory_instance/NUM_RAMS">
       <obj_property name="ElementShortName">NUM_RAMS[31:0]</obj_property>
@@ -1045,5 +1042,74 @@
    <wvobject fp_name="divider751" type="divider">
       <obj_property name="label">GEMM</obj_property>
       <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_top/DUT/memory_instance/meam">
+      <obj_property name="ElementShortName">meam[15:0][511:0][7:0]</obj_property>
+      <obj_property name="ObjectShortName">meam[15:0][511:0][7:0]</obj_property>
+      <wvobject type="array" fp_name="/tb_top/DUT/memory_instance/meam[15]">
+         <obj_property name="ElementShortName">[15][511:0][7:0]</obj_property>
+         <obj_property name="ObjectShortName">[15][511:0][7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/DUT/memory_instance/meam[14]">
+         <obj_property name="ElementShortName">[14][511:0][7:0]</obj_property>
+         <obj_property name="ObjectShortName">[14][511:0][7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/DUT/memory_instance/meam[13]">
+         <obj_property name="ElementShortName">[13][511:0][7:0]</obj_property>
+         <obj_property name="ObjectShortName">[13][511:0][7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/DUT/memory_instance/meam[12]">
+         <obj_property name="ElementShortName">[12][511:0][7:0]</obj_property>
+         <obj_property name="ObjectShortName">[12][511:0][7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/DUT/memory_instance/meam[11]">
+         <obj_property name="ElementShortName">[11][511:0][7:0]</obj_property>
+         <obj_property name="ObjectShortName">[11][511:0][7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/DUT/memory_instance/meam[10]">
+         <obj_property name="ElementShortName">[10][511:0][7:0]</obj_property>
+         <obj_property name="ObjectShortName">[10][511:0][7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/DUT/memory_instance/meam[9]">
+         <obj_property name="ElementShortName">[9][511:0][7:0]</obj_property>
+         <obj_property name="ObjectShortName">[9][511:0][7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/DUT/memory_instance/meam[8]">
+         <obj_property name="ElementShortName">[8][511:0][7:0]</obj_property>
+         <obj_property name="ObjectShortName">[8][511:0][7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/DUT/memory_instance/meam[7]">
+         <obj_property name="ElementShortName">[7][511:0][7:0]</obj_property>
+         <obj_property name="ObjectShortName">[7][511:0][7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/DUT/memory_instance/meam[6]">
+         <obj_property name="ElementShortName">[6][511:0][7:0]</obj_property>
+         <obj_property name="ObjectShortName">[6][511:0][7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/DUT/memory_instance/meam[5]">
+         <obj_property name="ElementShortName">[5][511:0][7:0]</obj_property>
+         <obj_property name="ObjectShortName">[5][511:0][7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/DUT/memory_instance/meam[4]">
+         <obj_property name="ElementShortName">[4][511:0][7:0]</obj_property>
+         <obj_property name="ObjectShortName">[4][511:0][7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/DUT/memory_instance/meam[3]">
+         <obj_property name="ElementShortName">[3][511:0][7:0]</obj_property>
+         <obj_property name="ObjectShortName">[3][511:0][7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/DUT/memory_instance/meam[2]">
+         <obj_property name="ElementShortName">[2][511:0][7:0]</obj_property>
+         <obj_property name="ObjectShortName">[2][511:0][7:0]</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/DUT/memory_instance/meam[1]">
+         <obj_property name="ElementShortName">[1][511:0][7:0]</obj_property>
+         <obj_property name="ObjectShortName">[1][511:0][7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/DUT/memory_instance/meam[0]">
+         <obj_property name="ElementShortName">[0][511:0][7:0]</obj_property>
+         <obj_property name="ObjectShortName">[0][511:0][7:0]</obj_property>
+      </wvobject>
    </wvobject>
 </wave_config>
