@@ -18,20 +18,18 @@ int main()
     asm("mv t6, %0" : : "r"(67)); // Not sure why this line is here, it sets register t6 to 67
 
     // Call the matrix multiplication function
-    MATMUL(2, 3, 2, A, B, (uint32_t (*)[2])C); // Typecasting C to the correct type
+    MATMUL(2, 3, 2, A, B, C); // Typecasting C to the correct type
 
-    int qw = 0;
     for (int i = 0; i < 2; i++)
     {
         for (int w = 0; w < 2; w++)
         {
-            qw = qw + C[i][w];
-            asm("mv t6, %0" : : "r"(qw));
+            asm("mv t6, %0" : : "r"(C[i][w]));
             for (int o = 0; o < 1000000; o++){} // Delay loop
+            
         }
     }
 
-    asm("mv t6, %0" : : "r"(qw)); // Not sure what this line does, it sets register t6 to qw
     for (int o = 0; o < 1000000; o++){} // Delay loop
 
     while (1)

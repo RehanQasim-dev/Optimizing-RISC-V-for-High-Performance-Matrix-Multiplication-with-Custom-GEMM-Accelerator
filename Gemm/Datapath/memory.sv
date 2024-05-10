@@ -88,21 +88,39 @@ genvar i;
   end
   reg [D_WID-1:0] meam[NUM_RAMS-1:0][2**A_WID-1:0];
 
-  // logic [D_WID-1:0] mem[2**A_WID-1:0][NUM_RAMS-1:0];
-  initial begin
-  // Open the file for reading
-  integer file;
-  logic [7:0] mem_value;
-  file = $fopen("DCACHE.data", "r");
+
+  banked_memory #(
+    .NUM_RAMS(NUM_RAMS),
+    .A_WID(A_WID),
+    .D_WID(D_WID)
+) banked_memory_instance (
+    .clk(clk),
+    .wea(bank_wea),
+    .web(bank_web),
+    .ena(bank_ena),
+    .enb(bank_enb),
+    .addra(bank_addra),
+    .addrb(bank_addrb),
+    .dina(bank_dina),
+    .dinb(bank_dinb),
+    .douta(bank_douta),
+    .doutb(bank_doutb)
+);
+  // // logic [D_WID-1:0] mem[2**A_WID-1:0][NUM_RAMS-1:0];
+  // initial begin
+  // // Open the file for reading
+  // integer file;
+  // logic [7:0] mem_value;
+  // file = $fopen("DCACHE.data", "r");
   
-  // Check if file opened successfully
-  if (file == 0) begin
-      $display("Error opening file");
-      $finish;
-  end
-  $fscanf(file, "%h", mem_value);
-  meam[0][0]  = mem_value;
-  $display("%h",mem_value);
+  // // Check if file opened successfully
+  // if (file == 0) begin
+  //     $display("Error opening file");
+  //     $finish;
+  // end
+  // $fscanf(file, "%h", mem_value);
+  // meam[0][0]  = mem_value;
+  // $display("%h",mem_value);
   // Loop through each line in the file
 //  for (int i = 0; i < 1;i++) begin
 //      for (int j = 0; NUM_RAMS; j++) begin
@@ -115,7 +133,7 @@ genvar i;
 //  end
   
   // Close the file
-  $fclose(file);
+  // $fclose(file);
 //    $readmemb("DCACHE.data",meam);
 //meam[0][0]=8'd1;
 //meam[1][0]=8'd2;
@@ -132,38 +150,39 @@ genvar i;
 
 
 
-  end
+  // end
+
   // PORT_A
-  generate
-    for (i = 0; i < NUM_RAMS; i = i + 1) begin : port_a_ops
-      always @(posedge clk) begin
-        if (bank_ena[i]) begin
-          if (bank_wea[i]) begin
-            meam[i] [bank_addra[i]]<= bank_dina[i];
-            // mem [bank_addra[i]][i] <= bank_dina[i];
-          end
-          bank_douta[i] <= meam[i][bank_addra[i]];
-          // bank_douta[i] <= mem[bank_addra[i]][i];
-        end
-      end
-    end
-  endgenerate
+  // generate
+  //   for (i = 0; i < NUM_RAMS; i = i + 1) begin : port_a_ops
+  //     always @(posedge clk) begin
+  //       if (bank_ena[i]) begin
+  //         if (bank_wea[i]) begin
+  //           meam[i] [bank_addra[i]]<= bank_dina[i];
+  //           // mem [bank_addra[i]][i] <= bank_dina[i];
+  //         end
+  //         bank_douta[i] <= meam[i][bank_addra[i]];
+  //         // bank_douta[i] <= mem[bank_addra[i]][i];
+  //       end
+  //     end
+  //   end
+  // endgenerate
 
   
-  // //PORT_B
-   generate
-    for (i = 0; i < NUM_RAMS; i = i + 1) begin: port_b_ops
-      always @(posedge clk) begin
-        if (bank_enb[i]) begin
-          if (bank_web[i]) begin
-            meam[i][bank_addrb[i]] <= bank_dinb[i];
-            // mem[bank_addrb[i]][i] <= bank_dinb[i];
-          end
-          bank_doutb[i] <= meam[i][bank_addrb[i]];
-          // bank_doutb[i] <= mem[bank_addrb[i]][i];
-        end
-      end
-    end
-  endgenerate
+  // // //PORT_B
+  //  generate
+  //   for (i = 0; i < NUM_RAMS; i = i + 1) begin: port_b_ops
+  //     always @(posedge clk) begin
+  //       if (bank_enb[i]) begin
+  //         if (bank_web[i]) begin
+  //           meam[i][bank_addrb[i]] <= bank_dinb[i];
+  //           // mem[bank_addrb[i]][i] <= bank_dinb[i];
+  //         end
+  //         bank_doutb[i] <= meam[i][bank_addrb[i]];
+  //         // bank_doutb[i] <= mem[bank_addrb[i]][i];
+  //       end
+  //     end
+  //   end
+  // endgenerate
 
 endmodule

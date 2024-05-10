@@ -20,7 +20,7 @@ module top (
   logic interface_en;
   logic [31:0] interface_addr;
   logic [127:0] interface_rd_data;
-  logic [127:0] interface_wr_data;
+  logic [3:0][31:0] interface_wr_data;
   logic [3:0] system_bus_mask;
   logic interupt, mem_valid, is_gemm_addr, en_gemm_conf, en_Dmem;
   always_ff @(posedge clk) begin
@@ -51,7 +51,7 @@ module top (
   assign en_Dmem = system_bus_en && (~is_gemm_addr);
   memory #(
       .NUM_RAMS(16),
-      .A_WID(1),
+      .A_WID(10),
       .D_WID(8)
   ) memory_instance (
       .clk(clk),

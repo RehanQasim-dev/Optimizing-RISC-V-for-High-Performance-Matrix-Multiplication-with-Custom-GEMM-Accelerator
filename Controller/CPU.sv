@@ -29,7 +29,7 @@ module CPU (input logic [31:0] instruction, output logic [3:0] ALU_CON , output 
 						case (func3)
 						3'b000 :begin  ALU_CON = 0000 ;reg_wr=1;alu_mux_1 =1'b0; alu_mux_2=1'b0;wr_bck_mux=2'b00; end // add
 						3'b001 :begin  ALU_CON = 0010	; reg_wr=1;alu_mux_1 =1'b0; alu_mux_2=1'b0;wr_bck_mux=2'b00; end // sll
-						3'b010 :begin  ALU_CON = 0011 ; reg_wr=1; alu_mux_1 =1'b0; alu_mux_2=1'b0;wr_bck_mux=2'b00;end	// slt
+						3'b010 :begin ALU_CON = 0011 ; reg_wr=1; alu_mux_1 =1'b0; alu_mux_2=1'b0;wr_bck_mux=2'b00;end	// slt
 						3'b011 :begin  ALU_CON = 0100 ; reg_wr=1; alu_mux_1 =1'b0; alu_mux_2=1'b0;wr_bck_mux=2'b00;end	//sltu
 						3'b100 :begin  ALU_CON = 0101 ; reg_wr=1; alu_mux_1 =1'b0; alu_mux_2=1'b0;wr_bck_mux=2'b00;end	//xor
 						3'b101 :begin  ALU_CON = 0110 ; reg_wr=1; alu_mux_1 =1'b0; alu_mux_2=1'b0;wr_bck_mux=2'b00;end	//srl

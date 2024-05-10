@@ -1,7 +1,7 @@
 ENTRY( reset_handler )
 
 MEMORY
-{   DCACHE (rx)  : ORIGIN = 0x00000000, LENGTH = 1K
+{   DCACHE (rx)  : ORIGIN = 0x00000000, LENGTH = 2K
 
   ICACHE (rwx) : ORIGIN = 0x00200000, LENGTH = 2K
 }
@@ -9,7 +9,7 @@ MEMORY
 
 SECTIONS
 {
-  __stack_size = DEFINED(__stack_size) ? __stack_size : 200;
+  __stack_size = DEFINED(__stack_size) ? __stack_size : 500;
 
   .text :
   {
