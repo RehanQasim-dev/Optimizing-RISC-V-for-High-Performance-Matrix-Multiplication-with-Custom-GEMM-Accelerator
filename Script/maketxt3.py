@@ -34,7 +34,10 @@ def address_to_binary(addr):
 
 # Iterate over the bank data and print the result
 for i, bank in enumerate(bank_data):
-    with open(f"build/memory{i}.mem", "w") as bank_file:
-        for byte in bank:
-            hex_value = hex(byte)[2:].zfill(2)  # Convert byte to hex and remove '0x' prefix, then zero-fill to ensure 2 digits
-            bank_file.write(f"{hex_value}\n")
+    binary_address = address_to_binary(i)
+    print("@" + binary_address, end=" ")
+    for byte in bank:
+        # print("--------------")
+        # print(byte)
+        print(byte, end="")
+    print()

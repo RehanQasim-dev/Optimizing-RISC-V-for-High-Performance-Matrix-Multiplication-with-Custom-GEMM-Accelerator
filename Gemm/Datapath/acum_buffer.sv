@@ -43,7 +43,7 @@ module acum_buffer (
 
   genvar i;
   for (i = 0; i < 4; i++) begin
-    assign din_1[(i+1)*32-1:i*32] = overwrite ? i_data[i] : dout_1[(i+1)*32-1:i*32] + i_data[i];
+    assign din_1[(i+1)*32-1:i*32] = overwrite ? {{8{i_data[i][23]}},i_data[i]} : dout_1[(i+1)*32-1:i*32] + {{8{i_data[i][23]}},i_data[i]};
   end
   assign wr_en_1 = ~store && valid;
   assign wr_en_2 = store && valid;

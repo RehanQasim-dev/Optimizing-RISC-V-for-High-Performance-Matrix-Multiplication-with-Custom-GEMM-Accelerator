@@ -12,15 +12,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="459272000fs"></ZoomStartTime>
-      <ZoomEndTime time="552572001fs"></ZoomEndTime>
-      <Cursor1Time time="499172000fs"></Cursor1Time>
+      <ZoomStartTime time="420400000fs"></ZoomStartTime>
+      <ZoomEndTime time="516100001fs"></ZoomEndTime>
+      <Cursor1Time time="482800000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="329"></NameColumnWidth>
-      <ValueColumnWidth column_width="234"></ValueColumnWidth>
+      <NameColumnWidth column_width="265"></NameColumnWidth>
+      <ValueColumnWidth column_width="274"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="256" />
+   <WVObjectSize size="258" />
    <wvobject type="logic" fp_name="/tb_top/DUT/clk">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
@@ -99,8 +99,9 @@
       <obj_property name="Radix">HEXRADIX</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/tb_top/DUT/interface_wr_data">
-      <obj_property name="ElementShortName">interface_wr_data[127:0]</obj_property>
-      <obj_property name="ObjectShortName">interface_wr_data[127:0]</obj_property>
+      <obj_property name="ElementShortName">interface_wr_data[3:0][31:0]</obj_property>
+      <obj_property name="ObjectShortName">interface_wr_data[3:0][31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/tb_top/DUT/system_bus_mask">
       <obj_property name="ElementShortName">system_bus_mask[3:0]</obj_property>
@@ -906,13 +907,20 @@
       <obj_property name="ElementShortName">interface_addr[31:0]</obj_property>
       <obj_property name="ObjectShortName">interface_addr[31:0]</obj_property>
    </wvobject>
+   <wvobject type="array" fp_name="/tb_top/DUT/interface_wr_data">
+      <obj_property name="ElementShortName">interface_wr_data[3:0][31:0]</obj_property>
+      <obj_property name="ObjectShortName">interface_wr_data[3:0][31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
    <wvobject type="array" fp_name="/tb_top/DUT/memory_instance/interface_wr_data">
       <obj_property name="ElementShortName">interface_wr_data[15:0][7:0]</obj_property>
       <obj_property name="ObjectShortName">interface_wr_data[15:0][7:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/tb_top/DUT/memory_instance/interface_rd_data">
       <obj_property name="ElementShortName">interface_rd_data[15:0][7:0]</obj_property>
       <obj_property name="ObjectShortName">interface_rd_data[15:0][7:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/tb_top/DUT/memory_instance/mask">
       <obj_property name="ElementShortName">mask[15:0]</obj_property>
@@ -931,8 +939,8 @@
       <obj_property name="ObjectShortName">bank_douta[15:0][7:0]</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/tb_top/DUT/memory_instance/bank_addra">
-      <obj_property name="ElementShortName">bank_addra[15:0][8:0]</obj_property>
-      <obj_property name="ObjectShortName">bank_addra[15:0][8:0]</obj_property>
+      <obj_property name="ElementShortName">bank_addra[15:0][9:0]</obj_property>
+      <obj_property name="ObjectShortName">bank_addra[15:0][9:0]</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/tb_top/DUT/memory_instance/bank_ena">
@@ -948,8 +956,8 @@
       <obj_property name="ObjectShortName">bank_doutb[15:0][7:0]</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/tb_top/DUT/memory_instance/bank_addrb">
-      <obj_property name="ElementShortName">bank_addrb[15:0][8:0]</obj_property>
-      <obj_property name="ObjectShortName">bank_addrb[15:0][8:0]</obj_property>
+      <obj_property name="ElementShortName">bank_addrb[15:0][9:0]</obj_property>
+      <obj_property name="ObjectShortName">bank_addrb[15:0][9:0]</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/tb_top/DUT/memory_instance/bank_dinb">
       <obj_property name="ElementShortName">bank_dinb[15:0][7:0]</obj_property>
@@ -1044,72 +1052,11 @@
       <obj_property name="DisplayName">label</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/tb_top/DUT/memory_instance/meam">
-      <obj_property name="ElementShortName">meam[15:0][511:0][7:0]</obj_property>
-      <obj_property name="ObjectShortName">meam[15:0][511:0][7:0]</obj_property>
-      <wvobject type="array" fp_name="/tb_top/DUT/memory_instance/meam[15]">
-         <obj_property name="ElementShortName">[15][511:0][7:0]</obj_property>
-         <obj_property name="ObjectShortName">[15][511:0][7:0]</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/tb_top/DUT/memory_instance/meam[14]">
-         <obj_property name="ElementShortName">[14][511:0][7:0]</obj_property>
-         <obj_property name="ObjectShortName">[14][511:0][7:0]</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/tb_top/DUT/memory_instance/meam[13]">
-         <obj_property name="ElementShortName">[13][511:0][7:0]</obj_property>
-         <obj_property name="ObjectShortName">[13][511:0][7:0]</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/tb_top/DUT/memory_instance/meam[12]">
-         <obj_property name="ElementShortName">[12][511:0][7:0]</obj_property>
-         <obj_property name="ObjectShortName">[12][511:0][7:0]</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/tb_top/DUT/memory_instance/meam[11]">
-         <obj_property name="ElementShortName">[11][511:0][7:0]</obj_property>
-         <obj_property name="ObjectShortName">[11][511:0][7:0]</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/tb_top/DUT/memory_instance/meam[10]">
-         <obj_property name="ElementShortName">[10][511:0][7:0]</obj_property>
-         <obj_property name="ObjectShortName">[10][511:0][7:0]</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/tb_top/DUT/memory_instance/meam[9]">
-         <obj_property name="ElementShortName">[9][511:0][7:0]</obj_property>
-         <obj_property name="ObjectShortName">[9][511:0][7:0]</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/tb_top/DUT/memory_instance/meam[8]">
-         <obj_property name="ElementShortName">[8][511:0][7:0]</obj_property>
-         <obj_property name="ObjectShortName">[8][511:0][7:0]</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/tb_top/DUT/memory_instance/meam[7]">
-         <obj_property name="ElementShortName">[7][511:0][7:0]</obj_property>
-         <obj_property name="ObjectShortName">[7][511:0][7:0]</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/tb_top/DUT/memory_instance/meam[6]">
-         <obj_property name="ElementShortName">[6][511:0][7:0]</obj_property>
-         <obj_property name="ObjectShortName">[6][511:0][7:0]</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/tb_top/DUT/memory_instance/meam[5]">
-         <obj_property name="ElementShortName">[5][511:0][7:0]</obj_property>
-         <obj_property name="ObjectShortName">[5][511:0][7:0]</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/tb_top/DUT/memory_instance/meam[4]">
-         <obj_property name="ElementShortName">[4][511:0][7:0]</obj_property>
-         <obj_property name="ObjectShortName">[4][511:0][7:0]</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/tb_top/DUT/memory_instance/meam[3]">
-         <obj_property name="ElementShortName">[3][511:0][7:0]</obj_property>
-         <obj_property name="ObjectShortName">[3][511:0][7:0]</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/tb_top/DUT/memory_instance/meam[2]">
-         <obj_property name="ElementShortName">[2][511:0][7:0]</obj_property>
-         <obj_property name="ObjectShortName">[2][511:0][7:0]</obj_property>
-         <obj_property name="isExpanded"></obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/tb_top/DUT/memory_instance/meam[1]">
-         <obj_property name="ElementShortName">[1][511:0][7:0]</obj_property>
-         <obj_property name="ObjectShortName">[1][511:0][7:0]</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/tb_top/DUT/memory_instance/meam[0]">
-         <obj_property name="ElementShortName">[0][511:0][7:0]</obj_property>
-         <obj_property name="ObjectShortName">[0][511:0][7:0]</obj_property>
-      </wvobject>
+      <obj_property name="ElementShortName">meam[15:0][1023:0][7:0]</obj_property>
+      <obj_property name="ObjectShortName">meam[15:0][1023:0][7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_top/DUT/memory_instance/banked_memory_instance/\ram_instances[0].bank_inst /mem">
+      <obj_property name="ElementShortName">mem[1023:0][7:0]</obj_property>
+      <obj_property name="ObjectShortName">mem[1023:0][7:0]</obj_property>
    </wvobject>
 </wave_config>
