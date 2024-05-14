@@ -19,7 +19,7 @@ module top (
   logic interface_rdwr;
   logic interface_en;
   logic [31:0] interface_addr;
-  logic [127:0] interface_rd_data;
+  logic [15:0][7:0] interface_rd_data;
   logic [3:0][31:0] interface_wr_data;
   logic [3:0] system_bus_mask;
   logic interupt, mem_valid, is_gemm_addr, en_gemm_conf, en_Dmem;

@@ -21,6 +21,7 @@ module mac #(
     input  logic [P_BITWIDTH-1:0] P_in,
     output logic [P_BITWIDTH-1:0] P_out
 );
+logic [23:0] temp;
   always_ff @(posedge clk) begin
     if (rst) begin
       A_out <= 0;
@@ -43,7 +44,8 @@ module mac #(
       if (A_en) begin
         A_out   <= A_in;
         //$display ("A_in = %d, A_out = %d", A_in, A_out);
-        P_out   <= ($signed(A_in) * $signed(W_out)) + P_in;
+        
+        P_out   <= temp + P_in;
         A_ready <= 1;
       end else begin
         A_ready <= 0;
@@ -53,5 +55,5 @@ module mac #(
 
     end
   end
-
+assign temp=($signed(A_in) * $signed(W_out));
 endmodule

@@ -20,7 +20,7 @@
         GEMM_control = (overwrite << 1) | store;                                                          \
         GEMM_DIM = msize | (ksize << 5) | (nsize << 10);                                                  \
     }
-void MATMUL( uint32_t A_rows, uint32_t A_cols, uint32_t B_cols,uint8_t A[A_rows][A_cols], uint8_t B[A_cols][B_cols], uint8_t C[A_rows][B_cols])
+void MATMUL( uint32_t A_rows, uint32_t A_cols, uint32_t B_cols,int8_t A[A_rows][A_cols], int8_t B[A_cols][B_cols], int32_t C[A_rows][B_cols])
 {
 
     uint32_t Tile_A_Address, Tile_B_Address, Tile_C_Address;
