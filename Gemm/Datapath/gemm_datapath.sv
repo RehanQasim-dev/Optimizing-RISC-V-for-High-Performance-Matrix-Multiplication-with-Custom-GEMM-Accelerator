@@ -12,7 +12,7 @@ module gemm_datapath (
     input logic [CORE_ROWS-2:0] if_mux_sel,
     input logic [CORE_COLS-2:0] w_mux_sel,
     input logic [3:0] accums_rd_en,
-    output logic [3:0][127:0] accum_o_data,
+    output logic [3:0][3:0][31:0] accum_o_data,
     output logic [3:0] acc_empty,
     output logic [1:0] mode_FV_if,
     output logic ready_for_HI,
@@ -166,7 +166,7 @@ module gemm_datapath (
       .i_data(of_data_setup),
       .o_data(accum_o_data),
       .empty(acc_empty)
-  );
+  );    
   assign mode_FV_if[0] = valid_Psum[15];
   assign mode_FV_if[1] = valid_Psum[7];
   logic old_valid_Psum_15;

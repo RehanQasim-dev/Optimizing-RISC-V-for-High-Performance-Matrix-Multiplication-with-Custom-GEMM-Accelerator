@@ -2,11 +2,11 @@ import random
 import numpy as np
 # Function to generate random integer in range [-100, 100]
 def random_value():
-    return random.randint(-100, 100)
+    return random.randint(-7, 4)
 
 # Define matrix dimensions
-rows = 8
-cols = 8
+rows = 3
+cols = 3
 
 # Generate random matrix
 matrixA = [[random_value() for _ in range(cols)] for _ in range(rows)]

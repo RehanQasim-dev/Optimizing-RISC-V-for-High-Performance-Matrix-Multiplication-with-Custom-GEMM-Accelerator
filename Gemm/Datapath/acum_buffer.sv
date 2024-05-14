@@ -7,7 +7,7 @@ module acum_buffer (
     rd_en,
     overwrite,
     input logic [3:0][23:0] i_data,
-    output logic [127:0] o_data,
+    output logic [3:0][31:0] o_data,
     output logic empty
 );
 
