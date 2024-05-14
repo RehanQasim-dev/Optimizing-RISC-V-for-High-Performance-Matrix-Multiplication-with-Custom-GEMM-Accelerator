@@ -12,15 +12,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="411814830fs"></ZoomStartTime>
-      <ZoomEndTime time="507914831fs"></ZoomEndTime>
-      <Cursor1Time time="473515000fs"></Cursor1Time>
+      <ZoomStartTime time="442600000fs"></ZoomStartTime>
+      <ZoomEndTime time="538700001fs"></ZoomEndTime>
+      <Cursor1Time time="477000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="265"></NameColumnWidth>
       <ValueColumnWidth column_width="270"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="89" />
+   <WVObjectSize size="112" />
    <wvobject type="logic" fp_name="/tb_top/DUT/clk">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
@@ -101,7 +101,7 @@
    <wvobject type="array" fp_name="/tb_top/DUT/interface_wr_data">
       <obj_property name="ElementShortName">interface_wr_data[3:0][31:0]</obj_property>
       <obj_property name="ObjectShortName">interface_wr_data[3:0][31:0]</obj_property>
-      <obj_property name="Radix">SIGNEDMAGRADIX</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/tb_top/DUT/system_bus_mask">
       <obj_property name="ElementShortName">system_bus_mask[3:0]</obj_property>
@@ -1029,26 +1029,32 @@
       <wvobject type="array" fp_name="/tb_top/DUT/gemm_instance/datapath_instance/super_sys_instance/core0/of_data">
          <obj_property name="ElementShortName">of_data[7:0][23:0]</obj_property>
          <obj_property name="ObjectShortName">of_data[7:0][23:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
       </wvobject>
       <wvobject type="array" fp_name="/tb_top/DUT/gemm_instance/datapath_instance/super_sys_instance/core0/if_data_out">
          <obj_property name="ElementShortName">if_data_out[7:0][7:0]</obj_property>
          <obj_property name="ObjectShortName">if_data_out[7:0][7:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
       </wvobject>
       <wvobject type="array" fp_name="/tb_top/DUT/gemm_instance/datapath_instance/super_sys_instance/core0/wdata_out">
          <obj_property name="ElementShortName">wdata_out[7:0][7:0]</obj_property>
          <obj_property name="ObjectShortName">wdata_out[7:0][7:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
       </wvobject>
       <wvobject type="array" fp_name="/tb_top/DUT/gemm_instance/datapath_instance/super_sys_instance/core0/A_data">
          <obj_property name="ElementShortName">A_data[7:0][6:0][7:0]</obj_property>
          <obj_property name="ObjectShortName">A_data[7:0][6:0][7:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
       </wvobject>
       <wvobject type="array" fp_name="/tb_top/DUT/gemm_instance/datapath_instance/super_sys_instance/core0/W_data">
          <obj_property name="ElementShortName">W_data[6:0][7:0][7:0]</obj_property>
          <obj_property name="ObjectShortName">W_data[6:0][7:0][7:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
       </wvobject>
       <wvobject type="array" fp_name="/tb_top/DUT/gemm_instance/datapath_instance/super_sys_instance/core0/P_data">
          <obj_property name="ElementShortName">P_data[6:0][7:0][23:0]</obj_property>
          <obj_property name="ObjectShortName">P_data[6:0][7:0][23:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
       </wvobject>
    </wvobject>
    <wvobject type="group" fp_name="group288">
@@ -1082,29 +1088,125 @@
    <wvobject type="group" fp_name="group287">
       <obj_property name="label">Core2</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <wvobject type="array" fp_name="/tb_top/DUT/gemm_instance/datapath_instance/super_sys_instance/core2/of_data">
-         <obj_property name="ElementShortName">of_data[7:0][23:0]</obj_property>
-         <obj_property name="ObjectShortName">of_data[7:0][23:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="array" fp_name="/tb_top/DUT/gemm_instance/datapath_instance/super_sys_instance/core0/if_en">
+         <obj_property name="ElementShortName">if_en[7:0]</obj_property>
+         <obj_property name="ObjectShortName">if_en[7:0]</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="/tb_top/DUT/gemm_instance/datapath_instance/super_sys_instance/core2/if_data_out">
-         <obj_property name="ElementShortName">if_data_out[7:0][7:0]</obj_property>
-         <obj_property name="ObjectShortName">if_data_out[7:0][7:0]</obj_property>
+      <wvobject type="array" fp_name="/tb_top/DUT/gemm_instance/datapath_instance/super_sys_instance/core0/wfetch">
+         <obj_property name="ElementShortName">wfetch[7:0]</obj_property>
+         <obj_property name="ObjectShortName">wfetch[7:0]</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="/tb_top/DUT/gemm_instance/datapath_instance/super_sys_instance/core2/wdata_out">
-         <obj_property name="ElementShortName">wdata_out[7:0][7:0]</obj_property>
-         <obj_property name="ObjectShortName">wdata_out[7:0][7:0]</obj_property>
+      <wvobject type="array" fp_name="/tb_top/DUT/gemm_instance/datapath_instance/super_sys_instance/core2/if_data">
+         <obj_property name="ElementShortName">if_data[7:0][7:0]</obj_property>
+         <obj_property name="ObjectShortName">if_data[7:0][7:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
       </wvobject>
       <wvobject type="array" fp_name="/tb_top/DUT/gemm_instance/datapath_instance/super_sys_instance/core2/A_data">
          <obj_property name="ElementShortName">A_data[7:0][6:0][7:0]</obj_property>
          <obj_property name="ObjectShortName">A_data[7:0][6:0][7:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/DUT/gemm_instance/datapath_instance/super_sys_instance/core2/if_data_out">
+         <obj_property name="ElementShortName">if_data_out[7:0][7:0]</obj_property>
+         <obj_property name="ObjectShortName">if_data_out[7:0][7:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/DUT/gemm_instance/datapath_instance/super_sys_instance/core2/wdata">
+         <obj_property name="ElementShortName">wdata[7:0][7:0]</obj_property>
+         <obj_property name="ObjectShortName">wdata[7:0][7:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
       </wvobject>
       <wvobject type="array" fp_name="/tb_top/DUT/gemm_instance/datapath_instance/super_sys_instance/core2/W_data">
          <obj_property name="ElementShortName">W_data[6:0][7:0][7:0]</obj_property>
          <obj_property name="ObjectShortName">W_data[6:0][7:0][7:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         <wvobject type="array" fp_name="/tb_top/DUT/gemm_instance/datapath_instance/super_sys_instance/core2/W_data[6]">
+            <obj_property name="ElementShortName">[6][7:0][7:0]</obj_property>
+            <obj_property name="ObjectShortName">[6][7:0][7:0]</obj_property>
+            <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="/tb_top/DUT/gemm_instance/datapath_instance/super_sys_instance/core2/W_data[5]">
+            <obj_property name="ElementShortName">[5][7:0][7:0]</obj_property>
+            <obj_property name="ObjectShortName">[5][7:0][7:0]</obj_property>
+            <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="/tb_top/DUT/gemm_instance/datapath_instance/super_sys_instance/core2/W_data[4]">
+            <obj_property name="ElementShortName">[4][7:0][7:0]</obj_property>
+            <obj_property name="ObjectShortName">[4][7:0][7:0]</obj_property>
+            <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="/tb_top/DUT/gemm_instance/datapath_instance/super_sys_instance/core2/W_data[3]">
+            <obj_property name="ElementShortName">[3][7:0][7:0]</obj_property>
+            <obj_property name="ObjectShortName">[3][7:0][7:0]</obj_property>
+            <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="/tb_top/DUT/gemm_instance/datapath_instance/super_sys_instance/core2/W_data[2]">
+            <obj_property name="ElementShortName">[2][7:0][7:0]</obj_property>
+            <obj_property name="ObjectShortName">[2][7:0][7:0]</obj_property>
+            <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="/tb_top/DUT/gemm_instance/datapath_instance/super_sys_instance/core2/W_data[1]">
+            <obj_property name="ElementShortName">[1][7:0][7:0]</obj_property>
+            <obj_property name="ObjectShortName">[1][7:0][7:0]</obj_property>
+            <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="/tb_top/DUT/gemm_instance/datapath_instance/super_sys_instance/core2/W_data[0]">
+            <obj_property name="ElementShortName">[0][7:0][7:0]</obj_property>
+            <obj_property name="ObjectShortName">[0][7:0][7:0]</obj_property>
+            <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/DUT/gemm_instance/datapath_instance/super_sys_instance/core2/wdata_out">
+         <obj_property name="ElementShortName">wdata_out[7:0][7:0]</obj_property>
+         <obj_property name="ObjectShortName">wdata_out[7:0][7:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
       </wvobject>
       <wvobject type="array" fp_name="/tb_top/DUT/gemm_instance/datapath_instance/super_sys_instance/core2/P_data">
          <obj_property name="ElementShortName">P_data[6:0][7:0][23:0]</obj_property>
          <obj_property name="ObjectShortName">P_data[6:0][7:0][23:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject type="array" fp_name="/tb_top/DUT/gemm_instance/datapath_instance/super_sys_instance/core2/P_data[6]">
+            <obj_property name="ElementShortName">[6][7:0][23:0]</obj_property>
+            <obj_property name="ObjectShortName">[6][7:0][23:0]</obj_property>
+            <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="/tb_top/DUT/gemm_instance/datapath_instance/super_sys_instance/core2/P_data[5]">
+            <obj_property name="ElementShortName">[5][7:0][23:0]</obj_property>
+            <obj_property name="ObjectShortName">[5][7:0][23:0]</obj_property>
+            <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="/tb_top/DUT/gemm_instance/datapath_instance/super_sys_instance/core2/P_data[4]">
+            <obj_property name="ElementShortName">[4][7:0][23:0]</obj_property>
+            <obj_property name="ObjectShortName">[4][7:0][23:0]</obj_property>
+            <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="/tb_top/DUT/gemm_instance/datapath_instance/super_sys_instance/core2/P_data[3]">
+            <obj_property name="ElementShortName">[3][7:0][23:0]</obj_property>
+            <obj_property name="ObjectShortName">[3][7:0][23:0]</obj_property>
+            <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="/tb_top/DUT/gemm_instance/datapath_instance/super_sys_instance/core2/P_data[2]">
+            <obj_property name="ElementShortName">[2][7:0][23:0]</obj_property>
+            <obj_property name="ObjectShortName">[2][7:0][23:0]</obj_property>
+            <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="/tb_top/DUT/gemm_instance/datapath_instance/super_sys_instance/core2/P_data[1]">
+            <obj_property name="ElementShortName">[1][7:0][23:0]</obj_property>
+            <obj_property name="ObjectShortName">[1][7:0][23:0]</obj_property>
+            <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="/tb_top/DUT/gemm_instance/datapath_instance/super_sys_instance/core2/P_data[0]">
+            <obj_property name="ElementShortName">[0][7:0][23:0]</obj_property>
+            <obj_property name="ObjectShortName">[0][7:0][23:0]</obj_property>
+            <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/DUT/gemm_instance/datapath_instance/super_sys_instance/core2/of_data">
+         <obj_property name="ElementShortName">of_data[7:0][23:0]</obj_property>
+         <obj_property name="ObjectShortName">of_data[7:0][23:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
       </wvobject>
    </wvobject>
    <wvobject type="group" fp_name="group286">
@@ -1133,6 +1235,140 @@
       <wvobject type="array" fp_name="/tb_top/DUT/gemm_instance/datapath_instance/super_sys_instance/core3/P_data">
          <obj_property name="ElementShortName">P_data[6:0][7:0][23:0]</obj_property>
          <obj_property name="ObjectShortName">P_data[6:0][7:0][23:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_top/DUT/gemm_instance/datapath_instance/super_sys_instance/core2/\genblk1[0].genblk1[1].genblk1.mac_instance /clk">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_top/DUT/gemm_instance/datapath_instance/super_sys_instance/core2/\genblk1[0].genblk1[1].genblk1.mac_instance /rst">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_top/DUT/gemm_instance/datapath_instance/super_sys_instance/core2/\genblk1[0].genblk1[1].genblk1.mac_instance /A_en">
+      <obj_property name="ElementShortName">A_en</obj_property>
+      <obj_property name="ObjectShortName">A_en</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_top/DUT/gemm_instance/datapath_instance/super_sys_instance/core2/\genblk1[0].genblk1[1].genblk1.mac_instance /A_ready">
+      <obj_property name="ElementShortName">A_ready</obj_property>
+      <obj_property name="ObjectShortName">A_ready</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_top/DUT/gemm_instance/datapath_instance/super_sys_instance/core2/\genblk1[0].genblk1[1].genblk1.mac_instance /A_out">
+      <obj_property name="ElementShortName">A_out[7:0]</obj_property>
+      <obj_property name="ObjectShortName">A_out[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_top/DUT/gemm_instance/datapath_instance/super_sys_instance/core2/\genblk1[0].genblk1[1].genblk1.mac_instance /W_en">
+      <obj_property name="ElementShortName">W_en</obj_property>
+      <obj_property name="ObjectShortName">W_en</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_top/DUT/gemm_instance/datapath_instance/super_sys_instance/core2/\genblk1[0].genblk1[1].genblk1.mac_instance /W_ready">
+      <obj_property name="ElementShortName">W_ready</obj_property>
+      <obj_property name="ObjectShortName">W_ready</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_top/DUT/gemm_instance/datapath_instance/super_sys_instance/core2/\genblk1[0].genblk1[1].genblk1.mac_instance /W_in">
+      <obj_property name="ElementShortName">W_in[7:0]</obj_property>
+      <obj_property name="ObjectShortName">W_in[7:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_top/DUT/gemm_instance/datapath_instance/super_sys_instance/core2/\genblk1[0].genblk1[1].genblk1.mac_instance /A_in">
+      <obj_property name="ElementShortName">A_in[7:0]</obj_property>
+      <obj_property name="ObjectShortName">A_in[7:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_top/DUT/gemm_instance/datapath_instance/super_sys_instance/core2/\genblk1[0].genblk1[1].genblk1.mac_instance /W_out">
+      <obj_property name="ElementShortName">W_out[7:0]</obj_property>
+      <obj_property name="ObjectShortName">W_out[7:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_top/DUT/gemm_instance/datapath_instance/super_sys_instance/core2/\genblk1[0].genblk1[1].genblk1.mac_instance /temp">
+      <obj_property name="ElementShortName">temp[23:0]</obj_property>
+      <obj_property name="ObjectShortName">temp[23:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_top/DUT/gemm_instance/datapath_instance/super_sys_instance/core2/\genblk1[0].genblk1[1].genblk1.mac_instance /P_in">
+      <obj_property name="ElementShortName">P_in[23:0]</obj_property>
+      <obj_property name="ObjectShortName">P_in[23:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_top/DUT/gemm_instance/datapath_instance/super_sys_instance/core2/\genblk1[0].genblk1[1].genblk1.mac_instance /P_out">
+      <obj_property name="ElementShortName">P_out[23:0]</obj_property>
+      <obj_property name="ObjectShortName">P_out[23:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_top/DUT/gemm_instance/datapath_instance/super_sys_instance/core2/\genblk1[0].genblk1[1].genblk1.mac_instance /A_BITWIDTH">
+      <obj_property name="ElementShortName">A_BITWIDTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">A_BITWIDTH[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_top/DUT/gemm_instance/datapath_instance/super_sys_instance/core2/\genblk1[0].genblk1[1].genblk1.mac_instance /W_BITWIDTH">
+      <obj_property name="ElementShortName">W_BITWIDTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">W_BITWIDTH[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_top/DUT/gemm_instance/datapath_instance/super_sys_instance/core2/\genblk1[0].genblk1[1].genblk1.mac_instance /P_BITWIDTH">
+      <obj_property name="ElementShortName">P_BITWIDTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">P_BITWIDTH[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_top/DUT/gemm_instance/datapath_instance/accumulator_instance/\genblk1[0].acum_buffer_instance /i_data">
+      <obj_property name="ElementShortName">i_data[3:0][23:0]</obj_property>
+      <obj_property name="ObjectShortName">i_data[3:0][23:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_top/DUT/gemm_instance/datapath_instance/accumulator_instance/\genblk1[0].acum_buffer_instance /din_1">
+      <obj_property name="ElementShortName">din_1[127:0]</obj_property>
+      <obj_property name="ObjectShortName">din_1[127:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_top/DUT/gemm_instance/datapath_instance/accumulator_instance/\genblk1[0].acum_buffer_instance /dout_1">
+      <obj_property name="ElementShortName">dout_1[127:0]</obj_property>
+      <obj_property name="ObjectShortName">dout_1[127:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_top/DUT/gemm_instance/datapath_instance/accumulator_instance/\genblk1[0].acum_buffer_instance /o_data">
+      <obj_property name="ElementShortName">o_data[3:0][31:0]</obj_property>
+      <obj_property name="ObjectShortName">o_data[3:0][31:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_top/DUT/gemm_instance/datapath_instance/accumulator_instance/\genblk1[0].acum_buffer_instance /rd_en">
+      <obj_property name="ElementShortName">rd_en</obj_property>
+      <obj_property name="ObjectShortName">rd_en</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_top/DUT/gemm_instance/datapath_instance/accumulator_instance/o_data">
+      <obj_property name="ElementShortName">o_data[3:0][3:0][31:0]</obj_property>
+      <obj_property name="ObjectShortName">o_data[3:0][3:0][31:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="array" fp_name="/tb_top/DUT/gemm_instance/datapath_instance/accumulator_instance/o_data[3]">
+         <obj_property name="ElementShortName">[3][3:0][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[3][3:0][31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/DUT/gemm_instance/datapath_instance/accumulator_instance/o_data[2]">
+         <obj_property name="ElementShortName">[2][3:0][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[2][3:0][31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/DUT/gemm_instance/datapath_instance/accumulator_instance/o_data[1]">
+         <obj_property name="ElementShortName">[1][3:0][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[1][3:0][31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/DUT/gemm_instance/datapath_instance/accumulator_instance/o_data[0]">
+         <obj_property name="ElementShortName">[0][3:0][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[0][3:0][31:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_top/DUT/gemm_instance/datapath_instance/accum_o_data">
+      <obj_property name="ElementShortName">accum_o_data[3:0][3:0][31:0]</obj_property>
+      <obj_property name="ObjectShortName">accum_o_data[3:0][3:0][31:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="array" fp_name="/tb_top/DUT/gemm_instance/datapath_instance/accum_o_data[3]">
+         <obj_property name="ElementShortName">[3][3:0][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[3][3:0][31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/DUT/gemm_instance/datapath_instance/accum_o_data[2]">
+         <obj_property name="ElementShortName">[2][3:0][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[2][3:0][31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/DUT/gemm_instance/datapath_instance/accum_o_data[1]">
+         <obj_property name="ElementShortName">[1][3:0][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[1][3:0][31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/DUT/gemm_instance/datapath_instance/accum_o_data[0]">
+         <obj_property name="ElementShortName">[0][3:0][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[0][3:0][31:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
       </wvobject>
    </wvobject>
 </wave_config>
