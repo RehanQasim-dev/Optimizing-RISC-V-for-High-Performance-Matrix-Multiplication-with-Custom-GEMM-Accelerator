@@ -1,5 +1,5 @@
 
- #define UART_BAUD_DIV  0x10
+ #define UART_BAUD_DIV  0xD8
 
 
 /** UART module prototype */

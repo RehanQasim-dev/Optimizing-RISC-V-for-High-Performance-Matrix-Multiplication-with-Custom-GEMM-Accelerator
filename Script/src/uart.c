@@ -50,8 +50,7 @@ void UETrv32_Uart_Print(const char *s) {
 
 
 unsigned int fact (unsigned int n);
-
-const char message[8] = {'H','e','l','l','o', '\n', '\r'};
+const char message[8] = {'y','e','l','t','o', '\n', '\r'};
 char dst[8] = {0,0,0,0,0,0,0,0};
 
 
@@ -74,7 +73,7 @@ int main(void) {
 //    printf("Hello World");
   while(1){
 	for(count = 0; count < 8; count++) {
-    	//   Uetrv32_Uart_Tx((message[count])); 
+    	  Uetrv32_Uart_Tx((message[count])); 
   	}  
   }
 }

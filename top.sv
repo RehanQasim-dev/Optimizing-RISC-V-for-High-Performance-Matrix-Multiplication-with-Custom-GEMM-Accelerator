@@ -5,7 +5,7 @@ module top (
     rst,
     output logic [7:0] an,
     output logic [6:0] a_to_g,
-     output    logic uart_rxd_i,
+    input  logic uart_rxd_i,
     output  logic uart_txd_o
 );
   logic is_gemm_addr_late;
