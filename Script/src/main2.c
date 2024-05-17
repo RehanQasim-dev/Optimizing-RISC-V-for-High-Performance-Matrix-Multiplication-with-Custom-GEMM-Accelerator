@@ -1,96 +1,116 @@
-// #include <stdio.h>
-// #include <stdint.h>
-// #include <stdbool.h>
-// //#include "gemm.h"
+#include <stdio.h>
+#include <stdint.h>
+#include <stdbool.h>
+#include <string.h>
+#include "gemm.h"
+#include "uart.h"
+#include <stdlib.h>
+void Uetrv32_Uart_Init(uint32_t baud) {
+  
+  UART_Module.baud = baud;
+}
 
-// // int32_t C[M][N];
-// //register int asm ("r10");
 
-// // void display_on_led (uint32_t *C, uint32_t rows,uint32_t  colmn);
+/**********************************************************************//**
+ * UART data transmit. This is a blocking function.
+ *
+ **************************************************************************/
+void Uetrv32_Uart_Tx(uint32_t tx_data) {
+  
+  while ((UART_Module.status & 0x01) == 0);
+	UART_Module.tx_data = tx_data;             // trigger transfer
+    // printf("%c",tx_data);
+  return ;
+}
 
-// // void delay  (int i);
+int main() {
+    Uetrv32_Uart_Init(1301);
 
-// void main()
-
-// {
-
-//     int A[2][3] = {{1, 2, 3},
-//                        {4, 5, 6}};
-//     int B[3][2] = {{7, 8},
-//                        {9, 7},
-//                        {11, 12}};
-//     int C[2][2];
-//     // Result matrix C
-
-//     // Call the matrix multiplication function
-//     // MATMUL(2, 3, 2, A, B, C);
-//     for (int e=0 ; e<2;e++){
-//         printf("entering first loop\n");
-//         for (int w=0; w<2 ;w++){
-//             printf("entering second loop\n");
-//             for (int r=0 ; r<3; r++){
-//             printf("entering third loop\n");
-//             C[e][w] +=  (A[e][r] * B[r][w]);
-            
-            
-//             }
-//             printf("%d \n", C[e][w]);
-//         }
-//         printf("exiting loop 1 \n");
-//     }
-//     printf("exited loops for calculation \n");
+    // Define a 2D matrix
+    int8_t A[2][3] = {{-16, -102, 3},
+                       {49, 53, -67}};
+    int8_t B[3][2] = {{7, 8},
+                       {9, 7},
+                       {11, 12}};
     
-//     for (int e=0 ; e<2 ; e++ ){
-//         printf("entering print loop 1\n");
-//         for (int w=0; w<2 ; w++){
-//             printf("entring loop 2\n");
-//             printf("%d \n", C[e][w]);
-//         }
-//         }
+    int32_t C[2][2]; // Declaring C on the stack
+
+    int rows = 2; // Number of rows in the matrix
+    int cols = 2; // Number of columns in the matrix
+    MATMUL(2, 3, 2, A, B, C); // Typecasting C to the correct type
+
+    // Loop over the matrix
+for (int i = 0; i < rows; i++) {
+    // Print opening bracket for each row
+    Uetrv32_Uart_Tx('[');
+
+    for (int j = 0; j < cols; j++) {
+        int a = C[i][j];
+        if (a < 0) {
+            Uetrv32_Uart_Tx('-');
+            a = -a;
+        }
+        if (a>=100){
+        Uetrv32_Uart_Tx('1');
+        if ( a<110 && a>=100){
+            Uetrv32_Uart_Tx('0'); 
+        }
+        a = a- 100;
+        }
+        if (a >= 90) {
+        Uetrv32_Uart_Tx('9'); 
+        a= a-90;
+        }
+        if (a >= 80) {
+        Uetrv32_Uart_Tx('8'); 
+        a= a-80;
+        }
+        if (a >= 70) {
+        Uetrv32_Uart_Tx('7'); 
+        a= a-70;
+        }
+        if (a >= 60) {
+        Uetrv32_Uart_Tx('6'); 
+        a= a-60;
+        }
+        if (a >= 50) {
+        Uetrv32_Uart_Tx('5'); 
+        a= a-50;
+        }
+        if (a >= 40) {
+        Uetrv32_Uart_Tx('4'); 
+        a= a-40;
+        }
+        if (a >= 30) {
+        Uetrv32_Uart_Tx('3'); 
+        a= a-30;
+        }
+        if (a >= 20) {
+        Uetrv32_Uart_Tx('2'); 
+        a= a-20;
+        }
+        if (a >= 10) {
+        Uetrv32_Uart_Tx('1'); 
+        a= a-10;
+        }
+        if (a >= 0) {
+        Uetrv32_Uart_Tx(a + '0'); 
+        }
     
-//    // display_on_led(*C, 2,2);
-// }
+        if (j < cols - 1) {
+            Uetrv32_Uart_Tx(',');
+            Uetrv32_Uart_Tx(' ');
+        }
+    }
 
-// // void delay (int i){
-// //     for (int e=0 ; e < i ; e++){}
-// // }
+    // Print closing bracket for each row
+    Uetrv32_Uart_Tx(']');
 
-// // void display_on_led (uint32_t *C, uint32_t rows, uint32_t colmn){
-// //     uint32_t q =0;
-// //     uint32_t w=0;
-// //     uint32_t value=0;
-// //     for (q ; q<rows ; q++){
-// //         for (w ; w<colmn ; w++){
-// //             value = C[q][w];
-// //             asm ("mv a0, %0": : "r"(value));
-// //             delay(10000);
-// //         }
-// //     }
-    
-// // }
-
-#include<stdio.h>
-
-
-void main (void) {
-    int a=0;
-    int w=30;
-    int r;
-    
-    asm("mv a2, %0" : : "r" (w));
-    for (int e =0; e< 10000; e++){}
-    
-    while (1){
-        // r= w+ w;
-        
-    asm("mv a3, %0" : : "r" (a));
-    a +=1;
-    for (int o =0; o<1000000; o++){}} ///// slow almost 1 sec chagnes
-//     a=3;
-//    asm("mv a1, %0" : : "r" (w));
-//     for (int e=0 ; e < 1000; e++){}
-//     a=6;
-//    asm("mv a1, %0" : : "r" (a));
-//     for (int e=0 ; e < 1000 ; e++){}
-
+    // Add a newline character after each row except the last one
+    if (i < rows - 1) {
+        Uetrv32_Uart_Tx('\n');
+        Uetrv32_Uart_Tx('\r');
+    }
+}
+    return 0;
 }
