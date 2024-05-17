@@ -50,7 +50,7 @@ void UETrv32_Uart_Print(const char *s) {
 
 
 unsigned int fact (unsigned int n);
-const char message[8] = {'y','e','l','t','o', '\n', '\r'};
+const char message[15] = {'h','l','l','o',' ', 'w', 'r', 'l','d', '\n', '\r'};
 char dst[8] = {0,0,0,0,0,0,0,0};
 
 
@@ -65,14 +65,14 @@ int main(void) {
  // count = fact(6);
 
   // Initialize UART with desired baudrate
-  Uetrv32_Uart_Init(UART_BAUD_DIV);
+  Uetrv32_Uart_Init(1301);
 
  // for(count = 0; count < 8; count++) {
  //   dst[count] = message[count]; 
  // }
 //    printf("Hello World");
   while(1){
-	for(count = 0; count < 8; count++) {
+	for(count = 0; count < 15; count++) {
     	  Uetrv32_Uart_Tx((message[count])); 
   	}  
   }
