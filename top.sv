@@ -53,10 +53,10 @@ module top (
   end
   assign system_bus_rd_data = is_gemm_addr_late ? gemm_conf_read_ppl : is_uart_addr?uart_rd_data:mem_read_data;
   assign en_gemm_conf = system_bus_en && is_gemm_addr;
-  assign en_Dmem = system_bus_en && (~is_gemm_addr);
+  assign en_Dmem = system_bus_en && (~is_gemm_addr) && (~is_uart_addr);
   memory #(
       .NUM_RAMS(16),
-      .A_WID(10),
+      .A_WID(7),
       .D_WID(8)
   ) memory_instance (
       .clk(clk),
