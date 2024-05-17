@@ -184,8 +184,8 @@ always_ff @(negedge rst_n, posedge clk) begin
     if (~rst_n) begin
         uart_reg_baud_ff <= 'h10;        
     end else begin
-//        uart_reg_baud_ff <= uart_reg_baud_next;
-        uart_reg_baud_ff <= 'h0a;
+        uart_reg_baud_ff <= uart_reg_baud_next;
+        //uart_reg_baud_ff <= 'h0a;
     end
 end
 
