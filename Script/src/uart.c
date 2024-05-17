@@ -49,31 +49,30 @@ void UETrv32_Uart_Print(const char *s) {
 
 
 
-unsigned int fact (unsigned int n);
-const char message[15] = {'h','l','l','o',' ', 'w', 'r', 'l','d', '\n', '\r'};
-char dst[8] = {0,0,0,0,0,0,0,0};
+// unsigned int fact (unsigned int n);
+// const char message[15] = {'h','l','l','o',' ', 'w', 'r', 'l','d', '\n', '\r'};
+// char dst[8] = {0,0,0,0,0,0,0,0};
 
 
-/* ************************************************************************ 
- * Main function.
- **************************************************************************/
-int main(void) {
-  uint32_t count = 0;
+// /* ************************************************************************ 
+//  * Main function.
+//  **************************************************************************/
+// int main(void) {
+//   uint32_t count = 0;
 
- // Uetrv32_Plic_Init();
+//  // Uetrv32_Plic_Init();
 
- // count = fact(6);
+//  // count = fact(6);
 
-  // Initialize UART with desired baudrate
-  Uetrv32_Uart_Init(1301);
+//   // Initialize UART with desired baudrate
+//   Uetrv32_Uart_Init(1301);
 
- // for(count = 0; count < 8; count++) {
- //   dst[count] = message[count]; 
- // }
-//    printf("Hello World");
-  while(1){
-	for(count = 0; count < 15; count++) {
-    	  Uetrv32_Uart_Tx((message[count])); 
-  	}  
-  }
-}
+//  // for(count = 0; count < 8; count++) {
+//  //   dst[count] = message[count]; 
+//  // }
+// //    printf("Hello World");
+ 
+//     	  UETrv32_Uart_Print((message)); 
+  	
+  
+// }
