@@ -357,7 +357,9 @@ m_unit multiply_and_divide_unit(
       branch_type,
       csr_reg_rd,
       csr_reg_wr,
-      csr_return
+      csr_return,
+      m_con, 
+      alu_mul_sel
   );  //CPU (input logic [31:0] instruction, output logic [3:0] ALU_CON , output logic reg_wr , mem_read, mem_write, alu_mux_1, alu_mux_2, pc_jump_mux, output logic[1:0] wr_bck_mux, output logic [2:0] sign_extend, func3_to_mem, branch_type );
   x7segb8 led_display_on_hardware (
       .x(led_display),
