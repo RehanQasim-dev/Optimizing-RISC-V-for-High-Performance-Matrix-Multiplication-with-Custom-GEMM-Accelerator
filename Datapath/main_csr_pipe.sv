@@ -78,7 +78,16 @@ module main_csr_pipe (
       data_out_to_alu_mux_2_muxed,
       inst_out_to_flip_muxed_stalled;
   logic valid, csr_return, csr_return_flip;
-  logic interupt_sel;
+  logic interupt_sel,
+        alu_mul_sel_flip;
+  logic [3:0] m_con;
+  logic [31:0] 
+        m_result,
+        arthimatic_result; 
+	logic 
+        m_done,
+        m_busy, 
+        alu_mul_sel;
 
 
   assign stall_instruction_for_pc = pc_to_inst_mem;
@@ -142,6 +151,12 @@ module main_csr_pipe (
       data_out_to_alu_mux_2
   );
 
+  mux_2x1 arthimatic_mux(
+    alu_result,
+     m_result,
+      alu_mul_sel, 
+      arthimatic_result);
+
 
   // stall for instructions flips 1 
   mux_4x1 stall_and_flush_to_inst_flip (
@@ -173,7 +188,7 @@ module main_csr_pipe (
       inst_out_to_rd_flip_muxed
   );
   mux_2x1 stall_for_alu_flip (
-      alu_result,
+      arthimatic_result,
       alu_result_flip_muxed_stalled,
       stall_sel,
       alu_result_flip_muxed
@@ -299,6 +314,15 @@ module main_csr_pipe (
       alu_con,
       alu_result
   );
+m_unit multiply_and_divide_unit(
+    clk,
+    data_out_to_alu_mux_1,
+    data_out_to_alu_mux_2 ,
+    m_con, 
+    BR_taken,
+    m_result,
+     m_done, 
+     m_busy);
 
   // memeory and write back stage
   // main_mem LOAD_STORE (clk,reset, alu_result_flip, store_data_flip,mem_write_flip,mem_read_flip, func3_to_mem_flip, load_data, valid, led_display_mem , uart_output, uart_busy);
@@ -406,6 +430,8 @@ module main_csr_pipe (
       forward_sel_1,
       forward_sel_2,
       flush_sel,
-      stall_sel
+      stall_sel,
+      m_done,
+      m_busy
   );
 endmodule

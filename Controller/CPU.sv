@@ -1,4 +1,4 @@
-module CPU (input logic [31:0] instruction, output logic [3:0] ALU_CON , output logic reg_wr , mem_read, mem_write, alu_mux_1, alu_mux_2, pc_jump_mux, output logic[1:0] wr_bck_mux, output logic [2:0] sign_extend, func3_to_mem, branch_type, output logic csr_reg_rd, csr_reg_wr,csr_return );
+module CPU (input logic [31:0] instruction, output logic [3:0] ALU_CON , output logic reg_wr , mem_read, mem_write, alu_mux_1, alu_mux_2, pc_jump_mux, output logic[1:0] wr_bck_mux, output logic [2:0] sign_extend, func3_to_mem, branch_type, output logic csr_reg_rd, csr_reg_wr,csr_return , output logic [3:0] mul_con,output logic alu_mul_sel);
 	logic [6:0] opcode ;
 	logic [2:0]func3 ;
 	logic [6:0] func7;
@@ -18,8 +18,8 @@ module CPU (input logic [31:0] instruction, output logic [3:0] ALU_CON , output 
 		csr_reg_rd=1'b0;
 		csr_reg_wr=1'b0;
 		csr_return =1'b0;
-		// m_con='0;
-		// alu_mul_sel=1'b0;
+		m_con='0;
+		alu_mul_sel=1'b0;
 		
 		case (opcode)
 		7'b0110011 : begin  //R-type intructions
@@ -52,11 +52,11 @@ module CPU (input logic [31:0] instruction, output logic [3:0] ALU_CON , output 
 						3'b001 : begin reg_wr=1;ALU_CON=4'b1100;sign_extend=0;alu_mux_1 =1'b0;alu_mux_2=1'b0; wr_bck_mux = '0;pc_jump_mux='0;  end
 						3'b010 : begin reg_wr=1;ALU_CON=4'b1101;sign_extend=0;alu_mux_1 =1'b0;alu_mux_2=1'b0; wr_bck_mux = '0;pc_jump_mux='0;  end
 						3'b011 : begin reg_wr=1;ALU_CON=4'b1110;sign_extend=0;alu_mux_1 =1'b0;alu_mux_2=1'b0; wr_bck_mux = '0;pc_jump_mux='0;  end
+						3'b100 : begin reg_wr=1;ALU_CON=0;sign_extend=0;alu_mux_1 =1'b0;alu_mux_2=1'b0; branch_type =3'b000;wr_bck_mux = '0;pc_jump_mux='0; m_con =34'b1000; alu_mul_sel=1'b1; end
+						3'b101 : begin reg_wr=1;ALU_CON=0;sign_extend=0;alu_mux_1 =1'b0;alu_mux_2=1'b0; branch_type =3'b000;wr_bck_mux = '0;pc_jump_mux='0; m_con =34'b1001; alu_mul_sel=1'b1; end
+						3'b110 : begin reg_wr=1;ALU_CON=0;sign_extend=0;alu_mux_1 =1'b0;alu_mux_2=1'b0; branch_type =3'b000;wr_bck_mux = '0;pc_jump_mux='0; m_con =34'b1010; alu_mul_sel=1'b1; end
+						3'b111 : begin reg_wr=1;ALU_CON=0;sign_extend=0;alu_mux_1 =1'b0;alu_mux_2=1'b0; branch_type =3'b000;wr_bck_mux = '0;pc_jump_mux='0; m_con =34'b1011; alu_mul_sel=1'b1; end
 						
-						// 3'b100 : begin reg_wr=1;ALU_CON=0;sign_extend=0;alu_mux_1 =1'b0;alu_mux_2=1'b0; branch_type =3'b000;wr_bck_mux = '0;pc_jump_mux='0;  end
-						// 3'b101 : begin reg_wr=1;ALU_CON=0;sign_extend=0;alu_mux_1 =1'b0;alu_mux_2=1'b0; branch_type =3'b000;wr_bck_mux = '0;pc_jump_mux='0;  end
-						// 3'b110 : begin reg_wr=1;ALU_CON=0;sign_extend=0;alu_mux_1 =1'b0;alu_mux_2=1'b0; branch_type =3'b000;wr_bck_mux = '0;pc_jump_mux='0;  end
-						// 3'b111 : begin reg_wr=1;ALU_CON=0;sign_extend=0;alu_mux_1 =1'b0;alu_mux_2=1'b0; branch_type =3'b000;wr_bck_mux = '0;pc_jump_mux='0;  end
 						endcase
 				end
 				endcase

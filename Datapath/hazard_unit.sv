@@ -1,4 +1,4 @@
-module hazard_unit(input logic clk, reset, reg_wr,input logic mem_read,input logic sel_for_branch, interupt_sel,input logic valid,  input logic[31:0] inst_exec, inst_mem, output logic forward_sel_1, forward_sel_2, flush_sel, stall);
+module hazard_unit(input logic clk, reset, reg_wr,input logic mem_read,input logic sel_for_branch, interupt_sel,input logic valid,  input logic[31:0] inst_exec, inst_mem, output logic forward_sel_1, forward_sel_2, flush_sel, stall,m_done,m_busy);
    logic [4:0] rs1_mem, rs2_mem,rd_exec,rd_mem, rs1_exec, rs2_exec;
    assign rs2_mem = inst_mem[24:20];
    assign rs1_mem = inst_mem[19:15];
@@ -43,6 +43,12 @@ localparam NORMAL = 1'b0;
         //     else if (valid) stall_sel =1'b0;
 
         // end
+        
+        if (~m_done & m_busy) begin 
+                stall_sel =1'b1; end 
+        else if (m_done & ~m_busy ) begin stall_sel=1'b0; end
+        else if (~m_busy & ~m_done) stall_sel=1'b0;
+
 
     end
 
@@ -74,7 +80,7 @@ localparam NORMAL = 1'b0;
     else cs <= ns;
   end
 
-  assign stall = stall_for_mem_read;
+  assign stall = stall_for_mem_read | stall_sel;
 
 
 endmodule
