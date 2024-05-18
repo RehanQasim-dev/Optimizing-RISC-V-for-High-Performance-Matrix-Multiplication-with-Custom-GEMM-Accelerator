@@ -1,4 +1,4 @@
-module CPU (input logic [31:0] instruction, output logic [3:0] ALU_CON , output logic reg_wr , mem_read, mem_write, alu_mux_1, alu_mux_2, pc_jump_mux, output logic[1:0] wr_bck_mux, output logic [2:0] sign_extend, func3_to_mem, branch_type, output logic csr_reg_rd, csr_reg_wr,csr_return , output logic [3:0] mul_con,output logic alu_mul_sel);
+module CPU (input logic [31:0] instruction, output logic [3:0] ALU_CON , output logic reg_wr , mem_read, mem_write, alu_mux_1, alu_mux_2, pc_jump_mux, output logic[1:0] wr_bck_mux, output logic [2:0] sign_extend, func3_to_mem, branch_type, output logic csr_reg_rd, csr_reg_wr,csr_return , output logic [3:0] m_con,output logic alu_mul_sel);
 	logic [6:0] opcode ;
 	logic [2:0]func3 ;
 	logic [6:0] func7;
