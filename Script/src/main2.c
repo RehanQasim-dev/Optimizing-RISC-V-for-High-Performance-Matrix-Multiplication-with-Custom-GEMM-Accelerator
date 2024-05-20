@@ -23,15 +23,37 @@ void Uetrv32_Uart_Tx(uint32_t tx_data) {
   return ;
 }
 
+void UART_SendNumber(int32_t number) {
+    char buffer[11];  // Buffer to hold digits, max 10 digits for 32-bit number + null terminator
+    int index = 0;
+    
+    // Handle the case when the number is 0
+    if (number == 0) {
+        Uetrv32_Uart_Tx('0');
+        return;
+    }
+
+    // Extract digits from the number
+    while (number > 0) {
+        buffer[index++] = (number % 10) + '0'; // Convert digit to character
+        number /= 10;
+    }
+
+    // Digits are in reverse order, so send them in reverse
+    for (int i = index - 1; i >= 0; i--) {
+        Uetrv32_Uart_Tx(buffer[i]);
+    }
+}
+
 int main() {
     Uetrv32_Uart_Init(1301);
 
     // Define a 2D matrix
     int8_t A[2][3] = {{-16, -102, 3},
                        {49, 53, -67}};
-    int8_t B[3][2] = {{7, 8},
-                       {9, 7},
-                       {11, 12}};
+    int8_t B[3][2] = {{76, 8},
+                       {99, -72},
+                       {-101, 12}};
     
     int32_t C[2][2]; // Declaring C on the stack
 
@@ -50,52 +72,7 @@ for (int i = 0; i < rows; i++) {
             Uetrv32_Uart_Tx('-');
             a = -a;
         }
-        if (a>=100){
-        Uetrv32_Uart_Tx('1');
-        if ( a<110 && a>=100){
-            Uetrv32_Uart_Tx('0'); 
-        }
-        a = a- 100;
-        }
-        if (a >= 90) {
-        Uetrv32_Uart_Tx('9'); 
-        a= a-90;
-        }
-        if (a >= 80) {
-        Uetrv32_Uart_Tx('8'); 
-        a= a-80;
-        }
-        if (a >= 70) {
-        Uetrv32_Uart_Tx('7'); 
-        a= a-70;
-        }
-        if (a >= 60) {
-        Uetrv32_Uart_Tx('6'); 
-        a= a-60;
-        }
-        if (a >= 50) {
-        Uetrv32_Uart_Tx('5'); 
-        a= a-50;
-        }
-        if (a >= 40) {
-        Uetrv32_Uart_Tx('4'); 
-        a= a-40;
-        }
-        if (a >= 30) {
-        Uetrv32_Uart_Tx('3'); 
-        a= a-30;
-        }
-        if (a >= 20) {
-        Uetrv32_Uart_Tx('2'); 
-        a= a-20;
-        }
-        if (a >= 10) {
-        Uetrv32_Uart_Tx('1'); 
-        a= a-10;
-        }
-        if (a >= 0) {
-        Uetrv32_Uart_Tx(a + '0'); 
-        }
+        UART_SendNumber(a);
     
         if (j < cols - 1) {
             Uetrv32_Uart_Tx(',');
