@@ -207,7 +207,7 @@ module main_csr_pipe (
       csr_address_muxed
   );
   mux_2x1 stall_for_write_data (
-      data_out_to_alu_mux_2,
+      data_out_to_alu_mux_1,
       write_data_stalled,
       stall_sel,
       write_data_muxed
