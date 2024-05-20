@@ -79,6 +79,7 @@ module cva6_csr_unit (input logic clk, reset, input logic [31:0] pc, input logic
             12'h342 : csr_mcause =  write_data ;//csr_mcause
             12'h344 : csr_mip =  write_data ;// csr mip
             12'h306 : csr_mcounter_en = write_data; // csr_timer_enable
+
             endcase
                 end
 
@@ -120,12 +121,12 @@ module cva6_csr_unit (input logic clk, reset, input logic [31:0] pc, input logic
             csr_mtvec_ff<=csr_mtvec;
             csr_mcounter_en_ff<=csr_mcounter_en;
 
-            if(mcycle_count_en_rst)    csr_mcycle_ff <='0;
-            else if (mcycle_count_en_rst) csr_mcycle_ff <= csr_mcycle_ff + 64'h1;
+            if(csr_mcounter_en[1] & csr_mcounter_en[0])    csr_mcycle_ff <='0;
+            else if (~ csr_mcounter_en[1] & csr_mcounter_en[0]) csr_mcycle_ff <= csr_mcycle_ff + 64'h1;
             else csr_mcycle_ff <=csr_mcycle_ff;
 
-            if(csr_mhpmcounter_3_count_en_rst)   csr_mhpmcounter_3_ff<='0;
-            else if (csr_mhpmcounter_3_count_en) csr_mhpmcounter_3_ff <= csr_mhpmcounter_3_ff + 64'h1;
+            if(csr_mcounter_en[4] & csr_mcounter_en[3])   csr_mhpmcounter_3_ff<='0;
+            else if (~csr_mcounter_en[4] & csr_mcounter_en[3]) csr_mhpmcounter_3_ff <= csr_mhpmcounter_3_ff + 64'h1;
             else csr_mhpmcounter_3_ff <= csr_mhpmcounter_3_ff;
 			
             if (interupt_csr_en) csr_mepc_ff<=pc;
