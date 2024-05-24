@@ -20,6 +20,7 @@ B = np.array([
 #     for j in range(2):
 #         for k in range(3):
 #             C[i][j] += A[i][k] * B[k][j]
+
 C=np.dot(A,B)
 # Print the result matrix C
 print("Result of A * B:")
