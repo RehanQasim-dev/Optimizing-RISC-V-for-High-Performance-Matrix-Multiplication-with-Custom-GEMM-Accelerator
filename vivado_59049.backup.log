@@ -1,0 +1,1070 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Tue May 21 17:42:07 2024
+# Process ID: 59049
+# Current directory: /home/abdul_waheed/Music/rv32_for_fyp
+# Command line: vivado
+# Log file: /home/abdul_waheed/Music/rv32_for_fyp/vivado.log
+# Journal file: /home/abdul_waheed/Music/rv32_for_fyp/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /home/abdul_waheed/Music/rv32_for_fyp/project_2/project_2.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2018.2/data/ip'.
+reset_run synth_1
+launch_runs synth_1 -jobs 20
+[Tue May 21 20:08:07 2024] Launched synth_1...
+Run output will be captured here: /home/abdul_waheed/Music/rv32_for_fyp/project_2/project_2.runs/synth_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 20
+[Tue May 21 20:09:56 2024] Launched impl_1...
+Run output will be captured here: /home/abdul_waheed/Music/rv32_for_fyp/project_2/project_2.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs synth_1 -jobs 20
+[Tue May 21 20:13:36 2024] Launched synth_1...
+Run output will be captured here: /home/abdul_waheed/Music/rv32_for_fyp/project_2/project_2.runs/synth_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 20
+[Tue May 21 20:15:10 2024] Launched impl_1...
+Run output will be captured here: /home/abdul_waheed/Music/rv32_for_fyp/project_2/project_2.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2018.2
+  **** Build date : Jun 14 2018-20:18:37
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292AD322CA
+set_property PROGRAM.FILE {/home/abdul_waheed/Music/rv32_for_fyp/project_2/project_2.runs/impl_1/soc.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {/home/abdul_waheed/Music/rv32_for_fyp/project_2/project_2.runs/impl_1/soc.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {/home/abdul_waheed/Music/rv32_for_fyp/project_2/project_2.runs/impl_1/soc.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {/home/abdul_waheed/Music/rv32_for_fyp/project_2/project_2.runs/impl_1/soc.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+reset_run synth_1
+launch_runs synth_1 -jobs 20
+[Tue May 21 20:22:00 2024] Launched synth_1...
+Run output will be captured here: /home/abdul_waheed/Music/rv32_for_fyp/project_2/project_2.runs/synth_1/runme.log
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/abdul_waheed/Music/rv32_for_fyp/project_2/project_2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'main_csr_pipe_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported '/home/abdul_waheed/Music/rv32_for_fyp/project_2/project_2.sim/sim_1/behav/xsim/ICACHE.mem'
+INFO: [SIM-utils-43] Exported '/home/abdul_waheed/Music/rv32_for_fyp/project_2/project_2.sim/sim_1/behav/xsim/memory5.mem'
+INFO: [SIM-utils-43] Exported '/home/abdul_waheed/Music/rv32_for_fyp/project_2/project_2.sim/sim_1/behav/xsim/memory8.mem'
+INFO: [SIM-utils-43] Exported '/home/abdul_waheed/Music/rv32_for_fyp/project_2/project_2.sim/sim_1/behav/xsim/memory7.mem'
+INFO: [SIM-utils-43] Exported '/home/abdul_waheed/Music/rv32_for_fyp/project_2/project_2.sim/sim_1/behav/xsim/memory11.mem'
+INFO: [SIM-utils-43] Exported '/home/abdul_waheed/Music/rv32_for_fyp/project_2/project_2.sim/sim_1/behav/xsim/memory14.mem'
+INFO: [SIM-utils-43] Exported '/home/abdul_waheed/Music/rv32_for_fyp/project_2/project_2.sim/sim_1/behav/xsim/memory2.mem'
+INFO: [SIM-utils-43] Exported '/home/abdul_waheed/Music/rv32_for_fyp/project_2/project_2.sim/sim_1/behav/xsim/memory0.mem'
+INFO: [SIM-utils-43] Exported '/home/abdul_waheed/Music/rv32_for_fyp/project_2/project_2.sim/sim_1/behav/xsim/memory4.mem'
+INFO: [SIM-utils-43] Exported '/home/abdul_waheed/Music/rv32_for_fyp/project_2/project_2.sim/sim_1/behav/xsim/memory15.mem'
+INFO: [SIM-utils-43] Exported '/home/abdul_waheed/Music/rv32_for_fyp/project_2/project_2.sim/sim_1/behav/xsim/memory10.mem'
+INFO: [SIM-utils-43] Exported '/home/abdul_waheed/Music/rv32_for_fyp/project_2/project_2.sim/sim_1/behav/xsim/memory13.mem'
+INFO: [SIM-utils-43] Exported '/home/abdul_waheed/Music/rv32_for_fyp/project_2/project_2.sim/sim_1/behav/xsim/memory12.mem'
+INFO: [SIM-utils-43] Exported '/home/abdul_waheed/Music/rv32_for_fyp/project_2/project_2.sim/sim_1/behav/xsim/memory6.mem'
+INFO: [SIM-utils-43] Exported '/home/abdul_waheed/Music/rv32_for_fyp/project_2/project_2.sim/sim_1/behav/xsim/memory9.mem'
+INFO: [SIM-utils-43] Exported '/home/abdul_waheed/Music/rv32_for_fyp/project_2/project_2.sim/sim_1/behav/xsim/memory3.mem'
+INFO: [SIM-utils-43] Exported '/home/abdul_waheed/Music/rv32_for_fyp/project_2/project_2.sim/sim_1/behav/xsim/memory1.mem'
+INFO: [SIM-utils-43] Exported '/home/abdul_waheed/Music/rv32_for_fyp/project_2/project_2.sim/sim_1/behav/xsim/reg_int.mem'
+INFO: [SIM-utils-43] Exported '/home/abdul_waheed/Music/rv32_for_fyp/project_2/project_2.sim/sim_1/behav/xsim/reg_int.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/abdul_waheed/Music/rv32_for_fyp/project_2/project_2.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj main_csr_pipe_tb_vlog.prj
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/abdul_waheed/Music/rv32_for_fyp/Gemm/Datapath/systolic_setup.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module systolic_setup
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/abdul_waheed/Music/rv32_for_fyp/Config.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/abdul_waheed/Music/rv32_for_fyp/Gemm/Datapath/acum_buffer.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module acum_buffer
+INFO: [VRFC 10-2458] undeclared symbol wr_en_1, assumed default net type wire [/home/abdul_waheed/Music/rv32_for_fyp/Gemm/Datapath/acum_buffer.sv:22]
+INFO: [VRFC 10-2458] undeclared symbol rd_en_1, assumed default net type wire [/home/abdul_waheed/Music/rv32_for_fyp/Gemm/Datapath/acum_buffer.sv:23]
+INFO: [VRFC 10-2458] undeclared symbol empty_, assumed default net type wire [/home/abdul_waheed/Music/rv32_for_fyp/Gemm/Datapath/acum_buffer.sv:26]
+INFO: [VRFC 10-2458] undeclared symbol wr_en_2, assumed default net type wire [/home/abdul_waheed/Music/rv32_for_fyp/Gemm/Datapath/acum_buffer.sv:36]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/abdul_waheed/Music/rv32_for_fyp/Gemm/Datapath/gemm_decoder.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module gemm_decoder
+INFO: [VRFC 10-2458] undeclared symbol Tallwave, assumed default net type wire [/home/abdul_waheed/Music/rv32_for_fyp/Gemm/Datapath/gemm_decoder.sv:14]
+INFO: [VRFC 10-2458] undeclared symbol Widewave, assumed default net type wire [/home/abdul_waheed/Music/rv32_for_fyp/Gemm/Datapath/gemm_decoder.sv:15]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/abdul_waheed/Music/rv32_for_fyp/Gemm/Datapath/accumulator.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module accumulator
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/abdul_waheed/Music/rv32_for_fyp/Gemm/Utilities/buffer.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module buffer
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/abdul_waheed/Music/rv32_for_fyp/Gemm/Controller/Store_Controller.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module store_controller
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/abdul_waheed/Music/rv32_for_fyp/Gemm/Controller/Load_Ex_controller.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Load_Ex_controller
+WARNING: [VRFC 10-756] identifier STORE is used before its declaration [/home/abdul_waheed/Music/rv32_for_fyp/Gemm/Controller/Load_Ex_controller.sv:44]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/abdul_waheed/Music/rv32_for_fyp/Gemm/Datapath/systolic.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module systolic
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/abdul_waheed/Music/rv32_for_fyp/Gemm/Datapath/systolic_setup_reverse.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module systolic_setup_reverse
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/abdul_waheed/Music/rv32_for_fyp/Gemm/Controller/buffer_accum_ctrl.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module buffer_accum_ctrl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/abdul_waheed/Music/rv32_for_fyp/Gemm/Datapath/memory_mapped.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module memory_mapped
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/abdul_waheed/Music/rv32_for_fyp/Gemm/Datapath/mac.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mac
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/abdul_waheed/Music/rv32_for_fyp/Gemm/Datapath/memory.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module memory
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/abdul_waheed/Music/rv32_for_fyp/Gemm/Datapath/gemm_datapath.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module gemm_datapath
+INFO: [VRFC 10-2458] undeclared symbol valid, assumed default net type wire [/home/abdul_waheed/Music/rv32_for_fyp/Gemm/Datapath/gemm_datapath.sv:103]
+INFO: [VRFC 10-2458] undeclared symbol accum1_valid, assumed default net type wire [/home/abdul_waheed/Music/rv32_for_fyp/Gemm/Datapath/gemm_datapath.sv:136]
+INFO: [VRFC 10-2458] undeclared symbol accum2_valid, assumed default net type wire [/home/abdul_waheed/Music/rv32_for_fyp/Gemm/Datapath/gemm_datapath.sv:144]
+INFO: [VRFC 10-2458] undeclared symbol accum3_valid, assumed default net type wire [/home/abdul_waheed/Music/rv32_for_fyp/Gemm/Datapath/gemm_datapath.sv:152]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/abdul_waheed/Music/rv32_for_fyp/Gemm/Datapath/super_sys.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module super_sys
+WARNING: [VRFC 10-756] identifier core2_if_en is used before its declaration [/home/abdul_waheed/Music/rv32_for_fyp/Gemm/Datapath/super_sys.sv:19]
+WARNING: [VRFC 10-756] identifier core2_if_en is used before its declaration [/home/abdul_waheed/Music/rv32_for_fyp/Gemm/Datapath/super_sys.sv:20]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/abdul_waheed/Music/rv32_for_fyp/Gemm/Utilities/muxes.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module muxes
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/abdul_waheed/Music/rv32_for_fyp/Gemm/Datapath/pipeline_gen.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pipeline_gen
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/abdul_waheed/Music/rv32_for_fyp/gemm.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module gemm
+INFO: [VRFC 10-2458] undeclared symbol accum_start, assumed default net type wire [/home/abdul_waheed/Music/rv32_for_fyp/gemm.sv:62]
+INFO: [VRFC 10-2458] undeclared symbol prefetch_start, assumed default net type wire [/home/abdul_waheed/Music/rv32_for_fyp/gemm.sv:167]
+INFO: [VRFC 10-2458] undeclared symbol use_store_addr, assumed default net type wire [/home/abdul_waheed/Music/rv32_for_fyp/gemm.sv:168]
+INFO: [VRFC 10-2458] undeclared symbol we_accum_ctrl, assumed default net type wire [/home/abdul_waheed/Music/rv32_for_fyp/gemm.sv:169]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/abdul_waheed/Music/rv32_for_fyp/soc.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module soc
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/abdul_waheed/Music/rv32_for_fyp/Datapath/reg_file.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module reg_file
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/abdul_waheed/Music/rv32_for_fyp/Datapath/mux_4x1.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux_4x1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/abdul_waheed/Music/rv32_for_fyp/Datapath/ALU.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/abdul_waheed/Music/rv32_for_fyp/Datapath/inst_mem.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module inst_mem
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/abdul_waheed/Music/rv32_for_fyp/Datapath/mux_2x1.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux_2x1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/abdul_waheed/Music/rv32_for_fyp/Datapath/x7segb8.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module x7segb8
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/abdul_waheed/Music/rv32_for_fyp/Datapath/flip_flop.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module flip_flop
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/abdul_waheed/Music/rv32_for_fyp/Datapath/branch_con.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module branch_con
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/abdul_waheed/Music/rv32_for_fyp/Datapath/PC_flip.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PC_flip
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/abdul_waheed/Music/rv32_for_fyp/Datapath/adder.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/abdul_waheed/Music/rv32_for_fyp/Datapath/cva6_csr_unit.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cva6_csr_unit
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/abdul_waheed/Music/rv32_for_fyp/Datapath/hazard_unit.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hazard_unit
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/abdul_waheed/Music/rv32_for_fyp/Datapath/main_csr_pipe.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module main_csr_pipe
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/abdul_waheed/Music/rv32_for_fyp/Datapath/mem_unit.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mem_unit
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/abdul_waheed/Music/rv32_for_fyp/Datapath/extend.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module extend
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/abdul_waheed/Music/rv32_for_fyp/Controller/flip_CU.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module flip_CU
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/abdul_waheed/Music/rv32_for_fyp/Controller/CPU.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CPU
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/abdul_waheed/Music/rv32_for_fyp/top.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/abdul_waheed/Music/rv32_for_fyp/tff.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tff
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/abdul_waheed/Music/rv32_for_fyp/test/banked_memory.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module banked_memory
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/abdul_waheed/Music/rv32_for_fyp/test/bank.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bank
+WARNING: [VRFC 10-937] initial value of parameter bank_no is omitted [/home/abdul_waheed/Music/rv32_for_fyp/test/bank.sv:2]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/abdul_waheed/Music/rv32_for_fyp/uart/uart.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module uart
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/abdul_waheed/Music/rv32_for_fyp/uart/uart_rx.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module uart_rx
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/abdul_waheed/Music/rv32_for_fyp/uart/uart_tx.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module uart_tx
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/abdul_waheed/Music/rv32_for_fyp/Datapath/m_unit.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module m_unit
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/abdul_waheed/Music/rv32_for_fyp/Datapath/div_try.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module div_try
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/abdul_waheed/Music/rv32_for_fyp/main_csr_pipe_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module main_csr_pipe_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/abdul_waheed/Music/rv32_for_fyp/tb_top.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/abdul_waheed/Music/rv32_for_fyp/Gemm/Datapath/memory_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module memory_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/abdul_waheed/Music/rv32_for_fyp/project_2/project_2.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: /opt/Xilinx/Vivado/2018.2/bin/unwrapped/lnx64.o/xelab -wto 16b51a207652433cac6f03342977ae67 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot main_csr_pipe_tb_behav xil_defaultlib.main_csr_pipe_tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 384 for port bias [/home/abdul_waheed/Music/rv32_for_fyp/Gemm/Datapath/gemm_datapath.sv:99]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "/home/abdul_waheed/Music/rv32_for_fyp/soc.sv" Line 1. Module soc doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/abdul_waheed/Music/rv32_for_fyp/Datapath/main_csr_pipe.sv" Line 1. Module main_csr_pipe doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/abdul_waheed/Music/rv32_for_fyp/Datapath/mux_2x1.sv" Line 1. Module mux_2x1 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/abdul_waheed/Music/rv32_for_fyp/Datapath/mux_2x1.sv" Line 1. Module mux_2x1 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/abdul_waheed/Music/rv32_for_fyp/Datapath/mux_2x1.sv" Line 1. Module mux_2x1 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/abdul_waheed/Music/rv32_for_fyp/Datapath/mux_2x1.sv" Line 1. Module mux_2x1 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/abdul_waheed/Music/rv32_for_fyp/Datapath/mux_4x1.sv" Line 1. Module mux_4x1 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/abdul_waheed/Music/rv32_for_fyp/Datapath/mux_2x1.sv" Line 1. Module mux_2x1 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/abdul_waheed/Music/rv32_for_fyp/Datapath/mux_2x1.sv" Line 1. Module mux_2x1 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/abdul_waheed/Music/rv32_for_fyp/Datapath/mux_2x1.sv" Line 1. Module mux_2x1 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/abdul_waheed/Music/rv32_for_fyp/Datapath/mux_4x1.sv" Line 1. Module mux_4x1 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/abdul_waheed/Music/rv32_for_fyp/Datapath/mux_2x1.sv" Line 1. Module mux_2x1 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/abdul_waheed/Music/rv32_for_fyp/Datapath/mux_2x1.sv" Line 1. Module mux_2x1 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/abdul_waheed/Music/rv32_for_fyp/Datapath/mux_2x1.sv" Line 1. Module mux_2x1 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/abdul_waheed/Music/rv32_for_fyp/Datapath/mux_2x1.sv" Line 1. Module mux_2x1 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/abdul_waheed/Music/rv32_for_fyp/Datapath/mux_2x1.sv" Line 1. Module mux_2x1 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/abdul_waheed/Music/rv32_for_fyp/Datapath/mux_2x1.sv" Line 1. Module mux_2x1 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/abdul_waheed/Music/rv32_for_fyp/Datapath/mux_2x1.sv" Line 1. Module mux_2x1 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/abdul_waheed/Music/rv32_for_fyp/Datapath/adder.sv" Line 1. Module adder doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/abdul_waheed/Music/rv32_for_fyp/Datapath/adder.sv" Line 1. Module adder doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/abdul_waheed/Music/rv32_for_fyp/Datapath/flip_flop.sv" Line 1. Module flip_flop doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/abdul_waheed/Music/rv32_for_fyp/Datapath/flip_flop.sv" Line 1. Module flip_flop doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/abdul_waheed/Music/rv32_for_fyp/Datapath/flip_flop.sv" Line 1. Module flip_flop doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/abdul_waheed/Music/rv32_for_fyp/Datapath/flip_flop.sv" Line 1. Module flip_flop doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/abdul_waheed/Music/rv32_for_fyp/Datapath/flip_flop.sv" Line 1. Module flip_flop doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/abdul_waheed/Music/rv32_for_fyp/Datapath/flip_flop.sv" Line 1. Module flip_flop doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/abdul_waheed/Music/rv32_for_fyp/Datapath/flip_flop.sv" Line 1. Module flip_flop doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/abdul_waheed/Music/rv32_for_fyp/Datapath/flip_flop.sv" Line 1. Module flip_flop doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/abdul_waheed/Music/rv32_for_fyp/Datapath/PC_flip.sv" Line 1. Module PC_flip doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/abdul_waheed/Music/rv32_for_fyp/Datapath/inst_mem.sv" Line 1. Module inst_mem doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/abdul_waheed/Music/rv32_for_fyp/Datapath/extend.sv" Line 1. Module extend doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/abdul_waheed/Music/rv32_for_fyp/Datapath/branch_con.sv" Line 1. Module branch_con doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/abdul_waheed/Music/rv32_for_fyp/Datapath/reg_file.sv" Line 1. Module reg_file doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/abdul_waheed/Music/rv32_for_fyp/Datapath/ALU.sv" Line 1. Module ALU doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/abdul_waheed/Music/rv32_for_fyp/Datapath/mem_unit.sv" Line 1. Module mem_unit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/abdul_waheed/Music/rv32_for_fyp/Controller/CPU.sv" Line 1. Module CPU doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/abdul_waheed/Music/rv32_for_fyp/Datapath/x7segb8.sv" Line 1. Module x7segb8 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/abdul_waheed/Music/rv32_for_fyp/Datapath/cva6_csr_unit.sv" Line 2. Module cva6_csr_unit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/abdul_waheed/Music/rv32_for_fyp/Controller/flip_CU.sv" Line 1. Module flip_CU doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/abdul_waheed/Music/rv32_for_fyp/Datapath/hazard_unit.sv" Line 1. Module hazard_unit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/abdul_waheed/Music/rv32_for_fyp/Gemm/Datapath/memory.sv" Line 3. Module memory(A_WID=7) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/abdul_waheed/Music/rv32_for_fyp/gemm.sv" Line 5. Module gemm doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/abdul_waheed/Music/rv32_for_fyp/Gemm/Datapath/gemm_datapath.sv" Line 2. Module gemm_datapath_default doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/abdul_waheed/Music/rv32_for_fyp/Gemm/Datapath/systolic_setup.sv" Line 2. Module systolic_setup(PORTS=16) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/abdul_waheed/Music/rv32_for_fyp/Gemm/Datapath/pipeline_gen.sv" Line 1. Module pipeline_gen(data_type=logic[7:0]) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/abdul_waheed/Music/rv32_for_fyp/Gemm/Datapath/pipeline_gen.sv" Line 1. Module pipeline_gen(data_type=logic[7:0],Number=2) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/abdul_waheed/Music/rv32_for_fyp/Gemm/Datapath/pipeline_gen.sv" Line 1. Module pipeline_gen(data_type=logic[7:0],Number=3) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/abdul_waheed/Music/rv32_for_fyp/Gemm/Datapath/pipeline_gen.sv" Line 1. Module pipeline_gen(data_type=logic[7:0],Number=4) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/abdul_waheed/Music/rv32_for_fyp/Gemm/Datapath/pipeline_gen.sv" Line 1. Module pipeline_gen(data_type=logic[7:0],Number=5) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/abdul_waheed/Music/rv32_for_fyp/Gemm/Datapath/pipeline_gen.sv" Line 1. Module pipeline_gen(data_type=logic[7:0],Number=6) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/abdul_waheed/Music/rv32_for_fyp/Gemm/Datapath/pipeline_gen.sv" Line 1. Module pipeline_gen(data_type=logic[7:0],Number=7) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/abdul_waheed/Music/rv32_for_fyp/Gemm/Datapath/pipeline_gen.sv" Line 1. Module pipeline_gen(data_type=logic[7:0],Number=8) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/abdul_waheed/Music/rv32_for_fyp/Gemm/Datapath/pipeline_gen.sv" Line 1. Module pipeline_gen(data_type=logic[7:0],Number=9) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/abdul_waheed/Music/rv32_for_fyp/Gemm/Datapath/pipeline_gen.sv" Line 1. Module pipeline_gen(data_type=logic[7:0],Number=10) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/abdul_waheed/Music/rv32_for_fyp/Gemm/Datapath/pipeline_gen.sv" Line 1. Module pipeline_gen(data_type=logic[7:0],Number=11) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/abdul_waheed/Music/rv32_for_fyp/Gemm/Datapath/pipeline_gen.sv" Line 1. Module pipeline_gen(data_type=logic[7:0],Number=12) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/abdul_waheed/Music/rv32_for_fyp/Gemm/Datapath/pipeline_gen.sv" Line 1. Module pipeline_gen(data_type=logic[7:0],Number=13) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/abdul_waheed/Music/rv32_for_fyp/Gemm/Datapath/pipeline_gen.sv" Line 1. Module pipeline_gen(data_type=logic[7:0],Number=14) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/abdul_waheed/Music/rv32_for_fyp/Gemm/Datapath/pipeline_gen.sv" Line 1. Module pipeline_gen(data_type=logic[7:0],Number=15) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/abdul_waheed/Music/rv32_for_fyp/Gemm/Datapath/systolic_setup.sv" Line 2. Module systolic_setup(DATA_WIDTH=1,PORTS=16) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/abdul_waheed/Music/rv32_for_fyp/Gemm/Datapath/pipeline_gen.sv" Line 1. Module pipeline_gen(data_type=logic[0:0]) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/abdul_waheed/Music/rv32_for_fyp/Gemm/Datapath/pipeline_gen.sv" Line 1. Module pipeline_gen(data_type=logic[0:0],Number=2) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/abdul_waheed/Music/rv32_for_fyp/Gemm/Datapath/pipeline_gen.sv" Line 1. Module pipeline_gen(data_type=logic[0:0],Number=3) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/abdul_waheed/Music/rv32_for_fyp/Gemm/Datapath/pipeline_gen.sv" Line 1. Module pipeline_gen(data_type=logic[0:0],Number=4) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/abdul_waheed/Music/rv32_for_fyp/Gemm/Datapath/pipeline_gen.sv" Line 1. Module pipeline_gen(data_type=logic[0:0],Number=5) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/abdul_waheed/Music/rv32_for_fyp/Gemm/Datapath/pipeline_gen.sv" Line 1. Module pipeline_gen(data_type=logic[0:0],Number=6) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/abdul_waheed/Music/rv32_for_fyp/Gemm/Datapath/pipeline_gen.sv" Line 1. Module pipeline_gen(data_type=logic[0:0],Number=7) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/abdul_waheed/Music/rv32_for_fyp/Gemm/Datapath/pipeline_gen.sv" Line 1. Module pipeline_gen(data_type=logic[0:0],Number=8) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/abdul_waheed/Music/rv32_for_fyp/Gemm/Datapath/pipeline_gen.sv" Line 1. Module pipeline_gen(data_type=logic[0:0],Number=9) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/abdul_waheed/Music/rv32_for_fyp/Gemm/Datapath/pipeline_gen.sv" Line 1. Module pipeline_gen(data_type=logic[0:0],Number=10) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/abdul_waheed/Music/rv32_for_fyp/Gemm/Datapath/pipeline_gen.sv" Line 1. Module pipeline_gen(data_type=logic[0:0],Number=11) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/abdul_waheed/Music/rv32_for_fyp/Gemm/Datapath/pipeline_gen.sv" Line 1. Module pipeline_gen(data_type=logic[0:0],Number=12) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/abdul_waheed/Music/rv32_for_fyp/Gemm/Datapath/pipeline_gen.sv" Line 1. Module pipeline_gen(data_type=logic[0:0],Number=13) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/abdul_waheed/Music/rv32_for_fyp/Gemm/Datapath/pipeline_gen.sv" Line 1. Module pipeline_gen(data_type=logic[0:0],Number=14) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/abdul_waheed/Music/rv32_for_fyp/Gemm/Datapath/pipeline_gen.sv" Line 1. Module pipeline_gen(data_type=logic[0:0],Number=15) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/abdul_waheed/Music/rv32_for_fyp/Gemm/Datapath/systolic_setup.sv" Line 2. Module systolic_setup(PORTS=16) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/abdul_waheed/Music/rv32_for_fyp/Gemm/Datapath/pipeline_gen.sv" Line 1. Module pipeline_gen(data_type=logic[7:0]) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/abdul_waheed/Music/rv32_for_fyp/Gemm/Datapath/pipeline_gen.sv" Line 1. Module pipeline_gen(data_type=logic[7:0],Number=2) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/abdul_waheed/Music/rv32_for_fyp/Gemm/Datapath/pipeline_gen.sv" Line 1. Module pipeline_gen(data_type=logic[7:0],Number=3) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/abdul_waheed/Music/rv32_for_fyp/Gemm/Datapath/pipeline_gen.sv" Line 1. Module pipeline_gen(data_type=logic[7:0],Number=4) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/abdul_waheed/Music/rv32_for_fyp/Gemm/Datapath/pipeline_gen.sv" Line 1. Module pipeline_gen(data_type=logic[7:0],Number=5) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/abdul_waheed/Music/rv32_for_fyp/Gemm/Datapath/pipeline_gen.sv" Line 1. Module pipeline_gen(data_type=logic[7:0],Number=6) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/abdul_waheed/Music/rv32_for_fyp/Gemm/Datapath/pipeline_gen.sv" Line 1. Module pipeline_gen(data_type=logic[7:0],Number=7) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/abdul_waheed/Music/rv32_for_fyp/Gemm/Datapath/pipeline_gen.sv" Line 1. Module pipeline_gen(data_type=logic[7:0],Number=8) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/abdul_waheed/Music/rv32_for_fyp/Gemm/Datapath/pipeline_gen.sv" Line 1. Module pipeline_gen(data_type=logic[7:0],Number=9) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/abdul_waheed/Music/rv32_for_fyp/Gemm/Datapath/pipeline_gen.sv" Line 1. Module pipeline_gen(data_type=logic[7:0],Number=10) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/abdul_waheed/Music/rv32_for_fyp/Gemm/Datapath/pipeline_gen.sv" Line 1. Module pipeline_gen(data_type=logic[7:0],Number=11) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/abdul_waheed/Music/rv32_for_fyp/Gemm/Datapath/pipeline_gen.sv" Line 1. Module pipeline_gen(data_type=logic[7:0],Number=12) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/abdul_waheed/Music/rv32_for_fyp/Gemm/Datapath/pipeline_gen.sv" Line 1. Module pipeline_gen(data_type=logic[7:0],Number=13) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/abdul_waheed/Music/rv32_for_fyp/Gemm/Datapath/pipeline_gen.sv" Line 1. Module pipeline_gen(data_type=logic[7:0],Number=14) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/abdul_waheed/Music/rv32_for_fyp/Gemm/Datapath/pipeline_gen.sv" Line 1. Module pipeline_gen(data_type=logic[7:0],Number=15) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/abdul_waheed/Music/rv32_for_fyp/Gemm/Datapath/systolic_setup.sv" Line 2. Module systolic_setup(DATA_WIDTH=1,PORTS=16) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/abdul_waheed/Music/rv32_for_fyp/Gemm/Datapath/pipeline_gen.sv" Line 1. Module pipeline_gen(data_type=logic[0:0]) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/abdul_waheed/Music/rv32_for_fyp/Gemm/Datapath/pipeline_gen.sv" Line 1. Module pipeline_gen(data_type=logic[0:0],Number=2) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/abdul_waheed/Music/rv32_for_fyp/Gemm/Datapath/pipeline_gen.sv" Line 1. Module pipeline_gen(data_type=logic[0:0],Number=3) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/abdul_waheed/Music/rv32_for_fyp/Gemm/Datapath/pipeline_gen.sv" Line 1. Module pipeline_gen(data_type=logic[0:0],Number=4) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/abdul_waheed/Music/rv32_for_fyp/Gemm/Datapath/pipeline_gen.sv" Line 1. Module pipeline_gen(data_type=logic[0:0],Number=5) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/abdul_waheed/Music/rv32_for_fyp/Gemm/Datapath/pipeline_gen.sv" Line 1. Module pipeline_gen(data_type=logic[0:0],Number=6) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/abdul_waheed/Music/rv32_for_fyp/Gemm/Datapath/pipeline_gen.sv" Line 1. Module pipeline_gen(data_type=logic[0:0],Number=7) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/abdul_waheed/Music/rv32_for_fyp/Gemm/Datapath/pipeline_gen.sv" Line 1. Module pipeline_gen(data_type=logic[0:0],Number=8) doesn't have a timescale but at least one module in design has a timescale.
+INFO: [Common 17-14] Message 'XSIM 43-4099' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.tff
+Compiling module xil_defaultlib.mux_2x1
+Compiling module xil_defaultlib.mux_4x1
+Compiling module xil_defaultlib.adder
+Compiling module xil_defaultlib.flip_flop
+Compiling module xil_defaultlib.PC_flip
+Compiling module xil_defaultlib.inst_mem
+Compiling module xil_defaultlib.extend
+Compiling module xil_defaultlib.branch_con
+Compiling module xil_defaultlib.reg_file
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.div_try(WIDTH=32)
+Compiling module xil_defaultlib.m_unit
+Compiling module xil_defaultlib.mem_unit
+Compiling module xil_defaultlib.CPU
+Compiling module xil_defaultlib.x7segb8
+Compiling module xil_defaultlib.cva6_csr_unit
+Compiling module xil_defaultlib.flip_CU
+Compiling module xil_defaultlib.hazard_unit
+Compiling module xil_defaultlib.main_csr_pipe
+Compiling module xil_defaultlib.bank(bank_no=0,A_WID=7)
+Compiling module xil_defaultlib.bank(bank_no=1,A_WID=7)
+Compiling module xil_defaultlib.bank(bank_no=2,A_WID=7)
+Compiling module xil_defaultlib.bank(bank_no=3,A_WID=7)
+Compiling module xil_defaultlib.bank(bank_no=4,A_WID=7)
+Compiling module xil_defaultlib.bank(bank_no=5,A_WID=7)
+Compiling module xil_defaultlib.bank(bank_no=6,A_WID=7)
+Compiling module xil_defaultlib.bank(bank_no=7,A_WID=7)
+Compiling module xil_defaultlib.bank(bank_no=8,A_WID=7)
+Compiling module xil_defaultlib.bank(bank_no=9,A_WID=7)
+Compiling module xil_defaultlib.bank(bank_no=10,A_WID=7)
+Compiling module xil_defaultlib.bank(bank_no=11,A_WID=7)
+Compiling module xil_defaultlib.bank(bank_no=12,A_WID=7)
+Compiling module xil_defaultlib.bank(bank_no=13,A_WID=7)
+Compiling module xil_defaultlib.bank(bank_no=14,A_WID=7)
+Compiling module xil_defaultlib.bank(bank_no=15,A_WID=7)
+Compiling module xil_defaultlib.banked_memory(NUM_RAMS=16,A_WID=...
+Compiling module xil_defaultlib.memory(A_WID=7)
+Compiling module xil_defaultlib.pipeline_gen(data_type=logic[7:0...
+Compiling module xil_defaultlib.pipeline_gen(data_type=logic[7:0...
+Compiling module xil_defaultlib.pipeline_gen(data_type=logic[7:0...
+Compiling module xil_defaultlib.pipeline_gen(data_type=logic[7:0...
+Compiling module xil_defaultlib.pipeline_gen(data_type=logic[7:0...
+Compiling module xil_defaultlib.pipeline_gen(data_type=logic[7:0...
+Compiling module xil_defaultlib.pipeline_gen(data_type=logic[7:0...
+Compiling module xil_defaultlib.pipeline_gen(data_type=logic[7:0...
+Compiling module xil_defaultlib.pipeline_gen(data_type=logic[7:0...
+Compiling module xil_defaultlib.pipeline_gen(data_type=logic[7:0...
+Compiling module xil_defaultlib.pipeline_gen(data_type=logic[7:0...
+Compiling module xil_defaultlib.pipeline_gen(data_type=logic[7:0...
+Compiling module xil_defaultlib.pipeline_gen(data_type=logic[7:0...
+Compiling module xil_defaultlib.pipeline_gen(data_type=logic[7:0...
+Compiling module xil_defaultlib.pipeline_gen(data_type=logic[7:0...
+Compiling module xil_defaultlib.systolic_setup(PORTS=16)
+Compiling module xil_defaultlib.pipeline_gen(data_type=logic[0:0...
+Compiling module xil_defaultlib.pipeline_gen(data_type=logic[0:0...
+Compiling module xil_defaultlib.pipeline_gen(data_type=logic[0:0...
+Compiling module xil_defaultlib.pipeline_gen(data_type=logic[0:0...
+Compiling module xil_defaultlib.pipeline_gen(data_type=logic[0:0...
+Compiling module xil_defaultlib.pipeline_gen(data_type=logic[0:0...
+Compiling module xil_defaultlib.pipeline_gen(data_type=logic[0:0...
+Compiling module xil_defaultlib.pipeline_gen(data_type=logic[0:0...
+Compiling module xil_defaultlib.pipeline_gen(data_type=logic[0:0...
+Compiling module xil_defaultlib.pipeline_gen(data_type=logic[0:0...
+Compiling module xil_defaultlib.pipeline_gen(data_type=logic[0:0...
+Compiling module xil_defaultlib.pipeline_gen(data_type=logic[0:0...
+Compiling module xil_defaultlib.pipeline_gen(data_type=logic[0:0...
+Compiling module xil_defaultlib.pipeline_gen(data_type=logic[0:0...
+Compiling module xil_defaultlib.pipeline_gen(data_type=logic[0:0...
+Compiling module xil_defaultlib.systolic_setup(DATA_WIDTH=1,PORT...
+Compiling module xil_defaultlib.pipeline_gen(data_type=logic[23:...
+Compiling module xil_defaultlib.pipeline_gen(data_type=logic[23:...
+Compiling module xil_defaultlib.pipeline_gen(data_type=logic[23:...
+Compiling module xil_defaultlib.systolic_setup_reverse(DATA_WIDT...
+Compiling module xil_defaultlib.muxes
+Compiling module xil_defaultlib.muxes(WIDTH=8)
+Compiling module xil_defaultlib.muxes(WIDTH=24)
+Compiling module xil_defaultlib.mac
+Compiling module xil_defaultlib.systolic_default
+Compiling module xil_defaultlib.super_sys
+Compiling module xil_defaultlib.pipeline_gen(data_type=logic,Num...
+Compiling module xil_defaultlib.pipeline_gen(data_type=logic,Num...
+Compiling module xil_defaultlib.pipeline_gen(data_type=logic,Num...
+Compiling module xil_defaultlib.buffer(DEPTH=16,DWIDTH=128)
+Compiling module xil_defaultlib.acum_buffer
+Compiling module xil_defaultlib.accumulator_default
+Compiling module xil_defaultlib.gemm_datapath_default
+Compiling module xil_defaultlib.gemm_decoder
+Compiling module xil_defaultlib.buffer_accum_ctrl(DEPTH=4,DWIDTH...
+Compiling module xil_defaultlib.Load_Ex_controller
+Compiling module xil_defaultlib.store_controller
+Compiling module xil_defaultlib.buffer(DEPTH=2,DWIDTH=32)
+Compiling module xil_defaultlib.memory_mapped
+Compiling module xil_defaultlib.gemm
+Compiling module xil_defaultlib.uart_tx
+Compiling module xil_defaultlib.uart_rx
+Compiling module xil_defaultlib.uart
+Compiling module xil_defaultlib.top
+Compiling module xil_defaultlib.soc
+Compiling module xil_defaultlib.main_csr_pipe_tb
+Compiling module xil_defaultlib.glbl
+Compiling package xil_defaultlib.$unit_systolic_setup_sv
+Compiling package xil_defaultlib.Config
+Built simulation snapshot main_csr_pipe_tb_behav
+
+****** Webtalk v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source /home/abdul_waheed/Music/rv32_for_fyp/project_2/project_2.sim/sim_1/behav/xsim/xsim.dir/main_csr_pipe_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Tue May 21 20:22:40 2024...
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/abdul_waheed/Music/rv32_for_fyp/project_2/project_2.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "main_csr_pipe_tb_behav -key {Behavioral:sim_1:Functional:main_csr_pipe_tb} -tclbatch {main_csr_pipe_tb.tcl} -view {/home/abdul_waheed/Music/rv32_for_fyp/abdul_top_behav.wcfg} -view {/home/abdul_waheed/Music/rv32_for_fyp/uart_look.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+open_wave_config /home/abdul_waheed/Music/rv32_for_fyp/abdul_top_behav.wcfg
+WARNING: Simulation object /tb_top/DUT/clk was not found in the design.
+WARNING: Simulation object /tb_top/DUT/rst was not found in the design.
+WARNING: Simulation object /tb_top/DUT/an was not found in the design.
+WARNING: Simulation object /tb_top/DUT/a_to_g was not found in the design.
+WARNING: Simulation object /tb_top/DUT/is_gemm_addr_late was not found in the design.
+WARNING: Simulation object /tb_top/DUT/system_bus_en was not found in the design.
+WARNING: Simulation object /tb_top/DUT/system_bus_rdwr was not found in the design.
+WARNING: Simulation object /tb_top/DUT/system_bus_rd_data was not found in the design.
+WARNING: Simulation object /tb_top/DUT/system_bus_wr_data was not found in the design.
+WARNING: Simulation object /tb_top/DUT/gemm_conf_read was not found in the design.
+WARNING: Simulation object /tb_top/DUT/mem_read_data was not found in the design.
+WARNING: Simulation object /tb_top/DUT/gemm_conf_read_ppl was not found in the design.
+WARNING: Simulation object /tb_top/DUT/result was not found in the design.
+WARNING: Simulation object /tb_top/DUT/system_bus_addr was not found in the design.
+WARNING: Simulation object /tb_top/DUT/interface_en was not found in the design.
+WARNING: Simulation object /tb_top/DUT/interface_rdwr was not found in the design.
+WARNING: Simulation object /tb_top/DUT/interface_control was not found in the design.
+WARNING: Simulation object /tb_top/DUT/interface_addr was not found in the design.
+WARNING: Simulation object /tb_top/DUT/interface_rd_data was not found in the design.
+WARNING: Simulation object /tb_top/DUT/interface_wr_data was not found in the design.
+WARNING: Simulation object /tb_top/DUT/system_bus_mask was not found in the design.
+WARNING: Simulation object /tb_top/DUT/interupt was not found in the design.
+WARNING: Simulation object /tb_top/DUT/mem_valid was not found in the design.
+WARNING: Simulation object /tb_top/DUT/is_gemm_addr was not found in the design.
+WARNING: Simulation object /tb_top/DUT/en_gemm_conf was not found in the design.
+WARNING: Simulation object /tb_top/DUT/en_Dmem was not found in the design.
+WARNING: Simulation object /tb_top/DUT/gemm_instance/memory_mapped_instance/tileA_addr_buffer/fifo was not found in the design.
+WARNING: Simulation object /tb_top/DUT/gemm_instance/memory_mapped_instance/tileB_addr_buffer/fifo was not found in the design.
+WARNING: Simulation object /tb_top/DUT/gemm_instance/memory_mapped_instance/tileC_addr_buffer/fifo was not found in the design.
+WARNING: Simulation object /tb_top/DUT/gemm_instance/memory_mapped_instance/tileA_stride_buffer/fifo was not found in the design.
+WARNING: Simulation object /tb_top/DUT/gemm_instance/memory_mapped_instance/tileB_stride_buffer/fifo was not found in the design.
+WARNING: Simulation object /tb_top/DUT/gemm_instance/memory_mapped_instance/GEMM_control_buffer/fifo was not found in the design.
+WARNING: Simulation object /tb_top/DUT/gemm_instance/memory_mapped_instance/tile_dimension_buffer/fifo was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/clk was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/reset was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/interupt was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/an was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/a_to_g was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/mem_rd_wr was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/cs was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/mask was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/mem_addr was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/mem_write_data was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/mem_read_data was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/mem_valid was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/flush_sel was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/stall_sel was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/sel_for_branch was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/pc_to_flip was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/pc_to_inst_mem was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/pc_to_flip_mux was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/pc_from_alu was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/pc_for_jump was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/pc_for_jump_flip_2 was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/data_out_to_reg was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/inst_out was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/rs1_alu_a was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/rs2_alu_b was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/write_back_data_to_reg_file was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/pc_for_inst_mem_from_csr was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/pc_to_flip_intrupt_mux was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/alu_con was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/reg_wr was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/BR_taken was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/reg_wr_flip was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/mem_read_flip was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/mem_write_flip was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/pc_jump_mux_flip was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/BR_taken_flip was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/rs1 was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/rs2 was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/rd was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/alu_result was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/pc_to_alu_mux was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/alu_result_flip was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/rs2_alu_b_flip was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/write_data was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/csr_address was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/csr_address_muxed was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/csr_address_stalled was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/alu_A was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/alu_B was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/imm_to_alu_mux_2 was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/load_data was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/inst_out_flip was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/inst_out_flip_2 was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/write_data_stalled was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/write_data_muxed was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/led_display was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/mem_read was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/mem_write was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/alu_mux_1 was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/alu_mux_2 was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/pc_jump_mux was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/wr_bck_mux was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/wr_bck_mux_flip was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/sign_extend was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/func3_to_mem was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/branch_type was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/func3_to_mem_flip was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/csr_reg_rd was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/csr_reg_wr was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/forward_data_to_alu_1 was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/data_out_to_alu_mux_1 was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/forward_data_to_alu_2 was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/data_out_to_alu_mux_2 was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/inst_out_to_flip_muxed was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/forward_sel_1 was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/forward_sel_2 was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/csr_reg_rd_flip was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/csr_reg_wr_flip was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/stall_instruction_for_pc was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/flush_opcode was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/pc_to_inst_mem_through_stall_n_flush was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/pc_to_alu_mux_muxed was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/inst_out_to_rd_flip_muxed was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/store_data_flip was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/alu_result_flip_muxed was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/inst_out_to_rd_flip_muxed_stalled was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/alu_result_flip_muxed_stalled was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/data_out_to_alu_mux_2_muxed_stalled was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/data_out_to_alu_mux_2_muxed was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/inst_out_to_flip_muxed_stalled was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/valid was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/csr_return was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/csr_return_flip was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/interupt_sel was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/calculator/A was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/calculator/B was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/calculator/ALU_CON was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/calculator/out_result was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/calculator/mul_result was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/calculator/a_signed_bit was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/calculator/b_signed_bit was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/calculator/A_mul was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/calculator/B_mul was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/control_unit/instruction was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/control_unit/ALU_CON was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/control_unit/reg_wr was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/control_unit/mem_read was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/control_unit/mem_write was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/control_unit/alu_mux_1 was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/control_unit/alu_mux_2 was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/control_unit/pc_jump_mux was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/control_unit/wr_bck_mux was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/control_unit/sign_extend was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/control_unit/func3_to_mem was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/control_unit/branch_type was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/control_unit/csr_reg_rd was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/control_unit/csr_reg_wr was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/control_unit/csr_return was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/control_unit/opcode was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/control_unit/func3 was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/control_unit/func7 was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/register_file/clk was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/register_file/reset was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/register_file/write_reg was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/register_file/rd was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/register_file/rs1 was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/register_file/rs2 was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/register_file/data_in was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/register_file/to_alu_1 was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/register_file/to_alu_2 was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/register_file/to_leds was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/register_file/reg_mem was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/register_file/valid_rs1 was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/register_file/valid_rs2 was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/register_file/valid_rd was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/IMMEDIATE_CREATE/ALU_ex_con was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/IMMEDIATE_CREATE/instruction was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/IMMEDIATE_CREATE/immediate_to_alu was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/IMMEDIATE_CREATE/imm_I was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/IMMEDIATE_CREATE/imm_B was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/IMMEDIATE_CREATE/imm_S was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/IMMEDIATE_CREATE/imm_U was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/IMMEDIATE_CREATE/imm_J was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/COMPARATOR/operand_a was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/COMPARATOR/operand_b was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/COMPARATOR/BRA_con was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/COMPARATOR/branch_tk was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/COMPARATOR/compare_result was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/COMPARATOR/compare_not_zero was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/COMPARATOR/compare_negative was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/COMPARATOR/compare_overflow was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/LOAD_STORE/write_en was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/LOAD_STORE/read_en was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/LOAD_STORE/func3 was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/LOAD_STORE/address was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/LOAD_STORE/data_in was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/LOAD_STORE/data_from_mem was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/LOAD_STORE/data_out_to_riscv was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/LOAD_STORE/address_to_mem was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/LOAD_STORE/data_out_to_mem was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/LOAD_STORE/cs was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/LOAD_STORE/mem_read was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/LOAD_STORE/mask was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/LOAD_STORE/data_to_uart was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/LOAD_STORE/load_uart was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/LOAD_STORE/transfer_byte was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/LOAD_STORE/uart_done was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/LOAD_STORE/uart_busy was not found in the design.
+WARNING: Simulation object /tb_top/DUT/UUT/LOAD_STORE/data_from_reg_mem was not found in the design.
+WARNING: Simulation object /tb_top/DUT/memory_instance/clk was not found in the design.
+WARNING: Simulation object /tb_top/DUT/memory_instance/system_bus_en was not found in the design.
+WARNING: Simulation object /tb_top/DUT/memory_instance/system_bus_rdwr was not found in the design.
+WARNING: Simulation object /tb_top/DUT/memory_instance/system_bus_mask was not found in the design.
+WARNING: Simulation object /tb_top/DUT/memory_instance/system_bus_rd_data was not found in the design.
+WARNING: Simulation object /tb_top/DUT/memory_instance/system_bus_wr_data was not found in the design.
+WARNING: Simulation object /tb_top/DUT/memory_instance/system_bus_addr was not found in the design.
+WARNING: Simulation object /tb_top/DUT/memory_instance/interface_rdwr was not found in the design.
+WARNING: Simulation object /tb_top/DUT/memory_instance/interface_en was not found in the design.
+WARNING: Simulation object /tb_top/DUT/memory_instance/interface_control was not found in the design.
+WARNING: Simulation object /tb_top/DUT/memory_instance/interface_addr was not found in the design.
+WARNING: Simulation object /tb_top/DUT/interface_wr_data was not found in the design.
+WARNING: Simulation object /tb_top/DUT/memory_instance/interface_wr_data was not found in the design.
+WARNING: Simulation object /tb_top/DUT/memory_instance/interface_rd_data was not found in the design.
+WARNING: Simulation object /tb_top/DUT/memory_instance/mask was not found in the design.
+WARNING: Simulation object /tb_top/DUT/memory_instance/mask_ppl was not found in the design.
+WARNING: Simulation object /tb_top/DUT/memory_instance/bank_dina was not found in the design.
+WARNING: Simulation object /tb_top/DUT/memory_instance/bank_douta was not found in the design.
+WARNING: Simulation object /tb_top/DUT/memory_instance/bank_addra was not found in the design.
+WARNING: Simulation object /tb_top/DUT/memory_instance/bank_ena was not found in the design.
+WARNING: Simulation object /tb_top/DUT/memory_instance/bank_wea was not found in the design.
+WARNING: Simulation object /tb_top/DUT/memory_instance/bank_doutb was not found in the design.
+WARNING: Simulation object /tb_top/DUT/memory_instance/bank_addrb was not found in the design.
+WARNING: Simulation object /tb_top/DUT/memory_instance/bank_dinb was not found in the design.
+WARNING: Simulation object /tb_top/DUT/memory_instance/bank_dinb_ was not found in the design.
+WARNING: Simulation object /tb_top/DUT/memory_instance/bank_enb was not found in the design.
+WARNING: Simulation object /tb_top/DUT/memory_instance/bank_enb_ was not found in the design.
+WARNING: Simulation object /tb_top/DUT/memory_instance/bank_web was not found in the design.
+WARNING: Simulation object /tb_top/DUT/memory_instance/bank_web_ was not found in the design.
+WARNING: Simulation object /tb_top/DUT/memory_instance/interface_addr_ppl was not found in the design.
+WARNING: Simulation object /tb_top/DUT/memory_instance/system_bus_addr_ppl was not found in the design.
+WARNING: Simulation object /tb_top/DUT/memory_instance/NUM_RAMS was not found in the design.
+WARNING: Simulation object /tb_top/DUT/memory_instance/A_WID was not found in the design.
+WARNING: Simulation object /tb_top/DUT/memory_instance/D_WID was not found in the design.
+WARNING: Simulation object /tb_top/DUT/memory_instance/meam was not found in the design.
+WARNING: Simulation object /tb_top/DUT/memory_instance/banked_memory_instance/\ram_instances[0].bank_inst /mem was not found in the design.
+WARNING: Simulation object /tb_top/DUT/gemm_instance/datapath_instance/super_sys_instance/core0/of_data was not found in the design.
+WARNING: Simulation object /tb_top/DUT/gemm_instance/datapath_instance/super_sys_instance/core0/if_data_out was not found in the design.
+WARNING: Simulation object /tb_top/DUT/gemm_instance/datapath_instance/super_sys_instance/core0/wdata_out was not found in the design.
+WARNING: Simulation object /tb_top/DUT/gemm_instance/datapath_instance/super_sys_instance/core0/A_data was not found in the design.
+WARNING: Simulation object /tb_top/DUT/gemm_instance/datapath_instance/super_sys_instance/core0/W_data was not found in the design.
+WARNING: Simulation object /tb_top/DUT/gemm_instance/datapath_instance/super_sys_instance/core0/P_data was not found in the design.
+WARNING: Simulation object /tb_top/DUT/gemm_instance/datapath_instance/super_sys_instance/core1/of_data was not found in the design.
+WARNING: Simulation object /tb_top/DUT/gemm_instance/datapath_instance/super_sys_instance/core1/if_data_out was not found in the design.
+WARNING: Simulation object /tb_top/DUT/gemm_instance/datapath_instance/super_sys_instance/core1/wdata_out was not found in the design.
+WARNING: Simulation object /tb_top/DUT/gemm_instance/datapath_instance/super_sys_instance/core1/A_data was not found in the design.
+WARNING: Simulation object /tb_top/DUT/gemm_instance/datapath_instance/super_sys_instance/core1/W_data was not found in the design.
+WARNING: Simulation object /tb_top/DUT/gemm_instance/datapath_instance/super_sys_instance/core1/P_data was not found in the design.
+WARNING: Simulation object /tb_top/DUT/gemm_instance/datapath_instance/super_sys_instance/core0/if_en was not found in the design.
+WARNING: Simulation object /tb_top/DUT/gemm_instance/datapath_instance/super_sys_instance/core0/wfetch was not found in the design.
+WARNING: Simulation object /tb_top/DUT/gemm_instance/datapath_instance/super_sys_instance/core2/if_data was not found in the design.
+WARNING: Simulation object /tb_top/DUT/gemm_instance/datapath_instance/super_sys_instance/core2/A_data was not found in the design.
+WARNING: Simulation object /tb_top/DUT/gemm_instance/datapath_instance/super_sys_instance/core2/if_data_out was not found in the design.
+WARNING: Simulation object /tb_top/DUT/gemm_instance/datapath_instance/super_sys_instance/core2/wdata was not found in the design.
+WARNING: Simulation object /tb_top/DUT/gemm_instance/datapath_instance/super_sys_instance/core2/W_data was not found in the design.
+WARNING: Simulation object /tb_top/DUT/gemm_instance/datapath_instance/super_sys_instance/core2/W_data[6] was not found in the design.
+WARNING: Simulation object /tb_top/DUT/gemm_instance/datapath_instance/super_sys_instance/core2/W_data[5] was not found in the design.
+WARNING: Simulation object /tb_top/DUT/gemm_instance/datapath_instance/super_sys_instance/core2/W_data[4] was not found in the design.
+WARNING: Simulation object /tb_top/DUT/gemm_instance/datapath_instance/super_sys_instance/core2/W_data[3] was not found in the design.
+WARNING: Simulation object /tb_top/DUT/gemm_instance/datapath_instance/super_sys_instance/core2/W_data[2] was not found in the design.
+WARNING: Simulation object /tb_top/DUT/gemm_instance/datapath_instance/super_sys_instance/core2/W_data[1] was not found in the design.
+WARNING: Simulation object /tb_top/DUT/gemm_instance/datapath_instance/super_sys_instance/core2/W_data[0] was not found in the design.
+WARNING: Simulation object /tb_top/DUT/gemm_instance/datapath_instance/super_sys_instance/core2/wdata_out was not found in the design.
+WARNING: Simulation object /tb_top/DUT/gemm_instance/datapath_instance/super_sys_instance/core2/P_data was not found in the design.
+WARNING: Simulation object /tb_top/DUT/gemm_instance/datapath_instance/super_sys_instance/core2/P_data[6] was not found in the design.
+WARNING: Simulation object /tb_top/DUT/gemm_instance/datapath_instance/super_sys_instance/core2/P_data[5] was not found in the design.
+WARNING: Simulation object /tb_top/DUT/gemm_instance/datapath_instance/super_sys_instance/core2/P_data[4] was not found in the design.
+WARNING: Simulation object /tb_top/DUT/gemm_instance/datapath_instance/super_sys_instance/core2/P_data[3] was not found in the design.
+WARNING: Simulation object /tb_top/DUT/gemm_instance/datapath_instance/super_sys_instance/core2/P_data[2] was not found in the design.
+WARNING: Simulation object /tb_top/DUT/gemm_instance/datapath_instance/super_sys_instance/core2/P_data[1] was not found in the design.
+WARNING: Simulation object /tb_top/DUT/gemm_instance/datapath_instance/super_sys_instance/core2/P_data[0] was not found in the design.
+WARNING: Simulation object /tb_top/DUT/gemm_instance/datapath_instance/super_sys_instance/core2/of_data was not found in the design.
+WARNING: Simulation object /tb_top/DUT/gemm_instance/datapath_instance/super_sys_instance/core3/of_data was not found in the design.
+WARNING: Simulation object /tb_top/DUT/gemm_instance/datapath_instance/super_sys_instance/core3/if_data_out was not found in the design.
+WARNING: Simulation object /tb_top/DUT/gemm_instance/datapath_instance/super_sys_instance/core3/wdata_out was not found in the design.
+WARNING: Simulation object /tb_top/DUT/gemm_instance/datapath_instance/super_sys_instance/core3/A_data was not found in the design.
+WARNING: Simulation object /tb_top/DUT/gemm_instance/datapath_instance/super_sys_instance/core3/W_data was not found in the design.
+WARNING: Simulation object /tb_top/DUT/gemm_instance/datapath_instance/super_sys_instance/core3/P_data was not found in the design.
+WARNING: Simulation object /tb_top/DUT/gemm_instance/datapath_instance/super_sys_instance/core2/\genblk1[0].genblk1[1].genblk1.mac_instance /clk was not found in the design.
+WARNING: Simulation object /tb_top/DUT/gemm_instance/datapath_instance/super_sys_instance/core2/\genblk1[0].genblk1[1].genblk1.mac_instance /rst was not found in the design.
+WARNING: Simulation object /tb_top/DUT/gemm_instance/datapath_instance/super_sys_instance/core2/\genblk1[0].genblk1[1].genblk1.mac_instance /A_en was not found in the design.
+WARNING: Simulation object /tb_top/DUT/gemm_instance/datapath_instance/super_sys_instance/core2/\genblk1[0].genblk1[1].genblk1.mac_instance /A_ready was not found in the design.
+WARNING: Simulation object /tb_top/DUT/gemm_instance/datapath_instance/super_sys_instance/core2/\genblk1[0].genblk1[1].genblk1.mac_instance /A_out was not found in the design.
+WARNING: Simulation object /tb_top/DUT/gemm_instance/datapath_instance/super_sys_instance/core2/\genblk1[0].genblk1[1].genblk1.mac_instance /W_en was not found in the design.
+WARNING: Simulation object /tb_top/DUT/gemm_instance/datapath_instance/super_sys_instance/core2/\genblk1[0].genblk1[1].genblk1.mac_instance /W_ready was not found in the design.
+WARNING: Simulation object /tb_top/DUT/gemm_instance/datapath_instance/super_sys_instance/core2/\genblk1[0].genblk1[1].genblk1.mac_instance /W_in was not found in the design.
+WARNING: Simulation object /tb_top/DUT/gemm_instance/datapath_instance/super_sys_instance/core2/\genblk1[0].genblk1[1].genblk1.mac_instance /A_in was not found in the design.
+WARNING: Simulation object /tb_top/DUT/gemm_instance/datapath_instance/super_sys_instance/core2/\genblk1[0].genblk1[1].genblk1.mac_instance /W_out was not found in the design.
+WARNING: Simulation object /tb_top/DUT/gemm_instance/datapath_instance/super_sys_instance/core2/\genblk1[0].genblk1[1].genblk1.mac_instance /temp was not found in the design.
+WARNING: Simulation object /tb_top/DUT/gemm_instance/datapath_instance/super_sys_instance/core2/\genblk1[0].genblk1[1].genblk1.mac_instance /P_in was not found in the design.
+WARNING: Simulation object /tb_top/DUT/gemm_instance/datapath_instance/super_sys_instance/core2/\genblk1[0].genblk1[1].genblk1.mac_instance /P_out was not found in the design.
+WARNING: Simulation object /tb_top/DUT/gemm_instance/datapath_instance/super_sys_instance/core2/\genblk1[0].genblk1[1].genblk1.mac_instance /A_BITWIDTH was not found in the design.
+WARNING: Simulation object /tb_top/DUT/gemm_instance/datapath_instance/super_sys_instance/core2/\genblk1[0].genblk1[1].genblk1.mac_instance /W_BITWIDTH was not found in the design.
+WARNING: Simulation object /tb_top/DUT/gemm_instance/datapath_instance/super_sys_instance/core2/\genblk1[0].genblk1[1].genblk1.mac_instance /P_BITWIDTH was not found in the design.
+WARNING: Simulation object /tb_top/DUT/gemm_instance/datapath_instance/accumulator_instance/\genblk1[0].acum_buffer_instance /i_data was not found in the design.
+WARNING: Simulation object /tb_top/DUT/gemm_instance/datapath_instance/accumulator_instance/\genblk1[0].acum_buffer_instance /din_1 was not found in the design.
+WARNING: Simulation object /tb_top/DUT/gemm_instance/datapath_instance/accumulator_instance/\genblk1[0].acum_buffer_instance /dout_1 was not found in the design.
+WARNING: Simulation object /tb_top/DUT/gemm_instance/datapath_instance/accumulator_instance/\genblk1[0].acum_buffer_instance /o_data was not found in the design.
+WARNING: Simulation object /tb_top/DUT/gemm_instance/datapath_instance/accumulator_instance/\genblk1[0].acum_buffer_instance /rd_en was not found in the design.
+WARNING: Simulation object /tb_top/DUT/gemm_instance/datapath_instance/accumulator_instance/o_data was not found in the design.
+WARNING: Simulation object /tb_top/DUT/gemm_instance/datapath_instance/accumulator_instance/o_data[3] was not found in the design.
+WARNING: Simulation object /tb_top/DUT/gemm_instance/datapath_instance/accumulator_instance/o_data[2] was not found in the design.
+WARNING: Simulation object /tb_top/DUT/gemm_instance/datapath_instance/accumulator_instance/o_data[1] was not found in the design.
+WARNING: Simulation object /tb_top/DUT/gemm_instance/datapath_instance/accumulator_instance/o_data[0] was not found in the design.
+WARNING: Simulation object /tb_top/DUT/gemm_instance/datapath_instance/accum_o_data was not found in the design.
+WARNING: Simulation object /tb_top/DUT/gemm_instance/datapath_instance/accum_o_data[3] was not found in the design.
+WARNING: Simulation object /tb_top/DUT/gemm_instance/datapath_instance/accum_o_data[2] was not found in the design.
+WARNING: Simulation object /tb_top/DUT/gemm_instance/datapath_instance/accum_o_data[1] was not found in the design.
+WARNING: Simulation object /tb_top/DUT/gemm_instance/datapath_instance/accum_o_data[0] was not found in the design.
+open_wave_config /home/abdul_waheed/Music/rv32_for_fyp/uart_look.wcfg
+source main_csr_pipe_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'main_csr_pipe_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 6966.109 ; gain = 115.047 ; free physical = 6414 ; free virtual = 12816
+run 1 ms
+run: Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 6999.457 ; gain = 8.000 ; free physical = 6185 ; free virtual = 12654
+run 1 ms
+run: Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 6999.457 ; gain = 0.000 ; free physical = 6004 ; free virtual = 12550
+reset_run synth_1
+launch_runs synth_1 -jobs 20
+[Tue May 21 20:23:44 2024] Launched synth_1...
+Run output will be captured here: /home/abdul_waheed/Music/rv32_for_fyp/project_2/project_2.runs/synth_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 20
+[Tue May 21 20:25:35 2024] Launched impl_1...
+Run output will be captured here: /home/abdul_waheed/Music/rv32_for_fyp/project_2/project_2.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {/home/abdul_waheed/Music/rv32_for_fyp/project_2/project_2.runs/impl_1/soc.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+reset_run synth_1
+launch_runs synth_1 -jobs 20
+[Tue May 21 20:31:37 2024] Launched synth_1...
+Run output will be captured here: /home/abdul_waheed/Music/rv32_for_fyp/project_2/project_2.runs/synth_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 20
+[Tue May 21 20:34:03 2024] Launched impl_1...
+Run output will be captured here: /home/abdul_waheed/Music/rv32_for_fyp/project_2/project_2.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {/home/abdul_waheed/Music/rv32_for_fyp/project_2/project_2.runs/impl_1/soc.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {/home/abdul_waheed/Music/rv32_for_fyp/project_2/project_2.runs/impl_1/soc.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {/home/abdul_waheed/Music/rv32_for_fyp/project_2/project_2.runs/impl_1/soc.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7a100tcsg324-1
+INFO: [Netlist 29-17] Analyzing 8057 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.2
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/abdul_waheed/Music/FYP/Vivado/Nexys-A7-100T-Master.xdc]
+Finished Parsing XDC File [/home/abdul_waheed/Music/FYP/Vivado/Nexys-A7-100T-Master.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  LDCP => LDCP (GND, LUT3, LUT3, LDCE, VCC): 1 instances
+
+open_run: Time (s): cpu = 00:00:15 ; elapsed = 00:00:13 . Memory (MB): peak = 7717.590 ; gain = 665.961 ; free physical = 4575 ; free virtual = 11317
+close_design
+close_design: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 7875.316 ; gain = 157.727 ; free physical = 4424 ; free virtual = 11174
+open_run impl_1
+INFO: [Netlist 29-17] Analyzing 8057 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 8065.867 ; gain = 68.852 ; free physical = 4169 ; free virtual = 10911
+Restored from archive | CPU: 1.770000 secs | Memory: 74.739540 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 8065.867 ; gain = 68.852 ; free physical = 4169 ; free virtual = 10911
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  LDCP => LDCP (GND, LUT3, LUT3, LDCE, VCC): 1 instances
+
+open_run: Time (s): cpu = 00:00:11 ; elapsed = 00:00:07 . Memory (MB): peak = 8141.625 ; gain = 266.309 ; free physical = 4116 ; free virtual = 10858
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {/home/abdul_waheed/Music/rv32_for_fyp/project_2/project_2.runs/impl_1/soc.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {/home/abdul_waheed/Music/rv32_for_fyp/project_2/project_2.runs/impl_1/soc.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+reset_run synth_1
+launch_runs synth_1 -jobs 20
+[Tue May 21 21:03:02 2024] Launched synth_1...
+Run output will be captured here: /home/abdul_waheed/Music/rv32_for_fyp/project_2/project_2.runs/synth_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 20
+[Tue May 21 21:06:11 2024] Launched impl_1...
+Run output will be captured here: /home/abdul_waheed/Music/rv32_for_fyp/project_2/project_2.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {/home/abdul_waheed/Music/rv32_for_fyp/project_2/project_2.runs/impl_1/soc.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+reset_run synth_1
+launch_runs synth_1 -jobs 20
+[Tue May 21 21:10:10 2024] Launched synth_1...
+Run output will be captured here: /home/abdul_waheed/Music/rv32_for_fyp/project_2/project_2.runs/synth_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 20
+[Tue May 21 21:11:53 2024] Launched impl_1...
+Run output will be captured here: /home/abdul_waheed/Music/rv32_for_fyp/project_2/project_2.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {/home/abdul_waheed/Music/rv32_for_fyp/project_2/project_2.runs/impl_1/soc.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+reset_run synth_1
+launch_runs synth_1 -jobs 20
+[Tue May 21 21:16:23 2024] Launched synth_1...
+Run output will be captured here: /home/abdul_waheed/Music/rv32_for_fyp/project_2/project_2.runs/synth_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 20
+[Tue May 21 21:19:01 2024] Launched impl_1...
+Run output will be captured here: /home/abdul_waheed/Music/rv32_for_fyp/project_2/project_2.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {/home/abdul_waheed/Music/rv32_for_fyp/project_2/project_2.runs/impl_1/soc.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {/home/abdul_waheed/Music/rv32_for_fyp/project_2/project_2.runs/impl_1/soc.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {/home/abdul_waheed/Music/rv32_for_fyp/project_2/project_2.runs/impl_1/soc.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {/home/abdul_waheed/Music/rv32_for_fyp/project_2/project_2.runs/impl_1/soc.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {/home/abdul_waheed/Music/rv32_for_fyp/project_2/project_2.runs/impl_1/soc.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+reset_run synth_1
+launch_runs synth_1 -jobs 20
+[Tue May 21 21:27:42 2024] Launched synth_1...
+Run output will be captured here: /home/abdul_waheed/Music/rv32_for_fyp/project_2/project_2.runs/synth_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 20
+[Tue May 21 21:29:46 2024] Launched impl_1...
+Run output will be captured here: /home/abdul_waheed/Music/rv32_for_fyp/project_2/project_2.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {/home/abdul_waheed/Music/rv32_for_fyp/project_2/project_2.runs/impl_1/soc.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+reset_run synth_1
+launch_runs synth_1 -jobs 20
+[Tue May 21 21:34:18 2024] Launched synth_1...
+Run output will be captured here: /home/abdul_waheed/Music/rv32_for_fyp/project_2/project_2.runs/synth_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 20
+[Tue May 21 21:35:57 2024] Launched impl_1...
+Run output will be captured here: /home/abdul_waheed/Music/rv32_for_fyp/project_2/project_2.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {/home/abdul_waheed/Music/rv32_for_fyp/project_2/project_2.runs/impl_1/soc.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
