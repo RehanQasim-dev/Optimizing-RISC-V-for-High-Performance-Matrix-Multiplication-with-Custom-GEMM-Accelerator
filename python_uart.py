@@ -8,8 +8,8 @@ def random_value():
     return random.randint(-128, 127)
 
 # Define matrix dimensions
-M = 50
-K = 40
+M = 60
+K = 60
 # N = 20
 
 
@@ -19,12 +19,10 @@ matrixA = [[random_value() for _ in range(K)] for _ in range(M)]
 # print(dir(serial))
 # print(hex(byte_string[0]))
 with serial.Serial(port=port, baudrate=baudrate, bytesize=serial.EIGHTBITS, parity=serial.PARITY_NONE, stopbits=serial.STOPBITS_TWO, timeout=2) as ser:
-    M_=M+48
-    K_=K+48
-    byte_string = M_.to_bytes(1, byteorder='little',signed=True)  # 'big' or 'little' for byte order
+    byte_string = M.to_bytes(4, byteorder='little',signed=False)  # 'big' or 'little' for byte order
     ser.write(byte_string)
     time.sleep(0.2)
-    byte_string = K_.to_bytes(1, byteorder='little',signed=True)  # 'big' or 'little' for byte order
+    byte_string = K.to_bytes(4, byteorder='little',signed=False)  # 'big' or 'little' for byte order
     ser.write(byte_string)
     # byte_string = K_.to_bytes(1, byteorder='little',signed=True)  # 'big' or 'little' for byte order
     # ser.write(byte_string)

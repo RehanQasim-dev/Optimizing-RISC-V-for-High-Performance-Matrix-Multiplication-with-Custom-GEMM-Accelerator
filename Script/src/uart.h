@@ -1,6 +1,7 @@
 
 #define BAUD_DIV 1301
 
+#include <stdbool.h>
 
 /** UART module prototype */
 typedef struct __attribute__((packed,aligned(4))) {
@@ -64,7 +65,10 @@ uint8_t Uetrv32_Uart_Rx(void) {
 void UART_SendNumber(int32_t number) {
     char buffer[11];  // Buffer to hold digits, max 10 digits for 32-bit number + null terminator
     int index = 0;
-    
+    if (number < 0) {
+    Uetrv32_Uart_Tx('-');
+    number = -number;
+    }
     // Handle the case when the number is 0
     if (number == 0) {
         Uetrv32_Uart_Tx('0');
@@ -89,10 +93,7 @@ void printMatrix(int rows, int cols, int8_t C[rows][cols]) {
 
         for (int j = 0; j < cols; j++) {
             int a = C[i][j];
-            if (a < 0) {
-                Uetrv32_Uart_Tx('-');
-                a = -a;
-            }
+
             UART_SendNumber(a);
 
             if (j < cols - 1) {
@@ -110,4 +111,86 @@ void printMatrix(int rows, int cols, int8_t C[rows][cols]) {
             Uetrv32_Uart_Tx('\r');
         }
     }
+}
+uint32_t Get_Data_Word(void) {
+
+  union {
+    uint32_t word;
+    uint8_t  byte[sizeof(uint32_t)];
+  } data;
+
+  uint32_t i;
+		
+  for (i=0; i<4; i++) {
+     data.byte[i] = (uint8_t) Uetrv32_Uart_Rx(); 
+   //  Uetrv32_Uart_Tx((uint32_t) data.byte[i]);   
+  }
+	
+  return data.word;
+}
+
+void displayMatrix2(int rows, int cols, int8_t matrix[rows][cols]) {
+    int i, j;
+    bool rows_g = rows > 10;
+    bool cols_g = cols > 10;
+
+    UETrv32_Uart_Print("[\n\r");
+
+    int rows_to_print = rows_g ? 5 : rows;
+
+    // Display the first set of rows
+    for (i = 0; i < rows_to_print; i++) {
+        UETrv32_Uart_Print("  [");
+        if (cols_g) {
+            for (j = 0; j < 5; j++) {
+                UART_SendNumber(matrix[i][j]);
+                Uetrv32_Uart_Tx(' ');
+            }
+            UETrv32_Uart_Print("... ");
+            for (j = cols - 5; j < cols; j++) {
+                UART_SendNumber(matrix[i][j]);
+                                Uetrv32_Uart_Tx(' ');
+
+            }
+        } else {
+            for (j = 0; j < cols; j++) {
+                UART_SendNumber(matrix[i][j]);
+                                Uetrv32_Uart_Tx(' ');
+
+            }
+        }
+        UETrv32_Uart_Print("]\n\r");
+    }
+
+    if (rows_g) {
+        // Ellipsis for skipped rows
+        UETrv32_Uart_Print("  ...\n\r");
+
+        // Display the last set of rows
+        for (i = rows - 5; i < rows; i++) {
+            UETrv32_Uart_Print("  [");
+            if (cols_g) {
+                for (j = 0; j < 5; j++) {
+                    UART_SendNumber(matrix[i][j]);
+                                    Uetrv32_Uart_Tx(' ');
+
+                }
+                UETrv32_Uart_Print("... ");
+                for (j = cols - 5; j < cols; j++) {
+                    UART_SendNumber(matrix[i][j]);
+                                    Uetrv32_Uart_Tx(' ');
+
+                }
+            } else {
+                for (j = 0; j < cols; j++) {
+                    UART_SendNumber(matrix[i][j]);
+                                    Uetrv32_Uart_Tx(' ');
+
+                }
+            }
+            UETrv32_Uart_Print("]\n\r");
+        }
+    }
+
+    UETrv32_Uart_Print("]\n\r");
 }

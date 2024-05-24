@@ -173,24 +173,7 @@ void main(void) {
     uint32_t M,K;
     // Initialize UART with desired baudrate
     Uetrv32_Uart_Init(BAUD_DIV);
-    UETrv32_Uart_Print("Enter dim_M: ");
-    M = (uint32_t) Uetrv32_Uart_Rx();
-    Uetrv32_Uart_Tx((uint32_t) M);
-    M = M-'0';
-    UETrv32_Uart_Print("\n\rEnter dim_K:");
-    K = (uint32_t) Uetrv32_Uart_Rx();
-   
-    Uetrv32_Uart_Tx((uint32_t) K);
-    K = K-'0';
-    int8_t A[M][K];
-    for (int i = 0; i < M; i++) {
-        for (int j = 0; j < K; j++) {
-            A[i][j]= (int8_t) Uetrv32_Uart_Rx();
-        }
-    }
-    UETrv32_Uart_Print("\n\rDone Receiving: ");
-    UETrv32_Uart_Print("\n\r");
-    printMatrix(M,K,A);
+
     // Uetrv32_Uart_Tx((uint32_t) 'W');
     // Uetrv32_Uart_Tx((uint32_t) 'a');
     // Uetrv32_Uart_Tx((uint32_t) 'i');
@@ -201,6 +184,21 @@ void main(void) {
     // Uetrv32_Uart_Tx((uint32_t) '\n');
     // Uetrv32_Uart_Tx((uint32_t) '\r');
     while (1) {
+        UETrv32_Uart_Print("Enter dim_M: ");
+        M = Get_Data_Word();
+        UART_SendNumber(M);
+        UETrv32_Uart_Print("\n\rEnter dim_K:");
+        K = Get_Data_Word();
+        UART_SendNumber(K);
+        int8_t A[M][K];
+        for (int i = 0; i < M; i++) {
+            for (int j = 0; j < K; j++) {
+                A[i][j]= (int8_t) Uetrv32_Uart_Rx();
+            }
+        }
+        UETrv32_Uart_Print("\n\rDone Receiving: ");
+        UETrv32_Uart_Print("\n\r");
+        displayMatrix2(M,K,A);
         // Echo back whatever is received
 
 
