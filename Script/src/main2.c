@@ -55,10 +55,16 @@ int main() {
     Uetrv32_Uart_Init(BAUD_DIV);
     
     int32_t C[M][N]; 
-    // TIMER_START
+    TIMER_START
     MATMUL(M, K,N, A, B, C);
-    // TIMER_STOP
-    // uint32_t cycles=read_cycles();
+    TIMER_STOP
+    uint32_t cycles=read_cycles();
+    asm("mv t6, %0"::"r"(cycles));
+    UETrv32_Uart_Print("\n\rno of cycles taken ");
+    UART_Send_32bit_number(cycles);
+    UETrv32_Uart_Print("\n\r");
+    display_result_matrix(M,N,C);
+
     // asm("csrrw t6, mcycle,x0"  );
     // int Cycles_passed;
     // asm ("csrrw %0, mcycle,x0"  : "=r" (Cycles_passed));
@@ -67,8 +73,9 @@ int main() {
     // TIMER_START
     // core_matmul(M, K, N, A, B, C);
     // TIMER_STOP
-    printMatrix(M,N,C);    
+    // printMatrix(M,N,C);    
     // UART_SendNumber(read_cycles());
+    while(1){}
     return 0;
 }
 

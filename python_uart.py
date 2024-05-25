@@ -1,4 +1,5 @@
 # from serial import Serial
+# sudo -E python3 python_uart.py
 import serial
 import time
 import random
