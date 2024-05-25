@@ -13,15 +13,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="1994000001fs"></ZoomEndTime>
-      <Cursor1Time time="1000000000fs"></Cursor1Time>
+      <ZoomStartTime time="1000000000000fs"></ZoomStartTime>
+      <ZoomEndTime time="1323765562900fs"></ZoomEndTime>
+      <Cursor1Time time="3024108130000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="265"></NameColumnWidth>
-      <ValueColumnWidth column_width="234"></ValueColumnWidth>
+      <NameColumnWidth column_width="332"></NameColumnWidth>
+      <ValueColumnWidth column_width="226"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="203" />
+   <WVObjectSize size="309" />
    <wvobject fp_name="divider802" type="divider">
       <obj_property name="label">top</obj_property>
       <obj_property name="DisplayName">label</obj_property>
@@ -490,6 +490,10 @@
       <obj_property name="label">load store</obj_property>
       <obj_property name="DisplayName">label</obj_property>
    </wvobject>
+   <wvobject type="logic" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/LOAD_STORE/cs">
+      <obj_property name="ElementShortName">cs</obj_property>
+      <obj_property name="ObjectShortName">cs</obj_property>
+   </wvobject>
    <wvobject type="logic" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/LOAD_STORE/read_en">
       <obj_property name="ElementShortName">read_en</obj_property>
       <obj_property name="ObjectShortName">read_en</obj_property>
@@ -526,10 +530,6 @@
       <obj_property name="ElementShortName">data_out_to_mem[31:0]</obj_property>
       <obj_property name="ObjectShortName">data_out_to_mem[31:0]</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/LOAD_STORE/cs">
-      <obj_property name="ElementShortName">cs</obj_property>
-      <obj_property name="ObjectShortName">cs</obj_property>
-   </wvobject>
    <wvobject type="logic" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/LOAD_STORE/mem_read">
       <obj_property name="ElementShortName">mem_read</obj_property>
       <obj_property name="ObjectShortName">mem_read</obj_property>
@@ -565,10 +565,6 @@
    <wvobject fp_name="divider918" type="divider">
       <obj_property name="label">register file</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/pc_to_flip">
-      <obj_property name="ElementShortName">pc_to_flip[31:0]</obj_property>
-      <obj_property name="ObjectShortName">pc_to_flip[31:0]</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/control_unit/instruction">
       <obj_property name="ElementShortName">instruction[31:0]</obj_property>
@@ -617,6 +613,135 @@
    <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/register_file/reg_mem">
       <obj_property name="ElementShortName">reg_mem[31:0][31:0]</obj_property>
       <obj_property name="ObjectShortName">reg_mem[31:0][31:0]</obj_property>
+      <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/register_file/reg_mem[31]">
+         <obj_property name="ElementShortName">[31][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[31][31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/register_file/reg_mem[30]">
+         <obj_property name="ElementShortName">[30][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[30][31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/register_file/reg_mem[29]">
+         <obj_property name="ElementShortName">[29][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[29][31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/register_file/reg_mem[28]">
+         <obj_property name="ElementShortName">[28][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[28][31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/register_file/reg_mem[27]">
+         <obj_property name="ElementShortName">[27][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[27][31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/register_file/reg_mem[26]">
+         <obj_property name="ElementShortName">[26][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[26][31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/register_file/reg_mem[25]">
+         <obj_property name="ElementShortName">[25][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[25][31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/register_file/reg_mem[24]">
+         <obj_property name="ElementShortName">[24][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[24][31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/register_file/reg_mem[23]">
+         <obj_property name="ElementShortName">[23][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[23][31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/register_file/reg_mem[22]">
+         <obj_property name="ElementShortName">[22][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[22][31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/register_file/reg_mem[21]">
+         <obj_property name="ElementShortName">[21][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[21][31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/register_file/reg_mem[20]">
+         <obj_property name="ElementShortName">[20][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[20][31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/register_file/reg_mem[19]">
+         <obj_property name="ElementShortName">[19][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[19][31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/register_file/reg_mem[18]">
+         <obj_property name="ElementShortName">[18][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[18][31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/register_file/reg_mem[17]">
+         <obj_property name="ElementShortName">[17][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[17][31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/register_file/reg_mem[16]">
+         <obj_property name="ElementShortName">[16][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[16][31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/register_file/reg_mem[15]">
+         <obj_property name="ElementShortName">[15][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[15][31:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/register_file/reg_mem[14]">
+         <obj_property name="ElementShortName">[14][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[14][31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/register_file/reg_mem[13]">
+         <obj_property name="ElementShortName">[13][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[13][31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/register_file/reg_mem[12]">
+         <obj_property name="ElementShortName">[12][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[12][31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/register_file/reg_mem[11]">
+         <obj_property name="ElementShortName">[11][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[11][31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/register_file/reg_mem[10]">
+         <obj_property name="ElementShortName">[10][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[10][31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/register_file/reg_mem[9]">
+         <obj_property name="ElementShortName">[9][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[9][31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/register_file/reg_mem[8]">
+         <obj_property name="ElementShortName">[8][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[8][31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/register_file/reg_mem[7]">
+         <obj_property name="ElementShortName">[7][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[7][31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/register_file/reg_mem[6]">
+         <obj_property name="ElementShortName">[6][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[6][31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/register_file/reg_mem[5]">
+         <obj_property name="ElementShortName">[5][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[5][31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/register_file/reg_mem[4]">
+         <obj_property name="ElementShortName">[4][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[4][31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/register_file/reg_mem[3]">
+         <obj_property name="ElementShortName">[3][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[3][31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/register_file/reg_mem[2]">
+         <obj_property name="ElementShortName">[2][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[2][31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/register_file/reg_mem[1]">
+         <obj_property name="ElementShortName">[1][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[1][31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/register_file/reg_mem[0]">
+         <obj_property name="ElementShortName">[0][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[0][31:0]</obj_property>
+      </wvobject>
    </wvobject>
    <wvobject type="logic" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/register_file/valid_rs1">
       <obj_property name="ElementShortName">valid_rs1</obj_property>
@@ -718,7 +843,7 @@
    <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/memory_instance/system_bus_wr_data">
       <obj_property name="ElementShortName">system_bus_wr_data[3:0][7:0]</obj_property>
       <obj_property name="ObjectShortName">system_bus_wr_data[3:0][7:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/memory_instance/system_bus_addr">
       <obj_property name="ElementShortName">system_bus_addr[31:0]</obj_property>
@@ -932,5 +1057,433 @@
    <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/uart_inst/uart_rx_module/state_next">
       <obj_property name="ElementShortName">state_next[1:0]</obj_property>
       <obj_property name="ObjectShortName">state_next[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider1307" type="divider">
+      <obj_property name="label">top core</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/clk">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/reset">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/interupt">
+      <obj_property name="ElementShortName">interupt</obj_property>
+      <obj_property name="ObjectShortName">interupt</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/an">
+      <obj_property name="ElementShortName">an[7:0]</obj_property>
+      <obj_property name="ObjectShortName">an[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/a_to_g">
+      <obj_property name="ElementShortName">a_to_g[6:0]</obj_property>
+      <obj_property name="ObjectShortName">a_to_g[6:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/mem_rd_wr">
+      <obj_property name="ElementShortName">mem_rd_wr</obj_property>
+      <obj_property name="ObjectShortName">mem_rd_wr</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/cs">
+      <obj_property name="ElementShortName">cs</obj_property>
+      <obj_property name="ObjectShortName">cs</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/mask">
+      <obj_property name="ElementShortName">mask[3:0]</obj_property>
+      <obj_property name="ObjectShortName">mask[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/mem_addr">
+      <obj_property name="ElementShortName">mem_addr[31:0]</obj_property>
+      <obj_property name="ObjectShortName">mem_addr[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/mem_write_data">
+      <obj_property name="ElementShortName">mem_write_data[31:0]</obj_property>
+      <obj_property name="ObjectShortName">mem_write_data[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/mem_read_data">
+      <obj_property name="ElementShortName">mem_read_data[31:0]</obj_property>
+      <obj_property name="ObjectShortName">mem_read_data[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/mem_valid">
+      <obj_property name="ElementShortName">mem_valid</obj_property>
+      <obj_property name="ObjectShortName">mem_valid</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/pc_to_flip">
+      <obj_property name="ElementShortName">pc_to_flip[31:0]</obj_property>
+      <obj_property name="ObjectShortName">pc_to_flip[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/stall_sel">
+      <obj_property name="ElementShortName">stall_sel</obj_property>
+      <obj_property name="ObjectShortName">stall_sel</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/flush_sel">
+      <obj_property name="ElementShortName">flush_sel</obj_property>
+      <obj_property name="ObjectShortName">flush_sel</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/forward_sel_2">
+      <obj_property name="ElementShortName">forward_sel_2</obj_property>
+      <obj_property name="ObjectShortName">forward_sel_2</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/forward_sel_1">
+      <obj_property name="ElementShortName">forward_sel_1</obj_property>
+      <obj_property name="ObjectShortName">forward_sel_1</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/pc_to_inst_mem">
+      <obj_property name="ElementShortName">pc_to_inst_mem[31:0]</obj_property>
+      <obj_property name="ObjectShortName">pc_to_inst_mem[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/pc_to_flip_mux">
+      <obj_property name="ElementShortName">pc_to_flip_mux[31:0]</obj_property>
+      <obj_property name="ObjectShortName">pc_to_flip_mux[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/pc_from_alu">
+      <obj_property name="ElementShortName">pc_from_alu[31:0]</obj_property>
+      <obj_property name="ObjectShortName">pc_from_alu[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/pc_for_jump">
+      <obj_property name="ElementShortName">pc_for_jump[31:0]</obj_property>
+      <obj_property name="ObjectShortName">pc_for_jump[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/pc_for_jump_flip_2">
+      <obj_property name="ElementShortName">pc_for_jump_flip_2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">pc_for_jump_flip_2[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/data_out_to_reg">
+      <obj_property name="ElementShortName">data_out_to_reg[31:0]</obj_property>
+      <obj_property name="ObjectShortName">data_out_to_reg[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/inst_out">
+      <obj_property name="ElementShortName">inst_out[31:0]</obj_property>
+      <obj_property name="ObjectShortName">inst_out[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/rs1_alu_a">
+      <obj_property name="ElementShortName">rs1_alu_a[31:0]</obj_property>
+      <obj_property name="ObjectShortName">rs1_alu_a[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/rs2_alu_b">
+      <obj_property name="ElementShortName">rs2_alu_b[31:0]</obj_property>
+      <obj_property name="ObjectShortName">rs2_alu_b[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/write_back_data_to_reg_file">
+      <obj_property name="ElementShortName">write_back_data_to_reg_file[31:0]</obj_property>
+      <obj_property name="ObjectShortName">write_back_data_to_reg_file[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/pc_for_inst_mem_from_csr">
+      <obj_property name="ElementShortName">pc_for_inst_mem_from_csr[31:0]</obj_property>
+      <obj_property name="ObjectShortName">pc_for_inst_mem_from_csr[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/pc_to_flip_intrupt_mux">
+      <obj_property name="ElementShortName">pc_to_flip_intrupt_mux[31:0]</obj_property>
+      <obj_property name="ObjectShortName">pc_to_flip_intrupt_mux[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/alu_con">
+      <obj_property name="ElementShortName">alu_con[3:0]</obj_property>
+      <obj_property name="ObjectShortName">alu_con[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/reg_wr">
+      <obj_property name="ElementShortName">reg_wr</obj_property>
+      <obj_property name="ObjectShortName">reg_wr</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/BR_taken">
+      <obj_property name="ElementShortName">BR_taken</obj_property>
+      <obj_property name="ObjectShortName">BR_taken</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/reg_wr_flip">
+      <obj_property name="ElementShortName">reg_wr_flip</obj_property>
+      <obj_property name="ObjectShortName">reg_wr_flip</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/mem_read_flip">
+      <obj_property name="ElementShortName">mem_read_flip</obj_property>
+      <obj_property name="ObjectShortName">mem_read_flip</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/mem_write_flip">
+      <obj_property name="ElementShortName">mem_write_flip</obj_property>
+      <obj_property name="ObjectShortName">mem_write_flip</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/pc_jump_mux_flip">
+      <obj_property name="ElementShortName">pc_jump_mux_flip</obj_property>
+      <obj_property name="ObjectShortName">pc_jump_mux_flip</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/BR_taken_flip">
+      <obj_property name="ElementShortName">BR_taken_flip</obj_property>
+      <obj_property name="ObjectShortName">BR_taken_flip</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/rs1">
+      <obj_property name="ElementShortName">rs1[4:0]</obj_property>
+      <obj_property name="ObjectShortName">rs1[4:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/rs2">
+      <obj_property name="ElementShortName">rs2[4:0]</obj_property>
+      <obj_property name="ObjectShortName">rs2[4:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/rd">
+      <obj_property name="ElementShortName">rd[4:0]</obj_property>
+      <obj_property name="ObjectShortName">rd[4:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/alu_result">
+      <obj_property name="ElementShortName">alu_result[31:0]</obj_property>
+      <obj_property name="ObjectShortName">alu_result[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/pc_to_alu_mux">
+      <obj_property name="ElementShortName">pc_to_alu_mux[31:0]</obj_property>
+      <obj_property name="ObjectShortName">pc_to_alu_mux[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/alu_result_flip">
+      <obj_property name="ElementShortName">alu_result_flip[31:0]</obj_property>
+      <obj_property name="ObjectShortName">alu_result_flip[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/rs2_alu_b_flip">
+      <obj_property name="ElementShortName">rs2_alu_b_flip[31:0]</obj_property>
+      <obj_property name="ObjectShortName">rs2_alu_b_flip[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/write_data">
+      <obj_property name="ElementShortName">write_data[31:0]</obj_property>
+      <obj_property name="ObjectShortName">write_data[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/csr_address">
+      <obj_property name="ElementShortName">csr_address[31:0]</obj_property>
+      <obj_property name="ObjectShortName">csr_address[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/csr_address_muxed">
+      <obj_property name="ElementShortName">csr_address_muxed[31:0]</obj_property>
+      <obj_property name="ObjectShortName">csr_address_muxed[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/csr_address_stalled">
+      <obj_property name="ElementShortName">csr_address_stalled[31:0]</obj_property>
+      <obj_property name="ObjectShortName">csr_address_stalled[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/alu_A">
+      <obj_property name="ElementShortName">alu_A[31:0]</obj_property>
+      <obj_property name="ObjectShortName">alu_A[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/alu_B">
+      <obj_property name="ElementShortName">alu_B[31:0]</obj_property>
+      <obj_property name="ObjectShortName">alu_B[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/imm_to_alu_mux_2">
+      <obj_property name="ElementShortName">imm_to_alu_mux_2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">imm_to_alu_mux_2[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/load_data">
+      <obj_property name="ElementShortName">load_data[31:0]</obj_property>
+      <obj_property name="ObjectShortName">load_data[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/inst_out_flip">
+      <obj_property name="ElementShortName">inst_out_flip[31:0]</obj_property>
+      <obj_property name="ObjectShortName">inst_out_flip[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/inst_out_flip_2">
+      <obj_property name="ElementShortName">inst_out_flip_2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">inst_out_flip_2[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/write_data_stalled">
+      <obj_property name="ElementShortName">write_data_stalled[31:0]</obj_property>
+      <obj_property name="ObjectShortName">write_data_stalled[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/write_data_muxed">
+      <obj_property name="ElementShortName">write_data_muxed[31:0]</obj_property>
+      <obj_property name="ObjectShortName">write_data_muxed[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/led_display">
+      <obj_property name="ElementShortName">led_display[31:0]</obj_property>
+      <obj_property name="ObjectShortName">led_display[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/mem_read">
+      <obj_property name="ElementShortName">mem_read</obj_property>
+      <obj_property name="ObjectShortName">mem_read</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/mem_write">
+      <obj_property name="ElementShortName">mem_write</obj_property>
+      <obj_property name="ObjectShortName">mem_write</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/alu_mux_1">
+      <obj_property name="ElementShortName">alu_mux_1</obj_property>
+      <obj_property name="ObjectShortName">alu_mux_1</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/alu_mux_2">
+      <obj_property name="ElementShortName">alu_mux_2</obj_property>
+      <obj_property name="ObjectShortName">alu_mux_2</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/pc_jump_mux">
+      <obj_property name="ElementShortName">pc_jump_mux</obj_property>
+      <obj_property name="ObjectShortName">pc_jump_mux</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/wr_bck_mux">
+      <obj_property name="ElementShortName">wr_bck_mux[1:0]</obj_property>
+      <obj_property name="ObjectShortName">wr_bck_mux[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/wr_bck_mux_flip">
+      <obj_property name="ElementShortName">wr_bck_mux_flip[1:0]</obj_property>
+      <obj_property name="ObjectShortName">wr_bck_mux_flip[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/sign_extend">
+      <obj_property name="ElementShortName">sign_extend[2:0]</obj_property>
+      <obj_property name="ObjectShortName">sign_extend[2:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/func3_to_mem">
+      <obj_property name="ElementShortName">func3_to_mem[2:0]</obj_property>
+      <obj_property name="ObjectShortName">func3_to_mem[2:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/branch_type">
+      <obj_property name="ElementShortName">branch_type[2:0]</obj_property>
+      <obj_property name="ObjectShortName">branch_type[2:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/func3_to_mem_flip">
+      <obj_property name="ElementShortName">func3_to_mem_flip[2:0]</obj_property>
+      <obj_property name="ObjectShortName">func3_to_mem_flip[2:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/sel_for_branch">
+      <obj_property name="ElementShortName">sel_for_branch</obj_property>
+      <obj_property name="ObjectShortName">sel_for_branch</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/csr_reg_rd">
+      <obj_property name="ElementShortName">csr_reg_rd</obj_property>
+      <obj_property name="ObjectShortName">csr_reg_rd</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/csr_reg_wr">
+      <obj_property name="ElementShortName">csr_reg_wr</obj_property>
+      <obj_property name="ObjectShortName">csr_reg_wr</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/data_out_to_alu_mux_2_muxed_stalled">
+      <obj_property name="ElementShortName">data_out_to_alu_mux_2_muxed_stalled[31:0]</obj_property>
+      <obj_property name="ObjectShortName">data_out_to_alu_mux_2_muxed_stalled[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/forward_data_to_alu_1">
+      <obj_property name="ElementShortName">forward_data_to_alu_1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">forward_data_to_alu_1[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/data_out_to_alu_mux_1">
+      <obj_property name="ElementShortName">data_out_to_alu_mux_1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">data_out_to_alu_mux_1[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/forward_data_to_alu_2">
+      <obj_property name="ElementShortName">forward_data_to_alu_2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">forward_data_to_alu_2[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/data_out_to_alu_mux_2">
+      <obj_property name="ElementShortName">data_out_to_alu_mux_2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">data_out_to_alu_mux_2[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/inst_out_to_flip_muxed">
+      <obj_property name="ElementShortName">inst_out_to_flip_muxed[31:0]</obj_property>
+      <obj_property name="ObjectShortName">inst_out_to_flip_muxed[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/csr_reg_rd_flip">
+      <obj_property name="ElementShortName">csr_reg_rd_flip</obj_property>
+      <obj_property name="ObjectShortName">csr_reg_rd_flip</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/csr_reg_wr_flip">
+      <obj_property name="ElementShortName">csr_reg_wr_flip</obj_property>
+      <obj_property name="ObjectShortName">csr_reg_wr_flip</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/stall_instruction_for_pc">
+      <obj_property name="ElementShortName">stall_instruction_for_pc[31:0]</obj_property>
+      <obj_property name="ObjectShortName">stall_instruction_for_pc[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/flush_opcode">
+      <obj_property name="ElementShortName">flush_opcode[31:0]</obj_property>
+      <obj_property name="ObjectShortName">flush_opcode[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/pc_to_inst_mem_through_stall_n_flush">
+      <obj_property name="ElementShortName">pc_to_inst_mem_through_stall_n_flush[31:0]</obj_property>
+      <obj_property name="ObjectShortName">pc_to_inst_mem_through_stall_n_flush[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/pc_to_alu_mux_muxed">
+      <obj_property name="ElementShortName">pc_to_alu_mux_muxed[31:0]</obj_property>
+      <obj_property name="ObjectShortName">pc_to_alu_mux_muxed[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/inst_out_to_rd_flip_muxed">
+      <obj_property name="ElementShortName">inst_out_to_rd_flip_muxed[31:0]</obj_property>
+      <obj_property name="ObjectShortName">inst_out_to_rd_flip_muxed[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/store_data_flip">
+      <obj_property name="ElementShortName">store_data_flip[31:0]</obj_property>
+      <obj_property name="ObjectShortName">store_data_flip[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/alu_result_flip_muxed">
+      <obj_property name="ElementShortName">alu_result_flip_muxed[31:0]</obj_property>
+      <obj_property name="ObjectShortName">alu_result_flip_muxed[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/inst_out_to_rd_flip_muxed_stalled">
+      <obj_property name="ElementShortName">inst_out_to_rd_flip_muxed_stalled[31:0]</obj_property>
+      <obj_property name="ObjectShortName">inst_out_to_rd_flip_muxed_stalled[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/alu_result_flip_muxed_stalled">
+      <obj_property name="ElementShortName">alu_result_flip_muxed_stalled[31:0]</obj_property>
+      <obj_property name="ObjectShortName">alu_result_flip_muxed_stalled[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/data_out_to_alu_mux_2_muxed">
+      <obj_property name="ElementShortName">data_out_to_alu_mux_2_muxed[31:0]</obj_property>
+      <obj_property name="ObjectShortName">data_out_to_alu_mux_2_muxed[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/inst_out_to_flip_muxed_stalled">
+      <obj_property name="ElementShortName">inst_out_to_flip_muxed_stalled[31:0]</obj_property>
+      <obj_property name="ObjectShortName">inst_out_to_flip_muxed_stalled[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/valid">
+      <obj_property name="ElementShortName">valid</obj_property>
+      <obj_property name="ObjectShortName">valid</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/csr_return">
+      <obj_property name="ElementShortName">csr_return</obj_property>
+      <obj_property name="ObjectShortName">csr_return</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/csr_return_flip">
+      <obj_property name="ElementShortName">csr_return_flip</obj_property>
+      <obj_property name="ObjectShortName">csr_return_flip</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/interupt_sel">
+      <obj_property name="ElementShortName">interupt_sel</obj_property>
+      <obj_property name="ObjectShortName">interupt_sel</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/alu_mul_sel_flip">
+      <obj_property name="ElementShortName">alu_mul_sel_flip</obj_property>
+      <obj_property name="ObjectShortName">alu_mul_sel_flip</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/m_con">
+      <obj_property name="ElementShortName">m_con[3:0]</obj_property>
+      <obj_property name="ObjectShortName">m_con[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/m_result">
+      <obj_property name="ElementShortName">m_result[31:0]</obj_property>
+      <obj_property name="ObjectShortName">m_result[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/arthimatic_result">
+      <obj_property name="ElementShortName">arthimatic_result[31:0]</obj_property>
+      <obj_property name="ObjectShortName">arthimatic_result[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/m_done">
+      <obj_property name="ElementShortName">m_done</obj_property>
+      <obj_property name="ObjectShortName">m_done</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/m_busy">
+      <obj_property name="ElementShortName">m_busy</obj_property>
+      <obj_property name="ObjectShortName">m_busy</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/alu_mul_sel">
+      <obj_property name="ElementShortName">alu_mul_sel</obj_property>
+      <obj_property name="ObjectShortName">alu_mul_sel</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider1344" type="divider">
+      <obj_property name="label">data memory data stall mux</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/stall_for_data_memory/A">
+      <obj_property name="ElementShortName">A[31:0]</obj_property>
+      <obj_property name="ObjectShortName">A[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/stall_for_data_memory/B">
+      <obj_property name="ElementShortName">B[31:0]</obj_property>
+      <obj_property name="ObjectShortName">B[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/stall_for_data_memory/sel">
+      <obj_property name="ElementShortName">sel</obj_property>
+      <obj_property name="ObjectShortName">sel</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/stall_for_data_memory/out">
+      <obj_property name="ElementShortName">out[31:0]</obj_property>
+      <obj_property name="ObjectShortName">out[31:0]</obj_property>
    </wvobject>
 </wave_config>
