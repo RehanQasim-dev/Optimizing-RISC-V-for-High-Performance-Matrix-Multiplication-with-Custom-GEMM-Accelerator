@@ -211,7 +211,13 @@ void main(void) {
         UETrv32_Uart_Print("\n\r");
         display_input_matrix(M,K,A);
         display_input_matrix(K,N,B);
-        MATMUL(M,K,N,A,B,C);
+        TIMER_START
+        MATMUL(M, K,N, A, B, C);
+        TIMER_STOP
+        int cycles=read_cycles();
+        UETrv32_Uart_Print("\n\rno of cycles taken ");
+        UART_Send_32bit_number(cycles);
+        UETrv32_Uart_Print("\n\r");
         display_result_matrix(M,N,C);
         // Echo back whatever is received
         // Append received character to received_string

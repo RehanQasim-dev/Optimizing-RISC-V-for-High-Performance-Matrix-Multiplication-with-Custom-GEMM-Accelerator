@@ -434,6 +434,7 @@ m_unit multiply_and_divide_unit(
       flush_sel,
       stall_sel,
       m_done,
-      m_busy
+      m_busy,
+      csr_reg_rd_flip
   );
 endmodule
