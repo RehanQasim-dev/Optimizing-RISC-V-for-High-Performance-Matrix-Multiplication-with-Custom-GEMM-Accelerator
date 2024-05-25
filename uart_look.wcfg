@@ -13,15 +13,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="941530817fs"></ZoomStartTime>
-      <ZoomEndTime time="1011693837fs"></ZoomEndTime>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="1994000001fs"></ZoomEndTime>
       <Cursor1Time time="1000000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="265"></NameColumnWidth>
-      <ValueColumnWidth column_width="238"></ValueColumnWidth>
+      <ValueColumnWidth column_width="234"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="202" />
+   <WVObjectSize size="203" />
    <wvobject fp_name="divider802" type="divider">
       <obj_property name="label">top</obj_property>
       <obj_property name="DisplayName">label</obj_property>
@@ -109,13 +109,13 @@
       <obj_property name="ElementShortName">interface_control[4:0]</obj_property>
       <obj_property name="ObjectShortName">interface_control[4:0]</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/main_csr_pipe_tb/top_instance/top_instance/interface_rdwr">
-      <obj_property name="ElementShortName">interface_rdwr</obj_property>
-      <obj_property name="ObjectShortName">interface_rdwr</obj_property>
-   </wvobject>
    <wvobject type="logic" fp_name="/main_csr_pipe_tb/top_instance/top_instance/interface_en">
       <obj_property name="ElementShortName">interface_en</obj_property>
       <obj_property name="ObjectShortName">interface_en</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/main_csr_pipe_tb/top_instance/top_instance/interface_rdwr">
+      <obj_property name="ElementShortName">interface_rdwr</obj_property>
+      <obj_property name="ObjectShortName">interface_rdwr</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/interface_addr">
       <obj_property name="ElementShortName">interface_addr[31:0]</obj_property>
@@ -128,6 +128,10 @@
    <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/interface_wr_data">
       <obj_property name="ElementShortName">interface_wr_data[3:0][31:0]</obj_property>
       <obj_property name="ObjectShortName">interface_wr_data[3:0][31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/gemm_instance/my_controller/cs">
+      <obj_property name="ElementShortName">cs[2:0]</obj_property>
+      <obj_property name="ObjectShortName">cs[2:0]</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/system_bus_mask">
       <obj_property name="ElementShortName">system_bus_mask[3:0]</obj_property>
@@ -613,7 +617,6 @@
    <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/register_file/reg_mem">
       <obj_property name="ElementShortName">reg_mem[31:0][31:0]</obj_property>
       <obj_property name="ObjectShortName">reg_mem[31:0][31:0]</obj_property>
-      <obj_property name="isExpanded"></obj_property>
    </wvobject>
    <wvobject type="logic" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/register_file/valid_rs1">
       <obj_property name="ElementShortName">valid_rs1</obj_property>
@@ -725,70 +728,70 @@
       <obj_property name="label">memory</obj_property>
       <obj_property name="DisplayName">label</obj_property>
       <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/memory_instance/banked_memory_instance/\ram_instances[0].bank_inst /mem">
-         <obj_property name="ElementShortName">mem[127:0][7:0]</obj_property>
-         <obj_property name="ObjectShortName">mem[127:0][7:0]</obj_property>
+         <obj_property name="ElementShortName">mem[2047:0][7:0]</obj_property>
+         <obj_property name="ObjectShortName">mem[2047:0][7:0]</obj_property>
          <obj_property name="isExpanded"></obj_property>
       </wvobject>
       <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/memory_instance/banked_memory_instance/\ram_instances[1].bank_inst /mem">
-         <obj_property name="ElementShortName">mem[127:0][7:0]</obj_property>
-         <obj_property name="ObjectShortName">mem[127:0][7:0]</obj_property>
+         <obj_property name="ElementShortName">mem[2047:0][7:0]</obj_property>
+         <obj_property name="ObjectShortName">mem[2047:0][7:0]</obj_property>
          <obj_property name="isExpanded"></obj_property>
       </wvobject>
       <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/memory_instance/banked_memory_instance/\ram_instances[2].bank_inst /mem">
-         <obj_property name="ElementShortName">mem[127:0][7:0]</obj_property>
-         <obj_property name="ObjectShortName">mem[127:0][7:0]</obj_property>
+         <obj_property name="ElementShortName">mem[2047:0][7:0]</obj_property>
+         <obj_property name="ObjectShortName">mem[2047:0][7:0]</obj_property>
       </wvobject>
       <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/memory_instance/banked_memory_instance/\ram_instances[3].bank_inst /mem">
-         <obj_property name="ElementShortName">mem[127:0][7:0]</obj_property>
-         <obj_property name="ObjectShortName">mem[127:0][7:0]</obj_property>
+         <obj_property name="ElementShortName">mem[2047:0][7:0]</obj_property>
+         <obj_property name="ObjectShortName">mem[2047:0][7:0]</obj_property>
       </wvobject>
       <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/memory_instance/banked_memory_instance/\ram_instances[4].bank_inst /mem">
-         <obj_property name="ElementShortName">mem[127:0][7:0]</obj_property>
-         <obj_property name="ObjectShortName">mem[127:0][7:0]</obj_property>
+         <obj_property name="ElementShortName">mem[2047:0][7:0]</obj_property>
+         <obj_property name="ObjectShortName">mem[2047:0][7:0]</obj_property>
       </wvobject>
       <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/memory_instance/banked_memory_instance/\ram_instances[5].bank_inst /mem">
-         <obj_property name="ElementShortName">mem[127:0][7:0]</obj_property>
-         <obj_property name="ObjectShortName">mem[127:0][7:0]</obj_property>
+         <obj_property name="ElementShortName">mem[2047:0][7:0]</obj_property>
+         <obj_property name="ObjectShortName">mem[2047:0][7:0]</obj_property>
       </wvobject>
       <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/memory_instance/banked_memory_instance/\ram_instances[6].bank_inst /mem">
-         <obj_property name="ElementShortName">mem[127:0][7:0]</obj_property>
-         <obj_property name="ObjectShortName">mem[127:0][7:0]</obj_property>
+         <obj_property name="ElementShortName">mem[2047:0][7:0]</obj_property>
+         <obj_property name="ObjectShortName">mem[2047:0][7:0]</obj_property>
       </wvobject>
       <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/memory_instance/banked_memory_instance/\ram_instances[7].bank_inst /mem">
-         <obj_property name="ElementShortName">mem[127:0][7:0]</obj_property>
-         <obj_property name="ObjectShortName">mem[127:0][7:0]</obj_property>
+         <obj_property name="ElementShortName">mem[2047:0][7:0]</obj_property>
+         <obj_property name="ObjectShortName">mem[2047:0][7:0]</obj_property>
       </wvobject>
       <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/memory_instance/banked_memory_instance/\ram_instances[8].bank_inst /mem">
-         <obj_property name="ElementShortName">mem[127:0][7:0]</obj_property>
-         <obj_property name="ObjectShortName">mem[127:0][7:0]</obj_property>
+         <obj_property name="ElementShortName">mem[2047:0][7:0]</obj_property>
+         <obj_property name="ObjectShortName">mem[2047:0][7:0]</obj_property>
       </wvobject>
       <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/memory_instance/banked_memory_instance/\ram_instances[9].bank_inst /mem">
-         <obj_property name="ElementShortName">mem[127:0][7:0]</obj_property>
-         <obj_property name="ObjectShortName">mem[127:0][7:0]</obj_property>
+         <obj_property name="ElementShortName">mem[2047:0][7:0]</obj_property>
+         <obj_property name="ObjectShortName">mem[2047:0][7:0]</obj_property>
       </wvobject>
       <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/memory_instance/banked_memory_instance/\ram_instances[10].bank_inst /mem">
-         <obj_property name="ElementShortName">mem[127:0][7:0]</obj_property>
-         <obj_property name="ObjectShortName">mem[127:0][7:0]</obj_property>
+         <obj_property name="ElementShortName">mem[2047:0][7:0]</obj_property>
+         <obj_property name="ObjectShortName">mem[2047:0][7:0]</obj_property>
       </wvobject>
       <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/memory_instance/banked_memory_instance/\ram_instances[11].bank_inst /mem">
-         <obj_property name="ElementShortName">mem[127:0][7:0]</obj_property>
-         <obj_property name="ObjectShortName">mem[127:0][7:0]</obj_property>
+         <obj_property name="ElementShortName">mem[2047:0][7:0]</obj_property>
+         <obj_property name="ObjectShortName">mem[2047:0][7:0]</obj_property>
       </wvobject>
       <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/memory_instance/banked_memory_instance/\ram_instances[12].bank_inst /mem">
-         <obj_property name="ElementShortName">mem[127:0][7:0]</obj_property>
-         <obj_property name="ObjectShortName">mem[127:0][7:0]</obj_property>
+         <obj_property name="ElementShortName">mem[2047:0][7:0]</obj_property>
+         <obj_property name="ObjectShortName">mem[2047:0][7:0]</obj_property>
       </wvobject>
       <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/memory_instance/banked_memory_instance/\ram_instances[13].bank_inst /mem">
-         <obj_property name="ElementShortName">mem[127:0][7:0]</obj_property>
-         <obj_property name="ObjectShortName">mem[127:0][7:0]</obj_property>
+         <obj_property name="ElementShortName">mem[2047:0][7:0]</obj_property>
+         <obj_property name="ObjectShortName">mem[2047:0][7:0]</obj_property>
       </wvobject>
       <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/memory_instance/banked_memory_instance/\ram_instances[14].bank_inst /mem">
-         <obj_property name="ElementShortName">mem[127:0][7:0]</obj_property>
-         <obj_property name="ObjectShortName">mem[127:0][7:0]</obj_property>
+         <obj_property name="ElementShortName">mem[2047:0][7:0]</obj_property>
+         <obj_property name="ObjectShortName">mem[2047:0][7:0]</obj_property>
       </wvobject>
       <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/memory_instance/banked_memory_instance/\ram_instances[15].bank_inst /mem">
-         <obj_property name="ElementShortName">mem[127:0][7:0]</obj_property>
-         <obj_property name="ObjectShortName">mem[127:0][7:0]</obj_property>
+         <obj_property name="ElementShortName">mem[2047:0][7:0]</obj_property>
+         <obj_property name="ObjectShortName">mem[2047:0][7:0]</obj_property>
       </wvobject>
    </wvobject>
    <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/memory_instance/banked_memory_instance/\ram_instances[0].bank_inst /mem[0]">

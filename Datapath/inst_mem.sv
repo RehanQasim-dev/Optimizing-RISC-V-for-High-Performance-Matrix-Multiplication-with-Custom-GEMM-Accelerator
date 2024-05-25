@@ -2,7 +2,7 @@ module inst_mem (
     input  logic [31:0] pc,
     output logic [31:0] inst_out
 );
-  logic [31:0] inst_ruction[1024:0];
+  logic [31:0] inst_ruction[2047:0];
   logic [31:0] address;
   assign address = pc;
   initial begin

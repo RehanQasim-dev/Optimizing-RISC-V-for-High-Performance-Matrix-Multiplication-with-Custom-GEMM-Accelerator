@@ -56,7 +56,7 @@ module top (
   assign en_Dmem = system_bus_en && (~is_gemm_addr) && (~is_uart_addr);
   memory #(
       .NUM_RAMS(16),
-      .A_WID(7),
+      .A_WID(11),
       .D_WID(8)
   ) memory_instance (
       .clk(clk),

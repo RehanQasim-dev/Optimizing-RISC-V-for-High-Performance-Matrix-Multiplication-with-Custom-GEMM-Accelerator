@@ -62,13 +62,13 @@ void MATMUL( uint32_t A_rows, uint32_t A_cols, uint32_t B_cols,int8_t A[A_rows][
 
                 current_k = A_cols - remaining_k;
             }
-
+            current_k=0;
             remaining_m -= rows_to_process;
 
             current_m = A_rows - remaining_m;
             remaining_k = A_cols;
         }
-
+        current_m=0;
         remaining_n -= cols_to_process;
 
         current_n = B_cols - remaining_n;
