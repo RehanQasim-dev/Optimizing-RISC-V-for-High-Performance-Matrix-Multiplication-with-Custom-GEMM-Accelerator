@@ -11,7 +11,7 @@
 `ifndef DDR_DEFS
 `define DDR_DEFS
 
-`include "pcore_interface_defs.svh"
+`include "/home/abdul_waheed/Music/rv32_for_fyp/uart/pcore_interface_defs.svh"
 
 // DDR memory related parametes 
 parameter DDR2_DQ_WIDTH   =  16;

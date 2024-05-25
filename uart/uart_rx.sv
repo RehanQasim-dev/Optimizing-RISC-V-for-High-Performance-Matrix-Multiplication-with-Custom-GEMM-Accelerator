@@ -8,7 +8,7 @@
 // Date: 13.7.2022
 
 
-`include "uart_defs.svh"
+`include "/home/abdul_waheed/Music/rv32_for_fyp/uart/uart_defs.svh"
 
 module uart_rx (
 

@@ -1,11 +1,11 @@
 
-// `include "/home/abdul_waheed/Music/rv32_for_fyp/Config.sv"
+`include "/home/abdul_waheed/Music/rv32_for_fyp/Config.sv"
 
 import Config::*;
 `define base_addr 32'h9000_0000
 
-module tb_random_gemm();
-  logic  clk , rst;
+module tb_random_gemm(input bit clk, rst);
+  // logic  clk , rst;
   logic system_bus_en, system_bus_rdwr;
   logic [31:0] system_bus_rd_data, system_bus_wr_data;
   logic [31:0] system_bus_addr;
@@ -66,14 +66,14 @@ module tb_random_gemm();
       .interface_rd_data(interface_rd_data)
   );
   //clock generation
-  localparam CLK_PERIOD = 10;
-  initial begin
-    clk <= 0;
-    forever begin
-      #(CLK_PERIOD / 2);
-      clk <= ~clk;
-    end
-  end
+  // localparam CLK_PERIOD = 10;
+  // initial begin
+  //   clk <= 0;
+  //   forever begin
+  //     #(CLK_PERIOD / 2);
+  //     clk <= ~clk;
+  //   end
+  // end
   // //Testbench
   localparam blkn = SUPER_SYS_ROWS;
   localparam blkk = SUPER_SYS_COLS;
@@ -108,9 +108,9 @@ module tb_random_gemm();
   end
   /////////////////////////////////////////////Unit Testing/////////////////////////////////////////////
   initial begin
-    rst <= 1;
+    // rst <= 1;
     @(posedge clk);
-    rst <= 0;
+    // rst <= 0;
     sel_for_test <= 1;
     @(posedge clk);
     file_handle = $fopen("/home/abdul_waheed/Music/rv32_for_fyp/log_test_vivado.csv", "w");

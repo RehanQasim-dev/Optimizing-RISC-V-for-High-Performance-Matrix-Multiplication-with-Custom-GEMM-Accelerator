@@ -11,7 +11,7 @@
 `ifndef MMU_DEFS
 `define MMU_DEFS
 
-`include "pcore_interface_defs.svh"
+`include "/home/abdul_waheed/Music/rv32_for_fyp/uart/pcore_interface_defs.svh"
 
 parameter int unsigned TLB_ENTRIES = 8;
 parameter int unsigned DTLB_ENTRIES = 8;

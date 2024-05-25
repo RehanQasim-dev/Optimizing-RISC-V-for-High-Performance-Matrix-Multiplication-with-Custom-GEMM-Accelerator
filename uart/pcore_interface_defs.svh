@@ -11,9 +11,9 @@
 `ifndef PCORE_INTERFACE_DEFS
 `define PCORE_INTERFACE_DEFS
 
- `include "pcore_config_defs.svh"
- `include "pcore_csr_defs.svh"
- `include "a_ext_defs.svh"
+ `include "/home/abdul_waheed/Music/rv32_for_fyp/uart/pcore_config_defs.svh"
+ `include "/home/abdul_waheed/Music/rv32_for_fyp/uart/pcore_csr_defs.svh"
+ `include "/home/abdul_waheed/Music/rv32_for_fyp/uart/a_ext_defs.svh"
 
 //============================== ISA related definitions ================================//
 

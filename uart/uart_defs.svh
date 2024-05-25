@@ -11,7 +11,7 @@
 `ifndef UART_DEFS
 `define UART_DEFS
 
-`include "pcore_interface_defs.svh"
+`include "/home/abdul_waheed/Music/rv32_for_fyp/uart/pcore_interface_defs.svh"
 
 `define UART_DATA_SIZE                        8
 

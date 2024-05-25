@@ -11,7 +11,7 @@
 `ifndef PCORE_CSR_DEFS
 `define PCORE_CSR_DEFS
 
-`include "pcore_config_defs.svh"
+`include "/home/abdul_waheed/Music/rv32_for_fyp/uart/pcore_config_defs.svh"
 
 // ISA implementation related details
 `define RVA_EXTENTION               `XLEN'h0001

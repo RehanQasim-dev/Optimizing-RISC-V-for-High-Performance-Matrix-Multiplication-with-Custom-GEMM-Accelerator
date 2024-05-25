@@ -6,7 +6,7 @@ module inst_mem (
   logic [31:0] address;
   assign address = pc;
   initial begin
-    $readmemh("ICACHE.mem", inst_ruction);
+    $readmemh("/home/abdul_waheed/Music/rv32_for_fyp/Script/build/ICACHE.mem", inst_ruction);
   end
 
   assign inst_out = inst_ruction[address[31:2]];

@@ -11,7 +11,7 @@
 `ifndef M_EXT_DEFS
 `define M_EXT_DEFS
 
-`include "pcore_interface_defs.svh"
+`include "/home/abdul_waheed/Music/rv32_for_fyp/uart/pcore_interface_defs.svh"
 
 `define WIDTH                        $clog2(`XLEN)
 `define MAX_COUNT                    `WIDTH'(`XLEN-1)

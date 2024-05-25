@@ -9,7 +9,7 @@
 
 `ifndef C_EXT_DEFS
 `define C_EXT_DEFS
-`include "pcore_config_defs.svh"
+`include "/home/abdul_waheed/Music/rv32_for_fyp/uart/pcore_config_defs.svh"
 
 // Bus interface from IF to cext
 typedef struct packed {                            
