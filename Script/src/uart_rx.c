@@ -163,14 +163,14 @@
 // }
 #include <stdint.h>
 #include "uart.h"
-
+#include "gemm.h"
 void main(void) {
     Uetrv32_Uart_Rx();
     int8_t rx_byte = 0;
     // char received_string[10] = {0}; // Assuming maximum length of received string is 10
     // const char terminator[] = "hello\n\r";
     // int terminator_index = 0; // Index to track position in terminator string
-    uint32_t M,K;
+    uint32_t M,K,N;
     // Initialize UART with desired baudrate
     Uetrv32_Uart_Init(BAUD_DIV);
 
@@ -186,22 +186,34 @@ void main(void) {
     while (1) {
         UETrv32_Uart_Print("Enter dim_M: ");
         M = Get_Data_Word();
-        UART_SendNumber(M);
+        UART_Send_32bit_number(M);
         UETrv32_Uart_Print("\n\rEnter dim_K:");
         K = Get_Data_Word();
-        UART_SendNumber(K);
+        UART_Send_32bit_number(K);
+        UETrv32_Uart_Print("\n\rEnter dim_N:");
+        N = Get_Data_Word();
+        UART_Send_32bit_number(N);
         int8_t A[M][K];
+        int8_t B[K][N];
+        int32_t C[M][N];
         for (int i = 0; i < M; i++) {
             for (int j = 0; j < K; j++) {
                 A[i][j]= (int8_t) Uetrv32_Uart_Rx();
             }
         }
-        UETrv32_Uart_Print("\n\rDone Receiving: ");
+        UETrv32_Uart_Print("\n\rMAtrix A is Received! ");
+        for (int i = 0; i < K; i++) {
+            for (int j = 0; j < N; j++) {
+                B[i][j]= (int8_t) Uetrv32_Uart_Rx();
+            }
+        }
+        UETrv32_Uart_Print("\n\rMAtrix B is Received! ");
         UETrv32_Uart_Print("\n\r");
-        displayMatrix2(M,K,A);
+        display_input_matrix(M,K,A);
+        display_input_matrix(K,N,B);
+        MATMUL(M,K,N,A,B,C);
+        display_result_matrix(M,N,C);
         // Echo back whatever is received
-
-
         // Append received character to received_string
         // received_string[terminator_index++] = (char)rx_byte;
 
