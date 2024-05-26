@@ -5,77 +5,94 @@
 #include "gemm.h"
 #include "uart.h"
 #include <stdlib.h>
-#define M 20
-#define K 18
-#define N 20
-int8_t A[M][K] = {
-    { 115,  116,   87,   25,   95,  -28,   62,   72,   51,   55,  -63,   10,  -41,  110,  -28, -108,  -70,  121 },
-    { -31,   71,   89,  122,  -28,  -90, -118,  -33,   55,   99,   -1,  -64,  -28, -111,   38,   62,   96,   74 },
-    {  82,  -27,  100,  -75,  114,  107,   30,  -26,  -34, -126,   63, -124,   10,   -7,   73,   68,  -65,  -93 },
-    {  28, -114,  -90,  125,   -6,  120,   11,  -82,   -9,  -49,   19,   73,   16,   31,  110,   19,   57,   -3 },
-    { -83,   35, -122,   25,  -82,   50, -112,  -85,   74,  -65,   74,  -35,  -41,   75,  -56,   94,   43,  -54 },
-    { 111,  -73,  114,    4,  -33,  -93,   40,   31,   72,   54,   39,  -89,    7,   13,   40, -100,   42,   63 },
-    { -25,  -13,  120,  100,   63,  122,   40, -100,  -21,  -36,  -37,   11,  -10,   95,  -27,  -41,   48,   27 },
-    {  69,  102,  -55,   10,  111, -106,  -62, -104,   69,  -86,   75,   63,   74,    4,   88,  -75,   32,  -48 },
-    {  -6,  -35,  -47,   28,  -57,   55,  -35,  -77,  105,    7,    2,  -55,  101,  104,   67,   78,   95,   -6 },
-    { -11,   87,   80,   85,    2, -121,  121, -100,  -26,   34,  -67,   86,   76,  -38,   13,    8,  -51,  -72 },
-    {-125,  116,  -59,  -19,  -86,  -29, -110,   63,    0,    1,   57,  -73,   71, -123,  -54,   13,  -80,  -83 },
-    {  65,   26,   -7,  -66, -102,  -73,  -50,  -63,   25, -112,   18,  108,   83,  -49,  -41,  -59, -101,   85 },
-    { -27,   69,   -2,   85,    0,   12,  126,    6,  113,  -14,    4,  -85,  -62,    4,  -24,   40,  124,  -10 },
-    {  41,  118, -122,   46,  -73,   97,  -69,  112,  -66,  -52,   81,   31,   35,  -85,  -68,  116, -122,  -73 },
-    {  42,  -11,  -93,  -95,   72, -128,   84,  -39,   -3,  -25,  -43,  -76,  114,   77,  -45,   58,  -51,  -29 },
-    {-103, -108,   54,   64,   91,   28,  101,  -48,   38,   43,  -14,   54,   94,  -45,  -94,   24,   86,   55 },
-    {  64,    9,   87,   28,  -92,  115,  -95,   85,    0,  112,   81,  -56,  -10,  122,  -57, -109,  -98, -102 },
-    { -37,   23,   84, -124,   32,  -60,  -91,  -17,   63,   -3,    8,   64,  -48,   51,   77,    1,  -10,  -82 },
-    { -29,  -32,   31,  117,  -62,  123,   30,   81,   70,  104,  -16,   84,  123,  -71,   95,  -88,  104,  -40 },
-    { -60,   83,  -39,   30,  -12,  -66,   20,  -57, -112,  -92,  -86,    0,   98, -109,  115,   94,  -52,   16 },
-};
-int8_t B[K][N] = {
-    { -51,    7,   80,  -52,  -23,  -12,   15,  105,   -9,  127,  113,  -89,  -67,  115,  107,   50, -108,  -12,   -8,  100 },
-    {  59,   69, -123,   45,   37,  -48,   57,  -49,  -65,   41,  103,  -82,  -12,   16, -100,  -90,  123,   59,  -85,   67 },
-    { -68,  108,  103,   -3,  -12,  -86,  -40,  -97,  -70,  100,  -39,   97, -121,   16,  122,  -74,    3,   99,  123,   97 },
-    { -63,   80,  -87,    8,   90,   83,  108,  118,   80,  -77, -115,  -43, -100,   57,  -74,   86,  117, -104,   24,  114 },
-    { 124,   66,   55,   85,  -62,  -93,  -87,   44,   -5, -117,   33,   34,  119,  112,  -85, -114,   34,  -34,   97,  -96 },
-    { -84,  -86,  -36,   94,   74,   25,  -34,  -92,   96,  -19,    9,   75,  -24,  101,   95,   89,  109,  -41,  -72, -105 },
-    {  81,  -65,  -63,   98,  -36,   88,   23,  -44,   60,   64,  -22,   79,   40,   25,   64,   56, -117, -126,  -52,   52 },
-    { -68,  -57,   28,  125,   75,   65,  -10,   -4,   68,  -24,  -95,   90,  -57,  -37,   12,  -63,  -40,  -47,  -88, -121 },
-    { 110,  -77,   62,   58,   10,   78,  -20,  -66,   71,  -67,  -52,  -47, -106,  -49,  -69,  -99,   98,  109,  -97, -102 },
-    {  60,   18,  115,   18,   59,  105,  126,  109, -104,   98,   91,   58,  -62,  -46,   20,  108,   48, -107, -101,  101 },
-    { -11,  -26,  -77,   85,  111,   27,  -50,  -90,   20,  113,   76, -105,    3,   58,   11,  121,   18,   50,   88,  -94 },
-    { -57,  -14,  -90,   91,  -44,  -40,  -70, -106,  -15,    8,   65,   22,  114,  110,  -64,  -16,  111,   -5,   59, -115 },
-    { -60, -102,  116, -117,   94,  -46,  -62,  122,  -45,  110,  -47, -110,   80,  -77,  -33,  -47,   11,  106,   56,  106 },
-    {-100,  -61,   66,  -20,    3,   98,   24,   82,   43,  -85,  -65, -100,   47,  -80,  -57,  -24,  -60,  -24,   99,   44 },
-    { -85,  -65, -121,  -29, -108,   53, -106,   79,  107,   52,   61,  -90,   53,  -64, -122,  103,  -52,  102,  -15,   83 },
-    {  64, -106,  -81,   41,  -76,   87,  -51,   34,   67,   23,  -50,  103,  -85,   89,  -66, -101,   -1,  -60,   22,  -96 },
-    {  -8,   14,  101,  -72, -122,  -63,  -78,  -47,  -27,  -15, -126,   11,   11,   41,   59,  -95,  -43,  -64,  -44,  -50 },
-    { -37,  118,    8,  -47,   17,   10,   60,   69,  -85,  -48,  -54,   36,  -89, -103,  103,   32,  -90, -102,   29,   85 },
-};
-int main() {
-    
+
+void main(void) {
+    Uetrv32_Uart_Rx();
+    int8_t rx_byte = 0;
+    // char received_string[10] = {0}; // Assuming maximum length of received string is 10
+    // const char terminator[] = "hello\n\r";
+    // int terminator_index = 0; // Index to track position in terminator string
+    uint32_t M,K,N;
+    // Initialize UART with desired baudrate
     Uetrv32_Uart_Init(BAUD_DIV);
-    
-    int32_t C[M][N]; 
-    TIMER_START
-    MATMUL(M, K,N, A, B, C);
-    TIMER_STOP
-    uint32_t cycles=read_cycles();
-    asm("csrrw t6, mcycle,x0");
-    UETrv32_Uart_Print("\n\rno of cycles taken ");
-    UART_Send_32bit_number(cycles);
-    UETrv32_Uart_Print("\n\r");
-    display_result_matrix(M,N,C);
 
-    // asm("csrrw t6, mcycle,x0"  );
-    // int Cycles_passed;
-    // asm ("csrrw %0, mcycle,x0"  : "=r" (Cycles_passed));
-    // int i = (read_cycles());
-    // asm ("mv t6, %0": : "r"(i));
-    // TIMER_START
-    // core_matmul(M, K, N, A, B, C);
-    // TIMER_STOP
-    // printMatrix(M,N,C);    
-    // UART_SendNumber(read_cycles());
-    while(1){}
-    return 0;
+    // Uetrv32_Uart_Tx((uint32_t) 'W');
+    // Uetrv32_Uart_Tx((uint32_t) 'a');
+    // Uetrv32_Uart_Tx((uint32_t) 'i');
+    // Uetrv32_Uart_Tx((uint32_t) 't');
+    // Uetrv32_Uart_Tx((uint32_t) 'i');
+    // Uetrv32_Uart_Tx((uint32_t) 'n');
+    // Uetrv32_Uart_Tx((uint32_t) 'g');
+    // Uetrv32_Uart_Tx((uint32_t) '\n');
+    // Uetrv32_Uart_Tx((uint32_t) '\r');
+    while (1) {
+        UETrv32_Uart_Print("Enter dim_M: ");
+        M = Get_Data_Word();
+        UART_Send_32bit_number(M);
+        UETrv32_Uart_Print("\n\rEnter dim_K:");
+        K = Get_Data_Word();
+        UART_Send_32bit_number(K);
+        UETrv32_Uart_Print("\n\rEnter dim_N:");
+        N = Get_Data_Word();
+        UART_Send_32bit_number(N);
+        int8_t A[M][K];
+        int8_t B[K][N];
+        int32_t C[M][N];
+        for (int i = 0; i < M; i++) {
+            for (int j = 0; j < K; j++) {
+                A[i][j]= (int8_t) Uetrv32_Uart_Rx();
+            }
+        }
+        UETrv32_Uart_Print("\n\rMAtrix A is Received! ");
+        for (int i = 0; i < K; i++) {
+            for (int j = 0; j < N; j++) {
+                B[i][j]= (int8_t) Uetrv32_Uart_Rx();
+            }
+        }
+        UETrv32_Uart_Print("\n\rMAtrix B is Received! ");
+        UETrv32_Uart_Print("\n\r");
+        display_input_matrix(M,K,A);
+        display_input_matrix(K,N,B);
+        TIMER_START
+        MATMUL(M, K,N, A, B, C);
+        TIMER_STOP
+        int cycles=read_cycles();
+        UETrv32_Uart_Print("\n\rno of cycles taken on GEMM ");
+        UART_Send_32bit_number(cycles);
+        UETrv32_Uart_Print("\n\r");
+        display_result_matrix(M,N,C);
+        UETrv32_Uart_Print("\n\rNow performing matrix multiplications on RISC-V..... ");
+        TIMER_START
+        core_matmul(M, K,N, A, B, C);
+        TIMER_STOP
+        int cycles_core=read_cycles();
+        UETrv32_Uart_Print("\n\rno of cycles taken on RISC-V CORE ");
+        UART_Send_32bit_number(cycles_core);
+        UETrv32_Uart_Print("\n\r");
+        // int ratio = cycles_core/cycles;
+        // UETrv32_Uart_Print("\n\rthe ratio of cycles of Risc-V to Gemm is");
+        // UART_Send_32bit_number(ratio);
+        // UETrv32_Uart_Print("\n\r");
+      
+        // Echo back whatever is received
+        // Append received character to received_string
+        // received_string[terminator_index++] = (char)rx_byte;
+
+        // // Check if received_string matches terminator
+        // if (terminator_index >= 8) {
+        //     int i;
+        //     int match = 1;
+        //     for (i = 0; i < 8; i++) {
+        //         if (received_string[i] != terminator[i]) {
+        //             match = 0;
+        //             break;
+        //         }
+        //     }
+        //     if (match) {
+        //         break; // Exit the loop if terminator is found
+        //     }
+        // }
+    }
+
+    return;
 }
-
