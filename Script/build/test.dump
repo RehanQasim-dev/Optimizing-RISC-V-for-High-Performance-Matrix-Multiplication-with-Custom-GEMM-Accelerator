@@ -305,16 +305,16 @@ Contents of section .text:
  12c0 8320c103 03248103 83244103 13010104  . ...$...$A.....
  12d0 67800000 1301019a 232e1164 232c8164  g.......#..d#,.d
  12e0 13040166 13055051 97000000 e7800000  ...f..PQ........
- 12f0 93073000 73906730 93071000 73906730  ..0.s.g0....s.g0
+ 12f0 93071000 739007b0 93071000 73906730  ....s.......s.g0
  1300 9307c49a 37070000 13070700 b7060000  ....7...........
  1310 93860600 13064001 93052001 13054001  ......@... ...@.
  1320 97000000 e7800000 93070000 73906730  ............s.g0
- 1330 97000000 e7800000 2326a4fe 8327c4fe  ........#&...'..
- 1340 938f0700 b7070000 13850700 97000000  ................
- 1350 e7800000 8327c4fe 13850700 97000000  .....'..........
- 1360 e7800000 b7070000 13850700 97000000  ................
- 1370 e7800000 9307c49a 13860700 93054001  ..............@.
- 1380 13054001 97000000 e7800000 6f000000  ..@.........o...
+ 1330 97000000 e7800000 2326a4fe f31f00b0  ........#&......
+ 1340 b7070000 13850700 97000000 e7800000  ................
+ 1350 8327c4fe 13850700 97000000 e7800000  .'..............
+ 1360 b7070000 13850700 97000000 e7800000  ................
+ 1370 9307c49a 13860700 93054001 13054001  ..........@...@.
+ 1380 97000000 e7800000 6f000000           ........o...    
 Contents of section .data:
  0000 73745719 5fe43e48 3337c10a d76ee494  stW._.>H37...n..
  0010 ba79e147 597ae4a6 8adf3763 ffc0e491  .y.GYz....7c....
@@ -494,22 +494,22 @@ Disassembly of section .text:
      190:	00f587b3          	add	a5,a1,a5
      194:	faf42023          	sw	a5,-96(s0)
      198:	900007b7          	lui	a5,0x90000
-     19c:	00c78793          	add	a5,a5,12 # 9000000c <.L122+0x8fffec80>
+     19c:	00c78793          	add	a5,a5,12 # 9000000c <.L122+0x8fffec84>
      1a0:	f9842583          	lw	a1,-104(s0)
      1a4:	00b7a023          	sw	a1,0(a5)
      1a8:	900007b7          	lui	a5,0x90000
-     1ac:	01078793          	add	a5,a5,16 # 90000010 <.L122+0x8fffec84>
+     1ac:	01078793          	add	a5,a5,16 # 90000010 <.L122+0x8fffec88>
      1b0:	f9442583          	lw	a1,-108(s0)
      1b4:	00b7a023          	sw	a1,0(a5)
      1b8:	900007b7          	lui	a5,0x90000
      1bc:	fa842583          	lw	a1,-88(s0)
-     1c0:	00b7a023          	sw	a1,0(a5) # 90000000 <.L122+0x8fffec74>
+     1c0:	00b7a023          	sw	a1,0(a5) # 90000000 <.L122+0x8fffec78>
      1c4:	900007b7          	lui	a5,0x90000
-     1c8:	00478793          	add	a5,a5,4 # 90000004 <.L122+0x8fffec78>
+     1c8:	00478793          	add	a5,a5,4 # 90000004 <.L122+0x8fffec7c>
      1cc:	fa442583          	lw	a1,-92(s0)
      1d0:	00b7a023          	sw	a1,0(a5)
      1d4:	900007b7          	lui	a5,0x90000
-     1d8:	00878793          	add	a5,a5,8 # 90000008 <.L122+0x8fffec7c>
+     1d8:	00878793          	add	a5,a5,8 # 90000008 <.L122+0x8fffec80>
      1dc:	fa042583          	lw	a1,-96(s0)
      1e0:	00b7a023          	sw	a1,0(a5)
      1e4:	fc842783          	lw	a5,-56(s0)
@@ -524,7 +524,7 @@ Disassembly of section .text:
      1f8:	faf44583          	lbu	a1,-81(s0)
      1fc:	00b7e5b3          	or	a1,a5,a1
      200:	900007b7          	lui	a5,0x90000
-     204:	01478793          	add	a5,a5,20 # 90000014 <.L122+0x8fffec88>
+     204:	01478793          	add	a5,a5,20 # 90000014 <.L122+0x8fffec8c>
      208:	00b7a023          	sw	a1,0(a5)
      20c:	fb042783          	lw	a5,-80(s0)
      210:	00579593          	sll	a1,a5,0x5
@@ -533,14 +533,14 @@ Disassembly of section .text:
      21c:	fb842783          	lw	a5,-72(s0)
      220:	00a79593          	sll	a1,a5,0xa
      224:	900007b7          	lui	a5,0x90000
-     228:	01878793          	add	a5,a5,24 # 90000018 <.L122+0x8fffec8c>
+     228:	01878793          	add	a5,a5,24 # 90000018 <.L122+0x8fffec90>
      22c:	00b565b3          	or	a1,a0,a1
      230:	00b7a023          	sw	a1,0(a5)
      234:	00000013          	nop
 
 00000238 <.L10>:
      238:	900007b7          	lui	a5,0x90000
-     23c:	0007a583          	lw	a1,0(a5) # 90000000 <.L122+0x8fffec74>
+     23c:	0007a583          	lw	a1,0(a5) # 90000000 <.L122+0x8fffec78>
      240:	00100793          	li	a5,1
      244:	fef58ae3          	beq	a1,a5,238 <.L10>
      248:	fd442583          	lw	a1,-44(s0)
@@ -589,7 +589,7 @@ Disassembly of section .text:
 
 000002dc <.L14>:
      2dc:	900007b7          	lui	a5,0x90000
-     2e0:	01878793          	add	a5,a5,24 # 90000018 <.L122+0x8fffec8c>
+     2e0:	01878793          	add	a5,a5,24 # 90000018 <.L122+0x8fffec90>
      2e4:	0007a703          	lw	a4,0(a5)
      2e8:	00100793          	li	a5,1
      2ec:	fef718e3          	bne	a4,a5,2dc <.L14>
@@ -761,7 +761,7 @@ Disassembly of section .text:
      53c:	fea42623          	sw	a0,-20(s0)
      540:	800007b7          	lui	a5,0x80000
      544:	fec42703          	lw	a4,-20(s0)
-     548:	00e7ac23          	sw	a4,24(a5) # 80000018 <.L122+0x7fffec8c>
+     548:	00e7ac23          	sw	a4,24(a5) # 80000018 <.L122+0x7fffec90>
      54c:	00000013          	nop
      550:	01c12403          	lw	s0,28(sp)
      554:	02010113          	add	sp,sp,32
@@ -776,12 +776,12 @@ Disassembly of section .text:
 
 00000570 <.L26>:
      570:	800007b7          	lui	a5,0x80000
-     574:	0147a783          	lw	a5,20(a5) # 80000014 <.L122+0x7fffec88>
+     574:	0147a783          	lw	a5,20(a5) # 80000014 <.L122+0x7fffec8c>
      578:	0017f793          	and	a5,a5,1
      57c:	fe078ae3          	beqz	a5,570 <.L26>
      580:	800007b7          	lui	a5,0x80000
      584:	fec42703          	lw	a4,-20(s0)
-     588:	00e7a023          	sw	a4,0(a5) # 80000000 <.L122+0x7fffec74>
+     588:	00e7a023          	sw	a4,0(a5) # 80000000 <.L122+0x7fffec78>
      58c:	00000013          	nop
      590:	01c12403          	lw	s0,28(sp)
      594:	02010113          	add	sp,sp,32
@@ -825,17 +825,17 @@ Disassembly of section .text:
 
 0000060c <.L32>:
      60c:	800007b7          	lui	a5,0x80000
-     610:	0147a783          	lw	a5,20(a5) # 80000014 <.L122+0x7fffec88>
+     610:	0147a783          	lw	a5,20(a5) # 80000014 <.L122+0x7fffec8c>
      614:	0027f793          	and	a5,a5,2
      618:	fe078ae3          	beqz	a5,60c <.L32>
      61c:	800007b7          	lui	a5,0x80000
-     620:	0047a783          	lw	a5,4(a5) # 80000004 <.L122+0x7fffec78>
+     620:	0047a783          	lw	a5,4(a5) # 80000004 <.L122+0x7fffec7c>
      624:	fef407a3          	sb	a5,-17(s0)
      628:	800007b7          	lui	a5,0x80000
-     62c:	0147a703          	lw	a4,20(a5) # 80000014 <.L122+0x7fffec88>
+     62c:	0147a703          	lw	a4,20(a5) # 80000014 <.L122+0x7fffec8c>
      630:	800007b7          	lui	a5,0x80000
      634:	ffd77713          	and	a4,a4,-3
-     638:	00e7aa23          	sw	a4,20(a5) # 80000014 <.L122+0x7fffec88>
+     638:	00e7aa23          	sw	a4,20(a5) # 80000014 <.L122+0x7fffec8c>
      63c:	fef44783          	lbu	a5,-17(s0)
      640:	00078513          	mv	a0,a5
      644:	01c12403          	lw	s0,28(sp)
@@ -1313,7 +1313,7 @@ Disassembly of section .text:
      c54:	00000097          	auipc	ra,0x0
      c58:	000080e7          	jalr	ra # c54 <.L78+0x14>
      c5c:	fc842783          	lw	a5,-56(s0)
-     c60:	ffb78793          	add	a5,a5,-5 # fffffffb <.L122+0xffffec6f>
+     c60:	ffb78793          	add	a5,a5,-5 # fffffffb <.L122+0xffffec73>
      c64:	fef42423          	sw	a5,-24(s0)
      c68:	0480006f          	j	cb0 <.L80>
 
@@ -1390,7 +1390,7 @@ Disassembly of section .text:
      d50:	00000097          	auipc	ra,0x0
      d54:	000080e7          	jalr	ra # d50 <.L76+0x1c>
      d58:	fcc42783          	lw	a5,-52(s0)
-     d5c:	ffb78793          	add	a5,a5,-5 # fffffffb <.L122+0xffffec6f>
+     d5c:	ffb78793          	add	a5,a5,-5 # fffffffb <.L122+0xffffec73>
      d60:	fef42623          	sw	a5,-20(s0)
      d64:	15c0006f          	j	ec0 <.L87>
 
@@ -1432,7 +1432,7 @@ Disassembly of section .text:
      de0:	00000097          	auipc	ra,0x0
      de4:	000080e7          	jalr	ra # de0 <.L89+0x14>
      de8:	fc842783          	lw	a5,-56(s0)
-     dec:	ffb78793          	add	a5,a5,-5 # fffffffb <.L122+0xffffec6f>
+     dec:	ffb78793          	add	a5,a5,-5 # fffffffb <.L122+0xffffec73>
      df0:	fef42423          	sw	a5,-24(s0)
      df4:	0480006f          	j	e3c <.L91>
 
@@ -1599,7 +1599,7 @@ Disassembly of section .text:
     100c:	00000097          	auipc	ra,0x0
     1010:	000080e7          	jalr	ra # 100c <.L102+0x14>
     1014:	fc842783          	lw	a5,-56(s0)
-    1018:	ffb78793          	add	a5,a5,-5 # fffffffb <.L122+0xffffec6f>
+    1018:	ffb78793          	add	a5,a5,-5 # fffffffb <.L122+0xffffec73>
     101c:	fef42423          	sw	a5,-24(s0)
     1020:	0500006f          	j	1070 <.L104>
 
@@ -1680,7 +1680,7 @@ Disassembly of section .text:
     1118:	00000097          	auipc	ra,0x0
     111c:	000080e7          	jalr	ra # 1118 <.L100+0x1c>
     1120:	fcc42783          	lw	a5,-52(s0)
-    1124:	ffb78793          	add	a5,a5,-5 # fffffffb <.L122+0xffffec6f>
+    1124:	ffb78793          	add	a5,a5,-5 # fffffffb <.L122+0xffffec73>
     1128:	fef42623          	sw	a5,-20(s0)
     112c:	1740006f          	j	12a0 <.L111>
 
@@ -1724,7 +1724,7 @@ Disassembly of section .text:
     11b0:	00000097          	auipc	ra,0x0
     11b4:	000080e7          	jalr	ra # 11b0 <.L113+0x14>
     11b8:	fc842783          	lw	a5,-56(s0)
-    11bc:	ffb78793          	add	a5,a5,-5 # fffffffb <.L122+0xffffec6f>
+    11bc:	ffb78793          	add	a5,a5,-5 # fffffffb <.L122+0xffffec73>
     11c0:	fef42423          	sw	a5,-24(s0)
     11c4:	0500006f          	j	1214 <.L115>
 
@@ -1819,8 +1819,8 @@ Disassembly of section .text:
     12e4:	51500513          	li	a0,1301
     12e8:	00000097          	auipc	ra,0x0
     12ec:	000080e7          	jalr	ra # 12e8 <main+0x14>
-    12f0:	00300793          	li	a5,3
-    12f4:	30679073          	csrw	mcounteren,a5
+    12f0:	00100793          	li	a5,1
+    12f4:	b0079073          	csrw	mcycle,a5
     12f8:	00100793          	li	a5,1
     12fc:	30679073          	csrw	mcounteren,a5
     1300:	9ac40793          	add	a5,s0,-1620
@@ -1838,26 +1838,25 @@ Disassembly of section .text:
     1330:	00000097          	auipc	ra,0x0
     1334:	000080e7          	jalr	ra # 1330 <main+0x5c>
     1338:	fea42623          	sw	a0,-20(s0)
-    133c:	fec42783          	lw	a5,-20(s0)
-    1340:	00078f93          	mv	t6,a5
-    1344:	000007b7          	lui	a5,0x0
-    1348:	00078513          	mv	a0,a5
-    134c:	00000097          	auipc	ra,0x0
-    1350:	000080e7          	jalr	ra # 134c <main+0x78>
-    1354:	fec42783          	lw	a5,-20(s0)
-    1358:	00078513          	mv	a0,a5
-    135c:	00000097          	auipc	ra,0x0
-    1360:	000080e7          	jalr	ra # 135c <main+0x88>
-    1364:	000007b7          	lui	a5,0x0
-    1368:	00078513          	mv	a0,a5
-    136c:	00000097          	auipc	ra,0x0
-    1370:	000080e7          	jalr	ra # 136c <main+0x98>
-    1374:	9ac40793          	add	a5,s0,-1620
-    1378:	00078613          	mv	a2,a5
-    137c:	01400593          	li	a1,20
-    1380:	01400513          	li	a0,20
-    1384:	00000097          	auipc	ra,0x0
-    1388:	000080e7          	jalr	ra # 1384 <main+0xb0>
+    133c:	b0001ff3          	csrrw	t6,mcycle,zero
+    1340:	000007b7          	lui	a5,0x0
+    1344:	00078513          	mv	a0,a5
+    1348:	00000097          	auipc	ra,0x0
+    134c:	000080e7          	jalr	ra # 1348 <main+0x74>
+    1350:	fec42783          	lw	a5,-20(s0)
+    1354:	00078513          	mv	a0,a5
+    1358:	00000097          	auipc	ra,0x0
+    135c:	000080e7          	jalr	ra # 1358 <main+0x84>
+    1360:	000007b7          	lui	a5,0x0
+    1364:	00078513          	mv	a0,a5
+    1368:	00000097          	auipc	ra,0x0
+    136c:	000080e7          	jalr	ra # 1368 <main+0x94>
+    1370:	9ac40793          	add	a5,s0,-1620
+    1374:	00078613          	mv	a2,a5
+    1378:	01400593          	li	a1,20
+    137c:	01400513          	li	a0,20
+    1380:	00000097          	auipc	ra,0x0
+    1384:	000080e7          	jalr	ra # 1380 <main+0xac>
 
-0000138c <.L122>:
-    138c:	0000006f          	j	138c <.L122>
+00001388 <.L122>:
+    1388:	0000006f          	j	1388 <.L122>

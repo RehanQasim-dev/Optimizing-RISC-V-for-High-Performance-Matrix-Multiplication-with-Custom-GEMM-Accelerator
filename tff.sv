@@ -15,7 +15,7 @@ module tff ( input logic clk, rst, output logic  out, rst_out);
                 else  if(rst_trigger) reset <= reset + 1'b1;
         end
 
-        assign out = d[1];
+        assign out = d[2];
         assign rst_out = rst_trigger;
     
 endmodule 
