@@ -59,7 +59,7 @@ int main() {
     MATMUL(M, K,N, A, B, C);
     TIMER_STOP
     uint32_t cycles=read_cycles();
-    asm("mv t6, %0"::"r"(cycles));
+    asm("csrrw t6, mcycle,x0");
     UETrv32_Uart_Print("\n\rno of cycles taken ");
     UART_Send_32bit_number(cycles);
     UETrv32_Uart_Print("\n\r");
