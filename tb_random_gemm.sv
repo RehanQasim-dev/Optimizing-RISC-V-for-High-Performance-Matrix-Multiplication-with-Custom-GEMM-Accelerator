@@ -86,12 +86,14 @@ module tb_random_gemm();
   int Tile_A_Address, Tile_B_Address, Tile_C_Address;
   // SystemVerilog does not support dynamic array sizes in module scope, 
   // so we use the maximum expected sizes and only use portions as needed.
-  localparam MAX_SIZE = 200;  // Maximum dimension size for matrices
-  localparam MAX_VAL = 127;  // Maximum value for matrix elements
-  localparam MIN_VAL = -128;  // minimum value for matrix elements
-  logic [MAX_SIZE-1:0][ 7:0] A[MAX_SIZE];
-  logic [MAX_SIZE-1:0][ 7:0] B[MAX_SIZE];
-  logic [MAX_SIZE-1:0][31:0] C[MAX_SIZE];
+  localparam MAX_SIZE = 30;  // Maximum dimension size for matrices
+  localparam MAX_VAL = 256;  // Maximum value for matrix elements
+  // localparam MIN_VAL = -128;  // minimum value for matrix elements
+  reg  [MAX_SIZE-1:0][ 7:0] A[MAX_SIZE];
+  reg  [MAX_SIZE-1:0][ 7:0] B[MAX_SIZE];
+  reg  [MAX_SIZE-1:0][31:0] C[MAX_SIZE];
+ integer temp;
+ logic [31:0] temp2;
   int A_addr, B_addr, C_addr;
   int file_handle;
 
@@ -128,12 +130,30 @@ module tb_random_gemm();
 
       for (int i = 0; i < M; i++) begin
         for (int j = 0; j < K; j++) begin
-          A[i][j] = $urandom_range(MIN_VAL, MAX_VAL);
+          temp = $random % 256; // $random generates a large number; % 256 limits it to 8 bits
+        
+        // Convert the number to the range -128 to 127
+        if (temp > 127) begin
+            A[i][j] = temp - 256;
+        end else begin
+            A[i][j]  = temp;
+        end
         end
       end
+
+
+     
       for (int i = 0; i < K; i++) begin
         for (int j = 0; j < N; j++) begin
-          B[i][j] = $urandom_range(MIN_VAL, MAX_VAL);
+           temp = $random % 256; // $random generates a large number; % 256 limits it to 8 bits
+        
+        // Convert the number to the range -128 to 127
+        if (temp > 127) begin
+            B[i][j] = temp - 256;
+        end else begin
+            B[i][j]  = temp;
+        end
+
         end
       end
       $display("M=%d, K=%d, N=%d ", M, K, N);
@@ -141,7 +161,8 @@ module tb_random_gemm();
         for (j = 0; j < N; j++) begin
           C[i][j] = 0;
           for (k = 0; k < K; k++) begin
-            C[i][j] += A[i][k] * B[k][j];
+            temp2=$signed(A[i][k]) * $signed(B[k][j]);
+            C[i][j] = C[i][j]+temp2;
           end
         end
       end
@@ -283,10 +304,10 @@ module tb_random_gemm();
             // Display comparison
             // $display("C[%0d][%0d] = %0d , interface_wr_data[%0d] = %0d", count_rows_compared, i,
             //          C[count_rows_compared][i], i, interface_wr_data[i%4]);
-            if (C[count_rows_compared][i] != interface_wr_data[i%4]) begin
-              $display("Mismatch found C[%0d][%0d] = %0d , interface_wr_data[%0d] = %0d, time=%0d",
-                       count_rows_compared, i, C[count_rows_compared][i], i,
-                       interface_wr_data[i%4], $time);
+            if ($signed(C[count_rows_compared][i]) != $signed(interface_wr_data[i%4])) begin
+              $display("Mismatch found C[%0d][%0d] = %0d , interface_wr_data[%0d] = %0d",
+                       count_rows_compared, i, $signed(C[count_rows_compared][i]), i,
+                       $signed(interface_wr_data[i%4]));
             end
           end
           count_rows_compared++;

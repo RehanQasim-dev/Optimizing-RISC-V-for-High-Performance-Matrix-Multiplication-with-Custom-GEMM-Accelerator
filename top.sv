@@ -29,7 +29,7 @@ module top (
   always_ff @(posedge clk) begin
     mem_valid <= ~system_bus_rdwr & system_bus_en;
   end
-  main_csr_pipe UUT (
+  main_csr_pipe RISC_V_core (
       clk,
       rst,
       interupt,
