@@ -5,14 +5,15 @@ import time
 import random
 import numpy as np
 port = "/dev/ttyUSB1"
-baudrate = 19210
+# baudrate = 19210
+baudrate = 9600
 def random_value():
     return random.randint(-128, 127)
 
 # Define matrix dimensions
 M = 50
 K = 18
-N = 70
+N = 20
 
 
 # Generate random matrix
