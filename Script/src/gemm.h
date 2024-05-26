@@ -95,7 +95,7 @@ void core_matmul(int32_t rows, int32_t cols_A, int32_t cols_B, int8_t A[rows][co
 
 #define TIMER_START \
     {\
-    asm("csrrw x0, mcounteren, %0" : : "r"(3)); \
+    asm("csrrw x0, mcycle, %0"::"r"(1) ); \
     asm("csrrw x0, mcounteren, %0" : : "r"(1));\
     }
 #define TIMER_STOP \
