@@ -86,8 +86,8 @@ The value of cycles can be read into a 32 bit un-signed varible using function:
 All of the Functions for CSR are written in ASM for C language.
 ### Using UART.h
 To display using UART to `gtkterm` we first need to set some of the following paratmeters. 
-- Select the Baud rate to be used.
-- Calculate the Uart Baud divisor and write it to c-code.
+- Select the Baud rate to be used. (Default: 9600)
+- Calculate the Uart Baud divisor and write it to c-code. (Default: 1301)
 - Make sure of RISC-V frequency for calculations of Baudrate and Divisor.
 - Provide Access to the port for UART transmission for both `Python` and `FPGA`.
 
