@@ -26,7 +26,9 @@ void main(void) {
     // Uetrv32_Uart_Tx((uint32_t) '\n');
     // Uetrv32_Uart_Tx((uint32_t) '\r');
     while (1) {
-        UETrv32_Uart_Print("Enter dim_M: ");
+        UETrv32_Uart_Print("\n\r");
+        UETrv32_Uart_Print("----------------------------------------------------------------\n\r");
+        UETrv32_Uart_Print("Enter dim_M:");
         M = Get_Data_Word();
         UART_Send_32bit_number(M);
         UETrv32_Uart_Print("\n\rEnter dim_K:");
@@ -43,33 +45,36 @@ void main(void) {
                 A[i][j]= (int8_t) Uetrv32_Uart_Rx();
             }
         }
-        UETrv32_Uart_Print("\n\rMAtrix A is Received! ");
+        UETrv32_Uart_Print("\n\rMatrix A is Received! ");
         for (int i = 0; i < K; i++) {
             for (int j = 0; j < N; j++) {
                 B[i][j]= (int8_t) Uetrv32_Uart_Rx();
             }
         }
-        UETrv32_Uart_Print("\n\rMAtrix B is Received! ");
+        UETrv32_Uart_Print("\n\rMatrix B is Received! ");
         UETrv32_Uart_Print("\n\r");
+        UETrv32_Uart_Print("\n\rMatrix A: ");
         display_input_matrix(M,K,A);
+        UETrv32_Uart_Print("\n\rMatrix B: ");
         display_input_matrix(K,N,B);
         TIMER_START
         MATMUL(M, K,N, A, B, C);
         TIMER_STOP
-        int cycles=read_cycles();
-        UETrv32_Uart_Print("\n\rno of cycles taken on GEMM ");
+        uint32_t cycles=read_cycles();
+        UETrv32_Uart_Print("\n\rNo of cycles taken on GEMM: ");
         UART_Send_32bit_number(cycles);
         UETrv32_Uart_Print("\n\r");
+        UETrv32_Uart_Print("\n\rMatrix C: ");
         display_result_matrix(M,N,C);
-        UETrv32_Uart_Print("\n\rNow performing matrix multiplications on RISC-V..... ");
+        UETrv32_Uart_Print("\n\r........Now performing matrix multiplications on RISC-V....... ");
         TIMER_START
         core_matmul(M, K,N, A, B, C);
         TIMER_STOP
-        int cycles_core=read_cycles();
-        UETrv32_Uart_Print("\n\rno of cycles taken on RISC-V CORE ");
+        uint32_t cycles_core=read_cycles();
+        UETrv32_Uart_Print("\n\rNo of cycles taken on RISC-V Core: ");
         UART_Send_32bit_number(cycles_core);
         UETrv32_Uart_Print("\n\r");
-        // int ratio = cycles_core/cycles;
+        // uint32_t ratio = cycles_core/cycles;
         // UETrv32_Uart_Print("\n\rthe ratio of cycles of Risc-V to Gemm is");
         // UART_Send_32bit_number(ratio);
         // UETrv32_Uart_Print("\n\r");
