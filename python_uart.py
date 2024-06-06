@@ -5,15 +5,15 @@ import time
 import random
 import numpy as np
 port = "/dev/ttyUSB1"
-# baudrate = 19210
-baudrate = 9600
+baudrate = 19210
+# baudrate = 9600
 def random_value():
     return random.randint(-128, 127)
 
 # Define matrix dimensions
-M = 50
-K = 18
-N = 20
+M = 70
+K = 11
+N = 60
 
 
 # Generate random matrix
@@ -38,13 +38,13 @@ with serial.Serial(port=port, baudrate=baudrate, bytesize=serial.EIGHTBITS, pari
     for i in range(M):
         for j in range(K):       
             byte_string = matrixA[i][j].to_bytes(1, byteorder='little',signed=True)  # 'big' or 'little' for byte order
-            print(byte_string)
+            # print(byte_string)
             ser.write(byte_string)
     time.sleep(3)
     for i in range(K):
         for j in range(N):       
             byte_string = matrixB[i][j].to_bytes(1, byteorder='little',signed=True)  # 'big' or 'little' for byte order
-            print(byte_string)
+            # print(byte_string)
             ser.write(byte_string)
     # print("Serial baud rate: " + str(baudrate))
     # print("Sending data: " + data_to_send.decode())  # Convert bytes to string for printing
@@ -83,26 +83,12 @@ with serial.Serial(port=port, baudrate=baudrate, bytesize=serial.EIGHTBITS, pari
     # print("Finished transmission!")
     # print (np.array(matrixA))
     # print (np.array(matrixB))
-    print("int8_t A[M][K] = {")
-for row in matrixA:
-    print("    {", end="")
-    for i, val in enumerate(row):
-        if i < len(row) - 1:
-            print(f"{val:4}, ", end="")
-        else:
-            print(f"{val:4}", end="")
-    print(" },")
-print("};")
+    print("int8_t A[M][K] = ")
+print(np.array(matrixA))
 
 # Print matrix in C format
-print("int8_t B[K][N] = {")
-for row in matrixB:
-    print("    {", end="")
-    for i, val in enumerate(row):
-        if i < len(row) - 1:
-            print(f"{val:4}, ", end="")
-        else:
-            print(f"{val:4}", end="")
-    print(" },")
-print("};")
-print(np.dot(np.array(matrixA),np.array(matrixB)))
+print("int8_t B[K][N] = ")
+print(np.array(matrixB))
+C=np.dot(np.array(matrixA),np.array(matrixB))
+print("int32_t C[M][N] = ")
+print(C)
