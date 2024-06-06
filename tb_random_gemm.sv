@@ -83,10 +83,9 @@ module tb_random_gemm();
   int M, K, N;
   int nsize, msize, ksize;
   bit last, first;
-  int Tile_A_Address, Tile_B_Address, Tile_C_Address;
   // SystemVerilog does not support dynamic array sizes in module scope, 
   // so we use the maximum expected sizes and only use portions as needed.
-  localparam MAX_SIZE = 30;  // Maximum dimension size for matrices
+  localparam MAX_SIZE = 20;  // Maximum dimension size for matrices
   localparam MAX_VAL = 256;  // Maximum value for matrix elements
   // localparam MIN_VAL = -128;  // minimum value for matrix elements
   reg  [MAX_SIZE-1:0][ 7:0] A[MAX_SIZE];
@@ -96,7 +95,16 @@ module tb_random_gemm();
  logic [31:0] temp2;
   int A_addr, B_addr, C_addr;
   int file_handle;
+int Tile_A_Address, Tile_B_Address, Tile_C_Address;
+int remaining_n;
+int remaining_m ;
+int remaining_k ;
 
+int current_n = 0;
+int current_m = 0;
+int current_k = 0;
+int cols_to_process, rows_to_process, rows_to_process_k;
+logic is_last;
   /////////////////////////////////////
   int old_sel_for_test;
   logic [31:0] cycles_count;
@@ -116,13 +124,13 @@ module tb_random_gemm();
     sel_for_test <= 1;
     @(posedge clk);
     file_handle = $fopen("/home/abdul_waheed/Music/rv32_for_fyp/log_test_vivado.csv", "w");
-    for (int test_no = 0; test_no < 1; test_no++) begin
+    for (int test_no = 0; test_no < 10; test_no++) begin
       $display(
           "------------------------------------Test No %d--------------------------------------",
           test_no + 1);
-      M = $urandom_range(MAX_SIZE, MAX_SIZE);
-      N = $urandom_range(MAX_SIZE, MAX_SIZE);
-      K = $urandom_range(MAX_SIZE, MAX_SIZE);
+      M = $urandom_range(2, MAX_SIZE);
+      N = $urandom_range(2, MAX_SIZE);
+      K = $urandom_range(2, MAX_SIZE);
 
       A_addr = 0;
       B_addr = M * K;
@@ -130,11 +138,11 @@ module tb_random_gemm();
 
       for (int i = 0; i < M; i++) begin
         for (int j = 0; j < K; j++) begin
-          temp = $random % 256; // $random generates a large number; % 256 limits it to 8 bits
+          temp = $random % 20; // $random generates a large number; % 256 limits it to 8 bits
         
         // Convert the number to the range -128 to 127
-        if (temp > 127) begin
-            A[i][j] = temp - 256;
+        if (temp > 10) begin
+            A[i][j] = temp - 10;
         end else begin
             A[i][j]  = temp;
         end
@@ -145,11 +153,11 @@ module tb_random_gemm();
      
       for (int i = 0; i < K; i++) begin
         for (int j = 0; j < N; j++) begin
-           temp = $random % 256; // $random generates a large number; % 256 limits it to 8 bits
+           temp = $random % 20; // $random generates a large number; % 256 limits it to 8 bits
         
         // Convert the number to the range -128 to 127
-        if (temp > 127) begin
-            B[i][j] = temp - 256;
+        if (temp > 10) begin
+            B[i][j] = temp - 10;
         end else begin
             B[i][j]  = temp;
         end
@@ -194,21 +202,38 @@ module tb_random_gemm();
       end
       //////////////////////////////////////////Do Configurations///////////////////////////////////////////////
       sel_for_test <= 0;
-      for (n = 0; n < N; n += blkn) begin
-        // $display("n= %d=", n);
-        nsize = (n + blkn <= N) ? blkn : N % blkn;
-        for (m = 0; m < M; m += blkm) begin
-          msize = (m + blkm <= M) ? blkm : M % blkm;
-          // $display("m = %d", m);
-          for (k = 0; k < K; k += blkk) begin
+      // Assuming the following variables and constants are defined elsewhere:
+// A, B, C arrays
+// SUPER_SYS_COLS, 16, SUPER_SYS_ROWS constants
+// GEMM_A, GEMM_DIM signals
+// Configure_GEMM function
 
-            // $display("k = %d", k);
-            last = (k + blkk >= K);
-            first = k == 0;
-            ksize = (k + blkk <= K) ? blkk : K % blkk;
-            Tile_A_Address = A_addr + k + m * K;
-            Tile_B_Address = B_addr + n + k * N + (ksize - 1) * N;
-            Tile_C_Address = C_addr + n + m * K;
+
+      remaining_n = N;
+      remaining_m = M;
+      remaining_k = K;
+      current_n = 0;
+      current_m = 0;
+      current_k = 0;
+    while (remaining_n > 0) begin
+        cols_to_process = (remaining_n >= SUPER_SYS_COLS) ? SUPER_SYS_COLS : remaining_n;
+      // $display("hello now in remaing_n loop\n : %d",remaining_n);
+        while (remaining_m > 0) begin
+                // $display("hello now in remaing_m loop\n : %d",remaining_m);
+
+            rows_to_process = (remaining_m >= 16) ? 16 : remaining_m;
+
+            while (remaining_k > 0) begin
+                    // $display("hello now in remaing_k loop\n : %d", remaining_k);
+
+                rows_to_process_k = (remaining_k >= SUPER_SYS_ROWS) ? SUPER_SYS_ROWS : remaining_k;
+
+                last = (current_k + SUPER_SYS_ROWS >= K);
+                first = (current_k == 0);
+                Tile_A_Address = A[current_m][current_k];
+                Tile_B_Address = B[current_k + rows_to_process_k - 1][current_n];
+                Tile_C_Address = C[current_m][current_n];
+
             @(posedge clk);
             system_bus_en <= 1;
             system_bus_rdwr <= 1;
@@ -237,7 +262,7 @@ module tb_random_gemm();
             system_bus_wr_data <= first << 1 | last;
             @(posedge clk);
             system_bus_addr <= `base_addr + 24;  //GEMM_DIM
-            system_bus_wr_data <= msize | ksize << 5 | nsize << 10;
+            system_bus_wr_data <= rows_to_process | rows_to_process_k << 5 | cols_to_process << 10;
             // $display("msize=%d, nsize=%d, ksize=%d", msize, nsize, ksize);
             @(posedge clk);
             system_bus_en   <= 1;
@@ -246,12 +271,23 @@ module tb_random_gemm();
             @(posedge clk);
             while (system_bus_rd_data == 1'b1) begin
               @(posedge clk);
+              // $display("hello now in hell forever\n");
               // Wait for the GEMM operation to complete;
             end
 
-          end
+            remaining_k -= rows_to_process_k;
+            current_k = K - remaining_k;
+            end
+            current_k = 0;
+            remaining_m -= rows_to_process;
+            current_m = M - remaining_m;
+            remaining_k = K;
         end
-      end
+        current_m = 0;
+        remaining_n -= cols_to_process;
+        current_n = N - remaining_n;
+        remaining_m = M;
+    end
       system_bus_en   <= 1;
       system_bus_rdwr <= 0;
       system_bus_addr <= `base_addr + 24;  //check if GEMM is done
@@ -261,14 +297,14 @@ module tb_random_gemm();
         // Wait for the GEMM operation to complete;
       end
       $display("the cycles are : %0d\n ",cycles_count );
-      $display("the dimensions are(M,K,N) : %0d , %0d , %0d \n", M, K, N );
+      // $display("the dimensions are(M,K,N) : %0d , %0d , %0d \n", M, K, N );
 
       $fwrite(file_handle, "%0d,%0d,%0d,%0d\n", M, K, N, cycles_count);
 
     end
     $fclose(file_handle);
     $finish;
-  end
+end
   // Define variables
   int count_rows_compared;
   int total_tiles, n_, nsize_, msize_, N_;
