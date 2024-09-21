@@ -24,14 +24,16 @@ module top (
   logic [15:0][7:0] interface_rd_data;
   logic [3:0][31:0] interface_wr_data;
   logic [3:0] system_bus_mask;
-  logic interupt, mem_valid, is_gemm_addr, en_gemm_conf, en_Dmem;
+  logic interrupt, mem_valid, is_gemm_addr, en_gemm_conf, en_Dmem;
   always_ff @(posedge clk) begin
     mem_valid <= ~system_bus_rdwr & system_bus_en;
   end
+  //disable the interrupt permanently
+  assign interrupt = 1'b0;
   riscv_core RISC_V_core (
       clk,
       rst,
-      interupt,
+      interrupt,
       an,
       a_to_g,
       system_bus_rdwr,
@@ -109,7 +111,7 @@ module top (
         .dbus2uart_i(dbus2uart_i),         // Connect to Dbus to UART interface
         .uart2dbus_o(uart2dbus_o),         // Connect to UART to Dbus interface
         .uart_sel_i(is_uart_addr),           // Connect to UART selection signal
-        .uart_irq_o(),           // Connect to UART interrupt signal
+        .uart_irq_o(1'b0),           // Connect to UART interrupt signal
         .uart_rxd_i(uart_rxd_i),           // Connect to UART RX signal
         .uart_txd_o(uart_txd_o)            // Connect to UART TX signal
     );

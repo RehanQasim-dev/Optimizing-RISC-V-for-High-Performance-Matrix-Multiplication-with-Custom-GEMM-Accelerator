@@ -15,18 +15,18 @@ list_incdir := $(foreach dir, ${incdir}, +incdir+$(dir))
 
 src_core := ./top.sv 						\
 		$(wildcard ./uart/*.svh)						\
-	   $(wildcard ./Datapath/*.sv)							\
-	   $(wildcard ./Controller/*.sv)						\
+	   $(wildcard ./rtl/Core/Datapath/*.sv)							\
+	   $(wildcard ./rtl/Core/Controller/*.sv)						\
 	   $(wildcard ./uart/*.sv)						
 
 src_gemm :=  ./tb_random_gemm.sv							\
 		./Config.sv 										\
 		./gemm.sv											\
-	   $(wildcard ./Gemm/Controller/*.sv)					\
-	   $(wildcard ./Gemm/Datapath/*.sv)						\
-	   $(wildcard ./Gemm/Utilities/*.sv)					\
-	   $(wildcard ./Datapath/*.sv)							\
-	   $(wildcard ./Controller/*.sv)						\
+	   $(wildcard ./rtl/Gemm/Controller/*.sv)					\
+	   $(wildcard ./rtl/Gemm/Datapath/*.sv)						\
+	   $(wildcard ./rtl/Gemm/Utilities/*.sv)					\
+	   $(wildcard ./rtl/Core/Datapath/*.sv)							\
+	   $(wildcard ./rtl/Core/Controller/*.sv)						\
 	   $(wildcard ./uart/*.sv)								\
 	   $(wildcard ./uart/*.svh)						
 

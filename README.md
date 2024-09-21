@@ -67,7 +67,7 @@ Compile the c-code using the following command(Windows):
 
     ./Script/make.bat
 
-This compilies the c-code and makes the files [ICACHE.mem](./Script/build/ICACHE.mem) and 16 data memorey files [memory0.mem](./Script/build/memory0.mem) that are to be read by [instruction_memory](./Datapath/inst_mem.sv) and [data_memory](./test/bank.sv) respectively using $readmemh.
+This compilies the c-code and makes the files [ICACHE.mem](./Script/build/ICACHE.mem) and 16 data memorey files [memory0.mem](./Script/build/memory0.mem) that are to be read by [instruction_memory](./rtl/Core/Datapath/inst_mem.sv) and [data_memory](./rtl/Gemm/Datapath/bank.sv) respectively using $readmemh.
 
 You can also use the RISC-V core's M extension to do multiplications using three for loops. The Functions is defined below:
 
