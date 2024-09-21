@@ -1,4 +1,4 @@
-module tff ( input logic clk, rst, output logic  out, rst_out);
+module clk_divider ( input logic clk, rst, output logic  out, rst_out);
     logic [2:0] d;
     logic [3:0] reset ;
     logic rst_trigger;

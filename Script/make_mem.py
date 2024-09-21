@@ -7,17 +7,12 @@
 # binary, for any purpose, commercial or non-commercial, and by any
 # means.
 
-#from sys import argv
 import sys 
 binfile = sys.argv[1]
-
-#binfile = "build/main.bin"
 
 with open(binfile, "rb") as f:
     bindata = f.read()
 
-#assert len(bindata) < 4*nwords
-#assert len(bindata) % 4 == 0
 nwords = len(bindata) // 4
 
 for i in range(nwords):

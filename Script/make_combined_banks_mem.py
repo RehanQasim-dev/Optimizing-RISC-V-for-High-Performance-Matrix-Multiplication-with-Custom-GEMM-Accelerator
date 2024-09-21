@@ -20,24 +20,17 @@ bank_data = [b"" for _ in range(16)]
 
 # Iterate over the words in the binary file
 for i in range(nwords):
-    # Extract 16 bytes (one word)
     w = bindata[16 * i: 16 * (i + 1)]
-    # Iterate over each byte in the word
     for j in range(16):
-        # Append the byte to the corresponding bank's data
         bank_data[j] += bytes([w[j]])
 
-# Convert address to binary and pad to 4 bits
 def address_to_binary(addr):
     binary = bin(addr)[2:]
     return binary.zfill(4)
 
-# Iterate over the bank data and print the result
 for i, bank in enumerate(bank_data):
     binary_address = address_to_binary(i)
     print("@" + binary_address, end=" ")
     for byte in bank:
-        # print("--------------")
-        # print(byte)
         print(byte, end="")
     print()

@@ -1,4 +1,4 @@
-module main_csr_pipe (
+module riscv_core (
     input logic clk,
     reset,
     interupt,
@@ -37,7 +37,6 @@ module main_csr_pipe (
       alu_result,
       pc_to_alu_mux,
       alu_result_flip,
-      rs2_alu_b_flip,
       write_data,
       csr_address,
       csr_address_muxed,
@@ -78,8 +77,7 @@ module main_csr_pipe (
       data_out_to_alu_mux_2_muxed,
       inst_out_to_flip_muxed_stalled;
   logic valid, csr_return, csr_return_flip;
-  logic interupt_sel,
-        alu_mul_sel_flip;
+  logic interupt_sel;
   logic [3:0] m_con;
   logic [31:0] 
         m_result,
@@ -342,7 +340,8 @@ m_unit multiply_and_divide_unit(
       .mask(mask)
   );
 
-  CPU control_unit (
+
+  control control_unit (
       inst_out_flip,
       alu_con,
       reg_wr,
@@ -360,7 +359,7 @@ m_unit multiply_and_divide_unit(
       csr_return,
       m_con, 
       alu_mul_sel
-  );  //CPU (input logic [31:0] instruction, output logic [3:0] ALU_CON , output logic reg_wr , mem_read, mem_write, alu_mux_1, alu_mux_2, pc_jump_mux, output logic[1:0] wr_bck_mux, output logic [2:0] sign_extend, func3_to_mem, branch_type );
+  );  //control (input logic [31:0] instruction, output logic [3:0] ALU_CON , output logic reg_wr , mem_read, mem_write, alu_mux_1, alu_mux_2, pc_jump_mux, output logic[1:0] wr_bck_mux, output logic [2:0] sign_extend, func3_to_mem, branch_type );
   x7segb8 led_display_on_hardware (
       .x(led_display),
       .clk(clk),
@@ -374,11 +373,6 @@ m_unit multiply_and_divide_unit(
   assign rs1 = inst_out_flip[19:15];
   assign rd = inst_out_flip_2[11:7];
   assign valid = mem_valid;
-  /*	// control stage
-	flip_flop reg_flie_write_flip(clk, reset, reg_wr, reg_wr_flip);
-	flip_flop mem_data_write_flip(clk, reset, mem_write, mem_write_flip);
-	flip_flop mem_data_read_flip (clk, reset, mem_read, mem_read_flip);
-	flip_flop wr_bck_mux_control_flip (clk, reset, wr_bck_mux, wr_bck_mux_flip);*/
 
   cva6_csr_unit csr_and_intrupts (
       clk,
@@ -394,7 +388,8 @@ m_unit multiply_and_divide_unit(
       pc_for_inst_mem_from_csr,
       interupt_sel
   );
-  flip_CU control_unit_flip (
+
+  pipelined_control control_unit_flip (
       clk,
       reset,
       stall_sel,

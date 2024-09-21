@@ -3,10 +3,10 @@
    <wave_state>
    </wave_state>
    <db_ref_list>
-      <db_ref path="main_csr_pipe_tb_func_impl.wdb" id="1">
+      <db_ref path="riscv_core_tb_func_impl.wdb" id="1">
          <top_modules>
             <top_module name="glbl" />
-            <top_module name="main_csr_pipe_tb" />
+            <top_module name="riscv_core_tb" />
          </top_modules>
       </db_ref>
    </db_ref_list>
@@ -20,27 +20,27 @@
       <ValueColumnWidth column_width="234"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="11" />
-   <wvobject type="logic" fp_name="/main_csr_pipe_tb/clk">
+   <wvobject type="logic" fp_name="/riscv_core_tb/clk">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/main_csr_pipe_tb/reset">
+   <wvobject type="logic" fp_name="/riscv_core_tb/reset">
       <obj_property name="ElementShortName">reset</obj_property>
       <obj_property name="ObjectShortName">reset</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/main_csr_pipe_tb/pins_comb">
+   <wvobject type="array" fp_name="/riscv_core_tb/pins_comb">
       <obj_property name="ElementShortName">pins_comb[7:0]</obj_property>
       <obj_property name="ObjectShortName">pins_comb[7:0]</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/main_csr_pipe_tb/seven_seg_comb">
+   <wvobject type="array" fp_name="/riscv_core_tb/seven_seg_comb">
       <obj_property name="ElementShortName">seven_seg_comb[6:0]</obj_property>
       <obj_property name="ObjectShortName">seven_seg_comb[6:0]</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/pc_to_inst_mem">
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/pc_to_inst_mem">
       <obj_property name="ElementShortName">pc_to_inst_mem[31:0]</obj_property>
       <obj_property name="ObjectShortName">pc_to_inst_mem[31:0]</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/inst_out_to_flip_muxed">
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/inst_out_to_flip_muxed">
       <obj_property name="ElementShortName">inst_out_to_flip_muxed[31:0]</obj_property>
       <obj_property name="ObjectShortName">inst_out_to_flip_muxed[31:0]</obj_property>
    </wvobject>
@@ -48,19 +48,19 @@
       <obj_property name="label">alu</obj_property>
       <obj_property name="DisplayName">label</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/calculator/A">
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/calculator/A">
       <obj_property name="ElementShortName">A[31:0]</obj_property>
       <obj_property name="ObjectShortName">A[31:0]</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/calculator/ALU_CON">
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/calculator/ALU_CON">
       <obj_property name="ElementShortName">ALU_CON[3:0]</obj_property>
       <obj_property name="ObjectShortName">ALU_CON[3:0]</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/calculator/B">
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/calculator/B">
       <obj_property name="ElementShortName">B[31:0]</obj_property>
       <obj_property name="ObjectShortName">B[31:0]</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/main_csr_pipe_tb/top_instance/top_instance/UUT/calculator/out_result">
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/calculator/out_result">
       <obj_property name="ElementShortName">out_result[31:0]</obj_property>
       <obj_property name="ObjectShortName">out_result[31:0]</obj_property>
    </wvobject>

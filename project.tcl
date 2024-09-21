@@ -59,11 +59,11 @@
 #    "/home/abdul_waheed/Music/rv32_for_fyp/Datapath/adder.sv"
 #    "/home/abdul_waheed/Music/rv32_for_fyp/Datapath/cva6_csr_unit.sv"
 #    "/home/abdul_waheed/Music/rv32_for_fyp/Datapath/hazard_unit.sv"
-#    "/home/abdul_waheed/Music/rv32_for_fyp/Datapath/main_csr_pipe.sv"
+#    "/home/abdul_waheed/Music/rv32_for_fyp/Datapath/riscv_core.sv"
 #    "/home/abdul_waheed/Music/rv32_for_fyp/Datapath/mem_unit.sv"
 #    "/home/abdul_waheed/Music/rv32_for_fyp/Datapath/extend.sv"
-#    "/home/abdul_waheed/Music/rv32_for_fyp/Controller/flip_CU.sv"
-#    "/home/abdul_waheed/Music/rv32_for_fyp/Controller/CPU.sv"
+#    "/home/abdul_waheed/Music/rv32_for_fyp/Controller/pipelined_control.sv"
+#    "/home/abdul_waheed/Music/rv32_for_fyp/Controller/control.sv"
 #    "/home/abdul_waheed/Music/rv32_for_fyp/top.sv"
 #    "/home/abdul_waheed/Music/rv32_for_fyp/tff.sv"
 #    "/home/abdul_waheed/Music/rv32_for_fyp/test/banked_memory.sv"
@@ -101,12 +101,12 @@
 #    "/home/abdul_waheed/Music/rv32_for_fyp/uart/plic_defs.svh"
 #    "/home/abdul_waheed/Music/rv32_for_fyp/uart/uart_defs.svh"
 #    "/home/abdul_waheed/Music/FYP/Vivado/Nexys-A7-100T-Master.xdc"
-#    "/home/abdul_waheed/Music/rv32_for_fyp/main_csr_pipe_tb.sv"
+#    "/home/abdul_waheed/Music/rv32_for_fyp/riscv_core_tb.sv"
 #    "/home/abdul_waheed/Music/rv32_for_fyp/tb_top.sv"
 #    "/home/abdul_waheed/Music/rv32_for_fyp/abdul_top_behav.wcfg"
 #    "/home/abdul_waheed/Music/rv32_for_fyp/main_impl.wcfg"
-#    "/home/abdul_waheed/Music/rv32_for_fyp/copy_main_csr_pipe_tb_func_imp.wcfg"
-#    "/home/abdul_waheed/Music/rv32_for_fyp/main_csr_pipe_tb_func_impl.wcfg"
+#    "/home/abdul_waheed/Music/rv32_for_fyp/copy_riscv_core_tb_func_imp.wcfg"
+#    "/home/abdul_waheed/Music/rv32_for_fyp/riscv_core_tb_func_impl.wcfg"
 #    "/home/abdul_waheed/Music/rv32_for_fyp/Gemm/Datapath/memory_tb.sv"
 #    "/home/abdul_waheed/Music/rv32_for_fyp/uart_look.wcfg"
 #
@@ -256,11 +256,11 @@ set files [list \
  [file normalize "${origin_dir}/Datapath/adder.sv"] \
  [file normalize "${origin_dir}/Datapath/cva6_csr_unit.sv"] \
  [file normalize "${origin_dir}/Datapath/hazard_unit.sv"] \
- [file normalize "${origin_dir}/Datapath/main_csr_pipe.sv"] \
+ [file normalize "${origin_dir}/Datapath/riscv_core.sv"] \
  [file normalize "${origin_dir}/Datapath/mem_unit.sv"] \
  [file normalize "${origin_dir}/Datapath/extend.sv"] \
- [file normalize "${origin_dir}/Controller/flip_CU.sv"] \
- [file normalize "${origin_dir}/Controller/CPU.sv"] \
+ [file normalize "${origin_dir}/Controller/pipelined_control.sv"] \
+ [file normalize "${origin_dir}/Controller/control.sv"] \
  [file normalize "${origin_dir}/top.sv"] \
  [file normalize "${origin_dir}/tff.sv"] \
  [file normalize "${origin_dir}/test/banked_memory.sv"] \
@@ -461,7 +461,7 @@ set file [file normalize $file]
 set file_obj [get_files -of_objects [get_filesets sources_1] [list "*$file"]]
 set_property -name "file_type" -value "SystemVerilog" -objects $file_obj
 
-set file "$origin_dir/Datapath/main_csr_pipe.sv"
+set file "$origin_dir/Datapath/riscv_core.sv"
 set file [file normalize $file]
 set file_obj [get_files -of_objects [get_filesets sources_1] [list "*$file"]]
 set_property -name "file_type" -value "SystemVerilog" -objects $file_obj
@@ -476,12 +476,12 @@ set file [file normalize $file]
 set file_obj [get_files -of_objects [get_filesets sources_1] [list "*$file"]]
 set_property -name "file_type" -value "SystemVerilog" -objects $file_obj
 
-set file "$origin_dir/Controller/flip_CU.sv"
+set file "$origin_dir/Controller/pipelined_control.sv"
 set file [file normalize $file]
 set file_obj [get_files -of_objects [get_filesets sources_1] [list "*$file"]]
 set_property -name "file_type" -value "SystemVerilog" -objects $file_obj
 
-set file "$origin_dir/Controller/CPU.sv"
+set file "$origin_dir/Controller/control.sv"
 set file [file normalize $file]
 set file_obj [get_files -of_objects [get_filesets sources_1] [list "*$file"]]
 set_property -name "file_type" -value "SystemVerilog" -objects $file_obj
@@ -705,19 +705,19 @@ if {[string equal [get_filesets -quiet sim_1] ""]} {
 # Set 'sim_1' fileset object
 set obj [get_filesets sim_1]
 set files [list \
- [file normalize "${origin_dir}/main_csr_pipe_tb.sv"] \
+ [file normalize "${origin_dir}/riscv_core_tb.sv"] \
  [file normalize "${origin_dir}/tb_top.sv"] \
  [file normalize "${origin_dir}/abdul_top_behav.wcfg"] \
  [file normalize "${origin_dir}/main_impl.wcfg"] \
- [file normalize "${origin_dir}/copy_main_csr_pipe_tb_func_imp.wcfg"] \
- [file normalize "${origin_dir}/main_csr_pipe_tb_func_impl.wcfg"] \
+ [file normalize "${origin_dir}/copy_riscv_core_tb_func_imp.wcfg"] \
+ [file normalize "${origin_dir}/riscv_core_tb_func_impl.wcfg"] \
  [file normalize "${origin_dir}/Gemm/Datapath/memory_tb.sv"] \
  [file normalize "${origin_dir}/uart_look.wcfg"] \
 ]
 add_files -norecurse -fileset $obj $files
 
 # Set 'sim_1' fileset file properties for remote files
-set file "$origin_dir/main_csr_pipe_tb.sv"
+set file "$origin_dir/riscv_core_tb.sv"
 set file [file normalize $file]
 set file_obj [get_files -of_objects [get_filesets sim_1] [list "*$file"]]
 set_property -name "file_type" -value "SystemVerilog" -objects $file_obj
@@ -732,12 +732,12 @@ set file [file normalize $file]
 set file_obj [get_files -of_objects [get_filesets sim_1] [list "*$file"]]
 set_property -name "is_enabled" -value "0" -objects $file_obj
 
-set file "$origin_dir/copy_main_csr_pipe_tb_func_imp.wcfg"
+set file "$origin_dir/copy_riscv_core_tb_func_imp.wcfg"
 set file [file normalize $file]
 set file_obj [get_files -of_objects [get_filesets sim_1] [list "*$file"]]
 set_property -name "is_enabled" -value "0" -objects $file_obj
 
-set file "$origin_dir/main_csr_pipe_tb_func_impl.wcfg"
+set file "$origin_dir/riscv_core_tb_func_impl.wcfg"
 set file [file normalize $file]
 set file_obj [get_files -of_objects [get_filesets sim_1] [list "*$file"]]
 set_property -name "is_enabled" -value "0" -objects $file_obj
@@ -753,7 +753,7 @@ set_property -name "file_type" -value "SystemVerilog" -objects $file_obj
 
 # Set 'sim_1' fileset properties
 set obj [get_filesets sim_1]
-set_property -name "top" -value "main_csr_pipe_tb" -objects $obj
+set_property -name "top" -value "riscv_core_tb" -objects $obj
 set_property -name "top_auto_set" -value "0" -objects $obj
 set_property -name "top_lib" -value "xil_defaultlib" -objects $obj
 

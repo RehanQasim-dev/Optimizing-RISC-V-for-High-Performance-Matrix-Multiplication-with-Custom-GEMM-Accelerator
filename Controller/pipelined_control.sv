@@ -1,4 +1,4 @@
-module flip_CU (
+module pipelined_control (
     input logic clk, reset,stall, reg_wr, mem_write, mem_read, pc_jump_mux, BR_taken,
     input logic [1:0] wr_bck_mux,
     input logic [2:0] func3_to_mem,
