@@ -1,7 +1,3 @@
-set origin_dir [file dirname [info script]]
-create_project ${_xil_proj_name_} $origin_dir/${_xil_proj_name_} -part xc7a100tcsg324-1
-
-
 # A GEMM (General Matrix Multiplier) Co-processor
 
 This repo is a Martix multiplier Co-processor integrated with a Risc-V 3-stage pipelined processor with separate data memory and UART. Currently, the core implements RV32IMZicsr ISA based on User-level ISA Version 2.0 and Privileged Architecture Version 1.11 supporting only M mode. The following are the key features of the repo:
