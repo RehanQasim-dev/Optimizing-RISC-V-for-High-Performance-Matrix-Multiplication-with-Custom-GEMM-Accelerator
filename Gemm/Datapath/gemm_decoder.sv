@@ -9,7 +9,6 @@ module gemm_decoder (
 
 );
 
-
   // Define the conditions for Tallwave and Widewave
   assign Tallwave = ksize <= SMALL_SYS_ROWS;
   assign Widewave = nsize > SMALL_SYS_COLS;

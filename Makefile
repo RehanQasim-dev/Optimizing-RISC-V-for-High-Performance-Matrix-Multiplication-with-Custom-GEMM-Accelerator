@@ -17,11 +17,7 @@ src_core := ./top.sv 						\
 		$(wildcard ./uart/*.svh)						\
 	   $(wildcard ./Datapath/*.sv)							\
 	   $(wildcard ./Controller/*.sv)						\
-	   $(wildcard ./uart/*.sv)						\
-	   $(wildcard ./test/*.sv)		
-
-	 
-	  
+	   $(wildcard ./uart/*.sv)						
 
 src_gemm :=  ./tb_random_gemm.sv							\
 		./Config.sv 										\
@@ -32,9 +28,7 @@ src_gemm :=  ./tb_random_gemm.sv							\
 	   $(wildcard ./Datapath/*.sv)							\
 	   $(wildcard ./Controller/*.sv)						\
 	   $(wildcard ./uart/*.sv)								\
-	   $(wildcard ./uart/*.svh)						\
-	   $(wildcard ./test/*.sv)
-
+	   $(wildcard ./uart/*.svh)						
 
 verilate_command_core := $(verilator) +define+$(defines) \
 					--cc $(src_core) $(list_incdir)	\
@@ -48,7 +42,7 @@ verilate_command_core := $(verilator) +define+$(defines) \
 					-Wno-PINMISSING 			\
 					--timing	\
 					--Mdir $(ver-library)				\
-					--exe bench/tb_top.cpp		\
+					--exe verilator_testbench/tb_top.cpp		\
 					--trace-structs --trace
 					
 verilate_command_gemm := $(verilator) 	+define+$(defines)		\
@@ -69,7 +63,7 @@ verilate_command_gemm := $(verilator) 	+define+$(defines)		\
 					-Wno-PINMISSING 			\
 					--timing	\
 					--Mdir $(ver-library)			\
-					--exe bench/tb_random_gemm.cpp		\
+					--exe verilator_testbench/tb_random_gemm.cpp		\
 					--trace-structs --trace
 
 

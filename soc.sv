@@ -6,10 +6,10 @@ module soc (
     output  logic uart_txd_o
 );
 
-logic rst_new, clk_25;
+logic rst_new, clk_div_by_8;
 
-    tff divider_1 (clk, rst, clk_25, rst_new);
+    clk_divider clk_divider (clk, rst, clk_div_by_8, rst_new);
    
-    top top_instance (clk_25,rst_new, an, a_to_g,uart_rxd_i,uart_txd_o);
+    top top_instance (clk_div_by_8,rst_new, an, a_to_g,uart_rxd_i,uart_txd_o);
     
 endmodule

@@ -1,6 +1,6 @@
 `timescale 1ns / 1ns
 
-module main_csr_pipe_tb;
+module riscv_core_tb;
 
   logic clk = 0;
   initial begin

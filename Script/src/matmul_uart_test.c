@@ -1,10 +1,6 @@
-#include <stdio.h>
 #include <stdint.h>
-#include <stdbool.h>
-#include <string.h>
 #include "gemm.h"
 #include "uart.h"
-#include <stdlib.h>
 #define M 20
 #define K 20
 #define N 20

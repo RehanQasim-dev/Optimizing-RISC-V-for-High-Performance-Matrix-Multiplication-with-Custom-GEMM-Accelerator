@@ -15,8 +15,7 @@ module top (
       system_bus_wr_data,
       gemm_conf_read,
       mem_read_data,
-      gemm_conf_read_ppl,
-      result;
+      gemm_conf_read_ppl;
   logic [31:0] system_bus_addr;
   logic [4:0] interface_control;
   logic interface_rdwr;
@@ -29,7 +28,7 @@ module top (
   always_ff @(posedge clk) begin
     mem_valid <= ~system_bus_rdwr & system_bus_en;
   end
-  main_csr_pipe RISC_V_core (
+  riscv_core RISC_V_core (
       clk,
       rst,
       interupt,
@@ -74,27 +73,26 @@ module top (
       .interface_rd_data(interface_rd_data)
   );
 
-  gemm gemm_instance (
-      .clk(clk),
-      .rst(rst),
-      .system_bus_en(en_gemm_conf),
-      .system_bus_rdwr(system_bus_rdwr),
-      .system_bus_rd_data(gemm_conf_read),
-      .system_bus_wr_data(system_bus_wr_data),
-      .system_bus_addr({system_bus_addr[31:2], 2'd0}),
-      .interface_control(interface_control),
-      .interface_rdwr(interface_rdwr),
-      .interface_en(interface_en),
-      .interface_addr(interface_addr),
-      .interface_rd_data(interface_rd_data),
-      .interface_wr_data(interface_wr_data)
-  );
+    // GEMM instance
+    gemm gemm_instance (
+        .clk(clk),
+        .rst(rst),
+        .system_bus_en(en_gemm_conf),
+        .system_bus_rdwr(system_bus_rdwr),
+        .system_bus_rd_data(gemm_conf_read),
+        .system_bus_wr_data(system_bus_wr_data),
+        .system_bus_addr({system_bus_addr[31:2], 2'd0}),
+        .interface_control(interface_control),
+        .interface_rdwr(interface_rdwr),
+        .interface_en(interface_en),
+        .interface_addr(interface_addr),
+        .interface_rd_data(interface_rd_data),
+        .interface_wr_data(interface_wr_data)
+    );
 
     logic rst_n;
     wire type_dbus2peri_s dbus2uart_i;
     wire type_peri2dbus_s uart2dbus_o;
-    logic uart_sel_i;
-     logic uart_irq_o;
 
     assign dbus2uart_i.addr = {system_bus_addr[31:2], 2'd0};
     assign dbus2uart_i.w_data = system_bus_wr_data;

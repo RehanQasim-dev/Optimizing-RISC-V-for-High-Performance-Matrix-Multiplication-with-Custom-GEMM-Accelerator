@@ -86,8 +86,6 @@ genvar i;
       end
     end
   end
-  reg [D_WID-1:0] meam[NUM_RAMS-1:0][2**A_WID-1:0];
-
 
   banked_memory #(
     .NUM_RAMS(NUM_RAMS),

@@ -1,47 +1,63 @@
-#include <stdio.h>
 #include <stdint.h>
-#include <stdbool.h>
 #include "gemm.h"
-#include"uart.h"
+#include "uart.h"
 
-
-// void load_value_reg(int x);
-    int8_t A[3][3] = {
-    {   3,   -3,    1 },
-    {  -1,   -6,    0 },
-    {  -7,   -5,   -6 },
-};
-int8_t B[3][3] = {
-    {   0,   -1,   -5 },
-    {   0,    0,    4 },
-    {   1,   -4,   -7 },
-};
-    
-    int32_t C[3][3]; // Declaring C on the stack
-int main()
-{
-    Uetrv32_Uart_Init(1301);
-    // asm("mv t6, %0" : : "r"(67)); // Not sure why this line is here, it sets register t6 to 67
-
-    // Call the matrix multiplication function
-    MATMUL(3, 3, 3, A, B, C); // Typecasting C to the correct type
-
-    for (int i = 0; i < 3; i++)
-    {
-        for (int w = 0; w < 3; w++)
-        {
-        //     asm("mv t6, %0" : : "r"(C[i][w]));
-        //     for (int o = 0; o < 1000000; o++){} // Delay loop
-            
+void main(void) {
+    Uetrv32_Uart_Rx();
+    int8_t rx_byte = 0;
+    uint32_t M,K,N;
+    // Initialize UART with desired baudrate
+    Uetrv32_Uart_Init(BAUD_DIV);
+    while (1) {
+        UETrv32_Uart_Print("\n\r");
+        UETrv32_Uart_Print("----------------------------------------------------------------\n\r");
+        UETrv32_Uart_Print("Enter dim_M:");
+        M = Get_Data_Word();
+        UART_Send_32bit_number(M);
+        UETrv32_Uart_Print("\n\rEnter dim_K:");
+        K = Get_Data_Word();
+        UART_Send_32bit_number(K);
+        UETrv32_Uart_Print("\n\rEnter dim_N:");
+        N = Get_Data_Word();
+        UART_Send_32bit_number(N);
+        int8_t A[M][K];
+        int8_t B[K][N];
+        int32_t C[M][N];
+        for (int i = 0; i < M; i++) {
+            for (int j = 0; j < K; j++) {
+                A[i][j]= (int8_t) Uetrv32_Uart_Rx();
+            }
         }
+        UETrv32_Uart_Print("\n\rMatrix A is Received! ");
+        for (int i = 0; i < K; i++) {
+            for (int j = 0; j < N; j++) {
+                B[i][j]= (int8_t) Uetrv32_Uart_Rx();
+            }
+        }
+        UETrv32_Uart_Print("\n\rMatrix B is Received! ");
+        UETrv32_Uart_Print("\n\r");
+        UETrv32_Uart_Print("\n\rMatrix A: ");
+        display_input_matrix(M,K,A);
+        UETrv32_Uart_Print("\n\rMatrix B: ");
+        display_input_matrix(K,N,B);
+        TIMER_START
+        MATMUL(M, K,N, A, B, C);
+        TIMER_STOP
+        uint32_t cycles=read_cycles();
+        UETrv32_Uart_Print("\n\rNo of cycles taken on GEMM: ");
+        UART_Send_32bit_number(cycles);
+        UETrv32_Uart_Print("\n\r");
+        UETrv32_Uart_Print("\n\rMatrix C: ");
+        display_result_matrix(M,N,C);
+        UETrv32_Uart_Print("\n\r........Now performing matrix multiplications on RISC-V....... ");
+        TIMER_START
+        core_matmul(M, K,N, A, B, C);
+        TIMER_STOP
+        uint32_t cycles_core=read_cycles();
+        UETrv32_Uart_Print("\n\rNo of cycles taken on RISC-V Core: ");
+        UART_Send_32bit_number(cycles_core);
+        UETrv32_Uart_Print("\n\r");
     }
 
-    for (int o = 0; o < 1000000; o++){} // Delay loop
-
-    while (1)
-    {
-        // Infinite loop to prevent the program from exiting
-    }
-    return 0;
+    return;
 }
-

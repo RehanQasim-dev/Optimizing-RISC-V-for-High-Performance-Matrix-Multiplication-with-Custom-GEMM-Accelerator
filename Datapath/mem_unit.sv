@@ -22,8 +22,6 @@ module mem_unit (
   logic [31:0] data_from_reg_mem;
   assign data_out_to_riscv = data_from_reg_mem;
   assign address_to_mem = address;
-  //	assign data_out_to_mem = data_in;
-
 
   always_comb begin : store_operations
 	data_out_to_mem =0;
@@ -108,50 +106,6 @@ module mem_unit (
             cs = ~(1'b0);
           end
         endcase
-    //   end else if (address[31]) begin  // uart transmission
-    //     transfer_byte = 1'b0;
-    //     load_uart = 1'b0;
-    //     if (~uart_done & ~uart_busy) begin
-    //       if (func3 == 3'b000) begin
-    //         case (address[1:0])
-    //           2'b00: begin
-    //             data_to_uart = data_in[7:0];
-    //             cs = ~(1'b1);
-    //             transfer_byte = 1'b1;
-    //             load_uart = 1'b1;
-    //           end
-
-    //           2'b01: begin
-    //             mem_read = ~(0);
-    //             data_to_uart = data_in[15:8];
-    //             cs = ~(1'b1);
-    //             transfer_byte = 1'b1;
-    //             load_uart = 1'b1;
-    //           end
-
-    //           2'b10: begin
-    //             data_to_uart = data_in[23:16];
-    //             cs = ~(1'b1);
-    //             transfer_byte = 1'b1;
-    //             load_uart = 1'b1;
-    //           end
-
-    //           2'b11: begin
-    //             cs = ~(1'b1);
-    //             transfer_byte = 1'b1;
-    //             load_uart = 1'b1;
-    //             data_to_uart = data_in[31:24];
-    //           end
-    //         endcase
-    //       end else if (uart_busy & ~uart_done) begin
-    //         transfer_byte = 1'b1;
-    //         load_uart = 1'b0;
-
-    //       end else if (~uart_busy & uart_done) begin
-    //         transfer_byte = 1'b0;
-    //         load_uart = 1'b0;
-    //       end
-        // end
       end
     end
 
