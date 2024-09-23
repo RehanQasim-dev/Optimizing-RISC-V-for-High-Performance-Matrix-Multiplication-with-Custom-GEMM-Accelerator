@@ -1,0 +1,1863 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="riscv_core_tb_func_impl.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="riscv_core_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="666170000fs"></ZoomStartTime>
+      <ZoomEndTime time="666358001fs"></ZoomEndTime>
+      <Cursor1Time time="667200000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="265"></NameColumnWidth>
+      <ValueColumnWidth column_width="316"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="460" />
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/reset">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/interupt">
+      <obj_property name="ElementShortName">interupt</obj_property>
+      <obj_property name="ObjectShortName">interupt</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/mem_valid">
+      <obj_property name="ElementShortName">mem_valid</obj_property>
+      <obj_property name="ObjectShortName">mem_valid</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/BR_taken">
+      <obj_property name="ElementShortName">BR_taken</obj_property>
+      <obj_property name="ObjectShortName">BR_taken</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/a_to_g">
+      <obj_property name="ElementShortName">a_to_g[6:0]</obj_property>
+      <obj_property name="ObjectShortName">a_to_g[6:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/alu_A">
+      <obj_property name="ElementShortName">alu_A[31:0]</obj_property>
+      <obj_property name="ObjectShortName">alu_A[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/alu_B">
+      <obj_property name="ElementShortName">alu_B[31:0]</obj_property>
+      <obj_property name="ObjectShortName">alu_B[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/alu_con">
+      <obj_property name="ElementShortName">alu_con[3:0]</obj_property>
+      <obj_property name="ObjectShortName">alu_con[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/alu_flip_n_37">
+      <obj_property name="ElementShortName">alu_flip_n_37</obj_property>
+      <obj_property name="ObjectShortName">alu_flip_n_37</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/alu_flip_n_38">
+      <obj_property name="ElementShortName">alu_flip_n_38</obj_property>
+      <obj_property name="ObjectShortName">alu_flip_n_38</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/alu_mux_1">
+      <obj_property name="ElementShortName">alu_mux_1</obj_property>
+      <obj_property name="ObjectShortName">alu_mux_1</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/alu_mux_2">
+      <obj_property name="ElementShortName">alu_mux_2</obj_property>
+      <obj_property name="ObjectShortName">alu_mux_2</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/alu_result_flip_muxed">
+      <obj_property name="ElementShortName">alu_result_flip_muxed[31:0]</obj_property>
+      <obj_property name="ObjectShortName">alu_result_flip_muxed[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/an">
+      <obj_property name="ElementShortName">an[7:0]</obj_property>
+      <obj_property name="ObjectShortName">an[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/arthimatic_result">
+      <obj_property name="ElementShortName">arthimatic_result[31:0]</obj_property>
+      <obj_property name="ObjectShortName">arthimatic_result[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/branch_type">
+      <obj_property name="ElementShortName">branch_type[2:0]</obj_property>
+      <obj_property name="ObjectShortName">branch_type[2:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/clk">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/control_unit_n_10">
+      <obj_property name="ElementShortName">control_unit_n_10</obj_property>
+      <obj_property name="ObjectShortName">control_unit_n_10</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/control_unit_n_36">
+      <obj_property name="ElementShortName">control_unit_n_36</obj_property>
+      <obj_property name="ObjectShortName">control_unit_n_36</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/control_unit_n_37">
+      <obj_property name="ElementShortName">control_unit_n_37</obj_property>
+      <obj_property name="ObjectShortName">control_unit_n_37</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/control_unit_n_38">
+      <obj_property name="ElementShortName">control_unit_n_38</obj_property>
+      <obj_property name="ObjectShortName">control_unit_n_38</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/control_unit_n_39">
+      <obj_property name="ElementShortName">control_unit_n_39</obj_property>
+      <obj_property name="ObjectShortName">control_unit_n_39</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/control_unit_n_7">
+      <obj_property name="ElementShortName">control_unit_n_7</obj_property>
+      <obj_property name="ObjectShortName">control_unit_n_7</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/control_unit_n_8">
+      <obj_property name="ElementShortName">control_unit_n_8</obj_property>
+      <obj_property name="ObjectShortName">control_unit_n_8</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/control_unit_n_9">
+      <obj_property name="ElementShortName">control_unit_n_9</obj_property>
+      <obj_property name="ObjectShortName">control_unit_n_9</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/cs">
+      <obj_property name="ElementShortName">cs</obj_property>
+      <obj_property name="ObjectShortName">cs</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_address">
+      <obj_property name="ElementShortName">csr_address[11:0]</obj_property>
+      <obj_property name="ObjectShortName">csr_address[11:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_address_muxed">
+      <obj_property name="ElementShortName">csr_address_muxed[11:0]</obj_property>
+      <obj_property name="ObjectShortName">csr_address_muxed[11:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_reg_rd">
+      <obj_property name="ElementShortName">csr_reg_rd</obj_property>
+      <obj_property name="ObjectShortName">csr_reg_rd</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_reg_rd_flip">
+      <obj_property name="ElementShortName">csr_reg_rd_flip</obj_property>
+      <obj_property name="ObjectShortName">csr_reg_rd_flip</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_return">
+      <obj_property name="ElementShortName">csr_return</obj_property>
+      <obj_property name="ObjectShortName">csr_return</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_return_flip">
+      <obj_property name="ElementShortName">csr_return_flip</obj_property>
+      <obj_property name="ObjectShortName">csr_return_flip</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/data_out_to_alu_mux_1">
+      <obj_property name="ElementShortName">data_out_to_alu_mux_1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">data_out_to_alu_mux_1[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/data_out_to_alu_mux_2">
+      <obj_property name="ElementShortName">data_out_to_alu_mux_2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">data_out_to_alu_mux_2[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/data_out_to_alu_mux_2_muxed">
+      <obj_property name="ElementShortName">data_out_to_alu_mux_2_muxed[31:0]</obj_property>
+      <obj_property name="ObjectShortName">data_out_to_alu_mux_2_muxed[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/data_out_to_reg">
+      <obj_property name="ElementShortName">data_out_to_reg[31:0]</obj_property>
+      <obj_property name="ObjectShortName">data_out_to_reg[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/flush_sel">
+      <obj_property name="ElementShortName">flush_sel</obj_property>
+      <obj_property name="ObjectShortName">flush_sel</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/forward_sel_1">
+      <obj_property name="ElementShortName">forward_sel_1</obj_property>
+      <obj_property name="ObjectShortName">forward_sel_1</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/forward_sel_2">
+      <obj_property name="ElementShortName">forward_sel_2</obj_property>
+      <obj_property name="ObjectShortName">forward_sel_2</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/func3_to_mem">
+      <obj_property name="ElementShortName">func3_to_mem[2:0]</obj_property>
+      <obj_property name="ObjectShortName">func3_to_mem[2:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/func3_to_mem_flip">
+      <obj_property name="ElementShortName">func3_to_mem_flip[2:0]</obj_property>
+      <obj_property name="ObjectShortName">func3_to_mem_flip[2:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/imm_to_alu_mux_2">
+      <obj_property name="ElementShortName">imm_to_alu_mux_2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">imm_to_alu_mux_2[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/inst_out">
+      <obj_property name="ElementShortName">inst_out[31:0]</obj_property>
+      <obj_property name="ObjectShortName">inst_out[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/inst_out_flip">
+      <obj_property name="ElementShortName">inst_out_flip[31:0]</obj_property>
+      <obj_property name="ObjectShortName">inst_out_flip[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/inst_out_flip_2">
+      <obj_property name="ElementShortName">inst_out_flip_2[11:7]</obj_property>
+      <obj_property name="ObjectShortName">inst_out_flip_2[11:7]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/inst_out_to_flip_muxed">
+      <obj_property name="ElementShortName">inst_out_to_flip_muxed[31:0]</obj_property>
+      <obj_property name="ObjectShortName">inst_out_to_flip_muxed[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/inst_out_to_rd_flip_muxed">
+      <obj_property name="ElementShortName">inst_out_to_rd_flip_muxed[11:7]</obj_property>
+      <obj_property name="ObjectShortName">inst_out_to_rd_flip_muxed[11:7]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/led_display">
+      <obj_property name="ElementShortName">led_display[31:0]</obj_property>
+      <obj_property name="ObjectShortName">led_display[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/load_data">
+      <obj_property name="ElementShortName">load_data[31:0]</obj_property>
+      <obj_property name="ObjectShortName">load_data[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/m_busy">
+      <obj_property name="ElementShortName">m_busy</obj_property>
+      <obj_property name="ObjectShortName">m_busy</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/m_con">
+      <obj_property name="ElementShortName">m_con[3:0]</obj_property>
+      <obj_property name="ObjectShortName">m_con[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/m_done">
+      <obj_property name="ElementShortName">m_done</obj_property>
+      <obj_property name="ObjectShortName">m_done</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/m_result">
+      <obj_property name="ElementShortName">m_result[31:0]</obj_property>
+      <obj_property name="ObjectShortName">m_result[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/mask">
+      <obj_property name="ElementShortName">mask[3:0]</obj_property>
+      <obj_property name="ObjectShortName">mask[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/mem_addr">
+      <obj_property name="ElementShortName">mem_addr[31:0]</obj_property>
+      <obj_property name="ObjectShortName">mem_addr[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/mem_rd_wr">
+      <obj_property name="ElementShortName">mem_rd_wr</obj_property>
+      <obj_property name="ObjectShortName">mem_rd_wr</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/mem_read">
+      <obj_property name="ElementShortName">mem_read</obj_property>
+      <obj_property name="ObjectShortName">mem_read</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/mem_read_data">
+      <obj_property name="ElementShortName">mem_read_data[31:0]</obj_property>
+      <obj_property name="ObjectShortName">mem_read_data[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/mem_read_flip">
+      <obj_property name="ElementShortName">mem_read_flip</obj_property>
+      <obj_property name="ObjectShortName">mem_read_flip</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/mem_write">
+      <obj_property name="ElementShortName">mem_write</obj_property>
+      <obj_property name="ObjectShortName">mem_write</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/mem_write_data">
+      <obj_property name="ElementShortName">mem_write_data[31:0]</obj_property>
+      <obj_property name="ObjectShortName">mem_write_data[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/mem_write_flip">
+      <obj_property name="ElementShortName">mem_write_flip</obj_property>
+      <obj_property name="ObjectShortName">mem_write_flip</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/pc_for_jump">
+      <obj_property name="ElementShortName">pc_for_jump[31:0]</obj_property>
+      <obj_property name="ObjectShortName">pc_for_jump[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/pc_for_jump_flip_2">
+      <obj_property name="ElementShortName">pc_for_jump_flip_2[31:1]</obj_property>
+      <obj_property name="ObjectShortName">pc_for_jump_flip_2[31:1]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/pc_from_alu">
+      <obj_property name="ElementShortName">pc_from_alu[31:0]</obj_property>
+      <obj_property name="ObjectShortName">pc_from_alu[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/pc_jump_mux">
+      <obj_property name="ElementShortName">pc_jump_mux</obj_property>
+      <obj_property name="ObjectShortName">pc_jump_mux</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/pc_to_alu_mux">
+      <obj_property name="ElementShortName">pc_to_alu_mux[31:0]</obj_property>
+      <obj_property name="ObjectShortName">pc_to_alu_mux[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/pc_to_alu_mux_muxed">
+      <obj_property name="ElementShortName">pc_to_alu_mux_muxed[31:0]</obj_property>
+      <obj_property name="ObjectShortName">pc_to_alu_mux_muxed[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/pc_to_flip">
+      <obj_property name="ElementShortName">pc_to_flip[31:0]</obj_property>
+      <obj_property name="ObjectShortName">pc_to_flip[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/pc_to_flip_intrupt_mux">
+      <obj_property name="ElementShortName">pc_to_flip_intrupt_mux[31:0]</obj_property>
+      <obj_property name="ObjectShortName">pc_to_flip_intrupt_mux[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/pc_to_flip_mux">
+      <obj_property name="ElementShortName">pc_to_flip_mux[31:1]</obj_property>
+      <obj_property name="ObjectShortName">pc_to_flip_mux[31:1]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/pc_to_inst_mem">
+      <obj_property name="ElementShortName">pc_to_inst_mem[31:0]</obj_property>
+      <obj_property name="ObjectShortName">pc_to_inst_mem[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/pc_to_inst_mem_through_stall_n_flush">
+      <obj_property name="ElementShortName">pc_to_inst_mem_through_stall_n_flush[31:0]</obj_property>
+      <obj_property name="ObjectShortName">pc_to_inst_mem_through_stall_n_flush[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/reg_wr">
+      <obj_property name="ElementShortName">reg_wr</obj_property>
+      <obj_property name="ObjectShortName">reg_wr</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/reg_wr_flip">
+      <obj_property name="ElementShortName">reg_wr_flip</obj_property>
+      <obj_property name="ObjectShortName">reg_wr_flip</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/rs1_alu_a">
+      <obj_property name="ElementShortName">rs1_alu_a[31:0]</obj_property>
+      <obj_property name="ObjectShortName">rs1_alu_a[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/rs2_alu_b">
+      <obj_property name="ElementShortName">rs2_alu_b[31:0]</obj_property>
+      <obj_property name="ObjectShortName">rs2_alu_b[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/sel_for_branch">
+      <obj_property name="ElementShortName">sel_for_branch</obj_property>
+      <obj_property name="ObjectShortName">sel_for_branch</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/sign_extend">
+      <obj_property name="ElementShortName">sign_extend[2:0]</obj_property>
+      <obj_property name="ObjectShortName">sign_extend[2:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/stall_sel">
+      <obj_property name="ElementShortName">stall_sel</obj_property>
+      <obj_property name="ObjectShortName">stall_sel</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/store_data_flip">
+      <obj_property name="ElementShortName">store_data_flip[31:0]</obj_property>
+      <obj_property name="ObjectShortName">store_data_flip[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/wr_bck_mux">
+      <obj_property name="ElementShortName">wr_bck_mux[1:0]</obj_property>
+      <obj_property name="ObjectShortName">wr_bck_mux[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/wr_bck_mux_flip">
+      <obj_property name="ElementShortName">wr_bck_mux_flip[1:0]</obj_property>
+      <obj_property name="ObjectShortName">wr_bck_mux_flip[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/write_back_data_to_reg_file">
+      <obj_property name="ElementShortName">write_back_data_to_reg_file[31:0]</obj_property>
+      <obj_property name="ObjectShortName">write_back_data_to_reg_file[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/write_data">
+      <obj_property name="ElementShortName">write_data[31:0]</obj_property>
+      <obj_property name="ObjectShortName">write_data[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/write_data_muxed">
+      <obj_property name="ElementShortName">write_data_muxed[31:0]</obj_property>
+      <obj_property name="ObjectShortName">write_data_muxed[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/NLW_IMMEDIATE_CREATE_instruction_UNCONNECTED">
+      <obj_property name="ElementShortName">NLW_IMMEDIATE_CREATE_instruction_UNCONNECTED[6:0]</obj_property>
+      <obj_property name="ObjectShortName">NLW_IMMEDIATE_CREATE_instruction_UNCONNECTED[6:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/NLW_JUMP_ADDER_add_in_UNCONNECTED">
+      <obj_property name="ElementShortName">NLW_JUMP_ADDER_add_in_UNCONNECTED[0:0]</obj_property>
+      <obj_property name="ObjectShortName">NLW_JUMP_ADDER_add_in_UNCONNECTED[0:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/NLW_JUMP_ADDER_add_out_UNCONNECTED">
+      <obj_property name="ElementShortName">NLW_JUMP_ADDER_add_out_UNCONNECTED[0:0]</obj_property>
+      <obj_property name="ObjectShortName">NLW_JUMP_ADDER_add_out_UNCONNECTED[0:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/NLW_LOAD_STORE_load_uart_UNCONNECTED">
+      <obj_property name="ElementShortName">NLW_LOAD_STORE_load_uart_UNCONNECTED</obj_property>
+      <obj_property name="ObjectShortName">NLW_LOAD_STORE_load_uart_UNCONNECTED</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/NLW_LOAD_STORE_transfer_byte_UNCONNECTED">
+      <obj_property name="ElementShortName">NLW_LOAD_STORE_transfer_byte_UNCONNECTED</obj_property>
+      <obj_property name="ObjectShortName">NLW_LOAD_STORE_transfer_byte_UNCONNECTED</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/NLW_LOAD_STORE_uart_busy_UNCONNECTED">
+      <obj_property name="ElementShortName">NLW_LOAD_STORE_uart_busy_UNCONNECTED</obj_property>
+      <obj_property name="ObjectShortName">NLW_LOAD_STORE_uart_busy_UNCONNECTED</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/NLW_LOAD_STORE_uart_done_UNCONNECTED">
+      <obj_property name="ElementShortName">NLW_LOAD_STORE_uart_done_UNCONNECTED</obj_property>
+      <obj_property name="ObjectShortName">NLW_LOAD_STORE_uart_done_UNCONNECTED</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/NLW_LOAD_STORE_address_UNCONNECTED">
+      <obj_property name="ElementShortName">NLW_LOAD_STORE_address_UNCONNECTED[31:2]</obj_property>
+      <obj_property name="ObjectShortName">NLW_LOAD_STORE_address_UNCONNECTED[31:2]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/NLW_LOAD_STORE_address_to_mem_UNCONNECTED">
+      <obj_property name="ElementShortName">NLW_LOAD_STORE_address_to_mem_UNCONNECTED[31:0]</obj_property>
+      <obj_property name="ObjectShortName">NLW_LOAD_STORE_address_to_mem_UNCONNECTED[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/NLW_LOAD_STORE_data_to_uart_UNCONNECTED">
+      <obj_property name="ElementShortName">NLW_LOAD_STORE_data_to_uart_UNCONNECTED[7:0]</obj_property>
+      <obj_property name="ObjectShortName">NLW_LOAD_STORE_data_to_uart_UNCONNECTED[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/NLW_PC_ADDER_add_in_UNCONNECTED">
+      <obj_property name="ElementShortName">NLW_PC_ADDER_add_in_UNCONNECTED[0:0]</obj_property>
+      <obj_property name="ObjectShortName">NLW_PC_ADDER_add_in_UNCONNECTED[0:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/NLW_PC_ADDER_add_out_UNCONNECTED">
+      <obj_property name="ElementShortName">NLW_PC_ADDER_add_out_UNCONNECTED[0:0]</obj_property>
+      <obj_property name="ObjectShortName">NLW_PC_ADDER_add_out_UNCONNECTED[0:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/NLW_Write_data_for_csr_reset_UNCONNECTED">
+      <obj_property name="ElementShortName">NLW_Write_data_for_csr_reset_UNCONNECTED</obj_property>
+      <obj_property name="ObjectShortName">NLW_Write_data_for_csr_reset_UNCONNECTED</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/NLW_alu_flip_reset_UNCONNECTED">
+      <obj_property name="ElementShortName">NLW_alu_flip_reset_UNCONNECTED</obj_property>
+      <obj_property name="ObjectShortName">NLW_alu_flip_reset_UNCONNECTED</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/NLW_control_unit_alu_mul_sel_UNCONNECTED">
+      <obj_property name="ElementShortName">NLW_control_unit_alu_mul_sel_UNCONNECTED</obj_property>
+      <obj_property name="ObjectShortName">NLW_control_unit_alu_mul_sel_UNCONNECTED</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/NLW_control_unit_csr_reg_wr_UNCONNECTED">
+      <obj_property name="ElementShortName">NLW_control_unit_csr_reg_wr_UNCONNECTED</obj_property>
+      <obj_property name="ObjectShortName">NLW_control_unit_csr_reg_wr_UNCONNECTED</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/NLW_control_unit_instruction_UNCONNECTED">
+      <obj_property name="ElementShortName">NLW_control_unit_instruction_UNCONNECTED[24:7]</obj_property>
+      <obj_property name="ObjectShortName">NLW_control_unit_instruction_UNCONNECTED[24:7]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/NLW_control_unit_m_con_UNCONNECTED">
+      <obj_property name="ElementShortName">NLW_control_unit_m_con_UNCONNECTED[2:2]</obj_property>
+      <obj_property name="ObjectShortName">NLW_control_unit_m_con_UNCONNECTED[2:2]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/NLW_control_unit_flip_BR_taken_UNCONNECTED">
+      <obj_property name="ElementShortName">NLW_control_unit_flip_BR_taken_UNCONNECTED</obj_property>
+      <obj_property name="ObjectShortName">NLW_control_unit_flip_BR_taken_UNCONNECTED</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/NLW_control_unit_flip_BR_taken_flip_UNCONNECTED">
+      <obj_property name="ElementShortName">NLW_control_unit_flip_BR_taken_flip_UNCONNECTED</obj_property>
+      <obj_property name="ObjectShortName">NLW_control_unit_flip_BR_taken_flip_UNCONNECTED</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/NLW_control_unit_flip_csr_reg_wr_UNCONNECTED">
+      <obj_property name="ElementShortName">NLW_control_unit_flip_csr_reg_wr_UNCONNECTED</obj_property>
+      <obj_property name="ObjectShortName">NLW_control_unit_flip_csr_reg_wr_UNCONNECTED</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/NLW_control_unit_flip_csr_reg_wr_flip_UNCONNECTED">
+      <obj_property name="ElementShortName">NLW_control_unit_flip_csr_reg_wr_flip_UNCONNECTED</obj_property>
+      <obj_property name="ObjectShortName">NLW_control_unit_flip_csr_reg_wr_flip_UNCONNECTED</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/NLW_control_unit_flip_pc_jump_mux_UNCONNECTED">
+      <obj_property name="ElementShortName">NLW_control_unit_flip_pc_jump_mux_UNCONNECTED</obj_property>
+      <obj_property name="ObjectShortName">NLW_control_unit_flip_pc_jump_mux_UNCONNECTED</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/NLW_control_unit_flip_pc_jump_mux_flip_UNCONNECTED">
+      <obj_property name="ElementShortName">NLW_control_unit_flip_pc_jump_mux_flip_UNCONNECTED</obj_property>
+      <obj_property name="ObjectShortName">NLW_control_unit_flip_pc_jump_mux_flip_UNCONNECTED</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/NLW_control_unit_flip_reset_UNCONNECTED">
+      <obj_property name="ElementShortName">NLW_control_unit_flip_reset_UNCONNECTED</obj_property>
+      <obj_property name="ObjectShortName">NLW_control_unit_flip_reset_UNCONNECTED</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/NLW_csr_address_from_extend_reset_UNCONNECTED">
+      <obj_property name="ElementShortName">NLW_csr_address_from_extend_reset_UNCONNECTED</obj_property>
+      <obj_property name="ObjectShortName">NLW_csr_address_from_extend_reset_UNCONNECTED</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/NLW_csr_address_from_extend_data_in_UNCONNECTED">
+      <obj_property name="ElementShortName">NLW_csr_address_from_extend_data_in_UNCONNECTED[31:12]</obj_property>
+      <obj_property name="ObjectShortName">NLW_csr_address_from_extend_data_in_UNCONNECTED[31:12]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/NLW_csr_address_from_extend_data_out_UNCONNECTED">
+      <obj_property name="ElementShortName">NLW_csr_address_from_extend_data_out_UNCONNECTED[31:12]</obj_property>
+      <obj_property name="ObjectShortName">NLW_csr_address_from_extend_data_out_UNCONNECTED[31:12]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/NLW_csr_and_intrupts_csr_reg_wr_UNCONNECTED">
+      <obj_property name="ElementShortName">NLW_csr_and_intrupts_csr_reg_wr_UNCONNECTED</obj_property>
+      <obj_property name="ObjectShortName">NLW_csr_and_intrupts_csr_reg_wr_UNCONNECTED</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/NLW_csr_and_intrupts_csr_return_UNCONNECTED">
+      <obj_property name="ElementShortName">NLW_csr_and_intrupts_csr_return_UNCONNECTED</obj_property>
+      <obj_property name="ObjectShortName">NLW_csr_and_intrupts_csr_return_UNCONNECTED</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/NLW_csr_and_intrupts_interupt_UNCONNECTED">
+      <obj_property name="ElementShortName">NLW_csr_and_intrupts_interupt_UNCONNECTED</obj_property>
+      <obj_property name="ObjectShortName">NLW_csr_and_intrupts_interupt_UNCONNECTED</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/NLW_csr_and_intrupts_interupt_sel_UNCONNECTED">
+      <obj_property name="ElementShortName">NLW_csr_and_intrupts_interupt_sel_UNCONNECTED</obj_property>
+      <obj_property name="ObjectShortName">NLW_csr_and_intrupts_interupt_sel_UNCONNECTED</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/NLW_csr_and_intrupts_reset_UNCONNECTED">
+      <obj_property name="ElementShortName">NLW_csr_and_intrupts_reset_UNCONNECTED</obj_property>
+      <obj_property name="ObjectShortName">NLW_csr_and_intrupts_reset_UNCONNECTED</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/NLW_csr_and_intrupts_csr_address_UNCONNECTED">
+      <obj_property name="ElementShortName">NLW_csr_and_intrupts_csr_address_UNCONNECTED[31:12]</obj_property>
+      <obj_property name="ObjectShortName">NLW_csr_and_intrupts_csr_address_UNCONNECTED[31:12]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/NLW_csr_and_intrupts_pc_UNCONNECTED">
+      <obj_property name="ElementShortName">NLW_csr_and_intrupts_pc_UNCONNECTED[31:0]</obj_property>
+      <obj_property name="ObjectShortName">NLW_csr_and_intrupts_pc_UNCONNECTED[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/NLW_csr_and_intrupts_pc_for_inst_mem_UNCONNECTED">
+      <obj_property name="ElementShortName">NLW_csr_and_intrupts_pc_for_inst_mem_UNCONNECTED[31:0]</obj_property>
+      <obj_property name="ObjectShortName">NLW_csr_and_intrupts_pc_for_inst_mem_UNCONNECTED[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/NLW_flip_flop_pc_reset_UNCONNECTED">
+      <obj_property name="ElementShortName">NLW_flip_flop_pc_reset_UNCONNECTED</obj_property>
+      <obj_property name="ObjectShortName">NLW_flip_flop_pc_reset_UNCONNECTED</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/NLW_hazard_detection_unit_reset_UNCONNECTED">
+      <obj_property name="ElementShortName">NLW_hazard_detection_unit_reset_UNCONNECTED</obj_property>
+      <obj_property name="ObjectShortName">NLW_hazard_detection_unit_reset_UNCONNECTED</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/NLW_hazard_detection_unit_valid_UNCONNECTED">
+      <obj_property name="ElementShortName">NLW_hazard_detection_unit_valid_UNCONNECTED</obj_property>
+      <obj_property name="ObjectShortName">NLW_hazard_detection_unit_valid_UNCONNECTED</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/NLW_hazard_detection_unit_inst_exec_UNCONNECTED">
+      <obj_property name="ElementShortName">NLW_hazard_detection_unit_inst_exec_UNCONNECTED[31:0]</obj_property>
+      <obj_property name="ObjectShortName">NLW_hazard_detection_unit_inst_exec_UNCONNECTED[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/NLW_hazard_detection_unit_inst_mem_UNCONNECTED">
+      <obj_property name="ElementShortName">NLW_hazard_detection_unit_inst_mem_UNCONNECTED[31:0]</obj_property>
+      <obj_property name="ObjectShortName">NLW_hazard_detection_unit_inst_mem_UNCONNECTED[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/NLW_instruction_flip_reset_UNCONNECTED">
+      <obj_property name="ElementShortName">NLW_instruction_flip_reset_UNCONNECTED</obj_property>
+      <obj_property name="ObjectShortName">NLW_instruction_flip_reset_UNCONNECTED</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/NLW_instruction_memory_inst_out_UNCONNECTED">
+      <obj_property name="ElementShortName">NLW_instruction_memory_inst_out_UNCONNECTED[1:1]</obj_property>
+      <obj_property name="ObjectShortName">NLW_instruction_memory_inst_out_UNCONNECTED[1:1]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/NLW_instruction_memory_pc_UNCONNECTED">
+      <obj_property name="ElementShortName">NLW_instruction_memory_pc_UNCONNECTED[31:0]</obj_property>
+      <obj_property name="ObjectShortName">NLW_instruction_memory_pc_UNCONNECTED[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/NLW_intrupt_pc_mux_B_UNCONNECTED">
+      <obj_property name="ElementShortName">NLW_intrupt_pc_mux_B_UNCONNECTED[31:0]</obj_property>
+      <obj_property name="ObjectShortName">NLW_intrupt_pc_mux_B_UNCONNECTED[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/NLW_led_display_on_hardware_clr_UNCONNECTED">
+      <obj_property name="ElementShortName">NLW_led_display_on_hardware_clr_UNCONNECTED</obj_property>
+      <obj_property name="ObjectShortName">NLW_led_display_on_hardware_clr_UNCONNECTED</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/NLW_led_display_on_hardware_dp_UNCONNECTED">
+      <obj_property name="ElementShortName">NLW_led_display_on_hardware_dp_UNCONNECTED</obj_property>
+      <obj_property name="ObjectShortName">NLW_led_display_on_hardware_dp_UNCONNECTED</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/NLW_multiply_and_divide_unit_branch_output_UNCONNECTED">
+      <obj_property name="ElementShortName">NLW_multiply_and_divide_unit_branch_output_UNCONNECTED</obj_property>
+      <obj_property name="ObjectShortName">NLW_multiply_and_divide_unit_branch_output_UNCONNECTED</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/NLW_multiply_and_divide_unit_mul_con_UNCONNECTED">
+      <obj_property name="ElementShortName">NLW_multiply_and_divide_unit_mul_con_UNCONNECTED[2:2]</obj_property>
+      <obj_property name="ObjectShortName">NLW_multiply_and_divide_unit_mul_con_UNCONNECTED[2:2]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/NLW_pc_for_jump_flip_reset_UNCONNECTED">
+      <obj_property name="ElementShortName">NLW_pc_for_jump_flip_reset_UNCONNECTED</obj_property>
+      <obj_property name="ObjectShortName">NLW_pc_for_jump_flip_reset_UNCONNECTED</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/NLW_pc_to_alu_mux_flip_reset_UNCONNECTED">
+      <obj_property name="ElementShortName">NLW_pc_to_alu_mux_flip_reset_UNCONNECTED</obj_property>
+      <obj_property name="ObjectShortName">NLW_pc_to_alu_mux_flip_reset_UNCONNECTED</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/NLW_rd_flip_reset_UNCONNECTED">
+      <obj_property name="ElementShortName">NLW_rd_flip_reset_UNCONNECTED</obj_property>
+      <obj_property name="ObjectShortName">NLW_rd_flip_reset_UNCONNECTED</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/NLW_rd_flip_data_in_UNCONNECTED">
+      <obj_property name="ElementShortName">NLW_rd_flip_data_in_UNCONNECTED[31:0]</obj_property>
+      <obj_property name="ObjectShortName">NLW_rd_flip_data_in_UNCONNECTED[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/NLW_rd_flip_data_out_UNCONNECTED">
+      <obj_property name="ElementShortName">NLW_rd_flip_data_out_UNCONNECTED[31:0]</obj_property>
+      <obj_property name="ObjectShortName">NLW_rd_flip_data_out_UNCONNECTED[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/NLW_register_file_reset_UNCONNECTED">
+      <obj_property name="ElementShortName">NLW_register_file_reset_UNCONNECTED</obj_property>
+      <obj_property name="ObjectShortName">NLW_register_file_reset_UNCONNECTED</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/NLW_stall_and_flush_to_inst_flip_A_UNCONNECTED">
+      <obj_property name="ElementShortName">NLW_stall_and_flush_to_inst_flip_A_UNCONNECTED[1:1]</obj_property>
+      <obj_property name="ObjectShortName">NLW_stall_and_flush_to_inst_flip_A_UNCONNECTED[1:1]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/NLW_stall_and_flush_to_inst_flip_B_UNCONNECTED">
+      <obj_property name="ElementShortName">NLW_stall_and_flush_to_inst_flip_B_UNCONNECTED[31:0]</obj_property>
+      <obj_property name="ObjectShortName">NLW_stall_and_flush_to_inst_flip_B_UNCONNECTED[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/NLW_stall_and_flush_to_inst_flip_C_UNCONNECTED">
+      <obj_property name="ElementShortName">NLW_stall_and_flush_to_inst_flip_C_UNCONNECTED[31:0]</obj_property>
+      <obj_property name="ObjectShortName">NLW_stall_and_flush_to_inst_flip_C_UNCONNECTED[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/NLW_stall_for_csr_address_A_UNCONNECTED">
+      <obj_property name="ElementShortName">NLW_stall_for_csr_address_A_UNCONNECTED[31:12]</obj_property>
+      <obj_property name="ObjectShortName">NLW_stall_for_csr_address_A_UNCONNECTED[31:12]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/NLW_stall_for_csr_address_B_UNCONNECTED">
+      <obj_property name="ElementShortName">NLW_stall_for_csr_address_B_UNCONNECTED[31:12]</obj_property>
+      <obj_property name="ObjectShortName">NLW_stall_for_csr_address_B_UNCONNECTED[31:12]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/NLW_stall_for_csr_address_out_UNCONNECTED">
+      <obj_property name="ElementShortName">NLW_stall_for_csr_address_out_UNCONNECTED[31:12]</obj_property>
+      <obj_property name="ObjectShortName">NLW_stall_for_csr_address_out_UNCONNECTED[31:12]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/NLW_stall_for_rd_flip_A_UNCONNECTED">
+      <obj_property name="ElementShortName">NLW_stall_for_rd_flip_A_UNCONNECTED[31:0]</obj_property>
+      <obj_property name="ObjectShortName">NLW_stall_for_rd_flip_A_UNCONNECTED[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/NLW_stall_for_rd_flip_B_UNCONNECTED">
+      <obj_property name="ElementShortName">NLW_stall_for_rd_flip_B_UNCONNECTED[31:0]</obj_property>
+      <obj_property name="ObjectShortName">NLW_stall_for_rd_flip_B_UNCONNECTED[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/NLW_stall_for_rd_flip_out_UNCONNECTED">
+      <obj_property name="ElementShortName">NLW_stall_for_rd_flip_out_UNCONNECTED[31:0]</obj_property>
+      <obj_property name="ObjectShortName">NLW_stall_for_rd_flip_out_UNCONNECTED[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/NLW_store_data_flip_flop_reset_UNCONNECTED">
+      <obj_property name="ElementShortName">NLW_store_data_flip_flop_reset_UNCONNECTED</obj_property>
+      <obj_property name="ObjectShortName">NLW_store_data_flip_flop_reset_UNCONNECTED</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider2569" type="divider">
+      <obj_property name="label">register file</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/register_file/to_alu_1">
+      <obj_property name="ElementShortName">to_alu_1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">to_alu_1[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/register_file/to_alu_2">
+      <obj_property name="ElementShortName">to_alu_2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">to_alu_2[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/register_file/clk">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/register_file/data_in">
+      <obj_property name="ElementShortName">data_in[31:0]</obj_property>
+      <obj_property name="ObjectShortName">data_in[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/register_file/rd">
+      <obj_property name="ElementShortName">rd[4:0]</obj_property>
+      <obj_property name="ObjectShortName">rd[4:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/register_file/rs1">
+      <obj_property name="ElementShortName">rs1[4:0]</obj_property>
+      <obj_property name="ObjectShortName">rs1[4:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/register_file/rs2">
+      <obj_property name="ElementShortName">rs2[4:0]</obj_property>
+      <obj_property name="ObjectShortName">rs2[4:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/register_file/write_reg">
+      <obj_property name="ElementShortName">write_reg</obj_property>
+      <obj_property name="ObjectShortName">write_reg</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/register_file/\reg_mem_reg[10]__0 ">
+      <obj_property name="ElementShortName">\reg_mem_reg[10]__0 [31:0]</obj_property>
+      <obj_property name="ObjectShortName">\reg_mem_reg[10]__0 [31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/register_file/\reg_mem_reg[11]__0 ">
+      <obj_property name="ElementShortName">\reg_mem_reg[11]__0 [31:0]</obj_property>
+      <obj_property name="ObjectShortName">\reg_mem_reg[11]__0 [31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/register_file/\reg_mem_reg[12]__0 ">
+      <obj_property name="ElementShortName">\reg_mem_reg[12]__0 [31:0]</obj_property>
+      <obj_property name="ObjectShortName">\reg_mem_reg[12]__0 [31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/register_file/\reg_mem_reg[13]__0 ">
+      <obj_property name="ElementShortName">\reg_mem_reg[13]__0 [31:0]</obj_property>
+      <obj_property name="ObjectShortName">\reg_mem_reg[13]__0 [31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/register_file/\reg_mem_reg[14]__0 ">
+      <obj_property name="ElementShortName">\reg_mem_reg[14]__0 [31:0]</obj_property>
+      <obj_property name="ObjectShortName">\reg_mem_reg[14]__0 [31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/register_file/\reg_mem_reg[15]__0 ">
+      <obj_property name="ElementShortName">\reg_mem_reg[15]__0 [31:0]</obj_property>
+      <obj_property name="ObjectShortName">\reg_mem_reg[15]__0 [31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/register_file/\reg_mem_reg[16]__0 ">
+      <obj_property name="ElementShortName">\reg_mem_reg[16]__0 [31:0]</obj_property>
+      <obj_property name="ObjectShortName">\reg_mem_reg[16]__0 [31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/register_file/\reg_mem_reg[17]__0 ">
+      <obj_property name="ElementShortName">\reg_mem_reg[17]__0 [31:0]</obj_property>
+      <obj_property name="ObjectShortName">\reg_mem_reg[17]__0 [31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/register_file/\reg_mem_reg[18]__0 ">
+      <obj_property name="ElementShortName">\reg_mem_reg[18]__0 [31:0]</obj_property>
+      <obj_property name="ObjectShortName">\reg_mem_reg[18]__0 [31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/register_file/\reg_mem_reg[19]__0 ">
+      <obj_property name="ElementShortName">\reg_mem_reg[19]__0 [31:0]</obj_property>
+      <obj_property name="ObjectShortName">\reg_mem_reg[19]__0 [31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/register_file/\reg_mem_reg[1]__0 ">
+      <obj_property name="ElementShortName">\reg_mem_reg[1]__0 [31:0]</obj_property>
+      <obj_property name="ObjectShortName">\reg_mem_reg[1]__0 [31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/register_file/\reg_mem_reg[20]__0 ">
+      <obj_property name="ElementShortName">\reg_mem_reg[20]__0 [31:0]</obj_property>
+      <obj_property name="ObjectShortName">\reg_mem_reg[20]__0 [31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/register_file/\reg_mem_reg[21]__0 ">
+      <obj_property name="ElementShortName">\reg_mem_reg[21]__0 [31:0]</obj_property>
+      <obj_property name="ObjectShortName">\reg_mem_reg[21]__0 [31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/register_file/\reg_mem_reg[22]__0 ">
+      <obj_property name="ElementShortName">\reg_mem_reg[22]__0 [31:0]</obj_property>
+      <obj_property name="ObjectShortName">\reg_mem_reg[22]__0 [31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/register_file/\reg_mem_reg[23]__0 ">
+      <obj_property name="ElementShortName">\reg_mem_reg[23]__0 [31:0]</obj_property>
+      <obj_property name="ObjectShortName">\reg_mem_reg[23]__0 [31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/register_file/\reg_mem_reg[24]__0 ">
+      <obj_property name="ElementShortName">\reg_mem_reg[24]__0 [31:0]</obj_property>
+      <obj_property name="ObjectShortName">\reg_mem_reg[24]__0 [31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/register_file/\reg_mem_reg[25]__0 ">
+      <obj_property name="ElementShortName">\reg_mem_reg[25]__0 [31:0]</obj_property>
+      <obj_property name="ObjectShortName">\reg_mem_reg[25]__0 [31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/register_file/\reg_mem_reg[26]__0 ">
+      <obj_property name="ElementShortName">\reg_mem_reg[26]__0 [31:0]</obj_property>
+      <obj_property name="ObjectShortName">\reg_mem_reg[26]__0 [31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/register_file/\reg_mem_reg[27]__0 ">
+      <obj_property name="ElementShortName">\reg_mem_reg[27]__0 [31:0]</obj_property>
+      <obj_property name="ObjectShortName">\reg_mem_reg[27]__0 [31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/register_file/\reg_mem_reg[28]__0 ">
+      <obj_property name="ElementShortName">\reg_mem_reg[28]__0 [31:0]</obj_property>
+      <obj_property name="ObjectShortName">\reg_mem_reg[28]__0 [31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/register_file/\reg_mem_reg[29]__0 ">
+      <obj_property name="ElementShortName">\reg_mem_reg[29]__0 [31:0]</obj_property>
+      <obj_property name="ObjectShortName">\reg_mem_reg[29]__0 [31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/register_file/\reg_mem_reg[2]__0 ">
+      <obj_property name="ElementShortName">\reg_mem_reg[2]__0 [31:0]</obj_property>
+      <obj_property name="ObjectShortName">\reg_mem_reg[2]__0 [31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/register_file/\reg_mem_reg[30]__0 ">
+      <obj_property name="ElementShortName">\reg_mem_reg[30]__0 [31:0]</obj_property>
+      <obj_property name="ObjectShortName">\reg_mem_reg[30]__0 [31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/register_file/\reg_mem_reg[3]__0 ">
+      <obj_property name="ElementShortName">\reg_mem_reg[3]__0 [31:0]</obj_property>
+      <obj_property name="ObjectShortName">\reg_mem_reg[3]__0 [31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/register_file/\reg_mem_reg[4]__0 ">
+      <obj_property name="ElementShortName">\reg_mem_reg[4]__0 [31:0]</obj_property>
+      <obj_property name="ObjectShortName">\reg_mem_reg[4]__0 [31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/register_file/\reg_mem_reg[5]__0 ">
+      <obj_property name="ElementShortName">\reg_mem_reg[5]__0 [31:0]</obj_property>
+      <obj_property name="ObjectShortName">\reg_mem_reg[5]__0 [31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/register_file/\reg_mem_reg[6]__0 ">
+      <obj_property name="ElementShortName">\reg_mem_reg[6]__0 [31:0]</obj_property>
+      <obj_property name="ObjectShortName">\reg_mem_reg[6]__0 [31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/register_file/\reg_mem_reg[7]__0 ">
+      <obj_property name="ElementShortName">\reg_mem_reg[7]__0 [31:0]</obj_property>
+      <obj_property name="ObjectShortName">\reg_mem_reg[7]__0 [31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/register_file/\reg_mem_reg[8]__0 ">
+      <obj_property name="ElementShortName">\reg_mem_reg[8]__0 [31:0]</obj_property>
+      <obj_property name="ObjectShortName">\reg_mem_reg[8]__0 [31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/register_file/\reg_mem_reg[9]__0 ">
+      <obj_property name="ElementShortName">\reg_mem_reg[9]__0 [31:0]</obj_property>
+      <obj_property name="ObjectShortName">\reg_mem_reg[9]__0 [31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider2608" type="divider">
+      <obj_property name="label">csr unit</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/clk">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/csr_address">
+      <obj_property name="ElementShortName">csr_address[31:0]</obj_property>
+      <obj_property name="ObjectShortName">csr_address[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/csr_reg_rd">
+      <obj_property name="ElementShortName">csr_reg_rd</obj_property>
+      <obj_property name="ObjectShortName">csr_reg_rd</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/csr_reg_wr">
+      <obj_property name="ElementShortName">csr_reg_wr</obj_property>
+      <obj_property name="ObjectShortName">csr_reg_wr</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/csr_return">
+      <obj_property name="ElementShortName">csr_return</obj_property>
+      <obj_property name="ObjectShortName">csr_return</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/interupt">
+      <obj_property name="ElementShortName">interupt</obj_property>
+      <obj_property name="ObjectShortName">interupt</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/pc">
+      <obj_property name="ElementShortName">pc[31:0]</obj_property>
+      <obj_property name="ObjectShortName">pc[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/reset">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/write_data">
+      <obj_property name="ElementShortName">write_data[31:0]</obj_property>
+      <obj_property name="ObjectShortName">write_data[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/data_out_to_reg">
+      <obj_property name="ElementShortName">data_out_to_reg[31:0]</obj_property>
+      <obj_property name="ObjectShortName">data_out_to_reg[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/interupt_sel">
+      <obj_property name="ElementShortName">interupt_sel</obj_property>
+      <obj_property name="ObjectShortName">interupt_sel</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/pc_for_inst_mem">
+      <obj_property name="ElementShortName">pc_for_inst_mem[31:0]</obj_property>
+      <obj_property name="ObjectShortName">pc_for_inst_mem[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[12]_i_1_n_11 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[12]_i_1_n_11 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[12]_i_1_n_11 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[12]_i_1_n_12 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[12]_i_1_n_12 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[12]_i_1_n_12 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[12]_i_1_n_13 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[12]_i_1_n_13 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[12]_i_1_n_13 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[12]_i_1_n_14 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[12]_i_1_n_14 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[12]_i_1_n_14 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[12]_i_1_n_7 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[12]_i_1_n_7 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[12]_i_1_n_7 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[16]_i_1_n_11 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[16]_i_1_n_11 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[16]_i_1_n_11 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[16]_i_1_n_12 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[16]_i_1_n_12 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[16]_i_1_n_12 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[16]_i_1_n_13 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[16]_i_1_n_13 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[16]_i_1_n_13 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[16]_i_1_n_14 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[16]_i_1_n_14 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[16]_i_1_n_14 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[16]_i_1_n_7 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[16]_i_1_n_7 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[16]_i_1_n_7 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[20]_i_1_n_11 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[20]_i_1_n_11 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[20]_i_1_n_11 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[20]_i_1_n_12 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[20]_i_1_n_12 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[20]_i_1_n_12 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[20]_i_1_n_13 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[20]_i_1_n_13 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[20]_i_1_n_13 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[20]_i_1_n_14 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[20]_i_1_n_14 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[20]_i_1_n_14 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[20]_i_1_n_7 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[20]_i_1_n_7 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[20]_i_1_n_7 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[24]_i_1_n_11 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[24]_i_1_n_11 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[24]_i_1_n_11 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[24]_i_1_n_12 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[24]_i_1_n_12 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[24]_i_1_n_12 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[24]_i_1_n_13 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[24]_i_1_n_13 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[24]_i_1_n_13 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[24]_i_1_n_14 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[24]_i_1_n_14 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[24]_i_1_n_14 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[24]_i_1_n_7 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[24]_i_1_n_7 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[24]_i_1_n_7 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[28]_i_1_n_11 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[28]_i_1_n_11 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[28]_i_1_n_11 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[28]_i_1_n_12 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[28]_i_1_n_12 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[28]_i_1_n_12 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[28]_i_1_n_13 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[28]_i_1_n_13 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[28]_i_1_n_13 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[28]_i_1_n_14 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[28]_i_1_n_14 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[28]_i_1_n_14 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[28]_i_1_n_7 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[28]_i_1_n_7 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[28]_i_1_n_7 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[32]_i_1_n_11 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[32]_i_1_n_11 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[32]_i_1_n_11 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[32]_i_1_n_12 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[32]_i_1_n_12 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[32]_i_1_n_12 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[32]_i_1_n_13 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[32]_i_1_n_13 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[32]_i_1_n_13 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[32]_i_1_n_14 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[32]_i_1_n_14 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[32]_i_1_n_14 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[32]_i_1_n_7 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[32]_i_1_n_7 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[32]_i_1_n_7 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[36]_i_1_n_11 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[36]_i_1_n_11 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[36]_i_1_n_11 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[36]_i_1_n_12 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[36]_i_1_n_12 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[36]_i_1_n_12 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[36]_i_1_n_13 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[36]_i_1_n_13 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[36]_i_1_n_13 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[36]_i_1_n_14 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[36]_i_1_n_14 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[36]_i_1_n_14 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[36]_i_1_n_7 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[36]_i_1_n_7 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[36]_i_1_n_7 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[40]_i_1_n_11 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[40]_i_1_n_11 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[40]_i_1_n_11 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[40]_i_1_n_12 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[40]_i_1_n_12 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[40]_i_1_n_12 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[40]_i_1_n_13 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[40]_i_1_n_13 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[40]_i_1_n_13 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[40]_i_1_n_14 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[40]_i_1_n_14 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[40]_i_1_n_14 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[40]_i_1_n_7 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[40]_i_1_n_7 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[40]_i_1_n_7 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[44]_i_1_n_11 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[44]_i_1_n_11 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[44]_i_1_n_11 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[44]_i_1_n_12 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[44]_i_1_n_12 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[44]_i_1_n_12 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[44]_i_1_n_13 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[44]_i_1_n_13 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[44]_i_1_n_13 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[44]_i_1_n_14 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[44]_i_1_n_14 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[44]_i_1_n_14 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[44]_i_1_n_7 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[44]_i_1_n_7 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[44]_i_1_n_7 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[48]_i_1_n_11 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[48]_i_1_n_11 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[48]_i_1_n_11 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[48]_i_1_n_12 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[48]_i_1_n_12 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[48]_i_1_n_12 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[48]_i_1_n_13 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[48]_i_1_n_13 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[48]_i_1_n_13 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[48]_i_1_n_14 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[48]_i_1_n_14 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[48]_i_1_n_14 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[48]_i_1_n_7 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[48]_i_1_n_7 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[48]_i_1_n_7 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[4]_i_1_n_11 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[4]_i_1_n_11 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[4]_i_1_n_11 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[4]_i_1_n_12 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[4]_i_1_n_12 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[4]_i_1_n_12 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[4]_i_1_n_13 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[4]_i_1_n_13 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[4]_i_1_n_13 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[4]_i_1_n_14 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[4]_i_1_n_14 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[4]_i_1_n_14 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[4]_i_1_n_7 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[4]_i_1_n_7 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[4]_i_1_n_7 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[52]_i_1_n_11 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[52]_i_1_n_11 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[52]_i_1_n_11 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[52]_i_1_n_12 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[52]_i_1_n_12 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[52]_i_1_n_12 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[52]_i_1_n_13 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[52]_i_1_n_13 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[52]_i_1_n_13 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[52]_i_1_n_14 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[52]_i_1_n_14 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[52]_i_1_n_14 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[52]_i_1_n_7 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[52]_i_1_n_7 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[52]_i_1_n_7 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[56]_i_1_n_11 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[56]_i_1_n_11 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[56]_i_1_n_11 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[56]_i_1_n_12 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[56]_i_1_n_12 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[56]_i_1_n_12 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[56]_i_1_n_13 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[56]_i_1_n_13 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[56]_i_1_n_13 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[56]_i_1_n_14 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[56]_i_1_n_14 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[56]_i_1_n_14 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[56]_i_1_n_7 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[56]_i_1_n_7 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[56]_i_1_n_7 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[60]_i_1_n_11 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[60]_i_1_n_11 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[60]_i_1_n_11 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[60]_i_1_n_12 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[60]_i_1_n_12 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[60]_i_1_n_12 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[60]_i_1_n_13 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[60]_i_1_n_13 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[60]_i_1_n_13 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[60]_i_1_n_14 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[60]_i_1_n_14 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[60]_i_1_n_14 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[8]_i_1_n_11 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[8]_i_1_n_11 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[8]_i_1_n_11 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[8]_i_1_n_12 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[8]_i_1_n_12 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[8]_i_1_n_12 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[8]_i_1_n_13 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[8]_i_1_n_13 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[8]_i_1_n_13 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[8]_i_1_n_14 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[8]_i_1_n_14 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[8]_i_1_n_14 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[8]_i_1_n_7 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[8]_i_1_n_7 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[8]_i_1_n_7 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg_n_7_[0] ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg_n_7_[0] </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg_n_7_[0] </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg_n_7_[10] ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg_n_7_[10] </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg_n_7_[10] </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg_n_7_[11] ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg_n_7_[11] </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg_n_7_[11] </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg_n_7_[12] ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg_n_7_[12] </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg_n_7_[12] </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg_n_7_[13] ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg_n_7_[13] </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg_n_7_[13] </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg_n_7_[14] ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg_n_7_[14] </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg_n_7_[14] </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg_n_7_[15] ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg_n_7_[15] </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg_n_7_[15] </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg_n_7_[16] ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg_n_7_[16] </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg_n_7_[16] </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg_n_7_[17] ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg_n_7_[17] </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg_n_7_[17] </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg_n_7_[18] ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg_n_7_[18] </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg_n_7_[18] </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg_n_7_[19] ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg_n_7_[19] </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg_n_7_[19] </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg_n_7_[1] ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg_n_7_[1] </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg_n_7_[1] </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg_n_7_[20] ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg_n_7_[20] </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg_n_7_[20] </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg_n_7_[21] ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg_n_7_[21] </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg_n_7_[21] </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg_n_7_[22] ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg_n_7_[22] </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg_n_7_[22] </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg_n_7_[23] ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg_n_7_[23] </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg_n_7_[23] </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg_n_7_[24] ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg_n_7_[24] </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg_n_7_[24] </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg_n_7_[25] ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg_n_7_[25] </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg_n_7_[25] </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg_n_7_[26] ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg_n_7_[26] </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg_n_7_[26] </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg_n_7_[27] ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg_n_7_[27] </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg_n_7_[27] </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg_n_7_[28] ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg_n_7_[28] </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg_n_7_[28] </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg_n_7_[29] ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg_n_7_[29] </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg_n_7_[29] </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg_n_7_[2] ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg_n_7_[2] </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg_n_7_[2] </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg_n_7_[30] ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg_n_7_[30] </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg_n_7_[30] </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg_n_7_[31] ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg_n_7_[31] </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg_n_7_[31] </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg_n_7_[3] ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg_n_7_[3] </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg_n_7_[3] </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg_n_7_[4] ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg_n_7_[4] </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg_n_7_[4] </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg_n_7_[5] ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg_n_7_[5] </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg_n_7_[5] </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg_n_7_[6] ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg_n_7_[6] </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg_n_7_[6] </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg_n_7_[7] ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg_n_7_[7] </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg_n_7_[7] </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg_n_7_[8] ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg_n_7_[8] </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg_n_7_[8] </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg_n_7_[9] ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg_n_7_[9] </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg_n_7_[9] </obj_property>
+   </wvobject>
+   <wvobject fp_name="divider10957" type="divider">
+      <obj_property name="label">csr unit</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\NLW_csr_mcycle_ff_reg[0]_i_2_CO_UNCONNECTED ">
+      <obj_property name="ElementShortName">\NLW_csr_mcycle_ff_reg[0]_i_2_CO_UNCONNECTED [2:0]</obj_property>
+      <obj_property name="ObjectShortName">\NLW_csr_mcycle_ff_reg[0]_i_2_CO_UNCONNECTED [2:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\NLW_csr_mcycle_ff_reg[12]_i_1_CO_UNCONNECTED ">
+      <obj_property name="ElementShortName">\NLW_csr_mcycle_ff_reg[12]_i_1_CO_UNCONNECTED [2:0]</obj_property>
+      <obj_property name="ObjectShortName">\NLW_csr_mcycle_ff_reg[12]_i_1_CO_UNCONNECTED [2:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\NLW_csr_mcycle_ff_reg[16]_i_1_CO_UNCONNECTED ">
+      <obj_property name="ElementShortName">\NLW_csr_mcycle_ff_reg[16]_i_1_CO_UNCONNECTED [2:0]</obj_property>
+      <obj_property name="ObjectShortName">\NLW_csr_mcycle_ff_reg[16]_i_1_CO_UNCONNECTED [2:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\NLW_csr_mcycle_ff_reg[20]_i_1_CO_UNCONNECTED ">
+      <obj_property name="ElementShortName">\NLW_csr_mcycle_ff_reg[20]_i_1_CO_UNCONNECTED [2:0]</obj_property>
+      <obj_property name="ObjectShortName">\NLW_csr_mcycle_ff_reg[20]_i_1_CO_UNCONNECTED [2:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\NLW_csr_mcycle_ff_reg[24]_i_1_CO_UNCONNECTED ">
+      <obj_property name="ElementShortName">\NLW_csr_mcycle_ff_reg[24]_i_1_CO_UNCONNECTED [2:0]</obj_property>
+      <obj_property name="ObjectShortName">\NLW_csr_mcycle_ff_reg[24]_i_1_CO_UNCONNECTED [2:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\NLW_csr_mcycle_ff_reg[28]_i_1_CO_UNCONNECTED ">
+      <obj_property name="ElementShortName">\NLW_csr_mcycle_ff_reg[28]_i_1_CO_UNCONNECTED [2:0]</obj_property>
+      <obj_property name="ObjectShortName">\NLW_csr_mcycle_ff_reg[28]_i_1_CO_UNCONNECTED [2:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\NLW_csr_mcycle_ff_reg[32]_i_1_CO_UNCONNECTED ">
+      <obj_property name="ElementShortName">\NLW_csr_mcycle_ff_reg[32]_i_1_CO_UNCONNECTED [2:0]</obj_property>
+      <obj_property name="ObjectShortName">\NLW_csr_mcycle_ff_reg[32]_i_1_CO_UNCONNECTED [2:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\NLW_csr_mcycle_ff_reg[36]_i_1_CO_UNCONNECTED ">
+      <obj_property name="ElementShortName">\NLW_csr_mcycle_ff_reg[36]_i_1_CO_UNCONNECTED [2:0]</obj_property>
+      <obj_property name="ObjectShortName">\NLW_csr_mcycle_ff_reg[36]_i_1_CO_UNCONNECTED [2:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\NLW_csr_mcycle_ff_reg[40]_i_1_CO_UNCONNECTED ">
+      <obj_property name="ElementShortName">\NLW_csr_mcycle_ff_reg[40]_i_1_CO_UNCONNECTED [2:0]</obj_property>
+      <obj_property name="ObjectShortName">\NLW_csr_mcycle_ff_reg[40]_i_1_CO_UNCONNECTED [2:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\NLW_csr_mcycle_ff_reg[44]_i_1_CO_UNCONNECTED ">
+      <obj_property name="ElementShortName">\NLW_csr_mcycle_ff_reg[44]_i_1_CO_UNCONNECTED [2:0]</obj_property>
+      <obj_property name="ObjectShortName">\NLW_csr_mcycle_ff_reg[44]_i_1_CO_UNCONNECTED [2:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\NLW_csr_mcycle_ff_reg[48]_i_1_CO_UNCONNECTED ">
+      <obj_property name="ElementShortName">\NLW_csr_mcycle_ff_reg[48]_i_1_CO_UNCONNECTED [2:0]</obj_property>
+      <obj_property name="ObjectShortName">\NLW_csr_mcycle_ff_reg[48]_i_1_CO_UNCONNECTED [2:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\NLW_csr_mcycle_ff_reg[4]_i_1_CO_UNCONNECTED ">
+      <obj_property name="ElementShortName">\NLW_csr_mcycle_ff_reg[4]_i_1_CO_UNCONNECTED [2:0]</obj_property>
+      <obj_property name="ObjectShortName">\NLW_csr_mcycle_ff_reg[4]_i_1_CO_UNCONNECTED [2:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\NLW_csr_mcycle_ff_reg[52]_i_1_CO_UNCONNECTED ">
+      <obj_property name="ElementShortName">\NLW_csr_mcycle_ff_reg[52]_i_1_CO_UNCONNECTED [2:0]</obj_property>
+      <obj_property name="ObjectShortName">\NLW_csr_mcycle_ff_reg[52]_i_1_CO_UNCONNECTED [2:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\NLW_csr_mcycle_ff_reg[56]_i_1_CO_UNCONNECTED ">
+      <obj_property name="ElementShortName">\NLW_csr_mcycle_ff_reg[56]_i_1_CO_UNCONNECTED [2:0]</obj_property>
+      <obj_property name="ObjectShortName">\NLW_csr_mcycle_ff_reg[56]_i_1_CO_UNCONNECTED [2:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\NLW_csr_mcycle_ff_reg[60]_i_1_CO_UNCONNECTED ">
+      <obj_property name="ElementShortName">\NLW_csr_mcycle_ff_reg[60]_i_1_CO_UNCONNECTED [3:0]</obj_property>
+      <obj_property name="ObjectShortName">\NLW_csr_mcycle_ff_reg[60]_i_1_CO_UNCONNECTED [3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\NLW_csr_mcycle_ff_reg[8]_i_1_CO_UNCONNECTED ">
+      <obj_property name="ElementShortName">\NLW_csr_mcycle_ff_reg[8]_i_1_CO_UNCONNECTED [2:0]</obj_property>
+      <obj_property name="ObjectShortName">\NLW_csr_mcycle_ff_reg[8]_i_1_CO_UNCONNECTED [2:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff[0]_i_10_n_7 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff[0]_i_10_n_7 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff[0]_i_10_n_7 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff[0]_i_3_n_7 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff[0]_i_3_n_7 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff[0]_i_3_n_7 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff[0]_i_4_n_7 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff[0]_i_4_n_7 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff[0]_i_4_n_7 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff[0]_i_5_n_7 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff[0]_i_5_n_7 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff[0]_i_5_n_7 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff[0]_i_6_n_7 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff[0]_i_6_n_7 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff[0]_i_6_n_7 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff[0]_i_7_n_7 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff[0]_i_7_n_7 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff[0]_i_7_n_7 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff[0]_i_8_n_7 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff[0]_i_8_n_7 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff[0]_i_8_n_7 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff[0]_i_9_n_7 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff[0]_i_9_n_7 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff[0]_i_9_n_7 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[0]_i_2_n_11 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[0]_i_2_n_11 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[0]_i_2_n_11 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[0]_i_2_n_12 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[0]_i_2_n_12 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[0]_i_2_n_12 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[0]_i_2_n_13 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[0]_i_2_n_13 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[0]_i_2_n_13 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[0]_i_2_n_14 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[0]_i_2_n_14 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[0]_i_2_n_14 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[0]_i_2_n_7 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[0]_i_2_n_7 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[0]_i_2_n_7 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[12]_i_1_n_11 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[12]_i_1_n_11 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[12]_i_1_n_11 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[12]_i_1_n_12 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[12]_i_1_n_12 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[12]_i_1_n_12 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[12]_i_1_n_13 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[12]_i_1_n_13 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[12]_i_1_n_13 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[12]_i_1_n_14 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[12]_i_1_n_14 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[12]_i_1_n_14 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[12]_i_1_n_7 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[12]_i_1_n_7 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[12]_i_1_n_7 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[16]_i_1_n_11 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[16]_i_1_n_11 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[16]_i_1_n_11 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[16]_i_1_n_12 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[16]_i_1_n_12 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[16]_i_1_n_12 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[16]_i_1_n_13 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[16]_i_1_n_13 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[16]_i_1_n_13 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[16]_i_1_n_14 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[16]_i_1_n_14 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[16]_i_1_n_14 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[16]_i_1_n_7 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[16]_i_1_n_7 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[16]_i_1_n_7 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[20]_i_1_n_11 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[20]_i_1_n_11 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[20]_i_1_n_11 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[20]_i_1_n_12 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[20]_i_1_n_12 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[20]_i_1_n_12 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[20]_i_1_n_13 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[20]_i_1_n_13 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[20]_i_1_n_13 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[20]_i_1_n_14 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[20]_i_1_n_14 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[20]_i_1_n_14 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[20]_i_1_n_7 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[20]_i_1_n_7 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[20]_i_1_n_7 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[24]_i_1_n_11 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[24]_i_1_n_11 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[24]_i_1_n_11 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[24]_i_1_n_12 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[24]_i_1_n_12 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[24]_i_1_n_12 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[24]_i_1_n_13 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[24]_i_1_n_13 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[24]_i_1_n_13 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[24]_i_1_n_14 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[24]_i_1_n_14 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[24]_i_1_n_14 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[24]_i_1_n_7 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[24]_i_1_n_7 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[24]_i_1_n_7 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[28]_i_1_n_11 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[28]_i_1_n_11 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[28]_i_1_n_11 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[28]_i_1_n_12 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[28]_i_1_n_12 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[28]_i_1_n_12 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[28]_i_1_n_13 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[28]_i_1_n_13 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[28]_i_1_n_13 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[28]_i_1_n_14 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[28]_i_1_n_14 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[28]_i_1_n_14 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[28]_i_1_n_7 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[28]_i_1_n_7 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[28]_i_1_n_7 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[32]_i_1_n_11 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[32]_i_1_n_11 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[32]_i_1_n_11 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[32]_i_1_n_12 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[32]_i_1_n_12 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[32]_i_1_n_12 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[32]_i_1_n_13 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[32]_i_1_n_13 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[32]_i_1_n_13 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[32]_i_1_n_14 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[32]_i_1_n_14 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[32]_i_1_n_14 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[32]_i_1_n_7 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[32]_i_1_n_7 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[32]_i_1_n_7 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[36]_i_1_n_11 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[36]_i_1_n_11 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[36]_i_1_n_11 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[36]_i_1_n_12 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[36]_i_1_n_12 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[36]_i_1_n_12 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[36]_i_1_n_13 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[36]_i_1_n_13 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[36]_i_1_n_13 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[36]_i_1_n_14 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[36]_i_1_n_14 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[36]_i_1_n_14 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[36]_i_1_n_7 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[36]_i_1_n_7 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[36]_i_1_n_7 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[40]_i_1_n_11 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[40]_i_1_n_11 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[40]_i_1_n_11 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[40]_i_1_n_12 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[40]_i_1_n_12 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[40]_i_1_n_12 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[40]_i_1_n_13 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[40]_i_1_n_13 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[40]_i_1_n_13 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[40]_i_1_n_14 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[40]_i_1_n_14 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[40]_i_1_n_14 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[40]_i_1_n_7 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[40]_i_1_n_7 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[40]_i_1_n_7 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[44]_i_1_n_11 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[44]_i_1_n_11 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[44]_i_1_n_11 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[44]_i_1_n_12 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[44]_i_1_n_12 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[44]_i_1_n_12 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[44]_i_1_n_13 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[44]_i_1_n_13 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[44]_i_1_n_13 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[44]_i_1_n_14 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[44]_i_1_n_14 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[44]_i_1_n_14 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[44]_i_1_n_7 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[44]_i_1_n_7 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[44]_i_1_n_7 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[48]_i_1_n_11 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[48]_i_1_n_11 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[48]_i_1_n_11 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[48]_i_1_n_12 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[48]_i_1_n_12 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[48]_i_1_n_12 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[48]_i_1_n_13 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[48]_i_1_n_13 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[48]_i_1_n_13 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[48]_i_1_n_14 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[48]_i_1_n_14 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[48]_i_1_n_14 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[48]_i_1_n_7 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[48]_i_1_n_7 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[48]_i_1_n_7 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[4]_i_1_n_11 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[4]_i_1_n_11 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[4]_i_1_n_11 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[4]_i_1_n_12 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[4]_i_1_n_12 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[4]_i_1_n_12 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[4]_i_1_n_13 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[4]_i_1_n_13 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[4]_i_1_n_13 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[4]_i_1_n_14 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[4]_i_1_n_14 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[4]_i_1_n_14 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[4]_i_1_n_7 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[4]_i_1_n_7 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[4]_i_1_n_7 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[52]_i_1_n_11 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[52]_i_1_n_11 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[52]_i_1_n_11 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[52]_i_1_n_12 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[52]_i_1_n_12 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[52]_i_1_n_12 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[52]_i_1_n_13 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[52]_i_1_n_13 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[52]_i_1_n_13 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[52]_i_1_n_14 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[52]_i_1_n_14 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[52]_i_1_n_14 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[52]_i_1_n_7 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[52]_i_1_n_7 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[52]_i_1_n_7 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[56]_i_1_n_11 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[56]_i_1_n_11 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[56]_i_1_n_11 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[56]_i_1_n_12 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[56]_i_1_n_12 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[56]_i_1_n_12 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[56]_i_1_n_13 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[56]_i_1_n_13 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[56]_i_1_n_13 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[56]_i_1_n_14 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[56]_i_1_n_14 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[56]_i_1_n_14 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[56]_i_1_n_7 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[56]_i_1_n_7 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[56]_i_1_n_7 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[60]_i_1_n_11 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[60]_i_1_n_11 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[60]_i_1_n_11 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[60]_i_1_n_12 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[60]_i_1_n_12 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[60]_i_1_n_12 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[60]_i_1_n_13 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[60]_i_1_n_13 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[60]_i_1_n_13 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[60]_i_1_n_14 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[60]_i_1_n_14 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[60]_i_1_n_14 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[8]_i_1_n_11 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[8]_i_1_n_11 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[8]_i_1_n_11 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[8]_i_1_n_12 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[8]_i_1_n_12 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[8]_i_1_n_12 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[8]_i_1_n_13 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[8]_i_1_n_13 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[8]_i_1_n_13 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[8]_i_1_n_14 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[8]_i_1_n_14 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[8]_i_1_n_14 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg[8]_i_1_n_7 ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg[8]_i_1_n_7 </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg[8]_i_1_n_7 </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg_n_7_[0] ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg_n_7_[0] </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg_n_7_[0] </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg_n_7_[10] ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg_n_7_[10] </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg_n_7_[10] </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg_n_7_[11] ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg_n_7_[11] </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg_n_7_[11] </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg_n_7_[12] ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg_n_7_[12] </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg_n_7_[12] </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg_n_7_[13] ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg_n_7_[13] </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg_n_7_[13] </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg_n_7_[14] ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg_n_7_[14] </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg_n_7_[14] </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg_n_7_[15] ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg_n_7_[15] </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg_n_7_[15] </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg_n_7_[16] ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg_n_7_[16] </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg_n_7_[16] </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg_n_7_[17] ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg_n_7_[17] </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg_n_7_[17] </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg_n_7_[18] ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg_n_7_[18] </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg_n_7_[18] </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg_n_7_[19] ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg_n_7_[19] </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg_n_7_[19] </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg_n_7_[1] ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg_n_7_[1] </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg_n_7_[1] </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg_n_7_[20] ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg_n_7_[20] </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg_n_7_[20] </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg_n_7_[21] ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg_n_7_[21] </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg_n_7_[21] </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg_n_7_[22] ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg_n_7_[22] </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg_n_7_[22] </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg_n_7_[23] ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg_n_7_[23] </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg_n_7_[23] </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg_n_7_[24] ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg_n_7_[24] </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg_n_7_[24] </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg_n_7_[25] ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg_n_7_[25] </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg_n_7_[25] </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg_n_7_[26] ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg_n_7_[26] </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg_n_7_[26] </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg_n_7_[27] ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg_n_7_[27] </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg_n_7_[27] </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg_n_7_[28] ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg_n_7_[28] </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg_n_7_[28] </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg_n_7_[29] ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg_n_7_[29] </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg_n_7_[29] </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg_n_7_[2] ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg_n_7_[2] </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg_n_7_[2] </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg_n_7_[30] ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg_n_7_[30] </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg_n_7_[30] </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg_n_7_[31] ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg_n_7_[31] </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg_n_7_[31] </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg_n_7_[3] ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg_n_7_[3] </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg_n_7_[3] </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg_n_7_[4] ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg_n_7_[4] </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg_n_7_[4] </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg_n_7_[5] ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg_n_7_[5] </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg_n_7_[5] </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg_n_7_[6] ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg_n_7_[6] </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg_n_7_[6] </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg_n_7_[7] ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg_n_7_[7] </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg_n_7_[7] </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg_n_7_[8] ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg_n_7_[8] </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg_n_7_[8] </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/\csr_mcycle_ff_reg_n_7_[9] ">
+      <obj_property name="ElementShortName">\csr_mcycle_ff_reg_n_7_[9] </obj_property>
+      <obj_property name="ObjectShortName">\csr_mcycle_ff_reg_n_7_[9] </obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/csr_mcycle_reset1_out">
+      <obj_property name="ElementShortName">csr_mcycle_reset1_out</obj_property>
+      <obj_property name="ObjectShortName">csr_mcycle_reset1_out</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/csr_mcounter_en">
+      <obj_property name="ElementShortName">csr_mcounter_en[31:0]</obj_property>
+      <obj_property name="ObjectShortName">csr_mcounter_en[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/csr_mcounter_en_ff">
+      <obj_property name="ElementShortName">csr_mcounter_en_ff[31:0]</obj_property>
+      <obj_property name="ObjectShortName">csr_mcounter_en_ff[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/clk">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/csr_address">
+      <obj_property name="ElementShortName">csr_address[31:0]</obj_property>
+      <obj_property name="ObjectShortName">csr_address[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/csr_reg_rd">
+      <obj_property name="ElementShortName">csr_reg_rd</obj_property>
+      <obj_property name="ObjectShortName">csr_reg_rd</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/csr_reg_wr">
+      <obj_property name="ElementShortName">csr_reg_wr</obj_property>
+      <obj_property name="ObjectShortName">csr_reg_wr</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/csr_return">
+      <obj_property name="ElementShortName">csr_return</obj_property>
+      <obj_property name="ObjectShortName">csr_return</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/interupt">
+      <obj_property name="ElementShortName">interupt</obj_property>
+      <obj_property name="ObjectShortName">interupt</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/pc">
+      <obj_property name="ElementShortName">pc[31:0]</obj_property>
+      <obj_property name="ObjectShortName">pc[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/reset">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/write_data">
+      <obj_property name="ElementShortName">write_data[31:0]</obj_property>
+      <obj_property name="ObjectShortName">write_data[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/data_out_to_reg">
+      <obj_property name="ElementShortName">data_out_to_reg[31:0]</obj_property>
+      <obj_property name="ObjectShortName">data_out_to_reg[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/interupt_sel">
+      <obj_property name="ElementShortName">interupt_sel</obj_property>
+      <obj_property name="ObjectShortName">interupt_sel</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_core_tb/top_instance/top_instance/UUT/csr_and_intrupts/pc_for_inst_mem">
+      <obj_property name="ElementShortName">pc_for_inst_mem[31:0]</obj_property>
+      <obj_property name="ObjectShortName">pc_for_inst_mem[31:0]</obj_property>
+   </wvobject>
+</wave_config>

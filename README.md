@@ -1,7 +1,3 @@
-set origin_dir [file dirname [info script]]
-create_project ${_xil_proj_name_} $origin_dir/${_xil_proj_name_} -part xc7a100tcsg324-1
-
-
 # A GEMM (General Matrix Multiplier) Co-processor
 
 This repo is a Martix multiplier Co-processor integrated with a Risc-V 3-stage pipelined processor with separate data memory and UART. Currently, the core implements RV32IMZicsr ISA based on User-level ISA Version 2.0 and Privileged Architecture Version 1.11 supporting only M mode. The following are the key features of the repo:
@@ -67,7 +63,7 @@ Compile the c-code using the following command(Windows):
 
     ./Script/make.bat
 
-This compilies the c-code and makes the files [ICACHE.mem](./Script/build/ICACHE.mem) and 16 data memorey files [memory0.mem](./Script/build/memory0.mem) that are to be read by [instruction_memory](./Datapath/inst_mem.sv) and [data_memory](./test/bank.sv) respectively using $readmemh.
+This compilies the c-code and makes the files [ICACHE.mem](./Script/build/ICACHE.mem) and 16 data memorey files [memory0.mem](./Script/build/memory0.mem) that are to be read by [instruction_memory](./rtl/Core/Datapath/inst_mem.sv) and [data_memory](./rtl/Gemm/Datapath/bank.sv) respectively using $readmemh.
 
 You can also use the RISC-V core's M extension to do multiplications using three for loops. The Functions is defined below:
 

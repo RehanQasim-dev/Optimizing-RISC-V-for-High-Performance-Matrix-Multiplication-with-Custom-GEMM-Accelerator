@@ -15,8 +15,7 @@ module top (
       system_bus_wr_data,
       gemm_conf_read,
       mem_read_data,
-      gemm_conf_read_ppl,
-      result;
+      gemm_conf_read_ppl;
   logic [31:0] system_bus_addr;
   logic [4:0] interface_control;
   logic interface_rdwr;
@@ -25,14 +24,16 @@ module top (
   logic [15:0][7:0] interface_rd_data;
   logic [3:0][31:0] interface_wr_data;
   logic [3:0] system_bus_mask;
-  logic interupt, mem_valid, is_gemm_addr, en_gemm_conf, en_Dmem;
+  logic interrupt, mem_valid, is_gemm_addr, en_gemm_conf, en_Dmem;
   always_ff @(posedge clk) begin
     mem_valid <= ~system_bus_rdwr & system_bus_en;
   end
-  main_csr_pipe RISC_V_core (
+  //disable the interrupt permanently
+  assign interrupt = 1'b0;
+  riscv_core RISC_V_core (
       clk,
       rst,
-      interupt,
+      interrupt,
       an,
       a_to_g,
       system_bus_rdwr,
@@ -74,27 +75,26 @@ module top (
       .interface_rd_data(interface_rd_data)
   );
 
-  gemm gemm_instance (
-      .clk(clk),
-      .rst(rst),
-      .system_bus_en(en_gemm_conf),
-      .system_bus_rdwr(system_bus_rdwr),
-      .system_bus_rd_data(gemm_conf_read),
-      .system_bus_wr_data(system_bus_wr_data),
-      .system_bus_addr({system_bus_addr[31:2], 2'd0}),
-      .interface_control(interface_control),
-      .interface_rdwr(interface_rdwr),
-      .interface_en(interface_en),
-      .interface_addr(interface_addr),
-      .interface_rd_data(interface_rd_data),
-      .interface_wr_data(interface_wr_data)
-  );
+    // GEMM instance
+    gemm gemm_instance (
+        .clk(clk),
+        .rst(rst),
+        .system_bus_en(en_gemm_conf),
+        .system_bus_rdwr(system_bus_rdwr),
+        .system_bus_rd_data(gemm_conf_read),
+        .system_bus_wr_data(system_bus_wr_data),
+        .system_bus_addr({system_bus_addr[31:2], 2'd0}),
+        .interface_control(interface_control),
+        .interface_rdwr(interface_rdwr),
+        .interface_en(interface_en),
+        .interface_addr(interface_addr),
+        .interface_rd_data(interface_rd_data),
+        .interface_wr_data(interface_wr_data)
+    );
 
     logic rst_n;
     wire type_dbus2peri_s dbus2uart_i;
     wire type_peri2dbus_s uart2dbus_o;
-    logic uart_sel_i;
-     logic uart_irq_o;
 
     assign dbus2uart_i.addr = {system_bus_addr[31:2], 2'd0};
     assign dbus2uart_i.w_data = system_bus_wr_data;
@@ -111,7 +111,7 @@ module top (
         .dbus2uart_i(dbus2uart_i),         // Connect to Dbus to UART interface
         .uart2dbus_o(uart2dbus_o),         // Connect to UART to Dbus interface
         .uart_sel_i(is_uart_addr),           // Connect to UART selection signal
-        .uart_irq_o(),           // Connect to UART interrupt signal
+        .uart_irq_o(1'b0),           // Connect to UART interrupt signal
         .uart_rxd_i(uart_rxd_i),           // Connect to UART RX signal
         .uart_txd_o(uart_txd_o)            // Connect to UART TX signal
     );

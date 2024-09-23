@@ -15,26 +15,20 @@ list_incdir := $(foreach dir, ${incdir}, +incdir+$(dir))
 
 src_core := ./top.sv 						\
 		$(wildcard ./uart/*.svh)						\
-	   $(wildcard ./Datapath/*.sv)							\
-	   $(wildcard ./Controller/*.sv)						\
-	   $(wildcard ./uart/*.sv)						\
-	   $(wildcard ./test/*.sv)		
-
-	 
-	  
+	   $(wildcard ./rtl/Core/Datapath/*.sv)							\
+	   $(wildcard ./rtl/Core/Controller/*.sv)						\
+	   $(wildcard ./uart/*.sv)						
 
 src_gemm :=  ./tb_random_gemm.sv							\
 		./Config.sv 										\
 		./gemm.sv											\
-	   $(wildcard ./Gemm/Controller/*.sv)					\
-	   $(wildcard ./Gemm/Datapath/*.sv)						\
-	   $(wildcard ./Gemm/Utilities/*.sv)					\
-	   $(wildcard ./Datapath/*.sv)							\
-	   $(wildcard ./Controller/*.sv)						\
+	   $(wildcard ./rtl/Gemm/Controller/*.sv)					\
+	   $(wildcard ./rtl/Gemm/Datapath/*.sv)						\
+	   $(wildcard ./rtl/Gemm/Utilities/*.sv)					\
+	   $(wildcard ./rtl/Core/Datapath/*.sv)							\
+	   $(wildcard ./rtl/Core/Controller/*.sv)						\
 	   $(wildcard ./uart/*.sv)								\
-	   $(wildcard ./uart/*.svh)						\
-	   $(wildcard ./test/*.sv)
-
+	   $(wildcard ./uart/*.svh)						
 
 verilate_command_core := $(verilator) +define+$(defines) \
 					--cc $(src_core) $(list_incdir)	\
@@ -48,7 +42,7 @@ verilate_command_core := $(verilator) +define+$(defines) \
 					-Wno-PINMISSING 			\
 					--timing	\
 					--Mdir $(ver-library)				\
-					--exe bench/tb_top.cpp		\
+					--exe testbench/verilator/tb_top.cpp		\
 					--trace-structs --trace
 					
 verilate_command_gemm := $(verilator) 	+define+$(defines)		\
@@ -69,7 +63,7 @@ verilate_command_gemm := $(verilator) 	+define+$(defines)		\
 					-Wno-PINMISSING 			\
 					--timing	\
 					--Mdir $(ver-library)			\
-					--exe bench/tb_random_gemm.cpp		\
+					--exe testbench/verilator/tb_random_gemm.cpp		\
 					--trace-structs --trace
 
 
