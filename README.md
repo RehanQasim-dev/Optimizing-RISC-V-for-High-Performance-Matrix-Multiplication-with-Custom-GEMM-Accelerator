@@ -51,9 +51,9 @@ The following diagram shows the all the components of the system and the operati
 
 ## Performance Comparison:
 The table below compares the performance of the GEMM Co-processor with the RISC-V scalar core. The cycle counts for the RISC-V core are empirically calculated, assuming no control hazards, using the following formulas:
-- Loading matrices: M*K + K*N
-- Computation: 2*M*K*N
-- Storing the result matrix: M*N  
+- Loading matrices: MxK + KxN
+- Computation: 2xMxKxN
+- Storing the result matrix: MxN  
 
 | A (M,K) | B (K,N) | GEMM cycles | Core Cycles (emp.) | Performance Gain |
 |---------|---------|-------------|--------------------|------------------|
