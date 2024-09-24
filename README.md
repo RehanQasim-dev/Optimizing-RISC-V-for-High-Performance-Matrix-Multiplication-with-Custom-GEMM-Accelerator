@@ -1,23 +1,22 @@
 # A GEMM (General Matrix Multiplier) Co-processor
 
-This repo is a Martix multiplier Co-processor integrated with a Risc-V 3-stage pipelined processor with separate data memory and UART. Currently, the core implements RV32IMZicsr ISA based on User-level ISA Version 2.0 and Privileged Architecture Version 1.11 supporting only M mode. The following are the key features of the repo:
+This Project is a Martix multiplier Co-processor integrated with a RISC-V 3-stage pipelined processor with integrated UART peripheral. Currently, the core implements RV32IMZicsr ISA based on User-level ISA Version 2.0 and Privileged Architecture Version 1.11 supporting only M mode. The following are the key features of this project:
 
 ## Key Features
 - 32-bit RISC-V ISA core that supports base integer (I) and multiplication and division (M),  and Zicsr (Z) extensions (RV32IMZicsr) with a custom GEMM Co-processor.
 - Supports 8-bit signed input matrix elements and 32-bit signed output matrix elements.
 - Supports Dual port data memory of 16 banks that is synthesizable in Vivado.
 - Supports user input for Matrix by both data memory and UART.
-- Support for rectangular matrices by using Runtime tiling provided by our GEMM.h file.
-- Support for performance monitoring in hardware by CSR counters and code.
-- Support for importing the repo to Vivado by a TCL file. (board ---> xc7a100tcgs)
+- Support for any size of matrix by using Runtime tiling provided by our GEMM.h file.
+- Overlapping of configuration and computation stages in GEMM to hide the latency of the configuration.
+- Support for performance monitoring in hardware by CSR counters.
+- Comprehensive random testing of GEMM with different matrix sizes and element values.
 
 ### System Design Overview
-The GEMM Co-processor is a loosely coupled Co-processor that can be accessed by its memory-mapped registers. We have used a Dual port Memory with a 32 interface with Risc-V core and a 128-bit interface with GEMM for fast load and stores. The GEMM communicates with the core with the 32-bus interface. We define the matrices in Code and their addresses are stored in registers GEMM_A for A matrix, GEMM_B for Matrix B, and GEMM_C for the resultant matrix. The tiling limits are stored in GEMM_stride_A for A matrix tiling and GEMM_stride_B for B Matrix tiling. GEMM_control is for Controlling the load and stores of the GEMM to Data memory while the GEMM_DIM is used to feed the dimensions of matrix A, B, and C
-
+The GEMM Co-processor is a loosely coupled Co-processor that can be configured by its memory-mapped registers. So we don't need to change the core's datapath and control that's the case with tightly coupled co-processors and we can easily integrate it with existing cores We have used a Dual port data memory with a 32-bit interface with RISCV-V core and a 128-bit wide interface with GEMM. The main unit of GEMM consists of 16x16 systolic array of MAC units. The GEMM is optimized to overlap the the computations in case when we need to process multiple tiles for a matrix. The architecture also overlaps the configuration and computation activities of the coprocessor which enables us to approach the ideal performance gain of 256x as the matrix size increases.
 ![Block Diagram](./pdf/GEMM.png)
 
-
-The block diagram shows the connectivity of the core with memory, GEMM, and UART peripherals using the data bus. Instruction memory is a form of ROM and is built into the RISC-V core.
+The block diagram shows the connectivity of the core with memory, GEMM, and UART peripherals using the data bus. Instruction memory is a form of ROM and is built into the RISC-V core for our case.
 
 ###  Memory Map
 The memory map for the Gemm and UART is provided in the following table.
@@ -32,11 +31,36 @@ The memory map for the Gemm and UART is provided in the following table.
 | 0x9000_0014         |      GEMM_control         |
 | 0x9000_0018         |      GEMM_DIM             |
 
+## Operations Overview:
+The following diagram shows the all the components of the system and the operations performed on each stage.
 
+![Operation Flow Diagram](./pdf/Operation%20Flow%20Diagram.png)
+## Architectural Details:
 
+| Parameter                        | Value             |
+|----------------------------------|-------------------|
+| Input size                       | 8 bits (signed)   |
+| Result size                      | 32 bits           |
+| DataFlow                         | Weight Stationary |
+| Systolic Array Size              | 16 x 16           |
+| Core Size                        | 8 x 8             |
+| Number of Cores                  | 4                 |
+| Data memory Banks (dual port)    | 16                |
+| Banks Port Widths                | 8 bits            |
+| Accumulator Size                 | 16 x 32           |
 
+## Performance Comparison:
+The table below compares the performance of the GEMM Co-processor with the RISC-V scalar core. The cycle counts for the RISC-V core are empirically calculated, assuming no control hazards, using the following formulas:
+- Loading matrices: M*K + K*N
+- Computation: 2*M*K*N
+- Storing the result matrix: M*N  
 
-
+| A (M,K) | B (K,N) | GEMM cycles | Core Cycles (emp.) | Performance Gain |
+|---------|---------|-------------|--------------------|------------------|
+| (60, 60)| (60, 60)| 3119        | 442,800            | 142x             |
+| (60, 8) | (8, 60) | 659         | 62,160             | 94x              |
+| (8, 60) | (60, 8) | 248         | 8,704              | 35x              |
+| (8, 8)  | (8, 8)  | 48          | 1,216              | 25x              |
 
 ## Getting Started
 The following Programs are needed for the usage of the Accelerator.
@@ -51,7 +75,7 @@ Install RISC-V [toolchain](https://github.com/riscv-collab/riscv-gnu-toolchain).
 Check that these tools are installed correctly, by running `riscv64-unknown-elf-gcc -v` and `gtkterm`.
 
 ### Using GEMM.h 
-Use the functions defined in [GEMM.h] (./Script/src/gemm.h). The MATMUL function is the GEMM matrix multiplication function and it handles all the configuration of GEMM in hardware. The function accepts dimensions and the addresses of the matrix as arguments:
+Use the functions defined in [GEMM.h] (./Script/src/gemm.h). The MATMUL function is the GEMM matrix multiplication function and it handles all the configuration of GEMM in hardware and you just need to pass your matrices to it which you want to multiply and the matrix to store the result. The function accepts dimensions and the addresses of the matrix as arguments:
 
     MATMUL( uint32_t A_rows, uint32_t A_cols, uint32_t B_cols,int8_t A[A_rows][A_cols], int8_t B[A_cols][B_cols], int32_t C[A_rows][B_cols]);
 
@@ -63,23 +87,20 @@ Compile the c-code using the following command(Windows):
 
     ./Script/make.bat
 
-This compilies the c-code and makes the files [ICACHE.mem](./Script/build/ICACHE.mem) and 16 data memorey files [memory0.mem](./Script/build/memory0.mem) that are to be read by [instruction_memory](./rtl/Core/Datapath/inst_mem.sv) and [data_memory](./rtl/Gemm/Datapath/bank.sv) respectively using $readmemh.
+This compilies the c-code and makes the files [ICACHE.mem](./Script/build/ICACHE.mem) and memory files for the data memory banks that are to be read by [instruction_memory](./rtl/Core/Datapath/inst_mem.sv) and [data_memory](./rtl/Gemm/Datapath/banked_memory.sv).
 
-You can also use the RISC-V core's M extension to do multiplications using three for loops. The Functions is defined below:
+You can use the counter **MCYCLE** for checking hardware cycles taken by the function. These macros are defined in [timer.h](./Script/src/gemm.h).
 
-    void core_matmul(int32_t rows, int32_t cols_A, int32_t cols_B, int8_t A[rows][cols_A], int8_t B[cols_A][cols_B], int32_t C[rows][cols_B]) ;
-
-You can use the counter **MCYCLE** for checking hardware cycles. to use them you need to write the following MACRO before calling the **MATMUL** function:
+before calling the **MATMUL** function:
 
     TIMER_START
 After returning from the function:
 
     TIMER_STOP
-The value of cycles can be read into a 32-bit un-signed variable using the function:
+The value of cycles can be read into a 32-bit un-signed variable by calling the function:
 
     read_cycles();
 
-All of the Functions for CSR are written in ASM for C language.
 ### Using UART.h
 To display using UART to `gtkterm` we first need to set some of the following parameters. 
 - Select the Baud rate to be used. (Default: 9600)
