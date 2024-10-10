@@ -49,9 +49,9 @@ module tb_random_gemm();
   // Multiplexer to choose between test and original interface signals
   assign selected_interface_addr = sel_for_test ? test_interface_addr : interface_addr;
   assign selected_interface_wr_data = sel_for_test ? test_interface_wr_data : interface_wr_data;
-  assign selected_interface_control = sel_for_test ? test_interface_control : interface_control; // Assuming default control value if not provided
-  assign selected_interface_en = sel_for_test ? test_interface_en : interface_en; // Assuming default enable value if not provided
-  assign selected_interface_rdwr = sel_for_test ? test_interface_rdwr : interface_rdwr; // Assuming default rdwr value if not provided
+  assign selected_interface_control = sel_for_test ? test_interface_control : interface_control; 
+  assign selected_interface_en = sel_for_test ? test_interface_en : interface_en; 
+  assign selected_interface_rdwr = sel_for_test ? test_interface_rdwr : interface_rdwr;
   memory #(
       .NUM_RAMS(16),
       .A_WID(15),
@@ -83,7 +83,6 @@ module tb_random_gemm();
   int M, K, N;
   int nsize, msize, ksize;
   bit last, first;
-  // SystemVerilog does not support dynamic array sizes in module scope, 
   // so we use the maximum expected sizes and only use portions as needed.
   localparam MAX_SIZE = 300 ;  // Maximum dimension size for matrices
   localparam MAX_VAL = 256;  // Maximum value for matrix elements
@@ -150,23 +149,6 @@ logic is_last;
         end
         end
       end
-      // assign A='{'{3,-8,0,-17,-5,-2,6,-12,-12,-18,5},'{-19,-8,-7,7,-2,6,-8,-8,-1,-16,1},'{3,2,-5,4,-8,-18,10,-1,-13,-11,-7},'{-5,2,0,10,-8,0,-6,9,-13,-5,-15},'{6,-19,8,-18,-7,-19,-4,-7,2,-5,-8},'{4,6,-12,9,6,4,2,-2,-10,3,9},'{4,-19,0,-14,0,6,9,-4,7,3,8},'{2,-8,6,3,-2,-3,-4,-14,-9,-16,9},'{-9,-15,-5,-14,7,-8,-15,-10,7,-17,7},'{-14,6,4,3,5,-14,9,-2,0,1,8},'{-6,8,4,-19,1,0,1,-4,-13,-1,0}};
-
-      // Display matrix A in Python-compatible format
-      // $display("Matrix A = [");
-      // for (int i = 0; i < M; i++) begin
-      //   $write("    [");
-      //   for (int j = 0; j < K; j++) begin
-      //     $write("%d", $signed(A[i][j]));
-      //     if (j < K-1) $write(", ");
-      //   end
-      //   $write("]");
-      //   if (i < M-1) $display(",");
-      //   else $display("");
-      // end
-      // $display("]");
-      // $display(""); // Extra line for separation
-
       // $display("%p",A);
       for (int i = 0; i < K; i++) begin
         for (int j = 0; j < N; j++) begin
@@ -181,21 +163,6 @@ logic is_last;
 
         end
       end
-      // assign B='{'{7,-4,-8,9,-1,3,-12,9,9,2,4},'{-2,-2,2,1,-14,0,10,-16,-14,4,-15},'{-3,-13,-7,-5,9,-15,-19,-11,-15,-7,-13},'{-18,0,2,-18,2,6,8,7,-19,-3,-14},'{2,7,1,-2,-1,9,-3,8,-5,-17,-12},'{5,-13,6,0,-6,5,-7,9,2,8,2},'{-8,-15,-11,-19,6,10,0,4,0,3,1},'{-5,6,-15,1,-18,-15,6,-4,1,-3,-12},'{-1,-5,-4,9,-19,-19,-10,-2,3,0,-6},'{1,-10,-17,7,2,0,3,-14,-19,-2,9},'{1,-19,0,-13,0,2,-4,-7,-12,1,-15}};
-      // $display("Matrix B = [");
-      // for (int i = 0; i < K; i++) begin
-      //   $write("    [");
-      //   for (int j = 0; j < N; j++) begin
-      //     $write("%d", $signed(B[i][j]));
-      //     if (j < N-1) $write(", ");
-      //   end
-      //   $write("]");
-      //   if (i < K-1) $display(",");
-      //   else $display("");
-      // end
-      // $display("]");
-      // $display(""); // Extra line for separation
-      // $display("%p",B);
       // ------------------------------------------------------------------
       $display("M=%d, K=%d, N=%d ", M, K, N);
       for (i = 0; i < M; i++) begin
@@ -207,22 +174,6 @@ logic is_last;
           end
         end
       end
-
-      // $display("Matrix C = [");
-      // for (int i = 0; i < M; i++) begin
-      //   $write("    [");
-      //   for (int j = 0; j < N; j++) begin
-      //     $write("%d", $signed(C[i][j]));
-      //     if (j < N-1) $write(", ");
-      //   end
-      //   $write("]");
-      //   if (i < M-1) $display(",");
-      //   else $display("");
-      // end
-      // $display("]");
-      // $display(""); // Extra line for separation
-
-
 
       //////////////////////////////////////////Store A Matrix///////////////////////////////////////////////
       for (i = 0; i < M; i++) begin
@@ -252,11 +203,6 @@ logic is_last;
       end
       //////////////////////////////////////////Do Configurations///////////////////////////////////////////////
       sel_for_test <= 0;
-      // Assuming the following variables and constants are defined elsewhere:
-// A, B, C arrays
-// SUPER_SYS_COLS, 16, SUPER_SYS_ROWS constants
-// GEMM_A, GEMM_DIM signals
-// Configure_GEMM function
 
 
       remaining_n = N;
@@ -361,23 +307,14 @@ end
   // Initialization block
   initial begin
     forever begin
-
-      // Wait for negedge of sel_for_test signal
       @(negedge sel_for_test);
 
-      // Calculate total number of tiles
-      // total_tiles = ((N + SUPER_SYS_COLS - 1) / SUPER_SYS_COLS) * ((M + SUPER_SYS_ROWS - 1) / SUPER_SYS_ROWS);
-
-      // // Iterate over tiles
-      // repeat (total_tiles) begin
       N_ = N;  // Set N_
       for (n_ = 0; n_ < N_; n_ += blkn) begin
         nsize_ = (n_ + blkn <= N_) ? blkn : N_ % blkn;
-        // msize_ = msize;
 
         count_rows_compared = 0;  // Initialize count
         while (count_rows_compared < M) begin
-          // Iterate over elements in row
           for (int i = n_; i < (nsize_ + n_); i++) begin
             if (i % 4 == 0) begin
               @(posedge clk);
@@ -385,10 +322,6 @@ end
                 @(posedge clk);
               end
             end
-
-            // Display comparison
-            // $display("C[%0d][%0d] = %0d , interface_wr_data[%0d] = %0d", count_rows_compared, i,
-            //          C[count_rows_compared][i], i, interface_wr_data[i%4]);
             if ($signed(C[count_rows_compared][i]) != $signed(interface_wr_data[i%4])) begin
               $display("Mismatch found C[%0d][%0d] = %0d , interface_wr_data[%0d] = %0d",
                        count_rows_compared, i, $signed(C[count_rows_compared][i]), i,
