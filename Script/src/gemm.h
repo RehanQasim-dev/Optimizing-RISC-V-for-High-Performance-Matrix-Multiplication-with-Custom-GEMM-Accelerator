@@ -20,7 +20,7 @@
         GEMM_control = (overwrite << 1) | store;                                                          \
         GEMM_DIM = msize | (ksize << 5) | (nsize << 10);                                                  \
     }
-void MATMUL( uint32_t A_rows, uint32_t A_cols, uint32_t B_cols,int8_t A[A_rows][A_cols], int8_t B[A_cols][B_cols], int32_t C[A_rows][B_cols])
+void MATMUL(uint32_t A_rows, uint32_t A_cols, uint32_t B_cols, int8_t A[A_rows][A_cols], int8_t B[A_cols][B_cols], int32_t C[A_rows][B_cols])
 {
 
     uint32_t Tile_A_Address, Tile_B_Address, Tile_C_Address;
@@ -46,9 +46,9 @@ void MATMUL( uint32_t A_rows, uint32_t A_cols, uint32_t B_cols,int8_t A[A_rows][
 
                 bool is_last = (current_k + SYS_ROWS >= A_cols);
 
-                Tile_A_Address = &(A[current_m][current_k]);
-                Tile_B_Address = &(B[current_k + rows_to_process_k - 1][current_n]);
-                Tile_C_Address = &(C[current_m][current_n]);
+                Tile_A_Address = (uint32_t)&(A[current_m][current_k]);
+                Tile_B_Address = (uint32_t)&(B[current_k + rows_to_process_k - 1][current_n]);
+                Tile_C_Address = (uint32_t)&(C[current_m][current_n]);
 
                 Configure_GEMM(Tile_A_Address, Tile_B_Address, Tile_C_Address, A_cols, B_cols, rows_to_process, rows_to_process_k, cols_to_process, (current_k == 0), is_last);
 
@@ -57,53 +57,55 @@ void MATMUL( uint32_t A_rows, uint32_t A_cols, uint32_t B_cols,int8_t A[A_rows][
                     // Wait for the slot to become available
                 }
 
-
                 remaining_k -= rows_to_process_k;
 
                 current_k = A_cols - remaining_k;
             }
-            current_k=0;
+            current_k = 0;
             remaining_m -= rows_to_process;
 
             current_m = A_rows - remaining_m;
             remaining_k = A_cols;
         }
-        current_m=0;
+        current_m = 0;
         remaining_n -= cols_to_process;
 
         current_n = B_cols - remaining_n;
         remaining_m = A_rows;
-
     }
 
     while (GEMM_DIM != 1)
     {
         // check if GEMM is done
     }
-
 }
-void core_matmul(int32_t rows, int32_t cols_A, int32_t cols_B, int8_t A[rows][cols_A], int8_t B[cols_A][cols_B], int32_t C[rows][cols_B]) {
-    for (int32_t i = 0; i < rows; i++) {
-        for (int32_t j = 0; j < cols_B; j++) {
+void core_matmul(int32_t rows, int32_t cols_A, int32_t cols_B, int8_t A[rows][cols_A], int8_t B[cols_A][cols_B], int32_t C[rows][cols_B])
+{
+    for (int32_t i = 0; i < rows; i++)
+    {
+        for (int32_t j = 0; j < cols_B; j++)
+        {
             C[i][j] = 0;
-            for (int32_t k = 0; k < cols_A; k++) {
+            for (int32_t k = 0; k < cols_A; k++)
+            {
                 C[i][j] += A[i][k] * B[k][j];
             }
         }
     }
 }
 
-#define TIMER_START \
-    {\
-    asm("csrrw x0, mcycle, %0"::"r"(1) ); \
-    asm("csrrw x0, mcounteren, %0" : : "r"(1));\
+#define TIMER_START                                 \
+    {                                               \
+        asm("csrrw x0, mcycle, %0" ::"r"(1));       \
+        asm("csrrw x0, mcounteren, %0" : : "r"(1)); \
     }
-#define TIMER_STOP \
-    {\
-    asm("csrrw x0, mcounteren, %0" : : "r"(0));\
+#define TIMER_STOP                                  \
+    {                                               \
+        asm("csrrw x0, mcounteren, %0" : : "r"(0)); \
     }
-uint32_t read_cycles (void) {
+uint32_t read_cycles(void)
+{
     uint32_t r;
-   asm("csrrw %0, mcycle,x0" : "=r"(r));
-     return r;
+    asm("csrrw %0, mcycle,x0" : "=r"(r));
+    return r;
 }
